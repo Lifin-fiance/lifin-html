@@ -123,7 +123,7 @@
 
     // --- PENTING ---
     // Jangan pernah mengekspos API Key Anda di kode sisi klien (frontend) dalam aplikasi nyata.
-    const API_KEY = "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";
+    const API_KEY = import.meta.env.VITE_GROQ_API_KEY;
 
     // Prompt sistem untuk Finny (tetap sama)
     const systemPrompt = `
