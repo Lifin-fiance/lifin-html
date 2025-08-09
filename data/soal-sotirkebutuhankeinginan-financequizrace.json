@@ -1,0 +1,502 @@
+[
+    {
+        "No":1,
+        "Barang":"Sepatu sekolah",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":2,
+        "Barang":"Sepatu sneakers branded",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":3,
+        "Barang":"Pulsa HP",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":4,
+        "Barang":"Top up game",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":5,
+        "Barang":"Buku pelajaran",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":6,
+        "Barang":"Buku komik",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":7,
+        "Barang":"Jaket musim hujan",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":8,
+        "Barang":"Jaket untuk gaya",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":9,
+        "Barang":"Makan siang",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":10,
+        "Barang":"Makan di restoran cepat saji",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":11,
+        "Barang":"Obat flu",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":12,
+        "Barang":"Vitamin gummy",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":13,
+        "Barang":"Alat tulis",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":14,
+        "Barang":"Pulpen karakter lucu",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":15,
+        "Barang":"Tas sekolah",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":16,
+        "Barang":"Tas bermerek",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":17,
+        "Barang":"Seragam sekolah",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":18,
+        "Barang":"Seragam warna-warni",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":19,
+        "Barang":"Sandal rumah",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":20,
+        "Barang":"Sandal karakter kartun",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":21,
+        "Barang":"Laptop untuk belajar",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":22,
+        "Barang":"Laptop gaming",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":23,
+        "Barang":"HP untuk belajar",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":24,
+        "Barang":"HP terbaru",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":25,
+        "Barang":"Tiket bus ke sekolah",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":26,
+        "Barang":"Tiket konser",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":27,
+        "Barang":"Sabun mandi",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":28,
+        "Barang":"Sabun mandi wangi mahal",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":29,
+        "Barang":"Kacamata minus",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":30,
+        "Barang":"Kacamata gaya",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":31,
+        "Barang":"Aplikasi belajar",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":32,
+        "Barang":"Aplikasi edit video",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":33,
+        "Barang":"Les pelajaran",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":34,
+        "Barang":"Les musik",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":35,
+        "Barang":"Beras",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":36,
+        "Barang":"Camilan",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":37,
+        "Barang":"Kos dekat sekolah",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":38,
+        "Barang":"Apartemen mewah",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":39,
+        "Barang":"Air isi ulang",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":40,
+        "Barang":"Minuman energi",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":41,
+        "Barang":"Pakaian dalam",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":42,
+        "Barang":"Baju branded",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":43,
+        "Barang":"Gunting kuku",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":44,
+        "Barang":"Nail art set",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":45,
+        "Barang":"Potong rambut",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":46,
+        "Barang":"Salon & styling",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":47,
+        "Barang":"Meja belajar",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":48,
+        "Barang":"Meja belajar LED",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":49,
+        "Barang":"Kasur nyaman",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":50,
+        "Barang":"Kasur super empuk",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":51,
+        "Barang":"Sandal jepit",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":52,
+        "Barang":"Sepatu boots fashion",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":53,
+        "Barang":"Kalender sekolah",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":54,
+        "Barang":"Kalender artis",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":55,
+        "Barang":"Sendok dan garpu",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":56,
+        "Barang":"Sendok karakter lucu",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":57,
+        "Barang":"Obat luka",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":58,
+        "Barang":"Plester bergambar",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":59,
+        "Barang":"Baju hangat",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":60,
+        "Barang":"Hoodie tren TikTok",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":61,
+        "Barang":"Payung",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":62,
+        "Barang":"Payung transparan Korea",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":63,
+        "Barang":"Ongkos angkot",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":64,
+        "Barang":"Ojek online tiap hari",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":65,
+        "Barang":"Sikat gigi",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":66,
+        "Barang":"Sikat gigi elektrik",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":67,
+        "Barang":"WiFi untuk belajar",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":68,
+        "Barang":"WiFi untuk nonton",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":69,
+        "Barang":"Tiket seminar keterampilan",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":70,
+        "Barang":"Tiket fan meeting artis",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":71,
+        "Barang":"Baju cadangan",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":72,
+        "Barang":"Baju couple",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":73,
+        "Barang":"Tisu toilet",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":74,
+        "Barang":"Tisu wangi",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":75,
+        "Barang":"Air minum",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":76,
+        "Barang":"Air botol mahal",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":77,
+        "Barang":"Pakaian olahraga sekolah",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":78,
+        "Barang":"Jersey bola luar negeri",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":79,
+        "Barang":"Masker kesehatan",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":80,
+        "Barang":"Masker motif lucu",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":81,
+        "Barang":"Radio darurat",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":82,
+        "Barang":"Mikrofon podcast",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":83,
+        "Barang":"Lem serbaguna",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":84,
+        "Barang":"Slime",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":85,
+        "Barang":"Jas hujan",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":86,
+        "Barang":"Jas hujan transparan",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":87,
+        "Barang":"Fotokopi tugas",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":88,
+        "Barang":"Cetak foto",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":89,
+        "Barang":"Periksa gigi",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":90,
+        "Barang":"Pemutih gigi",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":91,
+        "Barang":"Buku catatan",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":92,
+        "Barang":"Binder estetik",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":93,
+        "Barang":"SPP sekolah",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":94,
+        "Barang":"Stiker lucu",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":95,
+        "Barang":"Payung lipat",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":96,
+        "Barang":"Kipas tangan lucu",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":97,
+        "Barang":"Sabun cuci tangan",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":98,
+        "Barang":"Sabun cair mewah",
+        "Jawaban":"Keinginan"
+    },
+    {
+        "No":99,
+        "Barang":"Kalender pelajaran",
+        "Jawaban":"Kebutuhan"
+    },
+    {
+        "No":100,
+        "Barang":"Poster idola",
+        "Jawaban":"Keinginan"
+    }
+]

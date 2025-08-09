@@ -1,0 +1,502 @@
+[
+    {
+        "No":1,
+        "Pertanyaan":"Menabung artinya menyimpan uang untuk masa depan.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":2,
+        "Pertanyaan":"Kalau punya uang, harus langsung dihabiskan.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":3,
+        "Pertanyaan":"Uang saku sebaiknya digunakan untuk kebutuhan penting dulu.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":4,
+        "Pertanyaan":"Barang diskon pasti wajib dibeli.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":5,
+        "Pertanyaan":"Membandingkan harga sebelum membeli adalah kebiasaan cerdas.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":6,
+        "Pertanyaan":"Uang koin tidak penting karena nilainya kecil.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":7,
+        "Pertanyaan":"Menabung bisa dilakukan sedikit demi sedikit.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":8,
+        "Pertanyaan":"Orang kaya tidak perlu menabung.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":9,
+        "Pertanyaan":"Menulis daftar belanja membantu menghindari pemborosan.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":10,
+        "Pertanyaan":"Dompet adalah tempat untuk menyimpan semua uang dan kartu.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":11,
+        "Pertanyaan":"Belanja tanpa rencana membuat uang cepat habis.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":12,
+        "Pertanyaan":"Berhutang pada teman itu tidak masalah jika terus menerus.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":13,
+        "Pertanyaan":"Lebih baik menunda membeli barang mahal daripada memaksakan.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":14,
+        "Pertanyaan":"Kebutuhan dan keinginan itu sama saja.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":15,
+        "Pertanyaan":"Uang saku bisa dibagi menjadi tiga: ditabung, dibelanjakan, dan disedekahkan.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":16,
+        "Pertanyaan":"Kalau uang sudah habis, tinggal minta lagi ke orang tua.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":17,
+        "Pertanyaan":"Jajan setiap hari itu wajib.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":18,
+        "Pertanyaan":"Menabung hanya bisa di bank.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":19,
+        "Pertanyaan":"Sedekah adalah bentuk penggunaan uang yang baik.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":20,
+        "Pertanyaan":"Belanja berdasarkan iklan itu bijak.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":21,
+        "Pertanyaan":"Orang yang hemat biasanya lebih tenang secara keuangan.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":22,
+        "Pertanyaan":"Uang tidak perlu diatur kalau masih anak-anak.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":23,
+        "Pertanyaan":"Membeli barang yang tidak dibutuhkan itu pemborosan.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":24,
+        "Pertanyaan":"Hemat bukan berarti pelit.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":25,
+        "Pertanyaan":"Kartu ATM bisa digunakan sembarangan oleh siapa saja.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":26,
+        "Pertanyaan":"Membeli karena ikut-ikutan teman bisa merugikan diri sendiri.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":27,
+        "Pertanyaan":"Menabung membuat kita bisa membeli barang impian.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":28,
+        "Pertanyaan":"Harga mahal selalu berarti kualitas bagus.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":29,
+        "Pertanyaan":"Kita bisa menyisihkan uang jajan untuk berbagi dengan yang membutuhkan.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":30,
+        "Pertanyaan":"Menulis catatan pengeluaran harian bisa membantu mengatur uang.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":31,
+        "Pertanyaan":"Semakin banyak uang, semakin boros.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":32,
+        "Pertanyaan":"Membeli barang bekas yang masih bagus adalah tindakan cerdas.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":33,
+        "Pertanyaan":"Dompet pintar artinya dompet yang bisa bicara.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":34,
+        "Pertanyaan":"Anggaran adalah rencana penggunaan uang yang bijak.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":35,
+        "Pertanyaan":"Kartu debit sama seperti uang tunai di dompet.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":36,
+        "Pertanyaan":"Punya uang berarti bebas membeli apapun kapan saja.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":37,
+        "Pertanyaan":"Orang yang berinvestasi sejak dini lebih siap menghadapi masa depan.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":38,
+        "Pertanyaan":"Menabung hanya untuk orang yang sudah bekerja.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":39,
+        "Pertanyaan":"Kalau dapat uang lebih, langsung belanjakan agar tidak hilang.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":40,
+        "Pertanyaan":"Membuat anggaran belanja bulanan adalah hal yang penting.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":41,
+        "Pertanyaan":"Membeli barang lewat cicilan artinya harus membayar lebih banyak dalam jangka waktu tertentu.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":42,
+        "Pertanyaan":"Saham dan deposito adalah contoh tabungan harian.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":43,
+        "Pertanyaan":"Dompet digital bisa membantu kita mengatur keuangan.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":44,
+        "Pertanyaan":"Saat harga barang naik, itu disebut inflasi.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":45,
+        "Pertanyaan":"Semua aplikasi keuangan itu aman tanpa perlu dicek.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":46,
+        "Pertanyaan":"Bujet adalah bahasa lain dari rencana pengeluaran.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":47,
+        "Pertanyaan":"Punya banyak barang berarti punya banyak kekayaan.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":48,
+        "Pertanyaan":"Investasi adalah cara menyimpan uang agar berkembang.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":49,
+        "Pertanyaan":"Kartu kredit memberikan uang gratis.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":50,
+        "Pertanyaan":"Dana darurat penting dimiliki untuk keadaan tak terduga.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":51,
+        "Pertanyaan":"Berbagi keuangan di media sosial adalah hal yang aman.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":52,
+        "Pertanyaan":"Menabung di celengan sudah cukup aman.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":53,
+        "Pertanyaan":"Kita harus selalu menyisihkan sebagian uang untuk masa depan.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":54,
+        "Pertanyaan":"Diskon bisa membuat kita boros kalau tidak dikontrol.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":55,
+        "Pertanyaan":"Mengatur uang itu hanya untuk orang dewasa.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":56,
+        "Pertanyaan":"Kredit artinya beli sekarang, bayar nanti.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":57,
+        "Pertanyaan":"Pinjaman online ilegal berbahaya bagi keuangan kita.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":58,
+        "Pertanyaan":"Semua orang pasti bisa mengelola uang tanpa belajar.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":59,
+        "Pertanyaan":"Ada baiknya punya lebih dari satu rekening bank.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":60,
+        "Pertanyaan":"Kalau punya uang saku lebih, lebih baik langsung dibelikan gadget.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":61,
+        "Pertanyaan":"Menunda keinginan bisa menyelamatkan keuangan.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":62,
+        "Pertanyaan":"Kita bisa hidup tanpa uang di zaman sekarang.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":63,
+        "Pertanyaan":"Berinvestasi sama dengan berjudi.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":64,
+        "Pertanyaan":"Menabung membuat hidup lebih tenang dan aman.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":65,
+        "Pertanyaan":"Punya tujuan finansial sejak SMP adalah hal baik.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":66,
+        "Pertanyaan":"Semua hutang itu buruk dan harus dihindari.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":67,
+        "Pertanyaan":"Cryptocurrency adalah mata uang digital yang digunakan secara online.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":68,
+        "Pertanyaan":"P2P lending berarti meminjamkan uang langsung ke orang lain lewat platform online.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":69,
+        "Pertanyaan":"Reksadana adalah bentuk investasi di mana uang dikelola oleh manajer investasi.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":70,
+        "Pertanyaan":"Bitcoin selalu aman dan nilainya stabil.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":71,
+        "Pertanyaan":"Semua aplikasi pinjaman online itu legal dan diawasi pemerintah.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":72,
+        "Pertanyaan":"E-wallet seperti DANA, OVO, dan GoPay termasuk dompet digital.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":73,
+        "Pertanyaan":"Cuan adalah istilah gaul untuk keuntungan finansial.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":74,
+        "Pertanyaan":"Diversifikasi investasi membantu mengurangi risiko kerugian.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":75,
+        "Pertanyaan":"NFT adalah bentuk investasi fisik yang bisa disentuh.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":76,
+        "Pertanyaan":"Blockchain adalah teknologi di balik Bitcoin.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":77,
+        "Pertanyaan":"Kita bisa jadi investor saham meskipun masih SMP.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":78,
+        "Pertanyaan":"Token dan koin kripto adalah jenis uang palsu.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":79,
+        "Pertanyaan":"Financial freedom artinya bebas membeli apa saja.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":80,
+        "Pertanyaan":"Rasio utang sehat sebaiknya tidak lebih dari 30% dari penghasilan.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":81,
+        "Pertanyaan":"Semakin tinggi risiko investasi, semakin besar peluang cuan.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":82,
+        "Pertanyaan":"Aplikasi investasi palsu bisa menjebak pengguna muda.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":83,
+        "Pertanyaan":"PayLater membantu kita membeli barang tanpa pertimbangan.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":84,
+        "Pertanyaan":"E-money berbeda dengan e-wallet.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":85,
+        "Pertanyaan":"Saham blue chip adalah saham dari perusahaan kecil.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":86,
+        "Pertanyaan":"Bunga majemuk membuat uang investasi bertumbuh lebih cepat.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":87,
+        "Pertanyaan":"Kalau teman investasi, kita harus ikut tanpa pikir panjang.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":88,
+        "Pertanyaan":"Investasi emas cocok untuk jangka panjang.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":89,
+        "Pertanyaan":"Finfluencer adalah orang yang berbagi tips keuangan di media sosial.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":90,
+        "Pertanyaan":"Dana pensiun itu hanya untuk orang tua.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":91,
+        "Pertanyaan":"Kalau gagal bayar PayLater, bisa kena denda dan bunga tinggi.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":92,
+        "Pertanyaan":"Risiko adalah bagian dari setiap investasi.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":93,
+        "Pertanyaan":"Belanja pakai QRIS lebih aman dari dompet tunai biasa.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":94,
+        "Pertanyaan":"Pinjol ilegal bisa menyebarkan data pribadi kita.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":95,
+        "Pertanyaan":"Orang sukses secara finansial biasanya punya rencana jangka panjang.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":96,
+        "Pertanyaan":"Kalau saham turun, berarti langsung rugi.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":97,
+        "Pertanyaan":"Budgeting artinya membatasi kesenangan hidup.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":98,
+        "Pertanyaan":"Uang digital akan menggantikan uang fisik sepenuhnya dalam waktu dekat.",
+        "Kunci Jawaban":"Salah"
+    },
+    {
+        "No":99,
+        "Pertanyaan":"Makin muda belajar finansial, makin kuat masa depannya.",
+        "Kunci Jawaban":"Benar"
+    },
+    {
+        "No":100,
+        "Pertanyaan":"Setiap keputusan keuangan harus dipikirkan secara logis, bukan hanya emosional.",
+        "Kunci Jawaban":"Benar"
+    }
+]

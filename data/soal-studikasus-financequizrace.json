@@ -1,0 +1,602 @@
+[
+    {
+        "Nomor":1,
+        "Pertanyaan":"Setiap hari, Raihan menyisihkan sebagian uang jajannya untuk dimasukkan ke dalam celengan ayam. Tindakan yang dilakukan Raihan ini disebut?",
+        "Pilihan Ganda":"A. Menghabiskan uang<br>B. Menabung uang<br>C. Menghilangkan uang<br>D. Meminjamkan uang",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":2,
+        "Pertanyaan":"Kian merasa lapar di sekolah dan pada saat yang sama ia melihat mainan baru yang sangat ia inginkan. Jika uangnya hanya cukup untuk membeli salah satu, mana yang seharusnya Kian dahulukan?",
+        "Pilihan Ganda":"A. Mainan baru, karena sedang tren.<br>B. Makanan, karena lapar adalah kebutuhan pokok.<br>C. Tidak membeli apa-apa.<br>D. Membeli keduanya dengan cara berutang.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":3,
+        "Pertanyaan":"Faraz ingin membeli komik seharga Rp25.000, tetapi uangnya baru terkumpul Rp15.000. Apa yang seharusnya Faraz lakukan agar bisa membeli komik tersebut?",
+        "Pilihan Ganda":"A. Memaksa orang tuanya untuk membelikan.<br>B. Melanjutkan menabung hingga uangnya cukup.<br>C. Mencuri komik tersebut.<br>D. Membeli mainan lain yang lebih murah.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":4,
+        "Pertanyaan":"Pradipta menyimpan sisa uang jajannya di laci meja kelas. Saat pulang, ia baru sadar uangnya hilang. Pelajaran apa yang bisa diambil dari pengalaman Pradipta?",
+        "Pilihan Ganda":"A. Uang sebaiknya dihabiskan semua.<br>B. Sebaiknya tidak pernah membawa uang ke sekolah.<br>C. Uang harus disimpan di tempat yang aman.<br>D. Jangan pernah menabung.",
+        "Kunci Jawaban":"C"
+    },
+    {
+        "Nomor":5,
+        "Pertanyaan":"Farel meminjam uang kepada Kian untuk membeli es krim dan berjanji akan mengembalikannya besok. Status uang yang dipinjam Farel dari Kian disebut...",
+        "Pilihan Ganda":"A. Hadiah<br>B. Tabungan<br>C. Utang<br>D. Investasi",
+        "Kunci Jawaban":"C"
+    },
+    {
+        "Nomor":6,
+        "Pertanyaan":"Rifai mendapatkan hadiah uang dari neneknya, dan ibunya menyarankan untuk menyimpan sebagian di bank. Mengapa menyimpan uang di bank dianggap lebih baik daripada di bawah kasur?",
+        "Pilihan Ganda":"A. Karena uangnya bisa hilang di bawah kasur.<br>B. Karena di bank lebih aman dan tercatat.<br>C. Karena teman-teman akan tahu jika disimpan di bank.<br>D. Karena uangnya akan berkurang jika di bank.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":7,
+        "Pertanyaan":"Faraz membuat daftar barang yang akan ia beli sebelum pergi ke supermarket agar tidak membeli barang yang tidak perlu. Daftar yang dibuat Faraz ini disebut juga...",
+        "Pilihan Ganda":"A. Daftar keinginan<br>B. Daftar utang<br>C. Anggaran belanja<br>D. Daftar teman",
+        "Kunci Jawaban":"C"
+    },
+    {
+        "Nomor":8,
+        "Pertanyaan":"Kian melihat iklan sepatu keren di televisi dan tiba-tiba sangat ingin membelinya, padahal sepatunya yang lama masih bagus. Keinginan Kian untuk membeli sepatu baru termasuk dalam kategori...",
+        "Pilihan Ganda":"A. Kebutuhan mendesak<br>B. Keinginan sesaat<br>C. Rencana masa depan<br>D. Kebutuhan pokok",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":9,
+        "Pertanyaan":"Pradipta menemukan dompet berisi uang di jalan, lalu memberikannya kepada guru piket agar bisa diumumkan dan dikembalikan kepada pemiliknya. Tindakan yang dilakukan Pradipta menunjukkan sikap...",
+        "Pilihan Ganda":"A. Boros<br>B. Jujur<br>C. Rakus<br>D. Malas",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":10,
+        "Pertanyaan":"Farel selalu menghabiskan semua uang jajannya setiap hari tanpa sisa sama sekali. Kebiasaan Farel ini bisa disebut...",
+        "Pilihan Ganda":"A. Rajin menabung<br>B. Hemat<br>C. Boros<br>D. Cerdas",
+        "Kunci Jawaban":"C"
+    },
+    {
+        "Nomor":11,
+        "Pertanyaan":"Raihan ingin membeli sepeda baru, dan ini adalah tujuannya menabung selama setahun. Membeli sepeda dalam kasus ini adalah contoh dari...",
+        "Pilihan Ganda":"A. Tujuan keuangan<br>B. Pengeluaran harian<br>C. Utang jangka pendek<br>D. Hadiah tak terduga",
+        "Kunci Jawaban":"A"
+    },
+    {
+        "Nomor":12,
+        "Pertanyaan":"Rifai diajak temannya untuk membeli jajanan yang sangat mahal, namun Rifai menolak karena uangnya ingin ia tabung. Keputusan Rifai menunjukkan bahwa ia dapat...",
+        "Pilihan Ganda":"A. Mengendalikan diri<br>B. Mengikuti teman<br>C. Menghamburkan uang<br>D. Bersikap sombong",
+        "Kunci Jawaban":"A"
+    },
+    {
+        "Nomor":13,
+        "Pertanyaan":"Faraz lebih memilih memperbaiki tasnya yang sedikit sobek daripada membeli tas baru yang mahal. Tindakan Faraz adalah contoh dari sikap...",
+        "Pilihan Ganda":"A. Boros<br>B. Hemat<br>C. Malas<br>D. Sombong",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":14,
+        "Pertanyaan":"Pradipta menerima uang jajan mingguan dan langsung membaginya ke dalam tiga amplop: untuk jajan, untuk menabung, dan untuk sedekah. Apa manfaat dari cara yang dilakukan Pradipta?",
+        "Pilihan Ganda":"A. Uangnya jadi terlihat lebih sedikit.<br>B. Pengeluarannya menjadi lebih teratur dan terkendali.<br>C. Teman-temannya akan memuji.<br>D. Uangnya akan cepat habis.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":15,
+        "Pertanyaan":"Farel selalu meminta uang lebih kepada ibunya setiap kali uangnya habis sebelum waktunya. Apa akibat dari kebiasaan Farel ini?",
+        "Pilihan Ganda":"A. Ia akan menjadi lebih mandiri.<br>B. Ia tidak akan belajar mengelola uang dengan baik.<br>C. Tabungannya akan bertambah banyak.<br>D. Ibunya akan selalu memberinya uang.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":16,
+        "Pertanyaan":"Raihan membantu ayahnya mencuci mobil dan diberi upah. Uang yang didapat Raihan adalah contoh...",
+        "Pilihan Ganda":"A. Uang hasil bekerja<br>B. Uang curian<br>C. Uang utang<br>D. Uang hilang",
+        "Kunci Jawaban":"A"
+    },
+    {
+        "Nomor":17,
+        "Pertanyaan":"Kian mencatat setiap uang yang masuk dan keluar di buku kecil. Apa fungsi dari catatan yang dibuat Kian?",
+        "Pilihan Ganda":"A. Agar bukunya cepat penuh.<br>B. Untuk melacak ke mana saja uangnya pergi.<br>C. Untuk dipamerkan ke teman-teman.<br>D. Agar uangnya bertambah.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":18,
+        "Pertanyaan":"Faraz membandingkan harga pensil di dua toko berbeda sebelum memutuskan membeli di toko yang lebih murah. Tindakan Faraz menunjukkan bahwa ia adalah pembeli yang...",
+        "Pilihan Ganda":"A. Terburu-buru<br>B. Cermat<br>C. Boros<br>D. Malas",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":19,
+        "Pertanyaan":"Rifai ingin membeli buku cerita. Keinginan Rifai ini adalah sebuah...",
+        "Pilihan Ganda":"A. Kebutuhan<br>B. Keinginan<br>C. Kewajiban<br>D. Paksaan",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":20,
+        "Pertanyaan":"Uang saku Farel adalah Rp10.000 per hari, dan ia harus membeli makan siang seharga Rp7.000. Bagi Farel, makan siang adalah...",
+        "Pilihan Ganda":"A. Keinginan<br>B. Kebutuhan<br>C. Tabungan<br>D. Hiburan",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":21,
+        "Pertanyaan":"Raihan menabung di celengan, sementara Kian menabung di bank. Jika dilihat dari risiko pencurian di rumah, uang siapa yang lebih aman?",
+        "Pilihan Ganda":"A. Raihan<br>B. Kian<br>C. Sama saja<br>D. Tidak ada yang aman",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":22,
+        "Pertanyaan":"Faraz meminjamkan penghapusnya kepada Pradipta. Apakah tindakan ini termasuk transaksi keuangan?",
+        "Pilihan Ganda":"A. Ya, karena ada serah terima barang.<br>B. Tidak, karena tidak melibatkan uang.<br>C. Ya, karena mereka berteman.<br>D. Tidak, karena penghapusnya murah.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":23,
+        "Pertanyaan":"Kian kehilangan uangnya di jalan. Apa yang seharusnya Kian lakukan di masa depan agar hal ini tidak terulang?",
+        "Pilihan Ganda":"A. Tidak pernah membawa uang lagi.<br>B. Menyimpan uang di saku atau dompet dengan baik.<br>C. Meminta ganti rugi pada semua orang.<br>D. Menyalahkan jalanan yang rusak.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":24,
+        "Pertanyaan":"Pradipta menggunakan uang tabungannya untuk membeli obat saat ia sakit. Penggunaan uang tabungan Pradipta adalah untuk...",
+        "Pilihan Ganda":"A. Dana darurat<br>B. Foya-foya<br>C. Investasi<br>D. Membayar utang",
+        "Kunci Jawaban":"A"
+    },
+    {
+        "Nomor":25,
+        "Pertanyaan":"Farel ingin membeli es krim. Es krim adalah contoh dari...",
+        "Pilihan Ganda":"A. Kebutuhan primer<br>B. Keinginan<br>C. Aset<br>D. Kebutuhan sekolah",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":26,
+        "Pertanyaan":"Rifai diberi pilihan: diberi Rp10.000 sekarang atau Rp10.000 besok. Dari sudut pandang nilai waktu uang, kapan uang itu sebaiknya diterima?",
+        "Pilihan Ganda":"A. Besok, agar lebih terasa spesial.<br>B. Sekarang, karena uang hari ini lebih berharga.<br>C. Tidak masalah kapan saja.<br>D. Tidak menerimanya sama sekali.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":27,
+        "Pertanyaan":"Orang tua Faraz memberinya uang sebagai hadiah karena mendapat nilai bagus. Uang tersebut merupakan...",
+        "Pilihan Ganda":"A. Gaji<br>B. Pendapatan pasif<br>C. Bonus atau insentif<br>D. Pinjaman",
+        "Kunci Jawaban":"C"
+    },
+    {
+        "Nomor":28,
+        "Pertanyaan":"Kian selalu membawa bekal makanan dari rumah. Apa keuntungan finansial dari kebiasaan Kian?",
+        "Pilihan Ganda":"A. Ia bisa makan lebih banyak.<br>B. Ia bisa menghemat uang jajan.<br>C. Ia jadi populer di antara teman-teman.<br>D. Ia tidak perlu istirahat.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":29,
+        "Pertanyaan":"Pradipta merusak mainan milik Farel dan harus menggantinya. Uang yang dikeluarkan Pradipta untuk mengganti mainan adalah...",
+        "Pilihan Ganda":"A. Pengeluaran tak terduga<br>B. Investasi<br>C. Tabungan<br>D. Hadiah",
+        "Kunci Jawaban":"A"
+    },
+    {
+        "Nomor":30,
+        "Pertanyaan":"Raihan dan Farel sama-sama ingin membeli bola. Raihan menabung, sedangkan Farel langsung meminta orang tuanya. Siapa yang belajar lebih banyak tentang nilai uang dari proses ini?",
+        "Pilihan Ganda":"A. Farel, karena ia langsung dapat bola.<br>B. Raihan, karena ia belajar usaha dan kesabaran.<br>C. Keduanya belajar hal yang sama.<br>D. Tidak ada yang belajar apa-apa.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":31,
+        "Pertanyaan":"Rifai membeli barang karena semua temannya memilikinya. Keputusan Rifai dipengaruhi oleh...",
+        "Pilihan Ganda":"A. Kebutuhan pribadi<br>B. Tekanan teman sebaya<br>C. Perencanaan keuangan<br>D. Nasihat orang tua",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":32,
+        "Pertanyaan":"Pradipta berkata, \"Aku tidak butuh ini, tapi aku mau ini.\" Pernyataan Pradipta menunjukkan bahwa ia bisa membedakan antara...",
+        "Pilihan Ganda":"A. Mahal dan murah<br>B. Baru dan bekas<br>C. Kebutuhan dan keinginan<br>D. Baik dan buruk",
+        "Kunci Jawaban":"C"
+    },
+    {
+        "Nomor":33,
+        "Pertanyaan":"Faraz menyimpan uangnya untuk membeli buku pelajaran baru semester depan. Tindakan Faraz adalah contoh dari...",
+        "Pilihan Ganda":"A. Perencanaan keuangan jangka pendek<br>B. Pemborosan<br>C. Pembelian impulsif<br>D. Menghadapi keadaan darurat",
+        "Kunci Jawaban":"A"
+    },
+    {
+        "Nomor":34,
+        "Pertanyaan":"Raihan punya uang pas untuk membeli buku pelajaran baru atau tiket konser musik yang ia inginkan. Jika ia memutuskan membeli buku pelajaran, maka kesempatan menonton konser musik yang ia lewatkan disebut...",
+        "Pilihan Ganda":"A. Harga buku pelajaran<br>B. Biaya peluang<br>C. Kerugian finansial<br>D. Waktu yang terbuang",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":35,
+        "Pertanyaan":"Kian ditawari dua pilihan menabung: di celengan di rumah atau di rekening bank yang memberikan bunga kecil setiap tahun. Apa keunggulan utama menabung di bank dalam skenario ini?",
+        "Pilihan Ganda":"A. Uangnya bisa diambil kapan saja tanpa kesulitan.<br>B. Uangnya bisa bertambah sedikit karena ada bunga.<br>C. Celengannya tidak bisa pecah.<br>D. Teman-teman tidak akan tahu ia punya tabungan.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":36,
+        "Pertanyaan":"Faraz sedang berbelanja kebutuhan sekolah. Di kasir, ia melihat cokelat mahal dan langsung membelinya tanpa berpikir panjang, padahal uangnya hampir habis. Tindakan Faraz membeli cokelat disebut...",
+        "Pilihan Ganda":"A. Perencanaan matang<br>B. Pembelian impulsif<br>C. Investasi jangka panjang<br>D. Menabung darurat",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":37,
+        "Pertanyaan":"Pradipta ingin membeli konsol game tahun depan, sementara Farel ingin membeli es teh nanti sore. Tujuan keuangan siapa yang tergolong jangka panjang?",
+        "Pilihan Ganda":"A. Pradipta<br>B. Farel<br>C. Keduanya jangka pendek<br>D. Keduanya jangka panjang",
+        "Kunci Jawaban":"A"
+    },
+    {
+        "Nomor":38,
+        "Pertanyaan":"Farel meminjam uang dari Raihan dan berjanji mengembalikan hari Jumat. Namun, saat hari Jumat tiba, Farel pura-pura lupa. Apa risiko yang dihadapi Farel dengan perilakunya?",
+        "Pilihan Ganda":"A. Uangnya akan bertambah.<br>B. Raihan tidak akan memercayainya lagi di kemudian hari.<br>C. Raihan akan memberinya lebih banyak uang.<br>D. Ia akan dipuji sebagai orang yang cerdas.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":39,
+        "Pertanyaan":"Kian ingin membeli sepatu baru. Ia mengunjungi tiga toko dan membandingkan harga serta kualitas sepatu sebelum memutuskan membeli. Apa tujuan utama Kian melakukan perbandingan tersebut?",
+        "Pilihan Ganda":"A. Untuk menghabiskan waktu luang.<br>B. Untuk mendapatkan penawaran terbaik (nilai terbaik untuk uangnya).<br>C. Untuk menunjukkan bahwa ia punya banyak pilihan.<br>D. Untuk membeli sepatu yang paling mahal.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":40,
+        "Pertanyaan":"Rifai mendapatkan uang Rp100.000 dan langsung menghabiskannya untuk jajan bersama teman-teman. Di hari yang sama, sepedanya rusak dan butuh perbaikan kecil, tapi ia sudah tidak punya uang. Apa yang seharusnya Rifai lakukan dengan uang Rp100.000 itu?",
+        "Pilihan Ganda":"A. Menghabiskan semuanya agar tidak hilang.<br>B. Menyisihkan sebagian untuk dana tak terduga atau tabungan.<br>C. Memberikan semuanya kepada teman.<br>D. Membeli barang yang paling mahal yang ia bisa beli.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":41,
+        "Pertanyaan":"Raihan punya ide bisnis menjual stiker dengan modal Rp50.000. Setelah semua stiker terjual, uangnya menjadi Rp80.000. Selisih Rp30.000 yang didapat Raihan disebut...",
+        "Pilihan Ganda":"A. Kerugian<br>B. Modal awal<br>C. Keuntungan (Laba)<br>D. Utang",
+        "Kunci Jawaban":"C"
+    },
+    {
+        "Nomor":42,
+        "Pertanyaan":"Faraz melihat penawaran di toko online: \"Beli 2 Gratis 1\". Ia sebenarnya hanya butuh satu barang, namun karena penawaran itu, ia membeli dua agar dapat bonus. Apa yang mungkin menjadi kerugian dari keputusan Faraz?",
+        "Pilihan Ganda":"A. Ia mendapatkan barang gratis.<br>B. Ia mengeluarkan uang lebih banyak dari yang seharusnya ia butuhkan.<br>C. Toko akan berterima kasih padanya.<br>D. Ia menghemat uang.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":43,
+        "Pertanyaan":"Kian sangat ingin membeli mainan edisi terbatas yang harganya mahal. Ia sadar, jika membelinya, ia tidak akan bisa jajan selama sebulan. Situasi yang dihadapi Kian ini mengharuskannya untuk membuat...",
+        "Pilihan Ganda":"A. Utang baru<br>B. Skala prioritas<br>C. Musuh baru<br>D. Rencana liburan",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":44,
+        "Pertanyaan":"Pradipta dan Farel sama-sama menabung Rp10.000 per minggu. Pradipta menyimpannya di bank, sementara Farel menyimpannya di laci. Setelah setahun, uang Pradipta sedikit lebih banyak karena bunga. Konsep apa yang menjelaskan mengapa uang Pradipta bertambah?",
+        "Pilihan Ganda":"A. Inflasi<br>B. Bunga bank<br>C. Biaya administrasi<br>D. Pajak",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":45,
+        "Pertanyaan":"Raihan kehilangan kartu ATM-nya dan segera menelepon bank untuk memblokirnya. Mengapa tindakan Raihan sangat penting dan mendesak?",
+        "Pilihan Ganda":"A. Agar ia bisa mendapatkan kartu baru dengan desain yang lebih bagus.<br>B. Untuk mencegah orang lain menyalahgunakan kartu dan mengambil uangnya.<br>C. Agar bank tahu bahwa ia pelanggan yang aktif.<br>D. Untuk mendapatkan hadiah dari bank.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":46,
+        "Pertanyaan":"Faraz ingin membeli ponsel baru dengan cara mencicil selama 12 bulan. Total harga yang harus ia bayar jika dicicil lebih mahal daripada jika membeli tunai. Mengapa total harga cicilan lebih mahal?",
+        "Pilihan Ganda":"A. Karena ada biaya tambahan berupa bunga.<br>B. Karena ponselnya lebih bagus jika dibeli kredit.<br>C. Karena penjualnya tidak suka pembayaran tunai.<br>D. Karena ada garansi tambahan.",
+        "Kunci Jawaban":"A"
+    },
+    {
+        "Nomor":47,
+        "Pertanyaan":"Rifai menerima pesan singkat (SMS) yang menyatakan ia memenangkan hadiah besar, tapi harus mentransfer \"biaya administrasi\" terlebih dahulu. Apa yang paling mungkin terjadi di balik pesan singkat tersebut?",
+        "Pilihan Ganda":"A. Rifai benar-benar pemenang yang beruntung.<br>B. Itu adalah upaya penipuan untuk mencuri uang Rifai.<br>C. Pengirimnya salah mengirim pesan.<br>D. Itu adalah promosi resmi dari pemerintah.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":48,
+        "Pertanyaan":"Pradipta ingin memulai usaha kecil, dan Raihan menyarankan untuk tidak menaruh semua modalnya hanya pada satu jenis produk. Nasihat Raihan ini bertujuan untuk...",
+        "Pilihan Ganda":"A. Membuat usaha Pradipta lebih rumit.<br>B. Mengurangi risiko kerugian jika satu produk tidak laku.<br>C. Menghabiskan modal lebih cepat.<br>D. Meniru usaha orang lain.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":49,
+        "Pertanyaan":"Farel lebih suka membeli barang-barang bermerek dan mahal untuk dipamerkan, meskipun fungsi barangnya sama dengan yang tidak bermerek dan lebih murah. Perilaku Farel lebih didorong oleh...",
+        "Pilihan Ganda":"A. Kebutuhan fungsional<br>B. Keinginan untuk menabung<br>C. Gengsi atau status sosial<br>D. Nasihat keuangan yang baik",
+        "Kunci Jawaban":"C"
+    },
+    {
+        "Nomor":50,
+        "Pertanyaan":"Raihan menyimpan uang untuk tujuan jangka pendek (membeli sepatu) dan jangka panjang (membeli laptop untuk kuliah). Bagaimana cara Raihan sebaiknya membedakan penyimpanan uangnya?",
+        "Pilihan Ganda":"A. Mencampur semua uang di satu tempat.<br>B. Memisahkan tabungan untuk sepatu dan laptop di rekening atau celengan berbeda.<br>C. Menghabiskan uang untuk sepatu dulu, baru memikirkan laptop.<br>D. Melupakan rencana membeli laptop karena terlalu lama.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":51,
+        "Pertanyaan":"Harga es krim favorit Kian tahun lalu Rp5.000. Tahun ini, dengan ukuran dan rasa yang sama, harganya menjadi Rp6.000. Kenaikan harga ini adalah contoh dari fenomena ekonomi yang disebut...",
+        "Pilihan Ganda":"A. Diskon<br>B. Deflasi<br>C. Inflasi<br>D. Barter",
+        "Kunci Jawaban":"C"
+    },
+    {
+        "Nomor":52,
+        "Pertanyaan":"Faraz memiliki kartu kredit milik orang tuanya dan menggunakannya untuk membeli game online tanpa izin. Apa konsekuensi utama dari tindakan Faraz?",
+        "Pilihan Ganda":"A. Ia akan menjadi gamer profesional.<br>B. Ia merusak kepercayaan orang tuanya dan menciptakan tagihan utang.<br>C. Perusahaan game akan memberinya bonus.<br>D. Kartu kreditnya akan memiliki limit lebih besar.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":53,
+        "Pertanyaan":"Pradipta menabung dengan rajin, namun ia tidak pernah tahu untuk apa uang itu akan digunakan. Apa kelemahan dari cara menabung Pradipta?",
+        "Pilihan Ganda":"A. Uangnya akan hilang.<br>B. Menabung tanpa tujuan yang jelas membuatnya kurang termotivasi.<br>C. Bank akan menutup rekeningnya.<br>D. Tabungannya akan terlalu banyak.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":54,
+        "Pertanyaan":"Raihan, seorang pelajar, ditawari pekerjaan paruh waktu dengan gaji besar, tetapi akan mengganggu waktu belajarnya. Apa trade-off (sesuatu yang harus dikorbankan) utama yang dihadapi Raihan?",
+        "Pilihan Ganda":"A. Uang vs. Popularitas<br>B. Waktu luang vs. Tidur<br>C. Pendapatan vs. Kualitas pendidikan<br>D. Teman vs. Keluarga",
+        "Kunci Jawaban":"C"
+    },
+    {
+        "Nomor":55,
+        "Pertanyaan":"Rifai punya utang kepada Kian dan Pradipta. Ia memutuskan membayar utangnya kepada Kian terlebih dahulu karena Kian lebih membutuhkannya. Keputusan Rifai menunjukkan kemampuannya dalam...",
+        "Pilihan Ganda":"A. Menghindari utang<br>B. Memprioritaskan pembayaran utang<br>C. Mencari utang baru<br>D. Mengabaikan utang",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":56,
+        "Pertanyaan":"Pradipta ingin membeli sepeda seharga Rp1.000.000. Ia punya pilihan: menabung Rp100.000 selama 10 bulan, atau meminjam uang dan membayarnya kembali dengan bunga. Apa keuntungan utama memilih menabung daripada meminjam?",
+        "Pilihan Ganda":"A. Ia bisa dapat sepeda lebih cepat.<br>B. Ia tidak perlu membayar biaya tambahan (bunga).<br>C. Ia akan lebih populer.<br>D. Sepedanya akan lebih awet.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":57,
+        "Pertanyaan":"Kian membuat anggaran bulanan. Di tengah bulan, ada pengeluaran tak terduga untuk menjenguk teman yang sakit. Apa yang harus Kian lakukan terhadap anggarannya?",
+        "Pilihan Ganda":"A. Mengabaikan anggaran sama sekali.<br>B. Menyesuaikan atau merevisi anggaran dengan mengurangi pos pengeluaran lain.<br>C. Berhenti membuat anggaran untuk selamanya.<br>D. Meminta uang lebih dari orang tua tanpa penjelasan.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":58,
+        "Pertanyaan":"Faraz menemukan dompet di jalan, lalu mengambil uangnya dan membuang dompetnya. Selain tidak jujur, tindakan Faraz juga berisiko secara hukum karena termasuk...",
+        "Pilihan Ganda":"A. Investasi<br>B. Pencurian<br>C. Jual beli<br>D. Negosiasi",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":59,
+        "Pertanyaan":"Raihan sadar bahwa semakin banyak uang yang ia miliki, semakin banyak \"teman\" yang mendekat hanya untuk meminta traktiran. Pelajaran sosial-finansial apa yang bisa diambil Raihan?",
+        "Pilihan Ganda":"A. Uang selalu mendatangkan teman sejati.<br>B. Penting untuk bisa membedakan teman tulus dengan yang hanya memanfaatkan.<br>C. Sebaiknya semua uang diberikan kepada teman.<br>D. Semakin kaya semakin baik.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":60,
+        "Pertanyaan":"Farel sering menggunakan layanan \"bayar nanti\" (paylater) untuk membeli barang-barang kecil seperti kopi dan makanan ringan. Apa risiko dari kebiasaan Farel ini?",
+        "Pilihan Ganda":"A. Kopi dan makanannya akan terasa lebih enak.<br>B. Utang-utang kecil dapat menumpuk menjadi besar dan sulit dilunasi.<br>C. Ia akan mendapatkan banyak poin hadiah.<br>D. Ia dianggap sebagai pelanggan prioritas.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":61,
+        "Pertanyaan":"Pradipta ingin berinvestasi. Ia diberi tahu bahwa investasi dengan potensi keuntungan sangat tinggi biasanya juga memiliki...",
+        "Pilihan Ganda":"A. Risiko yang sangat rendah<br>B. Risiko yang sangat tinggi<br>C. Jaminan keuntungan<br>D. Tidak ada risiko sama sekali",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":62,
+        "Pertanyaan":"Kian sedang menabung untuk dana darurat. Manakah di bawah ini yang paling tepat dianggap sebagai keadaan darurat untuk menggunakan dana tersebut?",
+        "Pilihan Ganda":"A. Membeli tiket konser yang sedang diskon.<br>B. Mengganti layar ponsel yang retak agar bisa digunakan untuk belajar.<br>C. Membeli baju baru untuk pesta.<br>D. Mentraktir teman yang berulang tahun.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":63,
+        "Pertanyaan":"Faraz menjual akun game online miliknya kepada Raihan. Dalam transaksi ini, akun game online dianggap sebagai...",
+        "Pilihan Ganda":"A. Aset fisik<br>B. Aset digital<br>C. Utang<br>D. Barang ilegal",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":64,
+        "Pertanyaan":"Rifai selalu membayar tagihan (misal: iuran kelas) tepat waktu. Sikap Rifai ini menunjukkan bahwa ia...",
+        "Pilihan Ganda":"A. Tidak peduli dengan uang.<br>B. Memiliki kebiasaan finansial yang buruk.<br>C. Bertanggung jawab secara finansial.<br>D. Suka menunda-nunda pekerjaan.",
+        "Kunci Jawaban":"C"
+    },
+    {
+        "Nomor":65,
+        "Pertanyaan":"Pradipta menerima dua tawaran pekerjaan: (A) gaji besar tapi pekerjaan tidak ia sukai, dan (B) gaji lebih kecil tapi pekerjaan sangat ia sukai. Faktor non-finansial apa yang menjadi pertimbangan penting bagi Pradipta?",
+        "Pilihan Ganda":"A. Jumlah gaji<br>B. Lokasi kantor<br>C. Kepuasan kerja<br>D. Bonus tahunan",
+        "Kunci Jawaban":"C"
+    },
+    {
+        "Nomor":66,
+        "Pertanyaan":"Raihan membuka rekening investasi reksa dana. Ia tahu bahwa nilai investasinya bisa naik atau turun setiap hari. Sifat dari nilai investasi ini disebut...",
+        "Pilihan Ganda":"A. Stabil<br>B. Tetap<br>C. Fluktuatif<br>D. Dijamin",
+        "Kunci Jawaban":"C"
+    },
+    {
+        "Nomor":67,
+        "Pertanyaan":"Farel membeli makanan menggunakan aplikasi dengan metode pembayaran QRIS. Metode pembayaran yang digunakan Farel adalah...",
+        "Pilihan Ganda":"A. Tunai<br>B. Kartu kredit<br>C. Digital atau non-tunai<br>D. Barter",
+        "Kunci Jawaban":"C"
+    },
+    {
+        "Nomor":68,
+        "Pertanyaan":"Faraz memberikan PIN ATM-nya kepada temannya agar bisa diambilkan uang. Mengapa tindakan Faraz ini sangat berisiko?",
+        "Pilihan Ganda":"A. Karena temannya bisa mengambil uang lebih banyak dari yang disuruh.<br>B. Karena PIN-nya bisa diketahui dan disalahgunakan oleh siapa saja.<br>C. Karena mesin ATM bisa rusak.<br>D. Karena bank akan marah.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":69,
+        "Pertanyaan":"Rifai menemukan penawaran investasi yang menjanjikan keuntungan 100% dalam seminggu tanpa risiko. Apa yang seharusnya menjadi reaksi pertama Rifai?",
+        "Pilihan Ganda":"A. Langsung menginvestasikan semua uangnya.<br>B. Bersikap skeptis dan waspada karena penawaran itu terlalu bagus untuk jadi kenyataan.<br>C. Mengajak semua temannya untuk ikut.<br>D. Meminjam uang untuk berinvestasi.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":70,
+        "Pertanyaan":"Pradipta memiliki polis asuransi kesehatan. Apa fungsi utama dari asuransi kesehatan yang dimiliki Pradipta?",
+        "Pilihan Ganda":"A. Untuk membuatnya lebih sering sakit.<br>B. Sebagai bentuk tabungan masa depan.<br>C. Untuk melindunginya dari biaya medis yang tinggi jika ia sakit.<br>D. Untuk mendapatkan diskon di rumah sakit.",
+        "Kunci Jawaban":"C"
+    },
+    {
+        "Nomor":71,
+        "Pertanyaan":"Farel memiliki utang di beberapa tempat. Ia memutuskan untuk melunasi utang dengan bunga paling tinggi terlebih dahulu. Strategi Farel ini dikenal sebagai metode...",
+        "Pilihan Ganda":"A. Bola salju (snowball)<br>B. Longsoran utang (avalanche)<br>C. Konsolidasi utang<br>D. Menghindari utang",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":72,
+        "Pertanyaan":"Keluarga Raihan memiliki dana pendidikan untuknya yang disimpan di instrumen investasi. Tujuan utama dari dana pendidikan adalah...",
+        "Pilihan Ganda":"A. Untuk biaya liburan keluarga.<br>B. Untuk memastikan biaya sekolah dan kuliah Raihan di masa depan terjamin.<br>C. Untuk membeli mobil baru saat Raihan lulus.<br>D. Untuk modal usaha orang tuanya.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":73,
+        "Pertanyaan":"Faraz membuat konten di media sosial tentang cara mengelola uang jajan dan mendapatkan penghasilan dari iklan. Faraz bisa disebut sebagai seorang...",
+        "Pilihan Ganda":"A. Akuntan publik<br>B. Manajer investasi<br>C. Finfluencer (Financial Influencer)<br>D. Analis kredit",
+        "Kunci Jawaban":"C"
+    },
+    {
+        "Nomor":74,
+        "Pertanyaan":"Kian mewarisi sebuah rumah (aset) tetapi juga utang pajak yang belum dibayar atas rumah tersebut (liabilitas). Apa artinya ini bagi keuangan Kian?",
+        "Pilihan Ganda":"A. Ia hanya mendapatkan keuntungan dari rumah tersebut.<br>B. Ia mendapatkan aset sekaligus tanggung jawab untuk melunasi utangnya.<br>C. Utang pajak akan hilang dengan sendirinya.<br>D. Rumah tersebut tidak berharga.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":75,
+        "Pertanyaan":"Pradipta ingin memulai berinvestasi saham, namun ia takut rugi jika salah memilih saham. Manajer investasi menyarankannya membeli reksa dana saham. Mengapa reksa dana bisa jadi pilihan yang lebih aman untuk pemula?",
+        "Pilihan Ganda":"A. Karena keuntungannya pasti lebih besar dari saham individu.<br>B. Karena dananya dikelola oleh profesional dan tersebar di banyak saham (diversifikasi).<br>C. Karena tidak ada biaya pembelian sama sekali.<br>D. Karena bisa dibeli dengan utang.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":76,
+        "Pertanyaan":"Rifai mendapati tagihan kartu kreditnya membengkak karena banyak biaya tersembunyi yang tidak ia sadari. Pelajaran apa yang bisa diambil dari pengalaman Rifai?",
+        "Pilihan Ganda":"A. Jangan pernah menggunakan kartu kredit.<br>B. Selalu baca syarat dan ketentuan dengan teliti sebelum menggunakan produk keuangan.<br>C. Biaya tersembunyi adalah hal yang wajar.<br>D. Bank selalu benar.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":77,
+        "Pertanyaan":"Raihan mendapat penghasilan dari menyewakan kamarnya yang tidak terpakai. Penghasilan yang didapat Raihan tanpa harus aktif bekerja ini disebut...",
+        "Pilihan Ganda":"A. Gaji aktif<br>B. Pendapatan pasif<br>C. Dana darurat<br>D. Kerugian",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":78,
+        "Pertanyaan":"Farel bekerja di sebuah kafe. Pemilik kafe memotong sebagian gajinya untuk iuran BPJS Ketenagakerjaan. Apa tujuan dari iuran tersebut?",
+        "Pilihan Ganda":"A. Untuk mengurangi gaji Farel.<br>B. Sebagai tabungan untuk liburan pemilik kafe.<br>C. Untuk memberikan jaminan sosial bagi Farel, seperti dana pensiun dan jaminan kecelakaan kerja.<br>D. Untuk membayar pajak restoran.",
+        "Kunci Jawaban":"C"
+    },
+    {
+        "Nomor":79,
+        "Pertanyaan":"Kian sedang mempertimbangkan untuk mengambil pinjaman online. Apa langkah pertama yang paling penting yang harus ia lakukan?",
+        "Pilihan Ganda":"A. Langsung mengajukan pinjaman di aplikasi pertama yang ia temukan.<br>B. Memeriksa apakah aplikasi pinjaman tersebut legal dan terdaftar di OJK (Otoritas Jasa Keuangan).<br>C. Memberitahu semua temannya bahwa ia akan punya banyak uang.<br>D. Menyiapkan data pribadi untuk diunggah.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":80,
+        "Pertanyaan":"Pradipta membeli saham perusahaan A seharga Rp1.000 per lembar. Beberapa bulan kemudian, ia menjualnya seharga Rp1.200 per lembar. Keuntungan Rp200 per lembar yang ia dapatkan disebut...",
+        "Pilihan Ganda":"A. Dividen<br>B. Capital Gain<br>C. Bunga<br>D. Kerugian",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":81,
+        "Pertanyaan":"Faraz memiliki beberapa sumber pendapatan: uang saku, hasil kerja paruh waktu, dan keuntungan dari jualan online. Memiliki beberapa sumber pendapatan seperti Faraz dapat membantu...",
+        "Pilihan Ganda":"A. Membuatnya lebih boros.<br>B. Meningkatkan keamanan finansial jika salah satu sumber pendapatan terhenti.<br>C. Membuatnya bingung menghitung uang.<br>D. Mengurangi jumlah teman.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":82,
+        "Pertanyaan":"Raihan ingin menabung untuk pensiun, meskipun usianya masih sangat muda. Apa keuntungan utama mulai menabung untuk pensiun sejak dini?",
+        "Pilihan Ganda":"A. Tidak ada keuntungannya, karena pensiun masih sangat lama.<br>B. Uangnya akan terkena inflasi dan menjadi tidak berharga.<br>C. Ia akan kehilangan masa mudanya.<br>D. Adanya efek bunga majemuk (compounding) yang membuat uangnya bertumbuh secara eksponensial dalam jangka waktu lama.",
+        "Kunci Jawaban":"D"
+    },
+    {
+        "Nomor":83,
+        "Pertanyaan":"Rifai merasa stres karena utangnya menumpuk. Stres yang dialami Rifai menunjukkan bahwa masalah keuangan dapat memengaruhi...",
+        "Pilihan Ganda":"A. Kesehatan fisik saja<br>B. Kesehatan mental dan emosional<br>C. Status sosial saja<br>D. Kondisi cuaca",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":84,
+        "Pertanyaan":"Pradipta tidak pernah memeriksa laporan keuangannya dan tidak tahu berapa banyak utang yang ia miliki. Ketidaktahuan Pradipta ini adalah contoh dari...",
+        "Pilihan Ganda":"A. Literasi finansial yang baik<br>B. Buta finansial (Financial Illiteracy)<br>C. Kejeniusan finansial<br>D. Strategi investasi",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":85,
+        "Pertanyaan":"Faraz ingin berdonasi untuk membantu korban bencana alam. Tindakan Faraz ini, selain membantu sesama, juga merupakan bagian dari pengeluaran untuk...",
+        "Pilihan Ganda":"A. Tujuan sosial (filantropi)<br>B. Tujuan investasi<br>C. Tujuan konsumtif<br>D. Tujuan spekulatif",
+        "Kunci Jawaban":"A"
+    },
+    {
+        "Nomor":86,
+        "Pertanyaan":"Farel memutuskan untuk berhenti berlangganan beberapa aplikasi streaming yang jarang ia tonton untuk menghemat uang. Tindakan Farel adalah contoh dari...",
+        "Pilihan Ganda":"A. Meningkatkan pendapatan<br>B. Mengurangi pengeluaran tidak perlu<br>C. Mengambil utang baru<br>D. Berinvestasi pada saham",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":87,
+        "Pertanyaan":"Raihan membuka usaha kecil. Ia memisahkan rekening bank pribadi dengan rekening bank untuk usahanya. Mengapa tindakan Raihan ini penting?",
+        "Pilihan Ganda":"A. Agar terlihat lebih profesional.<br>B. Untuk mempermudah pelacakan arus kas usaha dan menghindari tercampurnya keuangan pribadi.<br>C. Agar bisa mendapatkan bunga lebih banyak.<br>D. Agar tidak diketahui oleh keluarganya.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":88,
+        "Pertanyaan":"Skor kredit Kian buruk karena ia sering terlambat membayar cicilan. Apa dampak dari skor kredit yang buruk?",
+        "Pilihan Ganda":"A. Ia akan lebih mudah mendapatkan pinjaman di masa depan.<br>B. Ia akan kesulitan atau mendapatkan bunga yang lebih tinggi saat mengajukan pinjaman.<br>C. Bank akan memberinya hadiah.<br>D. Skor kredit tidak memiliki dampak apa pun.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":89,
+        "Pertanyaan":"Pradipta memiliki saham perusahaan B yang rutin membagikan sebagian keuntungannya kepada pemegang saham. Pembagian keuntungan ini disebut...",
+        "Pilihan Ganda":"A. Capital Gain<br>B. Bunga<br>C. Dividen<br>D. Gaji",
+        "Kunci Jawaban":"C"
+    },
+    {
+        "Nomor":90,
+        "Pertanyaan":"Rifai ingin membeli rumah dalam 10 tahun ke depan. Untuk mencapai tujuan ini, ia perlu membuat...",
+        "Pilihan Ganda":"A. Rencana pengeluaran harian<br>B. Rencana keuangan jangka panjang<br>C. Daftar belanja mingguan<br>D. Rencana liburan tahunan",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":91,
+        "Pertanyaan":"Faraz mendapat nasihat dari seorang finfluencer untuk membeli aset kripto yang sedang naik daun. Sebelum mengikuti nasihat tersebut, apa yang sebaiknya Faraz lakukan?",
+        "Pilihan Ganda":"A. Langsung membeli aset tersebut sebanyak-banyaknya.<br>B. Melakukan riset sendiri (Do Your Own Research - DYOR) untuk memahami risiko dan potensinya.<br>C. Menjual semua barangnya untuk berinvestasi.<br>D. Menganggap nasihat itu sebagai perintah yang wajib diikuti.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":92,
+        "Pertanyaan":"Kian menyadari bahwa nilai uang Rp100.000 hari ini tidak akan sama dengan nilai uang Rp100.000 lima tahun lagi karena inflasi. Pemahaman Kian ini berkaitan dengan konsep...",
+        "Pilihan Ganda":"A. Nilai buku<br>B. Nilai waktu dari uang (Time Value of Money)<br>C. Nilai intrinsik<br>D. Nilai jual kembali",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":93,
+        "Pertanyaan":"Farel memiliki gaya hidup yang lebih besar pasak daripada tiang. Apa artinya peribahasa ini?",
+        "Pilihan Ganda":"A. Penghasilannya lebih besar dari pengeluarannya.<br>B. Pengeluarannya lebih besar dari penghasilannya.<br>C. Ia tinggal di rumah dengan banyak tiang.<br>D. Ia adalah seorang arsitek.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":94,
+        "Pertanyaan":"Pradipta berinvestasi pada emas. Salah satu keuntungan emas sebagai aset investasi adalah nilainya cenderung stabil atau naik saat kondisi ekonomi tidak menentu. Fungsi emas dalam kasus ini adalah sebagai...",
+        "Pilihan Ganda":"A. Aset spekulatif<br>B. Safe haven (aset aman)<br>C. Aset tidak berwujud<br>D. Utang",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":95,
+        "Pertanyaan":"Raihan menggunakan metode SMART (Specific, Measurable, Achievable, Relevant, Time-bound) untuk menetapkan tujuan keuangannya. Apa tujuan penggunaan metode ini?",
+        "Pilihan Ganda":"A. Agar tujuannya terdengar keren.<br>B. Agar tujuannya menjadi lebih jelas, terukur, dan realistis untuk dicapai.<br>C. Agar ia bisa pamer kepada teman-temannya.<br>D. Agar tujuannya cepat gagal.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":96,
+        "Pertanyaan":"Rifai baru saja lulus dan mulai bekerja. Apa langkah keuangan pertama yang paling mendasar yang sebaiknya ia lakukan?",
+        "Pilihan Ganda":"A. Membeli mobil sport.<br>B. Membuat anggaran untuk mengelola pendapatan dan pengeluarannya.<br>C. Berlibur keliling dunia.<br>D. Berhenti bekerja dan menikmati hidup.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":97,
+        "Pertanyaan":"Kian mewarisi rumah besar (aset) beserta utang PBB yang sangat besar (liabilitas). Apa kesimpulan yang paling akurat mengenai warisan Kian?",
+        "Pilihan Ganda":"A. Ia langsung menjadi kaya tanpa masalah.<br>B. Aset yang diwariskan datang dengan liabilitas yang perlu diselesaikan.<br>C. Sebaiknya rumah itu dibiarkan saja.<br>D. Pajak akan lunas dengan sendirinya.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":98,
+        "Pertanyaan":"Farel membeli barang edisi kolektor yang langka. Ia berharap harganya akan naik berkali-kali lipat di masa depan untuk dijual kembali. Tindakan Farel ini lebih bersifat...",
+        "Pilihan Ganda":"A. Menabung<br>B. Spekulasi<br>C. Menciptakan dana darurat<br>D. Membayar utang",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":99,
+        "Pertanyaan":"Pradipta, Raihan, dan Kian berdiskusi. Pradipta berkata, \"Yang penting punya aset.\" Raihan berkata, \"Yang penting arus kas (cash flow) positif.\" Kian berkata, \"Yang penting bebas utang.\" Diskusi mereka menunjukkan bahwa kesehatan finansial...",
+        "Pilihan Ganda":"A. Hanya dilihat dari satu faktor saja.<br>B. Merupakan kombinasi dari beberapa faktor (aset, arus kas, dan utang).<br>C. Tidak penting untuk didiskusikan.<br>D. Hanya soal siapa yang paling kaya.",
+        "Kunci Jawaban":"B"
+    },
+    {
+        "Nomor":100,
+        "Pertanyaan":"Faraz memahami bahwa literasi finansial bukan hanya tentang menjadi kaya, tetapi tentang memiliki pengetahuan dan keterampilan untuk membuat keputusan keuangan yang efektif demi mencapai kesejahteraan hidup. Menurut pemahaman Faraz, apa tujuan akhir dari literasi finansial?",
+        "Pilihan Ganda":"A. Mengumpulkan uang sebanyak-banyaknya.<br>B. Mencapai kesejahteraan dan keamanan finansial (financial well-being).<br>C. Untuk bisa pamer kepada orang lain.<br>D. Untuk mengalahkan teman-temannya dalam hal kekayaan.",
+        "Kunci Jawaban":"B"
+    }
+]

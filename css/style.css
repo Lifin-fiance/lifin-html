@@ -1,0 +1,78 @@
+  .faq-item {
+    transition: transform 0.18s cubic-bezier(.4,0,.2,1), box-shadow 0.18s cubic-bezier(.4,0,.2,1), height 0.3s;
+  }
+  .faq-item:hover {
+    transform: translateY(10px);
+    box-shadow: 0 0px 0 0 #D4B000 !important;
+  }
+  .faq-item:active {
+    transform: translateY(4px);
+    box-shadow: 0 0px 0 0 #D4B000 !important;
+  }
+    html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background: white;
+  }
+
+  .text-outline {
+    text-shadow:
+      0 0 2px #000,
+      -3px 0 1px #000, 3px 0 1px #000,
+      0 -3px 1px #000, 0 3px 1px #000,
+      -3px -3px 1px #000, 3px -3px 1px #000,
+      -3px 3px 1px #000, 3px 3px 1px #000;
+  }
+
+  .montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .text-shadow {
+    text-shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
+  }
+  .button {
+      transition: all 0.15s ease-in-out;
+    }
+
+    /* This applies to ALL buttons */
+    button:hover {
+      transform: translateY(10px);
+      box-shadow: none !important;
+    }
+
+    button:active {
+      transform: translateY(4px);
+      box-shadow: none !important;
+    }
+
+    /* To exclude a button from this effect, add a class, e.g. .no-anim */
+    .no-anim:hover, .no-anim:active {
+      transform: none !important;
+      box-shadow: initial !important;
+    }
+
+  #dropdown-trigger {
+    /* Flexbox for centering text and icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  #jenjang-text {
+    flex: 1 1 0%;
+    text-align: center;
+    min-width: 0;
+  }
+  #dropdown-trigger svg {
+    margin-right: 2px;
+    margin-left: 0;
+  }

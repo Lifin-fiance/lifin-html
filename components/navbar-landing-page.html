@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LIFIN - Best way to learn Financial Literacy</title>
+  <link rel="icon" type="image/png" href="assets/images/fav.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Poppins:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Header -->
+<header class="sticky top-0 left-0 w-full h-[109px] bg-white flex items-center justify-between px-6 lg:px-20 shadow-sm z-50" style="box-shadow: 0 4px 20px 0 rgba(4,179,227,0.2); font-family: 'Poppins', sans-serif;">
+  <div class="flex items-center">
+    <img src="assets/images/icon.png" class="w-[75px] lg:w-[100px] object-cover cursor-pointer" alt="logolifin" onclick="scrollToTop()">
+  </div>
+  <script>
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+
+<!-- Navigasi Desktop -->
+<div class="hidden lg:flex bg-[#FFD635] rounded-full w-[633px] h-[61px] items-center justify-between pl-[50px] overflow-hidden">
+  <div class="flex items-center gap-[65px]">
+    <a href="#" onclick="scrollToTop(); return false;" class="text-gray-800 text-[20px] font-medium hover:text-[#04B3E3] transition-colors">Beranda</a>
+    <!-- PERUBAHAN: Mengarahkan ke section dengan id="berita" -->
+    <a href="#berita" class="text-gray-800 text-[20px] font-medium hover:text-[#04B3E3] transition-colors">News</a>
+    <!-- PERUBAHAN: Mengarahkan ke section dengan id="faq" -->
+    <a href="#faq" class="text-gray-800 text-[20px] font-medium hover:text-[#04B3E3] transition-colors">FAQ</a>
+  </div>
+  <button 
+    onclick="window.location.href='./auth.html'" 
+    class="w-[197px] h-[61px] bg-[#04B3E3] text-white text-[32px] font-extrabold rounded-r-full flex items-center justify-center no-anim" 
+    style="font-family: 'Baloo 2', cursive; box-shadow: 0 10px 0 #038DB4;">
+    LOGIN
+</button>
+</div>
+
+  <!-- Hamburger Button -->
+  <div class="lg:hidden z-[60]">
+    <button id="hamburger-btn" class="w-10 h-10 flex items-center justify-center relative no-anim">
+      <!-- Hamburger Icon -->
+      <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg"
+        class="w-[32px] h-[32px] text-[#04B3E3] transition-transform duration-300 ease-in-out rotate-0 opacity-100 absolute"
+        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <!-- Close Icon -->
+      <svg id="close-icon" xmlns="http://www.w3.org/2000/svg"
+        class="w-[32px] h-[32px] text-[#04B3E3] transition-transform duration-300 ease-in-out -rotate-90 opacity-0 absolute"
+        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- MENU MOBILE -->
+<div id="mobile-menu" class="lg:hidden hidden fixed top-[109px] left-0 w-full bg-white z-40 px-6 py-6 flex flex-col gap-5 shadow-md text-[20px] font-medium" style="font-family: 'Poppins', sans-serif;">
+  <a href="#" onclick="scrollToTop(); return false;" class="hover:text-[#04B3E3] transition-colors">Beranda</a>
+  <!-- PERUBAHAN: Tautan dan teks menu mobile diperbarui -->
+  <a href="#berita" class="hover:text-[#04B3E3] transition-colors">News</a>
+  <a href="#faq" class="hover:text-[#04B3E3] transition-colors">FAQ</a>
+  <button class="w-full h-[54px] bg-[#04B3E3] text-white text-[24px] font-extrabold rounded-[16px] mb-6 no-anim"
+    style="font-family: 'Baloo 2', cursive; box-shadow: 0 10px 0 #0384b4;"
+    onclick="window.location.href='./auth.html'">
+    LOGIN
+  </button>
+</div>
+
+<!-- JS Script Toggle -->
+<script>
+  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const hamburgerIcon = document.getElementById("hamburger-icon");
+  const closeIcon = document.getElementById("close-icon");
+
+  function toggleMenu() {
+      const isOpen = closeIcon.classList.contains("opacity-100");
+      mobileMenu.classList.toggle("hidden");
+
+      if (!isOpen) {
+          hamburgerIcon.classList.replace("opacity-100", "opacity-0");
+          hamburgerIcon.classList.replace("rotate-0", "rotate-90");
+          closeIcon.classList.replace("opacity-0", "opacity-100");
+          closeIcon.classList.replace("-rotate-90", "rotate-0");
+      } else {
+          hamburgerIcon.classList.replace("opacity-0", "opacity-100");
+          hamburgerIcon.classList.replace("rotate-90", "rotate-0");
+          closeIcon.classList.replace("opacity-100", "opacity-0");
+          closeIcon.classList.replace("rotate-0", "-rotate-90");
+      }
+  }
+
+  hamburgerBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleMenu();
+  });
+  
+  // Menutup menu saat link di dalam menu mobile diklik
+  mobileMenu.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+      toggleMenu();
+    }
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!hamburgerBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+      if (!mobileMenu.classList.contains("hidden")) {
+          toggleMenu();
+      }
+    }
+  });
+</script>
