@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Materi Interaktif - LIFIN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style type="text/tailwindcss">
+        @layer base {
+            html, body {
+                font-family: 'Baloo 2', sans-serif;
+            }
+            .page-section {
+                width: 100%;
+                flex: 1;
+                display: none; /* Hidden by default */
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+            .page-section.active {
+                display: flex; /* Shown when active */
+            }
+        }
+        .custom-shadow { box-shadow: 0 10px 0 #04b3e3; }
+        .gradient-border {
+            border: 7px solid transparent;
+            border-radius: 16px;
+            background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #7AD5EE, #006F8D);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            box-shadow: 0px 10px 2.5px rgba(0, 0, 0, 0.1);
+        }
+        @media (min-width: 1024px) {
+            .gradient-border { border-radius: 50px; }
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen flex flex-col items-center">
+
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-sm" style="box-shadow: 0 4px 20px 0 rgba(4,179,227,0.2);">
+        <div class="max-w-screen-xl w-full mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4 gap-4">
+            <img src="./assets/images/icon.png" alt="Logo" class="w-[55px] lg:w-[70px] object-contain flex-shrink-0">
+            <div id="navbarWrapper" class="flex-1 h-[12px] rounded-full flex items-center transition-all duration-300 max-w-4xl">
+                <!-- Progress bar will be injected here -->
+            </div>
+            <button id="closeButton" class="w-8 h-8 flex items-center justify-center hover:opacity-70 flex-shrink-0" aria-label="Close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#4a4a4a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                    <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content" class="w-full max-w-7xl flex-1 flex p-4 sm:p-6">
+
+        <!-- Page 0: Material Selection (Fallback) -->
+        <div id="page-0" class="page-section">
+            <div class="w-full max-w-3xl mx-auto text-center">
+                <div class="w-fit px-8 py-2 bg-white rounded-[10px] shadow-[0_7px_0_#04b3e3] mx-auto mb-10">
+                    <h1 class="text-[#038aaf] text-3xl lg:text-[40px] font-extrabold">Pilih Materi</h1>
+                </div>
+                <div id="material-selection-container" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <p class="text-gray-500">Memuat materi...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 1: Tujuan Materi -->
+        <div id="page-1" class="page-section">
+             <div class="w-full max-w-5xl mx-auto">
+                <div class="w-fit px-8 py-2 bg-white rounded-[10px] shadow-[0_7px_0_#04b3e3] mx-auto mb-8">
+                    <span class="text-[#038aaf] text-3xl lg:text-[40px] font-extrabold">Tujuan Materi</span>
+                </div>
+                <div class="w-full bg-[#FAFAFA] rounded-[16px] mx-auto custom-shadow p-8 mb-10">
+                    <div id="konten-tujuan" class="text-gray-700 text-xl text-center font-semibold">Memuat...</div>
+                </div>
+                <div class="w-full flex flex-col-reverse sm:flex-row sm:justify-between items-center gap-4">
+                     <button data-action="dashboard" class="w-full sm:w-auto sm:flex-1 max-w-xs h-12 lg:h-[52px] bg-white text-[#004b75] border-[3px] border-[#004b75] rounded-2xl font-bold">Kembali</button>
+                    <button data-action="next" class="w-full sm:w-auto sm:flex-1 max-w-xs h-12 lg:h-[52px] bg-[#004b75] text-white rounded-2xl font-bold">Lanjut</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 2: Isi Materi -->
+        <div id="page-2" class="page-section">
+            <div class="w-full max-w-5xl space-y-6">
+                <div class="w-full bg-[#04b3e3] text-white rounded-[32px] px-6 py-8 sm:px-12 sm:py-10">
+                    <p id="level-materi" class="text-xl sm:text-2xl font-bold py-2 ml-6">Memuat...</p>
+                    <h2 id="judul-materi" class="inline-block bg-white text-[#04b3e3] text-lg sm:text-2xl font-extrabold py-2 px-6 rounded-full mb-6"></h2>
+                    <p id="isi-materi" class="text-base sm:text-lg font-semibold leading-relaxed"></p>
+                </div>
+                <div class="w-full flex justify-between items-center">
+                    <button data-action="prev" class="bg-white text-[#004b75] border-2 border-[#004b75] rounded-2xl px-6 py-3 font-bold">Kembali</button>
+                    <button data-action="next" class="bg-[#004b75] text-white border-2 border-[#004b75] rounded-2xl px-6 py-3 font-bold">Lanjut</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 3: Quiz -->
+        <div id="page-3" class="page-section">
+             <div class="w-full max-w-7xl space-y-6 md:space-y-10">
+                <div class="w-fit px-8 py-2 lg:h-[72px] bg-white rounded-[10px] shadow-[0_7px_0_#04b3e3] mx-auto mb-6">
+                    <span class="text-[#038aaf] text-3xl lg:text-[40px] font-extrabold">Simpel Quiz</span>
+                </div>
+                <div class="w-full max-w-5xl mx-auto p-3 lg:p-6 gradient-border">
+                    <h1 id="judul-soal" class="text-lg md:text-2xl lg:text-[36px] font-bold text-[#006F8D] text-center mb-6">Memuat...</h1>
+                    <div id="pilihan-container" class="space-y-3 flex flex-col items-center">
+                         <div class="pilihan-jawaban w-full lg:w-[864px] min-h-[48px] bg-[#36c2e9]/65 rounded-2xl lg:rounded-full flex items-center p-2 gap-3 cursor-pointer"><div class="w-9 h-9 lg:w-12 lg:h-12 bg-[#004b75]/65 rounded-full flex-shrink-0 flex items-center justify-center"><span class="text-white font-bold">A</span></div><div id="pilihan-A" class="text-[#004b75] font-bold w-full text-left pr-2"></div></div>
+                         <div class="pilihan-jawaban w-full lg:w-[864px] min-h-[48px] bg-[#36c2e9]/65 rounded-2xl lg:rounded-full flex items-center p-2 gap-3 cursor-pointer"><div class="w-9 h-9 lg:w-12 lg:h-12 bg-[#004b75]/65 rounded-full flex-shrink-0 flex items-center justify-center"><span class="text-white font-bold">B</span></div><div id="pilihan-B" class="text-[#004b75] font-bold w-full text-left pr-2"></div></div>
+                         <div class="pilihan-jawaban w-full lg:w-[864px] min-h-[48px] bg-[#36c2e9]/65 rounded-2xl lg:rounded-full flex items-center p-2 gap-3 cursor-pointer"><div class="w-9 h-9 lg:w-12 lg:h-12 bg-[#004b75]/65 rounded-full flex-shrink-0 flex items-center justify-center"><span class="text-white font-bold">C</span></div><div id="pilihan-C" class="text-[#004b75] font-bold w-full text-left pr-2"></div></div>
+                         <div class="pilihan-jawaban w-full lg:w-[864px] min-h-[48px] bg-[#36c2e9]/65 rounded-2xl lg:rounded-full flex items-center p-2 gap-3 cursor-pointer"><div class="w-9 h-9 lg:w-12 lg:h-12 bg-[#004b75]/65 rounded-full flex-shrink-0 flex items-center justify-center"><span class="text-white font-bold">D</span></div><div id="pilihan-D" class="text-[#004b75] font-bold w-full text-left pr-2"></div></div>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col-reverse sm:flex-row sm:justify-between items-center gap-4 px-4 lg:px-[125px]">
+                    <button data-action="prev" class="w-full lg:w-[215px] h-12 bg-white text-[#004b75] border-[3px] border-[#004b75] rounded-2xl font-bold">Kembali</button>
+                    <button data-action="next" id="tombol-lanjut-quiz" class="w-full lg:w-[215px] h-12 bg-[#004b75] text-white rounded-2xl font-bold opacity-50 cursor-not-allowed" disabled>Lanjut</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Page 4: Poin Penting -->
+        <div id="page-4" class="page-section">
+            <div class="w-full max-w-[992px]">
+                <div class="w-fit px-8 py-2 bg-white rounded-[10px] shadow-[0_7px_0_#04b3e3] mx-auto mb-8"><span class="text-[#038aaf] text-3xl lg:text-[40px] font-extrabold">Poin Penting</span></div>
+                <div id="poin-container" class="w-full bg-[#04b3e3] border-[5px] border-[#9ae9ff] rounded-[32px] p-8 mb-6"></div>
+                <div class="w-full flex justify-between gap-4 pt-4">
+                    <button data-action="prev" class="w-full sm:flex-1 max-w-xs h-12 bg-white text-[#004b75] border-[3px] border-[#004b75] rounded-2xl font-bold">Kembali</button>
+                    <button data-action="next" class="w-full sm:flex-1 max-w-xs h-12 bg-[#004b75] text-white rounded-2xl font-bold">Lanjut</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 5: Sumber Informasi -->
+        <div id="page-5" class="page-section">
+            <div class="w-full max-w-5xl flex flex-col items-center">
+                 <div class="w-fit px-8 py-2 bg-white rounded-[10px] shadow-[0_7px_0_#04b3e3] mx-auto"><span class="text-[#038aaf] text-3xl lg:text-[40px] font-extrabold">Sumber Informasi</span></div>
+                <div id="sumber-container" class="w-full flex flex-col items-center space-y-5 my-8"></div>
+                <div class="w-full flex justify-between gap-4 pt-4">
+                    <button data-action="prev" class="w-full sm:flex-1 max-w-xs h-12 bg-white text-[#004b75] border-[3px] border-[#004b75] rounded-2xl font-bold">Kembali</button>
+                    <button data-action="finish" class="w-full sm:flex-1 max-w-xs h-12 bg-[#004b75] text-white rounded-2xl font-bold">Selesai</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div id="overlay-feedback" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-2xl shadow-xl p-8 text-center w-full max-w-md">
+            <h1 id="feedback-text" class="font-extrabold text-[96px]"></h1>
+            <div id="feedback-actions" class="mt-6"></div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { getUserProfileData, updateMateriProgress } from './js/auth-manager.js';
+
+        // --- STATE MANAGEMENT ---
+        let currentStep = 0;
+        const totalSteps = 5;
+        let allMateriData = null; // Will be a flat array
+        let materiAktif = null;
+        let sudahMenjawabQuiz = false;
+        let userProfile = null;
+
+        // --- DOM REFERENCES ---
+        const mainContent = document.getElementById('main-content');
+        const pages = document.querySelectorAll('.page-section');
+        const navbarWrapper = document.getElementById('navbarWrapper');
+        const closeButton = document.getElementById('closeButton');
+        const materialSelectionContainer = document.getElementById('material-selection-container');
+        const allNavButtons = document.querySelectorAll('button[data-action]');
+
+        // --- CORE FUNCTIONS ---
+        
+        function showPage(step) {
+            currentStep = step;
+            pages.forEach(p => p.classList.remove('active'));
+            const pageToShow = document.getElementById(`page-${step}`);
+            if (pageToShow) pageToShow.classList.add('active');
+            updateProgressBar(step);
+            window.scrollTo(0, 0);
+        }
+        
+        function updateProgressBar(step) {
+            if (step === 0) {
+                navbarWrapper.innerHTML = '';
+                return;
+            }
+            const progressPercentage = (step / totalSteps) * 100;
+            let progressBarFill = navbarWrapper.querySelector('.progress-bar-fill');
+            if (!progressBarFill) {
+                navbarWrapper.innerHTML = `
+                    <div class="w-full h-[12px] bg-[#e0e0e0] rounded-full overflow-hidden">
+                        <div class="progress-bar-fill h-full bg-[#04b3e3] rounded-full transition-all duration-500 ease-out"></div>
+                    </div>`;
+                progressBarFill = navbarWrapper.querySelector('.progress-bar-fill');
+            }
+            setTimeout(() => {
+                progressBarFill.style.width = `${progressPercentage}%`;
+            }, 50);
+        }
+
+        function populateAllPages(data) {
+            if (!data) return;
+            
+            // Using the original keys from your JSON
+            document.getElementById('konten-tujuan').textContent = `• ${data['Tujuan Materi']}`;
+            document.getElementById('level-materi').textContent = `Materi Level ${data.Nomor}`;
+            document.getElementById('judul-materi').textContent = data["Judul Materi"];
+            document.getElementById('isi-materi').textContent = data.Materi;
+
+            const kuis = data["Simpel Quiz"][0];
+            document.getElementById('judul-soal').textContent = kuis.pertanyaan;
+            document.getElementById('pilihan-A').textContent = kuis.pilihan[0];
+            document.getElementById('pilihan-B').textContent = kuis.pilihan[1];
+            document.getElementById('pilihan-C').textContent = kuis.pilihan[2];
+            document.getElementById('pilihan-D').textContent = kuis.pilihan[3];
+            document.getElementById('tombol-lanjut-quiz').disabled = true;
+            document.getElementById('tombol-lanjut-quiz').classList.add('opacity-50', 'cursor-not-allowed');
+            document.querySelectorAll('.pilihan-jawaban').forEach(el => {
+                el.classList.remove('!bg-green-400', '!bg-red-400');
+            });
+            sudahMenjawabQuiz = false;
+
+            const poinContainer = document.getElementById('poin-container');
+            poinContainer.innerHTML = '<ul class="list-disc list-inside space-y-3"></ul>';
+            const listPoin = poinContainer.querySelector('ul');
+            data['Poin-Poin Penting'].forEach(poin => {
+                listPoin.innerHTML += `<li class="text-white font-semibold text-lg lg:text-xl">${poin}</li>`;
+            });
+            
+            const sumberContainer = document.getElementById('sumber-container');
+            sumberContainer.innerHTML = '';
+            const isValidUrl = (s) => typeof s === 'string' && s.startsWith('http');
+            data.Sumber.forEach(sumberString => {
+                const buttonHtml = isValidUrl(sumberString) 
+                    ? `<button onclick="window.open('${sumberString}', '_blank')" class="w-full mt-2 sm:mt-0 sm:w-[150px] h-[60px] bg-[#ffd635] text-[#004b75] font-extrabold rounded-2xl sm:rounded-[32px] flex-shrink-0">Lihat</button>` 
+                    : '';
+                sumberContainer.innerHTML += `
+                    <div class="w-full min-h-[55px] bg-[#04b3e3] flex flex-col sm:flex-row items-center justify-between rounded-2xl sm:rounded-[32px] p-2 sm:p-0">
+                        <p class="text-white font-semibold text-center sm:text-left px-6 py-2 break-all">${sumberString}</p>
+                        ${buttonHtml}
+                    </div>`;
+            });
+        }
+
+        function createMaterialSelection(materials, profile) {
+            materialSelectionContainer.innerHTML = '';
+            const userLevel = profile.level;
+            const userProgress = profile.progress[userLevel] || 0;
+
+            materials.forEach(mat => {
+                const isLocked = mat.Nomor > userProgress + 1;
+                const button = document.createElement('button');
+                button.className = `p-6 rounded-2xl text-left transition duration-300 shadow-lg ${isLocked ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#04b3e3] text-white hover:bg-[#008db1]'}`;
+                button.disabled = isLocked;
+                button.innerHTML = `
+                    <span class="block text-lg font-bold">Materi ${mat.Nomor} ${isLocked ? '(Terkunci)' : ''}</span>
+                    <span class="block text-2xl font-extrabold">${mat['Judul Materi']}</span>
+                `;
+                if (!isLocked) {
+                    button.onclick = () => {
+                        window.location.href = `./materi.html?id=${mat.Nomor}`;
+                    };
+                }
+                materialSelectionContainer.appendChild(button);
+            });
+        }
+
+        // --- EVENT LISTENERS ---
+        function setupEventListeners() {
+            allNavButtons.forEach(button => {
+                button.addEventListener('click', async () => {
+                    const action = button.getAttribute('data-action');
+                    if (action === 'next') showPage(currentStep + 1);
+                    else if (action === 'prev') showPage(currentStep - 1);
+                    else if (action === 'dashboard') window.location.href = './dashboard.html';
+                    else if (action === 'finish') {
+                        // Use the correct property 'Nomor' for the ID
+                        const success = await updateMateriProgress(userProfile.level, materiAktif.Nomor);
+                        if (success) {
+                            window.location.href = './dashboard.html';
+                        } else {
+                            alert('Gagal menyimpan progress, silahkan coba lagi.');
+                        }
+                    }
+                });
+            });
+            
+            closeButton.onclick = () => window.location.href = './dashboard.html';
+            document.getElementById('pilihan-container').addEventListener('click', handlePilihanQuiz);
+        }
+
+        // --- QUIZ LOGIC ---
+        function handlePilihanQuiz(event) {
+            if (sudahMenjawabQuiz || !materiAktif) return;
+            const pilihanDipilih = event.target.closest('.pilihan-jawaban');
+            if (!pilihanDipilih) return;
+            
+            const jawabanBenar = materiAktif["Simpel Quiz"][0].jawaban;
+            const teksJawaban = pilihanDipilih.querySelector('div[id^="pilihan-"]').textContent;
+            
+            sudahMenjawabQuiz = true;
+            
+            if (teksJawaban === jawabanBenar) {
+                pilihanDipilih.classList.add('!bg-green-400');
+                tampilkanFeedbackQuiz('benar');
+            } else {
+                pilihanDipilih.classList.add('!bg-red-400');
+                tampilkanFeedbackQuiz('salah', pilihanDipilih);
+            }
+        }
+
+        function tampilkanFeedbackQuiz(status, elemenPilihan = null) {
+            const overlay = document.getElementById('overlay-feedback');
+            const feedbackText = document.getElementById('feedback-text');
+            const feedbackActions = document.getElementById('feedback-actions');
+
+            overlay.classList.add('flex');
+            overlay.classList.remove('hidden');
+            feedbackActions.innerHTML = '';
+
+            if (status === "benar") {
+                feedbackText.textContent = "BENAR";
+                feedbackText.className = "font-extrabold text-[96px] text-green-500";
+                const tombolLanjutQuiz = document.getElementById('tombol-lanjut-quiz');
+                tombolLanjutQuiz.disabled = false;
+                tombolLanjutQuiz.classList.remove('opacity-50', 'cursor-not-allowed');
+                setTimeout(() => {
+                    overlay.classList.add('hidden');
+                    overlay.classList.remove('flex');
+                }, 1500);
+            } else {
+                feedbackText.textContent = "SALAH";
+                feedbackText.className = "font-extrabold text-[96px] text-red-500";
+                const cobaLagiBtn = document.createElement('button');
+                cobaLagiBtn.textContent = 'Coba Lagi';
+                cobaLagiBtn.className = 'w-full max-w-xs h-12 bg-[#004b75] text-white rounded-xl font-bold';
+                cobaLagiBtn.onclick = () => {
+                    overlay.classList.add('hidden');
+                    overlay.classList.remove('flex');
+                    sudahMenjawabQuiz = false;
+                    if (elemenPilihan) elemenPilihan.classList.remove('!bg-red-400');
+                };
+                feedbackActions.appendChild(cobaLagiBtn);
+            }
+        }
+        
+        // --- INITIALIZE APP ---
+        async function initializeApp() {
+            try {
+                userProfile = await getUserProfileData();
+                if (!userProfile) {
+                    mainContent.innerHTML = '<p class="text-center text-red-500 p-8 text-xl">Sesi tidak valid. Anda akan diarahkan ke halaman login.</p>';
+                    return;
+                }
+
+                const response = await fetch(`./data/materi.json`);
+                if (!response.ok) throw new Error('Gagal memuat data materi.json');
+                allMateriData = await response.json(); // Data is a flat array
+                setupEventListeners();
+
+                const urlParams = new URLSearchParams(window.location.search);
+                const materiIdStr = urlParams.get('id');
+
+                if (!materiIdStr) {
+                    // No ID in URL, show material selection for the user's level
+                    createMaterialSelection(allMateriData, userProfile);
+                    showPage(0);
+                    return;
+                }
+                
+                const materiId = parseInt(materiIdStr, 10);
+                const userProgress = userProfile.progress[userProfile.level] || 0;
+
+                if (materiId > userProgress + 1) {
+                    mainContent.innerHTML = `
+                        <div class="w-full h-full flex flex-col items-center justify-center text-center p-4">
+                            <h1 class="text-3xl font-bold text-red-500 mb-4">Materi Terkunci!</h1>
+                            <p class="text-lg text-gray-700">Selesaikan materi sebelumnya terlebih dahulu untuk membuka materi ini.</p>
+                            <button onclick="window.location.href='./dashboard.html'" class="mt-8 px-6 py-3 bg-[#004b75] text-white rounded-xl font-bold">Kembali ke Dashboard</button>
+                        </div>`;
+                    return;
+                }
+
+                // Find the material in the flat array using 'Nomor'
+                materiAktif = allMateriData.find(m => m.Nomor == materiId);
+                if (materiAktif) {
+                    populateAllPages(materiAktif);
+                    showPage(1);
+                } else {
+                    // ID provided but not found, show selection as fallback
+                    materialSelectionContainer.innerHTML = `<p class="text-red-500 font-bold col-span-full">Materi dengan ID ${materiId} tidak ditemukan.</p>`;
+                    createMaterialSelection(allMateriData, userProfile);
+                    showPage(0);
+                }
+
+            } catch (error) {
+                console.error("Initialization Error:", error);
+                mainContent.innerHTML = `<div class="text-center p-8"><p class="text-red-500 font-bold col-span-full">${error.message}</p><button onclick="window.location.href='./dashboard.html'" class="mt-4 px-6 py-2 bg-gray-200 rounded-lg">Kembali</button></div>`;
+            }
+        }
+
+        initializeApp();
+    </script>
+</body>
+</html>

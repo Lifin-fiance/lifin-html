@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LIFIN - Best way to learn Financial Literacy</title>
+  <link rel="icon" type="image/png" href="assets/images/fav.png">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#04B3E3',
+            accent: '#FFD635',
+          },
+          fontFamily: {
+            baloo: ['"Baloo 2"', 'cursive'],
+            poppins: ['"Poppins"', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Mencegah scroll horizontal */
+    html, body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: white; 
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+        width: 100%;
+    }
+    .font-baloo {
+        font-family: 'Baloo 2', cursive;
+    }
+    .text-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+    button, .button {
+      transition: all 0.15s ease-in-out;
+    }
+    button:hover, .button:hover {
+      transform: translateY(4px);
+      box-shadow: none !important;
+    }
+    button:active, .button:active {
+      transform: translateY(10px);
+      box-shadow: none !important;
+    }
+    .text-outline {
+      text-shadow:
+        0 0 2px #000,
+        -3px 0 1px #000, 3px 0 1px #000,
+        0 -3px 1px #000, 0 3px 1px #000,
+        -3px -3px 1px #000, 3px -3px 1px #000,
+        -3px 3px 1px #000, 3px 3px 1px #000;
+    }
+    
+    /* --- STYLE TAMBAHAN UNTUK KALKULATOR BARU --- */
+    .baloo {
+      font-family: 'Baloo 2', cursive;
+    }
+    .baloo-semibold {
+      font-family: 'Baloo 2', cursive;
+      font-weight: 600;
+    }
+    #alokasikan:active {
+      transform: translateY(2px);
+      box-shadow: 0 8px 0 #038DB4 !important; /* Menambahkan !important untuk menimpa aturan umum */
+    }
+    
+    /* Penyesuaian grid untuk hasil kalkulator pada layar kecil */
+    @media (min-width: 420px) {
+      #results-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    /* --- STYLE BARU UNTUK FAQ --- */
+    .faq-item {
+        /* Transisi untuk properti height agar animasi mulus */
+        transition: height 0.3s ease-in-out;
+    }
+    .faq-content {
+        /* Transisi untuk opacity */
+        transition: opacity 0.3s ease-in-out;
+    }
+  </style>
+</head>
+
+<!-- =================================================================== -->
+<!-- ===================== PERUBAHAN UTAMA DI SINI ===================== -->
+<!-- =================================================================== -->
+<body class="bg-white min-h-screen flex flex-col">
+<!-- =================================================================== -->
+<!-- ===================== AKHIR PERUBAHAN UTAMA ======================= -->
+<!-- =================================================================== -->
+  
+  <!-- Header -->
+  <header class="font-baloo bg-white fixed top-0 left-0 w-full z-50">
+    <div id="navbar-landingpage-container"></div>
+  </header>
+
+  <!-- PERUBAHAN: Membungkus konten utama dengan tag <main> dan class flex-grow -->
+  <main class="flex-grow">
+      <!-- Hero Section -->
+      <div class="relative w-full">
+        <div class="w-full max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center justify-center lg:justify-between  lg:mt-[220px]  sm:px-4 lg:px-10">
+          
+          <!-- Kolom Teks -->
+          <div class="text-left flex-1 flex flex-col items-center md:items-start md:text-left lg:order-1 lg:items-start lg:text-left order-2 lg:order-1 mt-8 lg:mt-0">
+            <h1 class="text-[48px] md:text-[56px] lg:text-[64px] font-extrabold ml-[-40px] md:ml-[36px] lg:ml-[64px]" style="font-family: 'Nunito', sans-serif; line-height: 117%;">
+              <span class="text-[#04B3E3] block">Kuasai</span>
+              <span class="text-[#04B3E3] block">Literasi</span>
+              <span class="text-[#04B3E3] block">Finansial</span>
+            </h1>
+            <button class="mt-6 ml-[0px] md:ml-[36px] md:text-center lg:ml-[64px] lg:mt-[32px] w-[240px] h-[65px] bg-[#04B3E3] text-white text-[32px] font-baloo font-extrabold rounded-[24px]"
+              style="box-shadow: 0 10px 0 0 #0384b4;" onclick="window.location.href='auth.html';">
+              Mulai Belajar
+            </button>
+          </div>
+
+          <!-- Kolom Gambar Finny -->
+          <div class="relative w-full h-auto lg:order-2 ml-0 lg:ml-[96px] pt-24 md:pt-28 lg:pt-0">
+            <img src="./assets/images/big.png"
+                alt="Anak belajar finansial"
+                class="w-full max-w-[420px] sm:max-w-[500px] md:max-w-[580px] lg:max-w-[650px] h-auto object-contain mx-auto
+                        lg:absolute lg:top-[-200px] lg:right-[60px] transition-all duration-300 ease-in-out">
+          </div>
+        </div>
+
+        <!-- Uang Terbang Background -->
+        <div class="block z-0  absolute top-[150px] right-[-280px] w-[528.85px] md:top-[50px] md:right-[-380px] z-0 md:absolute md:w-[728.85px] lg:block lg:absolute lg:top-[-85px] lg:right-[-380px] z-0 lg:w-[828.85px]  pointer-events-none">
+          <img src="./assets/images/flymoney.png" alt="Uang terbang" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+
+      <!-- APA ITU LIFIN -->
+      <div class="flex justify-center mt-[100px] lg:mt-[164px] mb-[120px] lg:mb-[160px] px-4 relative">
+        <div class="flex w-full items-stretch lg:px-[64px] gap-[36px]">
+          <div class="hidden lg:block w-[60.5px] h-[316px] rounded-[32px] bg-[#04B3E3] flex-shrink-0"></div>
+          <div class="relative flex-1 h-auto lg:h-[316px]">
+            <div class="absolute top-[-35px] left-1/2 -translate-x-1/2 bg-[#FFD635] rounded-[64px] px-6 py-3 flex items-center justify-center z-10 w-[90%] max-w-[450px] h-auto lg:h-[80px]">
+              <h2 class="font-baloo font-extrabold text-[24px] sm:text-[28px] md:text-[32px] lg:text-[40px] text-center leading-tight">APA ITU LIFIN?</h2>
+            </div>
+            <div class="w-full h-full bg-[#04B3E3] rounded-[24px] md:rounded-[48px] lg:rounded-[64px] flex items-center justify-center text-center p-10 pt-20 pb-20 relative">
+              <p class="font-baloo font-extrabold text-[16px] sm:text-[20px] md:text-[24px] lg:text-[27px] leading-snug text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]">
+                LIFIN adalah program literasi finansial yang dirancang <strong>khusus</strong> untuk pelajar SMP agar paham cara mengelola uang, <strong>menabung, dan</strong> mengambil keputusan keuangan dengan bijak sejak dini.
+              </p>
+              <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex items-center justify-center lg:gap-x-[100px] md:gap-x-[75px]  gap-x-[15px] w-full px-4">
+                <button onclick="document.getElementById('fitur').scrollIntoView({ behavior: 'smooth' })"
+                  class="w-[140px] h-[44px] sm:w-[180px] sm:h-[50px] md:w-[220px] md:h-[60px] bg-[#004B75] rounded-[32px] flex items-center justify-center shadow-md gap-2"
+                  style="box-shadow: 0px 8px 0px #003552;">
+                  <img src="./assets/images/panah.png" alt="Panah" class="w-[18px] sm:w-[24px] md:w-[32px]" />
+                  <span class="font-baloo font-semibold md:font-extrabold lg:font-extrabold text-white text-[12px] sm:text-[16px] md:text-[22px]">Fitur LIFIN</span>
+                </button>
+                <button onclick="document.getElementById('finny').scrollIntoView({ behavior: 'smooth' })"
+                  class="w-[140px] h-[44px] sm:w-[180px] sm:h-[50px] md:w-[220px] md:h-[60px] bg-[#FF6B6B] rounded-[32px] flex items-center justify-center shadow-md gap-2"
+                  style="box-shadow: 0px 8px 0px #D44F4F;">
+                  <span class="font-baloo font-semibold md:font-extrabold lg:font-extrabold text-white text-[12px] sm:text-[16px] md:text-[22px]">Halo FINNY</span>
+                  <img src="./assets/images/panah.png" alt="Panah" class="w-[18px] sm:w-[24px] md:w-[32px]" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="hidden lg:block w-[60.5px] h-[316px] rounded-[32px] bg-[#04B3E3] flex-shrink-0"></div>
+        </div>
+      </div>
+
+      <!-- GAME DAN AYO MULAI -->
+      <div class="bg-white py-8 px-4 md:px-8 lg:px-[64px]">
+        <div class="flex flex-col lg:flex-row gap-8 lg:gap-[36px]">
+          <div class="flex flex-col gap-8 w-full lg:w-1/2">
+            <button type="button" class="relative w-full h-[200px] rounded-[24px] bg-[#04B3E3] shadow-[0_8px_0_#038DB4] flex flex-col justify-center px-6"
+            onclick="window.location.href='./games/life-simulation-game-main/index.html'">
+              <img src="./assets/images/3dmoney.png" alt="Money"
+                  class="absolute z-[1] w-[200px] top-[-20px] right-[-50px]
+                          md:w-[293px] md:top-[-20px] md:right-[-70px] lg:top-[-30px] lg:right-[-70px]" />
+              <div class="z-[0] w-full">
+                <h3 class="font-baloo text-outline font-extrabold text-[28px] md:text-[40px] text-white leading-tight text-left">
+                  DOMPET<br>PINTAR
+                </h3>
+                <p class="font-baloo font-bold text-white text-[20px] md:text-[32px] mt-1 text-left">
+                  Simulasi Uang Saku
+                </p>
+              </div>
+              <img src="./assets/images/play.png" alt="Play" class="absolute right-4 bottom-4 w-[60px] md:w-[86px]" />
+            </button>
+            <button type="button" class="relative w-full h-[200px] rounded-[24px] bg-[#FFD635] shadow-[0_8px_0_#D4B000] flex flex-col justify-center px-6 overflow-hidden">
+              <img src="./assets/images/raceflag.png" alt="Race Flag"
+                  class="hidden md:block absolute w-[400px] top-3 left-[-147px]" />
+              <h3 class="font-baloo text-outline font-extrabold text-[28px] md:text-[40px] text-white leading-tight text-left md:pl-[100px]">
+                FINANCE QUIZ<br>RACE
+              </h3>
+              <p class="font-baloo font-bold text-white text-[20px] md:text-[32px] mt-1 text-left md:pl-[100px]">
+                Kuiz Keuangan
+              </p>
+              <img src="./assets/images/play.png" alt="Play" class="absolute right-4 bottom-4 w-[60px] md:w-[86px]" />
+            </button>
+            <button type="button" class="relative w-full h-[200px] rounded-[24px] bg-[#FF6B6B] shadow-[0_8px_0_#D44F4F] flex flex-col justify-center px-6 overflow-hidden">
+              <h3 class="font-baloo text-outline font-extrabold text-[28px] md:text-[40px] text-white leading-tight text-center">
+                INVESTOR CILIK
+              </h3>
+              <p class="font-baloo font-bold text-white text-[20px] md:text-[32px] mt-1 text-center">
+                Simulasi Saham
+              </p>
+              <img src="./assets/images/play.png" alt="Play" class="absolute right-4 bottom-4 w-[60px] md:w-[86px]" />
+            </button>
+          </div>
+          <div class="w-full lg:w-1/2 mt-6 lg:mt-0">
+            <div class="bg-[#004B75] rounded-[24px] w-full h-auto relative overflow-hidden lg:h-[675px]">
+              <div class="lg:p-6 md:p-8 pt-6 pb-6 pl-6 p-6">
+                <div class="text-white font-baloo text-[32px] md:text-[52px] lg:text-[70px] font-extrabold leading-none">
+                  BELAJAR<br>FINANSIAL<br>SAMBIL<br>MAIN<br>GAME!
+                </div>
+                <div class="mt-4 text-[24px] md:text-[32px] lg:text-[36px] font-baloo font-extrabold leading-tight text-[#FFD635]">
+                  Mainkan dan kuasai <span class="block md:inline">finansial sejak dini!</span>
+                </div>
+                <button class="mt-6 md:mt-8 w-full h-[60px] md:h-[77px] bg-white text-[#004B75] text-[20px] lg:text-[30px] md:text-[30px] font-baloo font-extrabold rounded-[24px] md:rounded-[32px] shadow-[0_6px_0_rgba(255,255,255,0.7)] flex items-center justify-center">
+                  AYOK BELAJAR BARENG!
+                </button>
+              </div>
+              <img src="./assets/images/bucks.png" alt="Uang"
+                  class="absolute w-[280px] right-[-100px] bottom-[150px] md:w-[500px] md:right-[-170px] lg:bottom-[unset] lg:top-[200px] lg:-translate-y-1/2 object-contain" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BERITA KEUANGAN -->
+      <div id="berita" class="py-16 bg-white">
+        <div class="w-full flex flex-col items-center px-4 md:px-8">
+          <div class="relative w-full max-w-xl lg:w-[678px] h-auto bg-[#004B75] rounded-[50px] flex items-center justify-center py-4 overflow-visible">
+            <span class="text-3xl lg:text-[48px] font-extrabold text-white text-center font-baloo">BERITA KEUANGAN</span>
+            <img src="./assets/images/toa.png" alt="Toa" class="absolute w-[100px] right-[-15px] top-[-10px] md:w-[230.1px] md:right-[-120px] md:top-[-7px]" />
+          </div>
+          <div class="h-12"></div>
+        
+          <!-- === MODIFIED NEWS PREVIEW CONTAINER === -->
+          <div id="berita-preview-container" class="relative w-full max-w-6xl h-auto lg:h-[350px] bg-[#FFC72C] rounded-[48px] flex flex-col lg:flex-row items-center justify-between p-6 lg:px-12 mx-auto cursor-pointer" data-id="">
+            <img id="berita-preview-image" src="assets/images/mockup.png" alt="News" class="w-full max-w-sm lg:w-[381px] h-auto rounded-[32px] object-cover flex-shrink-0" />
+            <div class="flex-1 pt-6 lg:pt-0 lg:pl-10 text-center lg:text-left">
+              <p id="berita-preview-text" class="text-lg text-black font-medium leading-relaxed font-poppins">
+                <span id="berita-preview-title" class="font-extrabold">Memuat berita terbaru...</span><br class="hidden lg:block">
+                <span id="berita-preview-snippet">Silakan tunggu...</span>
+              </p>
+            </div>
+          </div>
+        
+          <!-- === NEW "SEE ALL" BUTTON === -->
+          <div class="mt-8 flex justify-center items-center">
+              <button onclick="window.location.href='berita.html'" class="w-auto h-auto px-8 py-3 bg-[#04B3E3] text-white text-xl font-baloo font-extrabold rounded-[24px] shadow-[0_8px_0_0_#0384b4]">
+                  Lihat Semua Berita
+              </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- KALKULATOR KEUANGAN -->
+      <div class="pt-0 pb-24 px-4 sm:px-8 md:px-[36px] lg:px-[64px] bg-white">
+        <header class="lg:w-full max-w-3xl w-[250px] h-auto py-4 bg-[#04b3e3] rounded-[40px] mx-auto mb-12 flex items-center justify-center translate-y-20 z-10 relative">
+          <p class="text-white text-2xl lg:text-[48px] font-extrabold baloo text-center px-5">KALKULATOR<br class="sm:hidden"> KEUANGAN</p>
+        </header>
+
+        <div class="w-full max-w-[1440px] bg-[#FFD635] lg:rounded-[48px] rounded-[24px] px-4 md:px-[48px] pt-[64px] py-[36px] mx-auto">
+          <div class="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-8 lg:gap-[48px]">
+
+            <!-- KIRI: HASIL ALOKASI -->
+            <div class="bg-white rounded-[32px] p-6 w-full lg:w-[560px] flex items-center justify-center">
+              <div id="results-grid" class="grid grid-cols-1 gap-4 w-full">
+                <div class="w-full h-[96px] md:h-auto lg:h-auto aspect-video bg-[#0F567D] rounded-[16px] flex flex-col justify-center items-center p-2">
+                  <span class="text-lg sm:text-[24px] text-white font-poppins baloo-semibold text-center">Donasi</span>
+                  <span id="nominal-donasi" class="text-lg sm:text-[24px] text-white font-bold">Rp0</span>
+                </div>
+                <div class="w-full h-[96px] md:h-auto lg:h-auto aspect-video bg-[#04B3E3] rounded-[16px] flex flex-col justify-center items-center p-2">
+                  <span class="text-lg sm:text-[24px] text-white baloo-semibold text-center">Tabungan</span>
+                  <span id="nominal-tabungan" class="text-lg sm:text-[24px] text-white font-bold">Rp0</span>
+                </div>
+                <div class="w-full h-[96px] md:h-auto lg:h-auto aspect-video bg-[#FFC72C] rounded-[16px] flex flex-col justify-center items-center p-2">
+                  <span class="text-lg sm:text-[24px] text-white baloo-semibold text-center">Jajan Harian</span>
+                  <span id="nominal-jajan" class="text-lg sm:text-[24px] text-white font-bold">Rp0</span>
+                </div>
+                <div class="w-full h-[96px] md:h-auto lg:h-auto aspect-video bg-[#FF6B6B] rounded-[16px] flex flex-col justify-center items-center p-2">
+                  <span class="text-lg sm:text-[24px] text-white baloo-semibold text-center">Dana Darurat</span>
+                  <span id="nominal-darurat" class="text-lg sm:text-[24px] text-white font-bold">Rp0</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- KANAN: INPUT PENGGUNA -->
+            <div class="bg-white rounded-[32px] p-6 w-full lg:w-[560px] flex items-center justify-center">
+              <div class="flex flex-col -translate-y-[24px] items-center gap-4 w-full ">
+                <div class="w-full pt-[24px]">
+                  <p class="text-xl md:text-[24px] font-bold text-black text-left" style="font-family: 'baloo 2', cursive;">
+                    Masukkan Total Uang Sakumu!
+                  </p>
+                </div>
+                
+                <div class="w-full">
+                  <div class="flex flex-col sm:flex-row sm:relative sm:h-[58px] gap-2 sm:gap-0">
+                    <input
+                      type="text"
+                      id="uang-saku"
+                      inputmode="numeric"
+                      class="w-full h-[58px] pl-4 pr-4 sm:pr-[135px] rounded-[32px] border-2 border-[#D6D6D6] text-gray-700 text-lg md:text-[24px] font-extrabold placeholder-[#d6d6d6]"
+                      placeholder="Contoh: 250.000"
+                    />
+                    
+                    <div class="relative sm:static w-full sm:w-auto">
+                      <div id="dropdown-trigger" class="w-full sm:w-[125px] h-[54px] sm:absolute sm:right-[2px] sm:top-1/2 sm:transform sm:-translate-y-1/2 flex items-center justify-center px-4 py-1 bg-[#FF6B6B] rounded-[32px] cursor-pointer select-none">
+                        <svg class="w-4 h-4 text-white mr-2" fill="currentColor" viewBox="0 0 20 20">
+                          <polygon points="5,7 10,15 15,7" />
+                        </svg>
+                        <span id="jenjang-text" class="text-lg md:text-[24px] font-extrabold text-white text-center flex-1">SD</span>
+                      </div>
+
+                      <div id="dropdown-menu-kalkulator" class="absolute top-full mt-1 w-full sm:w-[125px] sm:right-0 z-50 hidden">
+                        <div class="w-full h-auto bg-transparent flex flex-col select-none">
+                          <div data-jenjang="SD" data-warna="#FF6B6B" class="dropdown-item group w-full h-[38px] bg-white rounded-t-[16px] border-b border-[rgba(0,0,0,0.2)] flex items-center justify-center hover:bg-[#ff6b6b] cursor-pointer transition duration-200">
+                            <span class="text-[#ff6b6b] group-hover:text-white text-[24px] font-extrabold baloo">SD</span>
+                          </div>
+                          <div data-jenjang="SMP" data-warna="#004B75" class="dropdown-item group w-full h-[38px] bg-white border-b border-[rgba(0,0,0,0.2)] flex items-center justify-center hover:bg-[#004b75] cursor-pointer transition duration-200">
+                            <span class="text-[#004b75] group-hover:text-white text-[24px] font-extrabold baloo">SMP</span>
+                          </div>
+                          <div data-jenjang="SMA" data-warna="#FFD635" class="dropdown-item group w-full h-[38px] bg-white border-b border-[rgba(0,0,0,0.2)] flex items-center justify-center hover:bg-[#ffd635] cursor-pointer transition duration-200">
+                            <span class="text-[#ffd635] group-hover:text-white text-[24px] font-extrabold baloo">SMA</span>
+                          </div>
+                          <div data-jenjang="UMUM" data-warna="#68D1EE" class="dropdown-item group w-full h-[38px] bg-white rounded-b-[16px] shadow-[0_4px_0_rgba(0,0,0,0.25)] flex items-center justify-center hover:bg-[#68d1ee] cursor-pointer transition duration-200">
+                            <span class="text-[#68d1ee] group-hover:text-white text-[24px] font-extrabold baloo">UMUM</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button
+                    id="alokasikan"
+                    class="w-full h-[54px] mt-4 rounded-[32px] bg-[#04B3E3] text-white font-bold text-[25px] shadow-[0_10px_0_#038DB4]"
+                    style="font-family: 'baloo 2', cursive;">
+                    ALOKASIKAN
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      
+        <div id="finny-section" class="mx-auto hidden lg:block w-full max-w-[1440px] py-[96px] px-1 lg:px-0 items-center">
+          <div class="flex flex-col items-center">
+            <!-- Judul Section -->
+            <h1 class="font-baloo font-extrabold text-1xl sm:text-4xl lg:text-4xl text-center text-primary mb-8">
+              Kenalan Yuk Sama Aku!
+            </h1>
+
+            <!-- Kontainer Utama Finny (Relative untuk positioning anak) -->
+            <div class="w-full h-[380px] bg-[#04b3e3] rounded-[32px] md:rounded-[48px] relative lg:pt-8 lg:pb-8 md:pt-16 md:pb-12 px-6">
+              
+              <!-- Gambar Maskot Finny (Absolute, di atas kotak biru) -->
+              <img src="assets/images/mascotfin.png"
+                  alt="Finny Mascot"
+
+                  class="absolute -translate-x-[70px] -translate-y-[140px] w-48 sm:w-56 md:w-64 lg:w-[400px]" />
+
+              <!-- Konten di dalam kotak biru -->
+              <div class="w-full flex flex-col items-center justify-center gap-y-8">
+                <!-- Teks "Chatbot FINNY" -->
+                <div class="text-center">
+                  <h2 class="font-baloo absolute left-[275px] top-[10px] text-4xl sm:text-5xl lg:text-[60px] font-extrabold leading-tight text-white">
+                    Chatbot<br>FINNY
+                  </h2>
+                </div>
+
+                <!-- Wrapper Kotak Putih & Tombol Lanjut (Centered) -->
+                <div class="w-full px-0 lg:px-[100px] pt-[100px] mx-auto">
+                  <!-- Kotak Putih (Tombol) -->
+                  <button id="next-button" class="custom-button w-full min-h-[120px] sm:min-h-[140px] bg-white rounded-[24px] sm:rounded-[32px] flex items-start justify-start shadow-[0_10px_0_rgba(255,255,255,0.75)] relative p-5 sm:p-6 text-left">
+                    <p id="finny-text" class="text-base sm:text-lg md:text-xl font-bold text-black leading-snug font-poppins"></p>
+                  </button>
+
+                  <!-- Teks "Klik Untuk Lanjut" -->
+                  <div class="w-full text-center mt-6">
+                    <span class="text-xl sm:text-2xl font-extrabold text-white font-baloo">
+                      Klik Untuk Lanjut
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Awal Bagian Fitur -->
+        <div class="max-w-7xl mx-auto py-12 lg:px-4 px-0 bg-white">
+            <!-- Judul -->
+            <div id="fitur" class="text-center mb-12">
+                <!-- Ukuran font dibuat responsif: lebih kecil di mobile, lebih besar di desktop -->
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary mb-3 font-baloo">Apa Saja Fitur LIFIN?</h2>
+                <!-- Lebar gambar garis disesuaikan agar tidak meluber di layar kecil -->
+                <img src="./assets/images/line.png" alt="Dekorasi garis biru" class="w-4/5 max-w-[480px] mx-auto" />
+            </div>
+
+            <!-- Kontainer Gambar dan Box -->
+            <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+                
+                <!-- Gambar utama: tetap tersembunyi di mobile (lg:block) -->
+                <div class="hidden lg:block w-4/5 lg:w-2/5 flex-shrink-0">
+                    <img src="./assets/images/big.png" alt="Logo LIFIN" class="w-full h-auto object-contain rounded-3xl" />
+                </div>
+
+                <!-- Box Fitur -->
+                <!-- Padding (p-*) dibuat responsif untuk memberikan lebih banyak ruang pada konten di layar kecil -->
+                <div class="bg-primary rounded-3xl w-full lg:max-w-2xl p-6 sm:p-10 text-white">
+                    <!-- Spasi antar item (space-y-*) disesuaikan untuk layar yang lebih kecil -->
+                    <div class="relative flex flex-col space-y-6 sm:space-y-8">
+
+                        <!-- Garis putih vertikal dibuat responsif -->
+                        <!-- Posisinya (left-*) disesuaikan berdasarkan ukuran ikon yang juga responsif -->
+                        <!-- Tingginya (h-*) juga disesuaikan agar pas dengan konten di berbagai ukuran layar -->
+                        <div class="absolute lg:left-[40px]  md:left-[40px] left-[25px] lg:top-12 top-[90px] lg:h-[calc(100%-100px)] md:h-[calc(100%-100px)] h-[calc(100%-140px)] w-1 bg-white rounded-full z-0"></div>
+
+                        <!-- Fitur 1 -->
+                        <!-- Gap dan ukuran ikon dibuat responsif -->
+                        <div class="flex items-center gap-5 sm:gap-6 relative z-10">
+                            <div class="w-[50px] sm:w-[80px] flex-shrink-0">
+                                <img src="assets/images/lamp.png" alt="Ikon Lampu" class="w-full h-auto" />
+                            </div>
+                            <div>
+                                <!-- Ukuran font judul dan paragraf dibuat responsif -->
+                                <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-baloo">Bantu Kelola Uangmu</h3>
+                                <p class="text-base sm:text-lg font-medium font-poppins">Kamu bisa belajar ngatur uang saku lewat simulasi seru!</p>
+                            </div>
+                        </div>
+
+                        <!-- Fitur 2 -->
+                        <div class="flex items-center gap-5 sm:gap-6 relative z-10">
+                            <div class="w-[50px] sm:w-[80px] flex-shrink-0">
+                                <img src="assets/images/goal.png" alt="Ikon Target" class="w-full h-auto" />
+                            </div>
+                            <div>
+                                <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-baloo">Capai Tujuan Nabungmu!</h3>
+                                <p class="text-base sm:text-lg font-medium font-poppins">Bikin targetmu sendiri dan lihat progresnya tiap hari.</p>
+                            </div>
+                        </div>
+
+                        <!-- Fitur 3 -->
+                        <div class="flex items-center gap-5 sm:gap-6 relative z-10">
+                            <div class="w-[50px] sm:w-[80px] flex-shrink-0">
+                                <img src="assets/images/games.png" alt="Ikon Game" class="w-full h-auto" />
+                            </div>
+                            <div>
+                                <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-baloo">Main Sambil Belajar</h3>
+                                <p class="text-base sm:text-lg font-medium font-poppins">Kuis seru yang bantu kamu makin jago urus uang.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Akhir Bagian Fitur -->
+
+        <!-- FAQ Section -->
+        <div id="faq" class="bg-white py-20">
+            <div class="w-full text-center px-4">
+              <span class="font-baloo font-extrabold text-4xl lg:text-[48px] text-[#04B3E3]">Masih Bingung dan Ada Pertanyaan?</span>
+              <img src="./assets/images/Line2.png" alt="garis dekoratif" class="w-3/4 max-w-[480px] mt-2 mx-auto" /> 
+            </div>
+            
+            <div class="w-full max-w-7xl mx-auto flex flex-col items-center mt-[32px] gap-[32px] px-4" id="faq-container">
+
+              <!-- FAQ Item 1 -->
+              <div class="faq-item w-full bg-[#FFD635] rounded-[32px] shadow-[0_10px_0_0_#D4B000] overflow-hidden relative cursor-pointer" style="height: 94px;">
+                <div class="w-full h-[94px] flex items-center justify-between px-4 md:px-8">
+                  <span class="text-white text-xl md:text-[32px] font-extrabold font-baloo text-left pointer-events-none">
+                    Apa itu LIFIN dan siapa yang boleh ikut?
+                  </span>
+                  <img src="./assets/images/underarrow.png" alt="panah" class="faq-arrow w-14 h-14 md:w-[70px] md:h-[70px] transition-transform duration-300 pointer-events-none flex-shrink-0" />
+                </div>
+                <div class="faq-content absolute left-4 right-4 md:left-8 md:right-8 bottom-0 bg-white h-[144px] rounded-t-[32px] flex items-center justify-center text-center opacity-0 pointer-events-none">
+                  <p class="text-base md:text-[22px] font-semibold text-black leading-snug px-6 font-poppins">
+                    LIFIN itu tempat seru buat belajar ngatur uang dari kecil! Utamanya buat anak SMP, tapi SD dan SMA juga bisa ikut. Ada chatbot pintar yang siap bantu kapan aja!
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 2 -->
+              <div class="faq-item w-full bg-[#FFD635] rounded-[32px] shadow-[0_10px_0_0_#D4B000] overflow-hidden relative cursor-pointer" style="height: 94px;">
+                <div class="w-full h-[94px] flex items-center justify-between px-4 md:px-8">
+                  <span class="text-white text-xl md:text-[32px] font-extrabold font-baloo text-left pointer-events-none">
+                    LIFIN gratis atau bayar?
+                  </span>
+                  <img src="./assets/images/underarrow.png" alt="panah" class="faq-arrow w-14 h-14 md:w-[70px] md:h-[70px] transition-transform duration-300 pointer-events-none flex-shrink-0" />
+                </div>
+                <div class="faq-content absolute left-4 right-4 md:left-8 md:right-8 bottom-0 bg-white h-[144px] rounded-t-[32px] flex items-center justify-center text-center opacity-0 pointer-events-none">
+                  <p class="text-base md:text-[22px] font-semibold text-black leading-snug px-6 font-poppins">
+                    LIFIN 100% gratis! Kamu bisa belajar keuangan tanpa bayar sama sekali.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 3 -->
+              <div class="faq-item w-full bg-[#FFD635] rounded-[32px] shadow-[0_10px_0_0_#D4B000] overflow-hidden relative cursor-pointer" style="height: 94px;">
+                <div class="w-full h-[94px] flex items-center justify-between px-4 md:px-8">
+                  <span class="text-white text-xl md:text-[32px] font-extrabold font-baloo text-left pointer-events-none">
+                    Saya akan belajar apa di LIFIN?
+                  </span>
+                  <img src="./assets/images/underarrow.png" alt="panah" class="faq-arrow w-14 h-14 md:w-[70px] md:h-[70px] transition-transform duration-300 pointer-events-none flex-shrink-0" />
+                </div>
+                <div class="faq-content absolute left-4 right-4 md:left-8 md:right-8 bottom-0 bg-white h-[144px] rounded-t-[32px] flex items-center justify-center text-center opacity-0 pointer-events-none">
+                  <p class="text-base md:text-[22px] font-semibold text-black leading-snug px-6 font-poppins">
+                    Belajar keuangan di LIFIN itu asyik! Kamu bisa belajar nabung, belanja bijak, dan coba investasi lewat game seru. Chatbotnya juga siap bantu terus!
+                  </p>
+                </div>
+              </div>
+
+            </div>
+        </div>
+    </main>
+
+  <!-- PERUBAHAN: Menambahkan margin atas (mt) agar ada jarak dari konten di atasnya -->
+  <footer id="footer-landingpage-container" class="w-full max-w-none px-0 mt-48"></footer>
+
+
+  <div id="chatbot-container"></div>
+
+<!-- Add this right before your closing </body> tag in index.html -->
+<script type="module" src="js/index-berita.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    // --- LOGIKA KALKULATOR KEUANGAN ---
+    const uangSakuInput = document.getElementById('uang-saku');
+    const alokasikanButton = document.getElementById('alokasikan');
+    const dropdownTrigger = document.getElementById('dropdown-trigger');
+    const dropdownMenu = document.getElementById('dropdown-menu-kalkulator');
+    const jenjangText = document.getElementById('jenjang-text');
+
+    const persentaseAlokasi = {
+      SD: { donasi: 10, tabungan: 30, jajan: 40 },
+      SMP: { donasi: 15, tabungan: 25, jajan: 40 },
+      SMA: { donasi: 5, tabungan: 40, jajan: 35 },
+      UMUM: { donasi: 10, tabungan: 20, jajan: 50 },
+    };
+    let jenjangAktif = 'SD';
+
+    function formatRupiah(number) {
+        if (isNaN(number)) return "Rp0";
+        return 'Rp' + number.toLocaleString('id-ID');
+    }
+
+    function parseRupiah(value) {
+        return Number(String(value).replace(/[^0-9]/g, ''));
+    }
+    
+    if (uangSakuInput) {
+      uangSakuInput.addEventListener('input', (e) => {
+        let value = parseRupiah(e.target.value);
+        if (value) {
+          e.target.value = new Intl.NumberFormat('id-ID').format(value);
+        } else {
+          e.target.value = '';
+        }
+      });
+    }
+
+    function hitungAlokasi() {
+      const totalUang = parseRupiah(uangSakuInput.value);
+      if (!totalUang) return;
+
+      const persen = persentaseAlokasi[jenjangAktif];
+      const donasi = Math.floor(totalUang * persen.donasi / 100);
+      const tabungan = Math.floor(totalUang * persen.tabungan / 100);
+      const jajan = Math.floor(totalUang * persen.jajan / 100);
+      const darurat = totalUang - donasi - tabungan - jajan;
+
+      document.getElementById('nominal-donasi').textContent = formatRupiah(donasi);
+      document.getElementById('nominal-tabungan').textContent = formatRupiah(tabungan);
+      document.getElementById('nominal-jajan').textContent = formatRupiah(jajan);
+      document.getElementById('nominal-darurat').textContent = formatRupiah(darurat);
+    }
+
+    if (alokasikanButton) {
+        alokasikanButton.addEventListener('click', hitungAlokasi);
+    }
+
+    if (dropdownTrigger) {
+        dropdownTrigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+    }
+
+    if (dropdownMenu) {
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const jenjang = item.getAttribute('data-jenjang');
+                const warna = item.getAttribute('data-warna');
+                
+                jenjangAktif = jenjang;
+                jenjangText.textContent = jenjang;
+                if (dropdownTrigger) {
+                  dropdownTrigger.style.backgroundColor = warna;
+                }
+                dropdownMenu.classList.add('hidden');
+                hitungAlokasi();
+            });
+        });
+    }
+
+    // --- LOGIKA CHATBOT FINNY (TYPEWRITER) ---
+    const messages = [
+      "Halo teman-teman, namaku FINNY!<br>Salam Kenal yaa..",
+      "Aku bakal nemenin kamu selama belajar keuangan di LIFIN.",
+      "Kalau kamu bingung, butuh bantuan, atau cuma mau ngobrol...",
+      "Bingung soal uang jajan, nabung, atau budgeting?<br>Tanya aku ya.",
+      "Aku cuma bisa jawab soal finansial — soal cinta<br>atau matematika bukan urusanku ya!",
+      "Klik aku di pojok kanan bawah kapan pun kamu butuh bantuan!"
+    ];
+
+    let currentMsg = 0;
+    let typing = false;
+    const displayEl = document.getElementById("finny-text");
+    const nextButton = document.getElementById("next-button");
+
+    function typeText(text, doneCallback) {
+        typing = true;
+        let currentChar = 0;
+        displayEl.innerHTML = "";
+
+        function type() {
+            displayEl.innerHTML = text.slice(0, currentChar) + '<span class="animate-ping">|</span>';
+            if (currentChar < text.length) {
+                currentChar++;
+                setTimeout(type, 25); // Kecepatan mengetik
+            } else {
+                displayEl.innerHTML = text; // Hapus kursor setelah selesai
+                typing = false;
+                if (doneCallback) doneCallback();
+            }
+        }
+        type();
+    }
+
+    function showNextMessage() {
+        if (typing || !displayEl) return;
+        typeText(messages[currentMsg], () => {
+            currentMsg = (currentMsg + 1) % messages.length;
+        });
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener("click", showNextMessage);
+        showNextMessage();
+    }
+
+    // --- LOGIKA FAQ BARU ---
+    function toggleFaq(item) {
+        const content = item.querySelector('.faq-content');
+        const arrow = item.querySelector('.faq-arrow');
+        const isOpen = item.style.height === '250px';
+
+        // Tutup semua item lain
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+            if (otherItem !== item) {
+                otherItem.style.height = '94px';
+                otherItem.querySelector('.faq-content').style.opacity = '0';
+                otherItem.querySelector('.faq-arrow').style.transform = 'rotate(0deg)';
+            }
+        });
+
+        // Buka atau tutup item yang diklik
+        if (isOpen) {
+            item.style.height = '94px';
+            content.style.opacity = '0';
+            arrow.style.transform = 'rotate(0deg)';
+        } else {
+            item.style.height = '250px';
+            content.style.opacity = '1';
+            arrow.style.transform = 'rotate(180deg)';
+        }
+    }
+
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => toggleFaq(item));
+    });
+
+
+    // Menutup dropdown jika klik di luar area
+    window.addEventListener('click', () => {
+        if (dropdownMenu && !dropdownMenu.classList.contains('hidden')) {
+            dropdownMenu.classList.add('hidden');
+        }
+    });
+
+});
+</script>
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
+<script src="./js/component.js"></script>
+</body>
+</html>

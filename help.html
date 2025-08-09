@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LIFIN - Best Way to Learn Financial Literacy</title>
+  <link rel="icon" type="image/png" href="assets/images/fav.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#04B3E3',
+            accent: '#FFD635',
+          },
+          fontFamily: {
+            baloo: ['"Baloo 2"', 'cursive'],
+            poppins: ['Poppins', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Baloo 2', cursive;
+    }
+    .faq-item button:hover {
+      transform: translateY(10px);
+      box-shadow: none !important;
+    }
+    .faq-item button:active {
+      transform: translateY(4px);
+      box-shadow: none !important;
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+
+  <!-- Header -->
+  <div class="w-full flex flex-col items-center mt-[128px] px-4 text-center">
+    <h1 class="font-baloo font-extrabold text-3xl md:text-4xl lg:text-[48px] text-[#04B3E3]">
+      Pertanyaan Umum
+    </h1>
+  </div>
+
+  <!-- FAQ Container -->
+  <div class="w-full max-w-6xl mx-auto flex flex-col items-center mt-[50px] gap-8 px-4" id="faq-container">
+
+    <!-- FAQ Items (10 Total) -->
+    <!-- FAQ Template Start -->
+    <!-- Copy and paste the block below for each item, change span text and <p> content -->
+    <!-- You can replace this with JS later for dynamic rendering -->
+
+    <!-- ITEM LOOP START -->
+    <!-- Repeat for 10 items with different text -->
+    <!-- Example below is item 1 -->
+    <!-- ============ FAQ ITEM START ============ -->
+    <div class="faq-item w-full bg-accent rounded-[32px] shadow-[0_10px_0_0_#D4B000] overflow-hidden transition-all duration-300 relative cursor-pointer" style="height: 94px;">
+      <button type="button" class="w-full h-[94px] flex items-center justify-between px-4 md:px-8 bg-transparent focus:outline-none pointer-events-none" onclick="toggleFaqExpand(this)" tabindex="-1">
+        <span class="text-white text-xl md:text-[32px] font-extrabold font-baloo text-left pointer-events-none">
+          Apa itu LIFIN dan siapa yang boleh ikut?
+        </span>
+        <img src="assets/images/underarrow.png" alt="panah" class="w-14 h-14 md:w-[70px] md:h-[70px] transition-transform duration-300 pointer-events-none flex-shrink-0" />
+      </button>
+      <div class="absolute left-4 right-4 md:left-8 md:right-8 bottom-0 bg-white h-[144px] rounded-t-[32px] flex items-center justify-center text-center opacity-0 transition-opacity duration-300 pointer-events-none">
+        <p class="text-base md:text-[22px] font-semibold text-black leading-snug px-6 font-poppins">
+          LIFIN itu tempat seru buat belajar ngatur uang dari kecil! Utamanya buat anak SMP, tapi SD dan SMA juga bisa ikut. Ada chatbot pintar yang siap bantu kapan aja!
+        </p>
+      </div>
+    </div>
+    <!-- ============ FAQ ITEM END ============ -->
+
+    <!-- Lanjutan dari 3 box pertama -->
+<!-- FAQ Item 4 -->
+<div class="faq-item w-full bg-[#FFD635] rounded-[32px] shadow-[0_10px_0_0_#D4B000] overflow-hidden transition-all duration-300 relative cursor-pointer" style="height: 94px;">
+  <button type="button" class="w-full h-[94px] flex items-center justify-between px-4 md:px-8 focus:outline-none pointer-events-none bg-transparent" onclick="toggleFaqExpand(this)" tabindex="-1">
+    <span class="text-white text-xl md:text-[32px] font-extrabold font-baloo text-left pointer-events-none">
+      Apakah ada jadwal tetap untuk belajar?
+    </span>
+    <img src="assets/images/underarrow.png" alt="panah" class="w-14 h-14 md:w-[70px] md:h-[70px] transition-transform duration-300 pointer-events-none flex-shrink-0" />
+  </button>
+  <div class="absolute left-4 right-4 md:left-8 md:right-8 bottom-0 bg-white h-[144px] rounded-t-[32px] rounded-b-[0px] flex items-center justify-center text-center opacity-0 transition-opacity duration-300 pointer-events-none">
+    <p class="text-base md:text-[22px] font-semibold text-black leading-snug px-6 font-poppins">
+      Belajarnya fleksibel! Kamu bisa akses kapan saja sesuai waktu kamu sendiri.
+    </p>
+  </div>
+</div>
+
+<!-- FAQ Item 5 -->
+<div class="faq-item w-full bg-[#FFD635] rounded-[32px] shadow-[0_10px_0_0_#D4B000] overflow-hidden transition-all duration-300 relative cursor-pointer" style="height: 94px;">
+  <button type="button" class="w-full h-[94px] flex items-center justify-between px-4 md:px-8 focus:outline-none pointer-events-none bg-transparent" onclick="toggleFaqExpand(this)" tabindex="-1">
+    <span class="text-white text-xl md:text-[32px] font-extrabold font-baloo text-left pointer-events-none">
+      Apakah LIFIN punya aplikasi?
+    </span>
+    <img src="assets/images/underarrow.png" alt="panah" class="w-14 h-14 md:w-[70px] md:h-[70px] transition-transform duration-300 pointer-events-none flex-shrink-0" />
+  </button>
+  <div class="absolute left-4 right-4 md:left-8 md:right-8 bottom-0 bg-white h-[144px] rounded-t-[32px] rounded-b-[0px] flex items-center justify-center text-center opacity-0 transition-opacity duration-300 pointer-events-none">
+    <p class="text-base md:text-[22px] font-semibold text-black leading-snug px-6 font-poppins">
+      Saat ini LIFIN berbasis web, tapi kami sedang siapkan aplikasi Android & iOS!
+    </p>
+  </div>
+</div>
+
+<!-- FAQ Item 6 -->
+<div class="faq-item w-full bg-[#FFD635] rounded-[32px] shadow-[0_10px_0_0_#D4B000] overflow-hidden transition-all duration-300 relative cursor-pointer" style="height: 94px;">
+  <button type="button" class="w-full h-[94px] flex items-center justify-between px-4 md:px-8 focus:outline-none pointer-events-none bg-transparent" onclick="toggleFaqExpand(this)" tabindex="-1">
+    <span class="text-white text-xl md:text-[32px] font-extrabold font-baloo text-left pointer-events-none">
+      Apa manfaat ikut LIFIN?
+    </span>
+    <img src="assets/images/underarrow.png" alt="panah" class="w-14 h-14 md:w-[70px] md:h-[70px] transition-transform duration-300 pointer-events-none flex-shrink-0" />
+  </button>
+  <div class="absolute left-4 right-4 md:left-8 md:right-8 bottom-0 bg-white h-[144px] rounded-t-[32px] rounded-b-[0px] flex items-center justify-center text-center opacity-0 transition-opacity duration-300 pointer-events-none">
+    <p class="text-base md:text-[22px] font-semibold text-black leading-snug px-6 font-poppins">
+      Kamu jadi lebih paham uang, bisa atur pengeluaran, dan siap menghadapi dunia nyata!
+    </p>
+  </div>
+</div>
+
+<!-- FAQ Item 7 -->
+<div class="faq-item w-full bg-[#FFD635] rounded-[32px] shadow-[0_10px_0_0_#D4B000] overflow-hidden transition-all duration-300 relative cursor-pointer" style="height: 94px;">
+  <button type="button" class="w-full h-[94px] flex items-center justify-between px-4 md:px-8 focus:outline-none pointer-events-none bg-transparent" onclick="toggleFaqExpand(this)" tabindex="-1">
+    <span class="text-white text-xl md:text-[32px] font-extrabold font-baloo text-left pointer-events-none">
+      Bagaimana cara gabung ke LIFIN?
+    </span>
+    <img src="assets/images/underarrow.png" alt="panah" class="w-14 h-14 md:w-[70px] md:h-[70px] transition-transform duration-300 pointer-events-none flex-shrink-0" />
+  </button>
+  <div class="absolute left-4 right-4 md:left-8 md:right-8 bottom-0 bg-white h-[144px] rounded-t-[32px] rounded-b-[0px] flex items-center justify-center text-center opacity-0 transition-opacity duration-300 pointer-events-none">
+    <p class="text-base md:text-[22px] font-semibold text-black leading-snug px-6 font-poppins">
+      Cukup buka website LIFIN, daftar pakai email atau akun sekolahmu, langsung mulai!
+    </p>
+  </div>
+</div>
+
+<!-- FAQ Item 8 -->
+<div class="faq-item w-full bg-[#FFD635] rounded-[32px] shadow-[0_10px_0_0_#D4B000] overflow-hidden transition-all duration-300 relative cursor-pointer" style="height: 94px;">
+  <button type="button" class="w-full h-[94px] flex items-center justify-between px-4 md:px-8 focus:outline-none pointer-events-none bg-transparent" onclick="toggleFaqExpand(this)" tabindex="-1">
+    <span class="text-white text-xl md:text-[32px] font-extrabold font-baloo text-left pointer-events-none">
+      Apakah LIFIN ada ujian?
+    </span>
+    <img src="assets/images/underarrow.png" alt="panah" class="w-14 h-14 md:w-[70px] md:h-[70px] transition-transform duration-300 pointer-events-none flex-shrink-0" />
+  </button>
+  <div class="absolute left-4 right-4 md:left-8 md:right-8 bottom-0 bg-white h-[144px] rounded-t-[32px] rounded-b-[0px] flex items-center justify-center text-center opacity-0 transition-opacity duration-300 pointer-events-none">
+    <p class="text-base md:text-[22px] font-semibold text-black leading-snug px-6 font-poppins">
+      Nggak ada ujian kok, cuma mini quiz atau tantangan game seru yang bikin belajar makin fun!
+    </p>
+  </div>
+</div>
+
+<!-- FAQ Item 9 -->
+<div class="faq-item w-full bg-[#FFD635] rounded-[32px] shadow-[0_10px_0_0_#D4B000] overflow-hidden transition-all duration-300 relative cursor-pointer" style="height: 94px;">
+  <button type="button" class="w-full h-[94px] flex items-center justify-between px-4 md:px-8 focus:outline-none pointer-events-none bg-transparent" onclick="toggleFaqExpand(this)" tabindex="-1">
+    <span class="text-white text-xl md:text-[32px] font-extrabold font-baloo text-left pointer-events-none">
+      Bisa belajar bareng teman?
+    </span>
+    <img src="assets/images/underarrow.png" alt="panah" class="w-14 h-14 md:w-[70px] md:h-[70px] transition-transform duration-300 pointer-events-none flex-shrink-0" />
+  </button>
+  <div class="absolute left-4 right-4 md:left-8 md:right-8 bottom-0 bg-white h-[144px] rounded-t-[32px] rounded-b-[0px] flex items-center justify-center text-center opacity-0 transition-opacity duration-300 pointer-events-none">
+    <p class="text-base md:text-[22px] font-semibold text-black leading-snug px-6 font-poppins">
+      Tentu! Kamu bisa ajak teman gabung dan saling bantu lewat tantangan dan fitur sosial.
+    </p>
+  </div>
+</div>
+
+<!-- FAQ Item 10 -->
+<div class="mb-[96px]faq-item w-full bg-[#FFD635] rounded-[32px] shadow-[0_10px_0_0_#D4B000] overflow-hidden transition-all duration-300 relative cursor-pointer" style="height: 94px;">
+  <button type="button" class="w-full h-[94px] flex items-center justify-between px-4 md:px-8 focus:outline-none pointer-events-none bg-transparent" onclick="toggleFaqExpand(this)" tabindex="-1">
+    <span class="text-white text-xl md:text-[32px] font-extrabold font-baloo text-left pointer-events-none">
+      Apa itu chatbot Finny?
+    </span>
+    <img src="assets/images/underarrow.png" alt="panah" class="w-14 h-14 md:w-[70px] md:h-[70px] transition-transform duration-300 pointer-events-none flex-shrink-0" />
+  </button>
+  <div class="absolute left-4 right-4 md:left-8 md:right-8 bottom-0 bg-white h-[144px] rounded-t-[32px] rounded-b-[0px] flex items-center justify-center text-center opacity-0 transition-opacity duration-300 pointer-events-none">
+    <p class="text-base md:text-[22px] font-semibold text-black leading-snug px-6 font-poppins">
+      Finny adalah chatbot pintar LIFIN yang bisa jawab pertanyaan kamu tentang uang kapan aja!
+    </p>
+  </div>
+</div>
+<div class="w-full flex flex-col items-center mt-[96px] mb-[32px] px-4 text-center">
+    <h2 class="font-baloo font-extrabold text-2xl md:text-3xl lg:text-[36px] text-[#04B3E3]">
+        Masih Ada Pertanyaan Lain?
+    </h2>
+    <div class="w-full flex justify-center"></div>
+      <a href="/LIFIN/Features/saran.html" class="w-full max-w-[200px] h-[70px] bg-[#04B3E3] rounded-[20px] mt-8 mb-[96px] shadow-[0_10px_0_0_#038BB1] cursor-pointer hover:translate-y-2 transition-all duration-300 flex items-center justify-center">
+        <span class="font-baloo font-bold text-white text-[24px]">Kirim Saran</span>
+      </a>
+    </div>
+</div>
+
+  <!-- Script -->
+  <script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', function(e) {
+        if (e.target.tagName === 'BUTTON' || e.target.closest('button')) return;
+        const btn = item.querySelector('button');
+        if (btn) btn.click();
+      });
+    });
+
+    function toggleFaqExpand(button) {
+      const container = button.parentElement;
+      const img = button.querySelector('img');
+      const content = container.querySelector('.bg-white');
+      const isOpen = container.style.height === '250px';
+
+      document.querySelectorAll('#faq-container > .faq-item').forEach(div => {
+        div.style.height = '94px';
+        div.querySelector('img').style.transform = 'rotate(0deg)';
+        const whiteBox = div.querySelector('.bg-white');
+        whiteBox.style.opacity = 0;
+        whiteBox.style.pointerEvents = "none";
+      });
+
+      if (!isOpen) {
+        container.style.height = '250px';
+        img.style.transform = 'rotate(180deg)';
+        content.style.opacity = 1;
+        content.style.pointerEvents = "auto";
+      }
+    }
+  </script>
+
+</body>
+</html>

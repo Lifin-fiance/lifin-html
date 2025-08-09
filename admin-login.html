@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login - LIFIN</title>
+
+  <!-- Google Fonts and Tailwind CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind CSS Configuration
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            baloo: ['"Baloo 2"', 'cursive']
+          },
+          boxShadow: {
+            redButton: '0px 6px 0px #b94e4e',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom button styles for hover and active states */
+    .button {
+      transition: all 0.15s ease-in-out;
+    }
+    .button:hover {
+      transform: translateY(6px);
+      box-shadow: none !important;
+    }
+    .button:active {
+      transform: translateY(4px);
+      box-shadow: none !important;
+    }
+  </style>
+</head>
+
+<body class="bg-[#004B75] flex justify-center items-center min-h-screen font-baloo overflow-x-hidden p-5">
+
+  <!-- Main Authentication Container -->
+  <div class="w-full max-w-sm md:max-w-md relative">
+    
+    <!-- White Card Container -->
+    <div class="relative z-10 bg-white w-full px-6 lg:px-8 py-8 rounded-[32px]">
+      
+      <!-- Admin Login View -->
+      <div>
+        <div class="flex justify-center mb-4">
+            <img src="assets/images/icon.png" alt="LIFIN Logo" class="w-24 h-24">
+        </div>
+        <h1 class="text-center text-2xl md:text-3xl font-bold text-[#004B75] pb-6">
+          Admin Panel Login
+        </h1>
+        
+        <form id="admin-login-form">
+            <input id="adminEmailInput" name="email" type="email" placeholder="Admin Email" required
+              class="w-full mb-4 px-5 py-3 md:px-6 md:py-4 rounded-full border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#04B3E3] placeholder:font-semibold placeholder:text-gray-400" />
+
+            <input id="adminPasswordInput" name="password" type="password" placeholder="Admin Password" required
+              class="w-full mb-6 px-5 py-3 md:px-6 md:py-4 rounded-full border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#04B3E3] placeholder:font-semibold placeholder:text-gray-400" />
+            
+            <!-- Error Message Container -->
+            <p id="admin-error-message" class="text-center text-red-500 text-sm font-semibold mb-4"></p>
+
+            <button type="submit" id="adminLoginButton" class="button w-full py-3 bg-[#FF6B6B] text-white font-bold text-lg rounded-full shadow-redButton">
+              Login
+            </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase and Admin Login Logic -->
+  <script type="module" src="js/admin-login.js"></script>
+  
+</body>
+</html>

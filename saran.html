@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kotak Saran</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<!-- Poppins: 600, 700, 800 -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+<!-- Baloo 2: 600, 700, 800 -->
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+ <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .baloo { font-family: 'Baloo 2', cursive; }
+  </style>
+</head>
+<body class="bg-white">
+
+<div class="relative flex items-center justify-center py-[36px] pt-[36px]">
+  <div class="flex flex-col items-center text-center px-4">
+    <h2 class="baloo font-extrabold text-[28px] lg:text-[40px] leading-tight">
+      <span class="text-[#04B3E3]">Kita Bisa Bantu </span>
+      <span class="text-[#FFC72C]">Masalahmu</span>
+    </h2>
+    <img src="assets/images/line-yellow.svg" class="mt-[2px] w-[150px] lg:w-[217.54px] lg:translate-x-[140px]" alt="garis bawah kuning"/>
+  </div>
+  <img src="assets/images/finlook.svg" alt="finny" class="hidden lg:block absolute translate-x-[400px] w-[250px] z-[-1] translate-y-[60px]" />
+</div>
+
+<main class="px-6 pb-24">
+  <form id="saranForm" class="w-full lg:w-[1084px] h-auto lg:h-[477px] bg-[#04B3E3] rounded-2xl lg:rounded-[32px] mx-auto p-6 lg:p-[32px] flex flex-col lg:flex-row gap-8 lg:gap-[40px] text-white" enctype="multipart/form-data">
+    
+    <div class="flex flex-col gap-[8px] w-full lg:w-1/2">
+      <label class="baloo text-[20px] lg:text-[24px]">Alamat Emailmu</label>
+      <input type="email" name="email" required
+        class="w-full h-[50px] rounded-lg lg:rounded-[10px] text-black px-4 py-0 leading-none bg-white focus:outline-none focus:ring-[3px] focus:ring-[#FFC72C]" />
+
+      <label class="baloo text-[20px] lg:text-[24px] mt-2">Subjek</label>
+      <input type="text" name="title" required
+        class="w-full h-[50px] rounded-lg lg:rounded-[10px] text-black px-4 py-0 leading-none bg-white focus:outline-none focus:ring-[3px] focus:ring-[#FFC72C]" />
+
+      <label class="baloo text-[20px] lg:text-[24px] mt-2">Lampiran</label>
+      <div class="w-full h-[150px] bg-white rounded-lg lg:rounded-[10px] flex items-center justify-center p-4 mx-0 mb-[6px]">
+        <div onclick="document.getElementById('attachment').click()" 
+             class="w-full h-full border-2 border-dashed border-[#D6D6D6] rounded-lg lg:rounded-[10px] flex items-center justify-center text-center cursor-pointer">
+          <p class="text-black text-center px-2 text-base">
+            <span class="text-[#04B3E3] font-semibold">Sedang Dalam</span> Masa Pembuatan.
+          </p>
+          <input type="file" name="attachment" id="attachment" class="hidden" />
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col w-full lg:w-1/2 justify-between">
+      <div>
+        <label class="baloo text-[20px] lg:text-[24px]">Deskripsi</label>
+        <textarea name="message" required
+          class="mt-[8px] w-full h-[160px] rounded-lg lg:rounded-[10px] text-black p-4 resize-none bg-white focus:outline-none focus:ring-[3px] focus:ring-[#FFC72C]"></textarea>
+      </div>
+
+      <input type="submit" id="button" disabled
+        value="Langsung Kirim"
+        class="w-full h-[32px] lg:h-[140px] sm:h- mb-[10px] lg:h-[140px] mt-4 lg:mt-0 bg-gray-400 text-white baloo text-semibold text-[12px] lg:text-[32px] rounded-xl lg:rounded-[25px] shadow-[0_5px_0_#aaa] lg:shadow-[0_10px_0_#aaa] cursor-not-allowed transition-all duration-150" />
+    </div>
+  </form>
+
+  <div class="flex justify-center py-8">
+    <div class="g-recaptcha" data-sitekey="6Lf1aY4rAAAAAPe2l0Sh4zkXnFu2PWn3F0daG3nR" data-callback="recaptchaCallback"></div>
+  </div>
+
+</main>
+
+<script>
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  emailjs.init("qTkRU5PHixuf0D08O");
+
+  const btn = document.getElementById('button');
+  const form = document.getElementById('saranForm');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    btn.value = 'Mengirim...';
+    const email = this.email.value.trim();
+
+    if (grecaptcha.getResponse() === "") {
+      alert("Tolong centang reCAPTCHA dulu.");
+      btn.value = 'Langsung Kirim';
+      return;
+    }
+
+    if (!email.endsWith('@gmail.com')) {
+      alert("Email harus menggunakan @gmail.com");
+      btn.value = 'Langsung Kirim';
+      return;
+    }
+
+    emailjs.sendForm("service_nrl3de3", "template_xhjwxte", this)
+      .then(() => {
+        btn.value = 'Terkirim ✔️';
+        alert("Saran berhasil dikirim ke Lifin!");
+        form.reset();
+        grecaptcha.reset();
+        btn.disabled = true;
+        
+        btn.classList.remove('bg-[#004B75]', 'hover:translate-y-[10px]', 'shadow-[0_10px_0_#003552]', 'cursor-pointer');
+        btn.classList.add('bg-gray-400', 'cursor-not-allowed', 'shadow-[0_10px_0_#aaa]');
+        
+        setTimeout(() => { btn.value = 'Langsung Kirim'; }, 2000);
+      }, (err) => {
+        btn.value = 'Langsung Kirim';
+        alert("Gagal mengirim: " + JSON.stringify(err));
+      });
+  });
+
+  function recaptchaCallback() {
+    const btn = document.getElementById('button');
+    btn.disabled = false;
+    btn.classList.remove('bg-gray-400', 'cursor-not-allowed');
+    btn.classList.add('bg-[#004B75]', 'hover:translate-y-[10px]', 'shadow-[0_10px_0_#003552]', 'cursor-pointer');
+  }
+</script>
+
+</body>
+</html>

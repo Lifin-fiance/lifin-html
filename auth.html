@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Authentication - LIFIN</title>
+
+  <!-- Google Fonts and Tailwind CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind CSS Configuration
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            baloo: ['"Baloo 2"', 'cursive']
+          },
+          boxShadow: {
+            redButton: '0px 6px 0px #b94e4e',
+            blueButton: '0px 6px 0px #003554',
+          },
+          keyframes: {
+            'press': {
+              '0%': { transform: 'scale(1)' },
+              '50%': { transform: 'scale(0.95)' },
+              '100%': { transform: 'scale(1)' }
+            },
+            'slideDown': {
+              '0%': { transform: 'translateY(-100%)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' }
+            }
+          },
+          animation: {
+            press: 'press 0.2s ease-out',
+            'slide-down': 'slideDown 0.4s ease-out forwards'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom button styles for hover and active states */
+    .button {
+      transition: all 0.15s ease-in-out;
+    }
+    @media (min-width: 1024px) {
+      .button:hover {
+        transform: translateY(6px);
+        box-shadow: none !important;
+      }
+    }
+    .button:active {
+      transform: translateY(4px);
+      box-shadow: none !important;
+    }
+  </style>
+</head>
+
+<body class="bg-[#04B3E3] flex justify-center items-center min-h-screen font-baloo overflow-x-hidden py-5 sm:py-0">
+
+  <!-- Custom Notification Modal -->
+  <div id="notifModal" class="hidden fixed top-5 w-[90%] max-w-md bg-white border-4 border-[#FFD635] rounded-[32px] shadow-lg p-5 z-50 animate-slide-down">
+    <div class="flex items-center justify-between">
+      <h2 id="notifTitle" class="font-bold text-lg text-gray-800"></h2>
+      <button onclick="closeModal()" class="text-gray-500 hover:text-gray-800 font-bold text-xl">&times;</button>
+    </div>
+    <p id="notifMessage" class="mt-2 text-gray-700"></p>
+  </div>
+
+  <!-- Main Authentication Container -->
+  <div class="w-full max-w-sm md:max-w-md lg:max-w-[900px] mt-[96px] lg:mt-0 relative">
+    <div class="relative w-full flex justify-center">
+      
+      <!-- Mascot Image -->
+      <img src="assets/images/finlook.svg" alt="Finlook Mascot"
+           class="absolute -top-[85px] lg:-top-[130px] w-40 h-40 lg:w-[250px] lg:h-[250px] object-contain z-0" />
+
+      <!-- White Card Container -->
+      <div class="relative z-10 bg-white w-full px-6 lg:px-8 py-2 rounded-[32px] pt-14 lg:pt-5">
+        
+        <!-- ==================================================================== -->
+        <!-- LOGIN VIEW (DEFAULT)                                                 -->
+        <!-- ==================================================================== -->
+        <div id="login-view">
+          <h1 class="text-center text-2xl md:text-3xl font-bold text-[#04B3E3] pt-1 lg:pt-[8px] pb-[16px] lg:py-8">
+            Yuk, Masuk Untuk Melanjutkan!
+          </h1>
+          
+          <form id="login-form">
+              <!-- IMPORTANT: IDs have been updated for uniqueness. -->
+              <input id="loginEmailInput" name="email" type="email" placeholder="Masukkan Email" required
+                class="w-full mb-4 px-5 py-2 md:px-6 md:py-4 rounded-full border border-gray-300 focus:outline-none placeholder:font-semibold placeholder:text-gray-400" />
+
+              <input id="loginPasswordInput" name="password" type="password" placeholder="Passwordmu apa?" required
+                class="w-full mb-2 px-5 py-2 md:px-6 md:py-4 rounded-full border border-gray-300 focus:outline-none placeholder:font-semibold placeholder:text-gray-400" />
+
+              <div class="text-right mb-4">
+                <a href="#" id="show-forgot-password" class="text-sm text-[#04B3E3] font-medium">Lupa Password?</a>
+              </div>
+
+              <button type="submit" id="loginButton" class="button w-full py-3 bg-[#FF6B6B] text-white font-bold text-lg rounded-full shadow-redButton mb-6">
+                Lanjutkan
+              </button>
+          </form>
+
+          <div class="flex items-center mb-6">
+            <hr class="flex-grow border-t border-gray-800" />
+            <span class="mx-4 text-sm text-gray-800">atau</span>
+            <hr class="flex-grow border-t border-gray-800" />
+          </div>
+
+          <button id="googleLoginButton" class="button w-full py-3 bg-[#004B75] text-white font-bold text-lg rounded-full shadow-blueButton flex items-center justify-center gap-2">
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="w-6 h-6" />
+            Google
+          </button>
+
+          <p class="text-center text-sm pt-[24px] pb-[12px] font-bold text-black">
+            Belum Punya Akun? <a href="#" id="show-register" class="text-[#04B3E3] font-bold">Daftar Dulu!</a>
+          </p>
+        </div>
+
+        <!-- ==================================================================== -->
+        <!-- REGISTER VIEW (HIDDEN)                                               -->
+        <!-- ==================================================================== -->
+        <div id="register-view" class="hidden">
+          <h1 class="text-center text-2xl md:text-3xl font-bold text-[#04B3E3] pt-1 lg:pt-[8px] pb-[16px] lg:py-8">
+              Buat Akun Barumu!
+          </h1>
+
+          <form id="register-form">
+              <!-- IMPORTANT: IDs have been updated for uniqueness. -->
+              <input id="registerEmailInput" type="email" name="email" placeholder="Masukkan Email" required class="w-full mb-4 px-5 py-2 md:px-6 md:py-4 rounded-full border border-gray-300 focus:outline-none placeholder:font-semibold placeholder:text-gray-400" />
+
+              <input id="registerPasswordInput" type="password" name="password" placeholder="Buat Password" required class="w-full mb-4 px-5 py-2 md:px-6 md:py-4 rounded-full border border-gray-300 focus:outline-none placeholder:font-semibold placeholder:text-gray-400" />
+              
+              <input id="confirmPasswordInput" type="password" name="confirmPassword" placeholder="Ulangi Password" required class="w-full mb-6 px-5 py-2 md:px-6 md:py-4 rounded-full border border-gray-300 focus:outline-none placeholder:font-semibold placeholder:text-gray-400" />
+
+              <button type="submit" id="registerButton" class="button w-full py-3 bg-[#FF6B6B] text-white font-bold text-lg rounded-full shadow-redButton mb-6">
+                  Daftar
+              </button>
+          </form>
+
+          <p class="text-center text-sm pt-[12px] pb-[12px] font-bold text-black">
+              Sudah Punya Akun? <a href="#" id="show-login-from-register" class="text-[#04B3E3] font-bold">Masuk Sini!</a>
+          </p>
+        </div>
+
+        <!-- ==================================================================== -->
+        <!-- FORGOT PASSWORD VIEW (HIDDEN)                                        -->
+        <!-- ==================================================================== -->
+        <div id="forgot-password-view" class="hidden">
+            <h1 class="text-center text-2xl md:text-3xl font-bold text-[#04B3E3] pt-1 lg:pt-[8px] pb-1 lg:py-4">
+                Lupa Password?
+            </h1>
+            <p class="text-center text-[#004B75] text-sm mb-6">Kami akan kirimkan link reset ke email kamu.</p>
+
+            <form id="reset-form">
+                <!-- IMPORTANT: IDs have been updated for uniqueness. -->
+                <input id="resetEmailInput" type="email" placeholder="Masukkan Emailmu" required class="w-full mb-4 px-5 py-2 md:px-6 md:py-4 rounded-full border border-gray-300 focus:outline-none placeholder:font-semibold placeholder:text-gray-400" />
+
+                <button type="submit" id="resetButton" class="button w-full py-3 bg-[#FF6B6B] text-white font-bold text-lg rounded-full shadow-redButton mb-6">
+                    Kirim Link Reset
+                </button>
+            </form>
+
+            <p class="text-center text-sm pt-[12px] pb-[12px] font-bold text-black">
+                Ingat passwordnya? <a href="#" id="show-login-from-forgot" class="text-[#04B3E3] font-bold">Kembali ke Login</a>
+            </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================================================================== -->
+  <!-- JAVASCRIPT LOGIC                                                     -->
+  <!-- ==================================================================== -->
+  
+  <!-- Script to switch between Login, Register, and Forgot Password views -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Get the view containers
+      const loginView = document.getElementById('login-view');
+      const registerView = document.getElementById('register-view');
+      const forgotPasswordView = document.getElementById('forgot-password-view');
+
+      // Get the links that trigger view changes
+      const showRegisterLink = document.getElementById('show-register');
+      const showLoginFromRegisterLink = document.getElementById('show-login-from-register');
+      const showForgotPasswordLink = document.getElementById('show-forgot-password');
+      const showLoginFromForgotLink = document.getElementById('show-login-from-forgot');
+
+      // Function to hide all views
+      const hideAllViews = () => {
+        loginView.classList.add('hidden');
+        registerView.classList.add('hidden');
+        forgotPasswordView.classList.add('hidden');
+      };
+
+      // Event listener to show the register view
+      showRegisterLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        hideAllViews();
+        registerView.classList.remove('hidden');
+      });
+
+      // Event listener to show the forgot password view
+      showForgotPasswordLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        hideAllViews();
+        forgotPasswordView.classList.remove('hidden');
+      });
+
+      // Event listener to return to the login view from register
+      showLoginFromRegisterLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        hideAllViews();
+        loginView.classList.remove('hidden');
+      });
+
+      // Event listener to return to the login view from forgot password
+      showLoginFromForgotLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        hideAllViews();
+        loginView.classList.remove('hidden');
+      });
+    });
+
+    // Function to close the notification modal
+    function closeModal() {
+        document.getElementById('notifModal').classList.add('hidden');
+    }
+  </script>
+  
+  <!-- 
+    ====================================================================
+    IMPORTANT NOTE FOR YOU
+    ==================================================================== 
+    The paths to the assets and JS files have been updated to work from
+    the root directory. No more "../" is needed.
+    ==================================================================== 
+  -->
+
+  <script type="module" src="js/auth-manager.js"></script>
+  <script type="module" src="js/login-page.js"></script>
+  
+</body>
+</html>
