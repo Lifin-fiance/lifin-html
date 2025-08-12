@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Quiz Race LIFIN</title>
+    
+    <!-- Memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Memuat Font Baloo 2 dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        // Konfigurasi custom untuk Tailwind CSS
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'baloo': ['"Baloo 2"', 'cursive'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Mengaplikasikan font Baloo 2 sebagai font default */
+        body {
+            font-family: 'Baloo 2', cursive;
+        }
+
+        /* --- CSS untuk Efek Tombol 3D (Diperbarui) --- */
+        .button-3d {
+            /* Transisi untuk semua properti dengan durasi 0.15s */
+            transition: all 0.15s ease-in-out;
+        }
+
+        /* Efek hover: tombol turun 10px dan shadow hilang */
+        .button-3d:hover {
+            transform: translateY(10px);
+            box-shadow: none !important;
+        }
+
+        /* Efek saat tombol ditekan: tombol turun 10px dan shadow hilang */
+        .button-3d:active {
+            transform: translateY(10px);
+            box-shadow: none !important;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Header: Judul sekarang diposisikan di tengah secara vertikal dan horizontal menggunakan Flexbox -->
+    <header class="bg-[#04b3e3] py-[20px] lg:py-[50px] flex items-center justify-center">
+        <h1 class="font-baloo text-white text-3xl lg:text-4xl font-extrabold text-center tracking-wider">
+            FINANCE QUIZ RACE
+        </h1>
+    </header>
+
+    <main class="bg-white py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+
+                <!-- Tombol 1: Akuntan Cilik -->
+                <a href="./akuntan-cilik.html" 
+                   class="button-3d block w-full max-w-[500px] h-[245px] bg-[#04b3e3] rounded-2xl p-6 text-white flex items-center"
+                   style="--shadow-color: #038db4; box-shadow: 0 10px 0 var(--shadow-color);">
+                    <div class="flex justify-between items-center w-full">
+                        <div>
+                            <h2 class="font-baloo font-bold text-2xl sm:text-3xl">Akuntan Cilik</h2>
+                        </div>
+                        <img src="./assets/images/play.png" 
+
+                             alt="Play Icon" class="w-12 h-12">
+                    </div>
+                </a>
+
+                <!-- Tombol 2: Cuanesia -->
+                <a href="./cuanesia.html" 
+                   class="button-3d block w-full max-w-[500px] h-[245px] bg-[#004b75] rounded-2xl p-6 text-white flex items-center"
+                   style="--shadow-color: #003552; box-shadow: 0 10px 0 var(--shadow-color);">
+                    <div class="flex justify-between items-center w-full">
+                        <div>
+                            <h2 class="font-baloo font-bold text-2xl sm:text-3xl">Cuanesia</h2>
+                        </div>
+                        <img src="./assets/images/play.png" 
+
+                             alt="Play Icon" class="w-12 h-12">
+                    </div>
+                </a>
+
+                <!-- Tombol 3: Detektif Cuan -->
+                <a href="./true-false.html" 
+                   class="button-3d block w-full max-w-[500px] h-[245px] bg-[#eeace6] rounded-2xl p-6 text-white flex items-center"
+                   style="--shadow-color: #BE8AB8; box-shadow: 0 10px 0 var(--shadow-color);">
+                    <div class="flex justify-between items-center w-full">
+                        <div>
+                            <h2 class="font-baloo font-bold text-2xl sm:text-3xl">Detektif Cuan</h2>
+                        </div>
+                        <img src="./assets/images/play.png" 
+
+                             alt="Play Icon" class="w-12 h-12">
+                    </div>
+                </a>
+
+                <!-- Tombol 4: Split Smart -->
+                <a href="./split-smart.html" 
+                   class="button-3d block w-full max-w-[500px] h-[245px] bg-[#Ff6b6b] rounded-2xl p-6 text-white flex items-center"
+                   style="--shadow-color: #D44F4F; box-shadow: 0 10px 0 var(--shadow-color);">
+                    <div class="flex justify-between items-center w-full">
+                        <div>
+                            <h2 class="font-baloo font-bold text-2xl sm:text-3xl">Split Smart</h2>
+                        </div>
+                        <img src="assets/images/play.png" 
+
+                             alt="Play Icon" class="w-12 h-12">
+                    </div>
+                </a>
+
+                <!-- Tombol 5: Penjelajah Uang (di tengah) -->
+                <div class="md:col-span-2 flex justify-center w-full">
+                    <a href="./penjelajah-uang.html" 
+                       class="button-3d block w-full max-w-[500px] h-[245px] bg-[#ffc72c] rounded-2xl p-6 text-white flex items-center"
+                       style="--shadow-color: #D4B000; box-shadow: 0 10px 0 var(--shadow-color);">
+                        <div class="flex justify-between items-center w-full">
+                            <div>
+                                <h2 class="font-baloo font-bold text-2xl sm:text-3xl">Penjelajah Uang</h2>
+                            </div>
+                            <img src="./assets/images/play.png" 
+        
+                                 alt="Play Icon" class="w-12 h-12">
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

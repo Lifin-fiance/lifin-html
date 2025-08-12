@@ -174,71 +174,81 @@ export function generatePageContent(page, userProfile, allMateri) {
     switch (page) {
         // This is the updated 'finlook' case for your generatePageContent function in js/ui-manager.js
 
-case "finlook":
-    // This case returns the revamped HTML structure for the Finlook chatbot.
-    return `
-        <div class="w-full h-full flex items-center justify-center p-4 bg-gray-50">
-            <div id="chatbot-panel" class="w-full max-w-2xl h-[85vh] flex flex-col bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
-                
-                <!-- Chat Header -->
-                <div class="p-4 bg-white border-b border-gray-200 flex items-center gap-4 flex-shrink-0">
-                    <img src="assets/images/mascotfin.png" alt="Finny Mascot" class="w-12 h-12 object-contain rounded-full">
-                    <div>
-                        <h2 class="text-lg font-bold text-gray-800">Finny</h2>
-                        <p class="text-sm text-green-500 flex items-center gap-1.5">
-                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
-                            Online
-                        </p>
-                    </div>
-                </div>
+        case "finlook":
+            return `
+                <div class="w-full h-[calc(100vh-8rem)] lg:h-[calc(100vh-4rem)] p-0">
+                    <div id="chatbot-panel" class="w-full h-full flex flex-col bg-white">
+                        
+                        <!-- Chat Header (Sticky) -->
+                        <div class="p-4 bg-white border-b border-gray-200 flex items-center gap-4 flex-shrink-0 z-10">
+                            <img src="assets/images/mascotfin.png" alt="Finny Mascot" class="w-10 h-10 sm:w-12 sm:h-12 object-contain rounded-full">
+                            <div>
+                                <h2 class="text-lg font-bold text-gray-800">Finny</h2>
+                                <p class="text-sm text-green-500 flex items-center gap-1.5">
+                                    <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                    Online
+                                </p>
+                            </div>
+                        </div>
 
-                <!-- Chat Messages Area -->
-                <div class="flex-1 p-6 space-y-6 overflow-y-auto chat-messages bg-gray-50">
-                    <!-- Messages will be dynamically added here -->
-                    <div class="flex items-end gap-3 w-full justify-start">
-                        <img src="assets/images/mascotfin.png" alt="Finny" class="w-10 h-10 object-contain rounded-full flex-shrink-0 self-start">
-                        <div class="bg-[#04b3e3] text-white p-3 rounded-tr-[20px] rounded-tl-[20px] rounded-br-[20px] max-w-[85%] text-sm sm:text-base">
-                            <p class="text-base">Halo! Namaku FINNY! Mau nanyain apa nih seputar keuangan?</p>
+                        <!-- Chat Messages Area (Scrollable) -->
+                        <div class="flex-1 p-4 space-y-6 overflow-y-auto chat-messages bg-gray-50">
+                            <!-- Initial Welcome Message -->
+                            <div class="flex items-end gap-3 w-full justify-start">
+                                <img src="assets/images/mascotfin.png" alt="Finny" class="w-10 h-10 object-contain rounded-full flex-shrink-0 self-start">
+                                <div class="bg-[#04b3e3] text-white p-3 rounded-tr-[20px] rounded-tl-[20px] rounded-br-[20px] max-w-[85%]">
+                                    <p class="text-sm sm:text-base">Halo! Namaku FINNY! Mau nanyain apa nih seputar keuangan?</p>
+                                </div>
+                            </div>
+                            <!-- Dynamic messages will be added here by finlook.js -->
+                        </div>
+
+                        <!-- Sticky Footer for Inputs (Fixed at bottom) -->
+                        <div class="flex-shrink-0 bg-white border-t border-gray-200 shadow-[0_-2px_10px_rgba(0,0,0,0.05)]">
+                            <div class="p-4 space-y-4">
+                                <!-- Quick Questions Container -->
+                                <div class="quick-questions-container">
+                                    <div class="w-full py-2 bg-[#ffc72c] rounded-[50px] flex items-center justify-center relative mb-3">
+                                        <img src="assets/images/bolt.svg" alt="Bolt Icon" class="w-7 h-7 absolute left-4" />
+                                        <span class="text-white text-base sm:text-lg font-baloo font-extrabold">Pertanyaan Kilat</span>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-2 sm:gap-3">
+                                        <button class="quick-question w-full p-2 bg-white border border-[#04b3e3] rounded-[50px] text-xs sm:text-sm text-black font-semibold hover:bg-blue-50 transition">Uang itu apa?</button>
+                                        <button class="quick-question w-full p-2 bg-white border border-[#04b3e3] rounded-[50px] text-xs sm:text-sm text-black font-semibold hover:bg-blue-50 transition">Penjelasan saham</button>
+                                    </div>
+                                </div>
+
+                                <!-- User Input -->
+                                <div>
+                                    <div class="flex items-center w-full bg-white border-2 border-[#04b3e3] rounded-[50px] pr-3">
+                                        <input id="chat-input" type="text" placeholder="Mau nanya apa?" class="flex-1 bg-transparent outline-none p-3 sm:p-4 text-gray-700 text-sm sm:text-base"/>
+                                        <button id="send-btn" class="flex-shrink-0">
+                                            <img src="assets/images/send-icon.svg" alt="Kirim" class="w-10 h-10 cursor-pointer hover:opacity-80 transition-opacity">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                </div>
-
-
-                <!-- Quick Questions Container -->
-                <div class="p-4 bg-white border-t border-gray-200 quick-questions-container">
-                    <!-- Pertanyaan Kilat button will be dynamically added here -->
-                </div>
-
-                <!-- User Input (Restored Style) -->
-                <div class="p-3 sm:p-4 bg-white border-t-2 border-gray-100">
-                    <div class="flex items-center w-full bg-white border-2 border-[#04b3e3] rounded-[50px] pr-3">
-                        <input id="chat-input" type="text" placeholder="Mau nanya apa?" class="flex-1 bg-transparent outline-none p-3 sm:p-4 text-gray-700 text-sm sm:text-base"/>
-                        <button id="send-btn" class="flex-shrink-0">
-                            <img src="assets/images/send-icon.svg" alt="Kirim" class="w-10 h-10 cursor-pointer hover:opacity-80 transition-opacity">
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>`;
+                </div>`;
                 
         case "game":
             return `
             <div class="flex mt-7 flex-col gap-8 lg:gap-10 p-4 lg:px-24 lg:py-8 max-w-screen-xl mx-auto">
-                <button type="button" onclick="window.location.href='games/dompet-pintar/index.html'" class="group button-3d relative w-full h-48 lg:h-[168px] rounded-3xl bg-[#04B3E3] shadow-[0_10px_0_#038DB4] flex flex-col justify-center text-left p-6 lg:pl-[124px] focus:outline-none overflow-hidden">
+                <a href="games/dompet-pintar/index.html" class="group button-3d relative w-full h-48 lg:h-[168px] rounded-3xl bg-[#04B3E3] shadow-[0_10px_0_#038DB4] flex flex-col justify-center text-left p-6 lg:pl-[124px] focus:outline-none overflow-hidden">
                     <img src="assets/images/3dmoney.png" alt="Money" class="absolute -top-3 -right-10 w-48 lg:w-[373.5px] lg:right-[-90px] lg:top-[-40px] transition-transform duration-300 group-hover:scale-110" />
                     <h3 class="font-extrabold text-3xl lg:text-[45px] text-white text-outline leading-tight">DOMPET<br>PINTAR</h3>
                     <div class="mt-4 lg:absolute lg:right-[120px] lg:top-1/2 lg:transform lg:-translate-y-1/2 w-48 lg:w-[254px] h-14 lg:h-[72px] bg-white rounded-full flex items-center justify-center"><span class="text-black text-2xl lg:text-[40px] font-extrabold">MAINKAN</span></div>
-                </button>
-                <button type="button" class="group button-3d relative w-full h-48 lg:h-[168px] rounded-3xl bg-[#FFD635] shadow-[0_10px_0_#D4B000] flex flex-col justify-center text-left p-6 lg:pl-[200px] focus:outline-none overflow-hidden">
+                </a>
+                <a href="games/finance-quiz-race/index.html" class="group button-3d relative w-full h-48 lg:h-[168px] rounded-3xl bg-[#FFD635] shadow-[0_10px_0_#D4B000] flex flex-col justify-center text-left p-6 lg:pl-[200px] focus:outline-none overflow-hidden">
                     <img src="assets/images/raceflag.png" alt="Race Flag" class="absolute bottom-5 -right-[70px] w-48 transform rotate-180 transition-transform duration-300 lg:w-[350px] lg:left-[-128px] lg:top-[10px] lg:rotate-0 group-hover:scale-110" />
                     <h3 class="font-extrabold text-3xl lg:text-[45px] text-white text-outline leading-tight z-10">FINANCE QUIZ<br>RACE</h3>
                     <div class="mt-4 lg:absolute lg:right-[120px] lg:top-1/2 lg:transform lg:-translate-y-1/2 w-48 lg:w-[254px] h-14 lg:h-[72px] bg-white rounded-full flex items-center justify-center z-10"><span class="text-black text-2xl lg:text-[40px] font-extrabold">MAINKAN</span></div>
-                </button>
-                <button type="button" class="group button-3d mb-12 relative w-full h-48 lg:h-[168px] rounded-3xl bg-[#FF6B6B] shadow-[0_10px_0_#D44F4F] flex flex-col justify-center text-left p-6 lg:pl-[40px] focus:outline-none overflow-hidden">
+                </a>
+                <a href="games/investor-cilik/index.html" class="group button-3d mb-12 relative w-full h-48 lg:h-[168px] rounded-3xl bg-[#FF6B6B] shadow-[0_10px_0_#D44F4F] flex flex-col justify-center text-left p-6 lg:pl-[40px] focus:outline-none overflow-hidden">
                     <h3 class="font-extrabold text-3xl lg:text-[45px] text-white text-outline leading-tight">INVESTOR CILIK</h3>
                     <div class="mt-4 mb-10 lg:absolute lg:right-[120px] lg:top-1/2 lg:transform lg:-translate-y-1/2 w-48 lg:w-[254px] h-14 lg:h-[72px] bg-white rounded-full flex items-center justify-center"><span class="text-black text-2xl lg:text-[40px] font-extrabold">MAINKAN</span></div>
-                </button>
+                </a>
             </div>`;
         case "materi":
             if (!userProfile || !allMateri) return `<div class="text-center text-red-500 p-10">Gagal memuat data pengguna atau materi.</div>`;

@@ -1,76 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LIFIN Dashboard</title>
+  <title>Header Lifin</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Baloo 2', cursive;
-    }
-    .transition-stroke {
-      transition: stroke-dashoffset 1s ease-in-out;
-    }
-  </style>
+
+  <!-- Import Baloo 2 dan Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Poppins:wght@700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white">
 
- <!-- Header -->
-<header class="w-[1248px] h-[150px] mx-auto flex items-center px-[24px] justify-between">
-  <img 
-    src="../assets/images/icon.png" 
-    alt="Logo" 
-    class="w-[100px] object-contain cursor-pointer" 
-    onclick="window.location.href='index.html'"
-  >
+<body class="m-0 p-0 box-border">
 
-  <div id="navbarWrapper" class="relative w-[888px] h-[54px] bg-[rgba(255,107,107,0.5)] rounded-[32px] flex items-center transition-all duration-300 px-[48px]">
-    <div id="highlight" class="absolute top-0 h-[54px] w-[188px] bg-[#FF6B6B] rounded-[32px] transition-all duration-300" style="left: 0px;"></div>
-    <div class="relative z-10 flex w-full justify-between items-center text-white text-[36px] font-extrabold">
-      <div class="flex gap-[77px]">
-        <button onclick="setPage('home')" class="menu-btn">Home</button>
-        <button onclick="setPage('game')" class="menu-btn">Game</button>
-      </div>
-
-        <img src="../assets/images/finlook.svg" alt="Finlook" class="w-[190px] absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-[100%] z-20">
-        <div class="flex gap-[77px]">
-          <button onclick="setPage('materi')" class="menu-btn">Materi</button>
-          <button onclick="setPage('panel')" class="menu-btn">Panel</button>
-        </div>
-      </div>
+  <!-- Header -->
+  <header class="absolute top-0 left-0 w-full h-[90px] bg-white flex items-center justify-between px-6 lg:px-20 shadow-sm z-50" style="box-shadow: 0 3px 0px 0 rgba(4,179,227,0.2);">
+    <div class="flex items-center">
+      <img src="/LIFIN/assets/images/icon.png" class="w-[90px] object-cover cursor-pointer" alt="logolifin" onclick="scrollToTop()">
     </div>
-    <img src="../assets/images/profile.svg" alt="Profile" class="w-[70px] h-[70px] rounded-full object-cover">
+
+    <!-- Tombol BACK sebagai pengganti hamburger -->
+    <button onclick="history.back()"
+      class="bg-[#FF6B6B] text-white text-lg font-extrabold px-5 py-2 rounded-full font-['Baloo_2'] hover:opacity-90 transition-all duration-200" style="box-shadow: 0 5px 0px 0 #d44f4f;">
+      Back
+    </button>
   </header>
-<script>
-  function setPage(page) {
-    let left = "0px";
-    let bg = "#FF6B6B";
-    let wrapperBg = "rgba(255,107,107,0.5)";
 
-    switch (page) {
-      case "game":
-        left = "170px";
-        bg = "#004B75";
-        wrapperBg = "rgba(0,75,117,0.5)";
-        break;
-      case "materi":
-        left = "525px";
-        bg = "#FFC72C";
-        wrapperBg = "rgba(255,199,44,0.5)";
-        break;
-      case "panel":
-        left = "700px";
-        bg = "#00BFC3";
-        wrapperBg = "rgba(0,191,195,0.5)";
-        break;
-    }
-
-    highlight.style.left = left;
-    highlight.style.backgroundColor = bg;
-    navbarWrapper.style.backgroundColor = wrapperBg;
-  }
-</script>
 </body>
 </html>

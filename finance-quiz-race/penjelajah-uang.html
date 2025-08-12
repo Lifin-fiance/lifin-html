@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Penjelajah Uang LIFIN</title>
+      <link rel="icon" type="image/png" href="/LIFIN/assets/images/fav.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Icon Library for Padlock -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Baloo 2', sans-serif;
+            background-color: #ffffff; /* Warna latar belakang lebih lembut */
+        }
+
+        /* --- Palet Warna untuk Setiap Era (LIFIN THEME) --- */
+        :root {
+            --era-1-bg: #e6f7ff; --era-1-text: #004b75; --era-1-btn: #04b3e3;
+            --era-2-bg: #fff0f0; --era-2-text: #c53030; --era-2-btn: #ff6b6b;
+            --era-3-bg: #fffbeb; --era-3-text: #b45309; --era-3-btn: #ffc72c;
+            --era-4-bg: #fdf2f8; --era-4-text: #9d208c; --era-4-btn: #EEACE6;
+            --era-5-bg: #f0f9ff; --era-5-text: #1e40af; --era-5-btn: #3b82f6;
+            --era-6-bg: #f7fee7; --era-6-text: #4d7c0f; --era-6-btn: #84cc16;
+            --era-7-bg: #faf5ff; --era-7-text: #581c87; --era-7-btn: #9333ea;
+            --era-8-bg: #f3f4f6; --era-8-text: #1f2937; --era-8-btn: #4b5563;
+            --era-locked-bg: #e5e7eb; --era-locked-text: #6b7280;
+        }
+
+        /* --- Style Jawaban Benar/Salah --- */
+        .correct-answer { background-color: #22c55e !important; transition: background-color 0.3s; }
+        .correct-answer .option-circle, .correct-answer .option-text, .correct-answer .option-key { color: white !important; }
+        .correct-answer .option-circle { background-color: rgba(255, 255, 255, 0.3) !important; }
+
+        .wrong-answer { background-color: #ef4444 !important; transition: background-color 0.3s; }
+        .wrong-answer .option-circle, .wrong-answer .option-text, .wrong-answer .option-key { color: white !important; }
+        .wrong-answer .option-circle { background-color: rgba(255, 255, 255, 0.3) !important; }
+
+        .hidden { display: none; }
+        
+        /* --- Style Slider Era BARU --- */
+        #era-slider-track {
+            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+        .era-slide {
+            flex: 0 0 100%;
+        }
+        .era-slide-card {
+            transition: transform 0.3s;
+        }
+        /* Hapus filter, ganti dengan warna spesifik */
+        .era-slide-card.locked {
+            background-color: var(--era-locked-bg) !important;
+            color: var(--era-locked-text) !important;
+        }
+        .slider-arrow {
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: 9999px;
+            width: 3rem;
+            height: 3rem;
+            color: #004b75;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: all 0.2s;
+        }
+        /* Perubahan di sini: Hanya scale saat hover, tidak ada transform lain */
+        .slider-arrow:hover {
+            background-color: white;
+            transform: scale(1.1);
+        }
+        .slider-arrow:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            transform: scale(1); /* Pastikan kembali ke skala normal saat disabled */
+        }
+
+        /* --- Style Animasi Pop-up --- */
+        @keyframes fade-in {
+            to { transform: scale(1); opacity: 1; }
+        }
+        .animate-fade-in {
+            animation: fade-in 0.3s forwards;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <!-- Wrapper -->
+    <div class="w-full max-w-4xl">
+
+        <!-- Kontainer Game -->
+        <div id="game-container">
+            
+            <!-- Layar Pemilihan Era (SLIDER BARU) -->
+            <div id="era-selection-screen" class="w-full max-w-xl mx-auto">
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-[#006F8D] mb-6 text-center">Pilih Era Sejarah</h1>
+                <div class="relative">
+                    <!-- Slider Container -->
+                    <div id="era-slider-container" class="overflow-hidden rounded-3xl">
+                        <div id="era-slider-track" class="flex">
+                            <!-- Slide Era akan digenerate oleh JS -->
+                        </div>
+                    </div>
+                    
+                    <!-- Tombol Navigasi Slider (Struktur Diperbarui) -->
+                    <!-- Wrapper untuk tombol kiri agar tidak bergeser saat hover -->
+                    <div class="absolute top-1/2 -translate-y-1/2 left-0 -translate-x-1/2 z-10">
+                        <button id="prev-era-btn" class="slider-arrow flex items-center justify-center">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                    <!-- Wrapper untuk tombol kanan agar tidak bergeser saat hover -->
+                    <div class="absolute top-1/2 -translate-y-1/2 right-0 translate-x-1/2 z-10">
+                        <button id="next-era-btn" class="slider-arrow flex items-center justify-center">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layar Kuis Era -->
+            <div id="era-quiz-screen" class="hidden">
+                <div class="bg-[#006F8D] text-white p-6 sm:p-8 rounded-t-3xl text-center">
+                    <h2 id="era-quiz-title" class="text-3xl font-extrabold"></h2>
+                    <p id="era-question-counter" class="font-semibold opacity-80"></p>
+                </div>
+                <div class="bg-white w-full min-h-[384px] rounded-b-3xl p-6 sm:p-8 flex flex-col justify-center">
+                    <div id="quiz-container" class="text-center">
+                        <h2 id="era-question" class="text-xl sm:text-2xl font-bold text-[#006F8D] mb-8 min-h-[6rem] flex items-center justify-center">Memuat pertanyaan...</h2>
+                        <div id="era-options-container" class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+                            <!-- Opsi jawaban akan digenerate oleh JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pop-up Penjelasan -->
+        <div id="explanation-popup" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-50">
+            <div class="bg-white rounded-2xl p-8 max-w-2xl w-full text-center transform transition-all scale-95 opacity-0 animate-fade-in">
+                <h2 id="explanation-title" class="text-2xl font-bold mb-4"></h2>
+                <p id="explanation-text" class="text-lg text-gray-700 mb-6"></p>
+                <button id="next-question-btn" class="bg-[#FFD635] text-[#004b75] font-bold text-xl py-3 px-10 rounded-xl shadow-lg hover:bg-yellow-400 transition-colors">Lanjut</button>
+            </div>
+        </div>
+
+        <!-- Pop-up Kemenangan Era -->
+        <div id="era-complete-popup" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-50">
+            <div class="bg-white rounded-2xl p-8 max-w-md w-full text-center transform transition-all scale-95 opacity-0 animate-fade-in">
+                <h2 id="era-complete-title" class="text-3xl font-extrabold text-green-500 mb-4">Selamat!</h2>
+                <p id="era-complete-text" class="text-lg text-gray-700 mb-6"></p>
+                <button id="back-to-era-selection-btn" class="bg-[#36c2e9] text-white font-bold text-xl py-3 px-10 rounded-xl shadow-lg hover:bg-sky-500 transition-colors">Pilih Era Lain</button>
+            </div>
+        </div>
+
+        <!-- Pop-up Gagal Era (BARU) -->
+        <div id="era-failed-popup" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-50">
+            <div class="bg-white rounded-2xl p-8 max-w-md w-full text-center transform transition-all scale-95 opacity-0 animate-fade-in">
+                <h2 class="text-3xl font-extrabold text-red-500 mb-4">Coba Lagi!</h2>
+                <p id="era-failed-text" class="text-lg text-gray-700 mb-6"></p>
+                <button id="back-to-selection-from-fail-btn" class="bg-[#ff6b6b] text-white font-bold text-xl py-3 px-10 rounded-xl shadow-lg hover:bg-red-600 transition-colors">Kembali</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Referensi Elemen DOM ---
+        const eraSelectionScreen = document.getElementById('era-selection-screen');
+        const eraQuizScreen = document.getElementById('era-quiz-screen');
+        
+        const eraSliderTrack = document.getElementById('era-slider-track');
+        const prevEraBtn = document.getElementById('prev-era-btn');
+        const nextEraBtn = document.getElementById('next-era-btn');
+
+        const explanationPopup = document.getElementById('explanation-popup');
+        const nextQuestionBtn = document.getElementById('next-question-btn');
+        const explanationTitle = document.getElementById('explanation-title');
+
+        const eraCompletePopup = document.getElementById('era-complete-popup');
+        const eraCompleteText = document.getElementById('era-complete-text');
+        const backToEraSelectionBtn = document.getElementById('back-to-era-selection-btn');
+        
+        // Elemen Pop-up Gagal (BARU)
+        const eraFailedPopup = document.getElementById('era-failed-popup');
+        const eraFailedText = document.getElementById('era-failed-text');
+        const backToSelectionFromFailBtn = document.getElementById('back-to-selection-from-fail-btn');
+        
+        // --- State (Status) Game ---
+        let allQuestionsData = [];
+        let groupedEras = {};
+        let eraOrder = [];
+        let unlockedEraLevel = 1;
+        
+        let currentEraId = null;
+        let currentQuizQuestions = [];
+        let currentQuestionIndex = 0;
+        let currentScore = 0; // <-- BARU: Untuk melacak skor
+        const QUESTIONS_PER_ERA = 15;
+        const MIN_CORRECT_ANSWERS_TO_PASS = 12; // <-- BARU: Batas minimal jawaban benar
+
+        let currentSlideIndex = 0;
+
+        // --- Fungsi Utama ---
+        async function loadData() {
+            try {
+                // Pastikan path ke file JSON sudah benar sesuai struktur direktori Anda
+                const response = await fetch('/LIFIN/finance-quiz-race/data/soal-penjelajahuang-financequizrace.json');
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                allQuestionsData = await response.json();
+                if (!allQuestionsData || allQuestionsData.length === 0) throw new Error("Data soal kosong atau format tidak valid.");
+                processAndGroupData();
+            } catch (error) {
+                console.error("Gagal memuat atau memproses data soal:", error);
+                eraSliderTrack.innerHTML = `<div class="p-8 text-center text-red-500">Error: Gagal memuat soal. Periksa konsol untuk detail.</div>`;
+            }
+        }
+        
+        function processAndGroupData() {
+            const eraNames = new Set(allQuestionsData.map(q => q["Judul Era"]));
+            const historicalOrder = [
+                "Era Barter", "Era Uang Komoditas", "Era Uang Logam (Nusantara)", 
+                "Era Uang Kolonial", "Era Uang Perjuangan", "Era Rupiah Modern", 
+                "Era Dompet Digital & QRIS", "Era Aset Digital & Masa Depan Uang"
+            ];
+            eraOrder = historicalOrder.filter(name => eraNames.has(name));
+
+            eraOrder.forEach((name, index) => {
+                const eraId = index + 1;
+                groupedEras[eraId] = { id: eraId, name: name, questions: [] };
+            });
+
+            allQuestionsData.forEach(q => {
+                const eraIndex = eraOrder.indexOf(q["Judul Era"]);
+                if (eraIndex !== -1) {
+                    const eraId = eraIndex + 1;
+                    
+                    if (q["Pilihan Ganda"] && q["Kunci Jawaban"] && q.Penjelasan) {
+                        const options = q["Pilihan Ganda"].split('<br>').map(opt => opt.replace(/^[a-d]\.\s*/, '').trim());
+                        const correctLetter = q["Kunci Jawaban"].trim().toLowerCase();
+                        const correctIndex = correctLetter.charCodeAt(0) - 'a'.charCodeAt(0);
+                        
+                        groupedEras[eraId].questions.push({
+                            q: q.Pertanyaan, o: options, a: correctIndex, exp: q.Penjelasan
+                        });
+                    } else {
+                        console.warn(`Soal nomor ${q.Nomor} (${q.Pertanyaan}) dilewati karena data tidak lengkap.`);
+                    }
+                }
+            });
+        }
+
+        function initGame() {
+            loadUnlockedLevel();
+            eraQuizScreen.classList.add('hidden');
+            eraSelectionScreen.classList.remove('hidden');
+            renderEraSlider();
+        }
+
+        // --- Logika Level & Progres ---
+        function loadUnlockedLevel() {
+            const savedLevel = localStorage.getItem('unlockedEraLevel_FinanceQuiz');
+            unlockedEraLevel = savedLevel ? parseInt(savedLevel, 10) : 1;
+            currentSlideIndex = Math.min(unlockedEraLevel - 1, eraOrder.length - 1);
+        }
+
+        function saveUnlockedLevel(level) {
+            if (level > unlockedEraLevel) {
+                unlockedEraLevel = level;
+                localStorage.setItem('unlockedEraLevel_FinanceQuiz', unlockedEraLevel);
+            }
+        }
+
+        // --- Logika Tampilan & UI BARU (SLIDER) ---
+        function renderEraSlider() {
+            eraSliderTrack.innerHTML = '';
+            if (Object.keys(groupedEras).length === 0) return;
+
+            for (const eraId in groupedEras) {
+                const era = groupedEras[eraId];
+                const isLocked = era.id > unlockedEraLevel;
+
+                const slide = document.createElement('div');
+                slide.className = 'era-slide p-4';
+                
+                const cardBgColor = `var(--era-${era.id}-bg)`;
+                const cardTextColor = `var(--era-${era.id}-text)`;
+                const buttonColor = `var(--era-${era.id}-btn)`;
+
+                slide.innerHTML = `
+                    <div class="era-slide-card w-full h-[450px] rounded-3xl p-8 flex flex-col justify-between text-center shadow-xl ${isLocked ? 'locked' : ''}" style="background-color: ${cardBgColor}; color: ${cardTextColor};">
+                        <div>
+                            <h2 class="text-3xl font-extrabold mb-2">${era.name}</h2>
+                            <p class="font-semibold text-lg">Level ${era.id}</p>
+                        </div>
+                        <div class="text-6xl my-4">
+                            ${isLocked ? '<i class="fas fa-lock"></i>' : '<i class="fas fa-unlock-alt"></i>'}
+                        </div>
+                        <div>
+                            ${isLocked ? `
+                                <p class="font-bold text-lg">Terkunci</p>
+                                <p class="font-semibold">Selesaikan level sebelumnya untuk membuka.</p>
+                            ` : `
+                                <button class="start-quiz-btn w-full py-4 px-8 rounded-2xl text-white text-2xl font-bold shadow-lg hover:scale-105 transition-transform" style="background-color: ${buttonColor};" data-era-id="${era.id}">
+                                    Mulai
+                                </button>
+                            `}
+                        </div>
+                    </div>
+                `;
+                eraSliderTrack.appendChild(slide);
+            }
+            
+            document.querySelectorAll('.start-quiz-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const eraId = e.currentTarget.dataset.eraId;
+                    startQuizForEra(eraId);
+                });
+            });
+
+            showSlide(currentSlideIndex);
+        }
+        
+        function showSlide(index) {
+            const slideWidth = eraSliderTrack.querySelector('.era-slide').offsetWidth;
+            eraSliderTrack.style.transform = `translateX(-${index * slideWidth}px)`;
+            currentSlideIndex = index;
+
+            prevEraBtn.disabled = index === 0;
+            nextEraBtn.disabled = index === Object.keys(groupedEras).length - 1;
+        }
+
+        function startQuizForEra(eraId) {
+            currentEraId = eraId;
+            const eraData = groupedEras[eraId];
+
+            if (!eraData || eraData.questions.length === 0) {
+                alert("Soal untuk era ini belum tersedia!");
+                return;
+            }
+            
+            // Reset skor setiap kali memulai kuis baru
+            currentScore = 0; // <-- BARU
+
+            const shuffledQuestions = [...eraData.questions].sort(() => Math.random() - 0.5);
+            currentQuizQuestions = shuffledQuestions.slice(0, QUESTIONS_PER_ERA);
+            
+            currentQuestionIndex = 0;
+            eraSelectionScreen.classList.add('hidden');
+            eraQuizScreen.classList.remove('hidden');
+            displayQuestion();
+        }
+
+        function displayQuestion() {
+            const qData = currentQuizQuestions[currentQuestionIndex];
+            const eraData = groupedEras[currentEraId];
+
+            document.getElementById('era-quiz-title').textContent = eraData.name;
+            document.getElementById('era-question-counter').textContent = `Soal ${currentQuestionIndex + 1} dari ${currentQuizQuestions.length}`;
+            document.getElementById('era-question').innerHTML = qData.q;
+            
+            const optionsContainer = document.getElementById('era-options-container');
+            optionsContainer.innerHTML = '';
+            qData.o.forEach((option, index) => {
+                const optionLetter = String.fromCharCode(65 + index);
+                const button = document.createElement('button');
+                button.className = 'option-button w-full min-h-[60px] bg-[#36c2e9]/65 rounded-2xl flex items-center p-2 gap-3 cursor-pointer hover:bg-[#36c2e9] transition-colors duration-300';
+                button.innerHTML = `
+                    <div class="option-circle w-10 h-10 bg-[#004b75]/65 rounded-full flex-shrink-0 flex items-center justify-center">
+                        <span class="option-key text-white font-bold text-xl">${optionLetter}</span>
+                    </div>
+                    <span class="option-text text-[#004b75] font-bold text-left pr-2">${option}</span>
+                `;
+                button.addEventListener('click', () => checkAnswer(index, qData.a, qData.exp));
+                optionsContainer.appendChild(button);
+            });
+        }
+
+        function checkAnswer(selectedIndex, correctIndex, explanation) {
+            const buttons = document.querySelectorAll('#era-options-container .option-button');
+            buttons.forEach(btn => {
+                btn.disabled = true;
+                btn.classList.remove('hover:bg-[#36c2e9]');
+            }); 
+
+            const isCorrect = selectedIndex === correctIndex;
+
+            if (isCorrect) {
+                currentScore++; // <-- BARU: Tambah skor jika benar
+                buttons[selectedIndex].classList.add('correct-answer');
+                explanationTitle.textContent = "Jawaban Benar!";
+                explanationTitle.className = "text-2xl font-bold text-green-500 mb-4";
+            } else {
+                buttons[selectedIndex].classList.add('wrong-answer');
+                buttons[correctIndex].classList.add('correct-answer');
+                explanationTitle.textContent = "Jawaban Kurang Tepat";
+                explanationTitle.className = "text-2xl font-bold text-red-500 mb-4";
+            }
+            
+            setTimeout(() => {
+                showExplanationPopup(explanation);
+            }, 1000); 
+        }
+
+        function showExplanationPopup(explanation) {
+            document.getElementById('explanation-text').innerHTML = explanation;
+            explanationPopup.classList.remove('hidden');
+        }
+
+        function showEraCompletePopup() {
+            const eraName = groupedEras[currentEraId].name;
+            eraCompleteText.innerHTML = `Kamu telah menyelesaikan tantangan di <strong>${eraName}</strong> dan membuka jalan ke era berikutnya!`;
+            eraCompletePopup.classList.remove('hidden');
+        }
+        
+        // --- Fungsi Pop-up Gagal (BARU) ---
+        function showEraFailedPopup() {
+            eraFailedText.innerHTML = `Kamu hanya menjawab <strong>${currentScore}</strong> dengan benar. <br>Kamu butuh minimal <strong>${MIN_CORRECT_ANSWERS_TO_PASS}</strong> jawaban benar untuk lanjut. Ayo coba lagi!`;
+            eraFailedPopup.classList.remove('hidden');
+        }
+
+        // --- Event Listeners & Inisialisasi ---
+        
+        nextQuestionBtn.addEventListener('click', () => {
+            explanationPopup.classList.add('hidden');
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex >= currentQuizQuestions.length) {
+                // --- LOGIKA KELULUSAN BARU ---
+                if (currentScore >= MIN_CORRECT_ANSWERS_TO_PASS) {
+                    // Lulus, buka level berikutnya
+                    const nextLevel = parseInt(currentEraId) + 1;
+                    saveUnlockedLevel(nextLevel);
+                    showEraCompletePopup();
+                } else {
+                    // Gagal, tampilkan pop-up coba lagi
+                    showEraFailedPopup();
+                }
+            } else {
+                displayQuestion();
+            }
+        });
+
+        backToEraSelectionBtn.addEventListener('click', () => {
+            eraCompletePopup.classList.add('hidden');
+            initGame();
+        });
+        
+        // Event listener untuk tombol di pop-up gagal (BARU)
+        backToSelectionFromFailBtn.addEventListener('click', () => {
+            eraFailedPopup.classList.add('hidden');
+            initGame();
+        });
+
+
+        prevEraBtn.addEventListener('click', () => {
+            if (currentSlideIndex > 0) {
+                showSlide(currentSlideIndex - 1);
+            }
+        });
+
+        nextEraBtn.addEventListener('click', () => {
+            if (currentSlideIndex < Object.keys(groupedEras).length - 1) {
+                showSlide(currentSlideIndex + 1);
+            }
+        });
+
+        async function initialize() {
+            await loadData();
+            initGame();
+        }
+
+        initialize();
+    });
+    </script>
+</body>
+</html>

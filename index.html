@@ -36,6 +36,7 @@
         overflow-x: hidden;
         margin: 0;
         padding: 0;
+        scroll-behavior: smooth;
     }
     body {
         font-family: 'Poppins', sans-serif;
@@ -100,23 +101,105 @@
         /* Transisi untuk opacity */
         transition: opacity 0.3s ease-in-out;
     }
+
+    /* Style untuk button yang tidak perlu animasi hover/active */
+    .no-anim:hover, .no-anim:active {
+      transform: none !important;
+      box-shadow: initial !important;
+    }
+
+    /* === STYLE BARU UNTUK FOOTER LINK === */
+    .footer-link-animated {
+        position: relative;
+        font-family: 'Baloo 2', cursive;
+        font-weight: 600; /* Semibold */
+        color: rgba(255, 255, 255, 0.7); /* text-white/70 */
+        text-decoration: none;
+        transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out;
+    }
+
+    .footer-link-animated::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -3px;
+        left: 0;
+        background-color: white;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .footer-link-animated:hover {
+        color: white;
+        font-weight: 700; /* Bold */
+    }
+
+    .footer-link-animated:hover::after {
+        width: 100%;
+    }
+    
   </style>
 </head>
 
-<!-- =================================================================== -->
-<!-- ===================== PERUBAHAN UTAMA DI SINI ===================== -->
-<!-- =================================================================== -->
 <body class="bg-white min-h-screen flex flex-col">
-<!-- =================================================================== -->
-<!-- ===================== AKHIR PERUBAHAN UTAMA ======================= -->
-<!-- =================================================================== -->
   
-  <!-- Header -->
-  <header class="font-baloo bg-white fixed top-0 left-0 w-full z-50">
-    <div id="navbar-landingpage-container"></div>
+  <!-- =================================================================== -->
+  <!-- ======================= START: NAVBAR SECTION ===================== -->
+  <!-- =================================================================== -->
+  <header class="fixed top-0 left-0 w-full h-[109px] bg-white flex items-center justify-between px-6 lg:px-20 shadow-sm z-50" style="box-shadow: 0 4px 20px 0 rgba(4,179,227,0.2); font-family: 'Poppins', sans-serif;">
+    <div class="flex items-center">
+      <img src="assets/images/icon.png" class="w-[75px] lg:w-[100px] object-cover cursor-pointer" alt="logolifin" onclick="scrollToTop()">
+    </div>
+  
+    <!-- Navigasi Desktop -->
+    <div class="hidden lg:flex bg-[#FFD635] rounded-full w-[633px] h-[61px] items-center justify-between pl-[50px] overflow-hidden">
+      <div class="flex items-center gap-[65px]">
+        <a href="#" onclick="scrollToTop(); return false;" class="text-gray-800 text-[20px] font-medium hover:text-[#04B3E3] transition-colors">Beranda</a>
+        <a href="#berita" class="text-gray-800 text-[20px] font-medium hover:text-[#04B3E3] transition-colors">News</a>
+        <a href="#faq" class="text-gray-800 text-[20px] font-medium hover:text-[#04B3E3] transition-colors">FAQ</a>
+      </div>
+      <button 
+        onclick="window.location.href='./auth.html'" 
+        class="w-[197px] h-[61px] bg-[#04B3E3] text-white text-[32px] font-extrabold rounded-r-full flex items-center justify-center no-anim" 
+        style="font-family: 'Baloo 2', cursive; box-shadow: 0 10px 0 #038DB4;">
+        LOGIN
+      </button>
+    </div>
+  
+    <!-- Hamburger Button -->
+    <div class="lg:hidden z-[60]">
+      <button id="hamburger-btn" class="w-10 h-10 flex items-center justify-center relative no-anim">
+        <!-- Hamburger Icon -->
+        <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg"
+          class="w-[32px] h-[32px] text-[#04B3E3] transition-transform duration-300 ease-in-out rotate-0 opacity-100 absolute"
+          fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <!-- Close Icon -->
+        <svg id="close-icon" xmlns="http://www.w3.org/2000/svg"
+          class="w-[32px] h-[32px] text-[#04B3E3] transition-transform duration-300 ease-in-out -rotate-90 opacity-0 absolute"
+          fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
   </header>
+  
+  <!-- MENU MOBILE -->
+  <div id="mobile-menu" class="lg:hidden hidden fixed top-[109px] left-0 w-full bg-white z-40 px-6 py-6 flex flex-col gap-5 shadow-md text-[20px] font-medium" style="font-family: 'Poppins', sans-serif;">
+    <a href="#" onclick="scrollToTop(); return false;" class="hover:text-[#04B3E3] transition-colors">Beranda</a>
+    <a href="#berita" class="hover:text-[#04B3E3] transition-colors">News</a>
+    <a href="#faq" class="hover:text-[#04B3E3] transition-colors">FAQ</a>
+    <button class="w-full h-[54px] bg-[#04B3E3] text-white text-[24px] font-extrabold rounded-[16px] mb-6 no-anim"
+      style="font-family: 'Baloo 2', cursive; box-shadow: 0 10px 0 #0384b4;"
+      onclick="window.location.href='./auth.html'">
+      LOGIN
+    </button>
+  </div>
+  <!-- =================================================================== -->
+  <!-- ======================== END: NAVBAR SECTION ====================== -->
+  <!-- =================================================================== -->
 
-  <!-- PERUBAHAN: Membungkus konten utama dengan tag <main> dan class flex-grow -->
   <main class="flex-grow">
       <!-- Hero Section -->
       <div class="relative w-full">
@@ -138,7 +221,7 @@
           <!-- Kolom Gambar Finny -->
           <div class="relative w-full h-auto lg:order-2 ml-0 lg:ml-[96px] pt-24 md:pt-28 lg:pt-0">
             <img src="./assets/images/big.png"
-                alt="Anak belajar finansial"
+                alt="Typemark LIFIN"
                 class="w-full max-w-[420px] sm:max-w-[500px] md:max-w-[580px] lg:max-w-[650px] h-auto object-contain mx-auto
                         lg:absolute lg:top-[-200px] lg:right-[60px] transition-all duration-300 ease-in-out">
           </div>
@@ -146,7 +229,7 @@
 
         <!-- Uang Terbang Background -->
         <div class="block z-0  absolute top-[150px] right-[-280px] w-[528.85px] md:top-[50px] md:right-[-380px] z-0 md:absolute md:w-[728.85px] lg:block lg:absolute lg:top-[-85px] lg:right-[-380px] z-0 lg:w-[828.85px]  pointer-events-none">
-          <img src="./assets/images/flymoney.png" alt="Uang terbang" class="w-full h-full object-cover">
+          <img src="./assets/images/flymoney.png" alt="Hiasan Uang" class="w-full h-full object-cover">
         </div>
       </div>
 
@@ -167,14 +250,14 @@
                 <button onclick="document.getElementById('fitur').scrollIntoView({ behavior: 'smooth' })"
                   class="w-[140px] h-[44px] sm:w-[180px] sm:h-[50px] md:w-[220px] md:h-[60px] bg-[#004B75] rounded-[32px] flex items-center justify-center shadow-md gap-2"
                   style="box-shadow: 0px 8px 0px #003552;">
-                  <img src="./assets/images/panah.png" alt="Panah" class="w-[18px] sm:w-[24px] md:w-[32px]" />
+                  <img src="./assets/images/panah.png" alt="Panah Petunjuk" class="w-[18px] sm:w-[24px] md:w-[32px]" />
                   <span class="font-baloo font-semibold md:font-extrabold lg:font-extrabold text-white text-[12px] sm:text-[16px] md:text-[22px]">Fitur LIFIN</span>
                 </button>
-                <button onclick="document.getElementById('finny').scrollIntoView({ behavior: 'smooth' })"
+                <button onclick="document.getElementById('finny-section').scrollIntoView({ behavior: 'smooth' })"
                   class="w-[140px] h-[44px] sm:w-[180px] sm:h-[50px] md:w-[220px] md:h-[60px] bg-[#FF6B6B] rounded-[32px] flex items-center justify-center shadow-md gap-2"
                   style="box-shadow: 0px 8px 0px #D44F4F;">
                   <span class="font-baloo font-semibold md:font-extrabold lg:font-extrabold text-white text-[12px] sm:text-[16px] md:text-[22px]">Halo FINNY</span>
-                  <img src="./assets/images/panah.png" alt="Panah" class="w-[18px] sm:w-[24px] md:w-[32px]" />
+                  <img src="./assets/images/panah.png" alt="Panah Petunjuk" class="w-[18px] sm:w-[24px] md:w-[32px]" />
                 </button>
               </div>
             </div>
@@ -189,7 +272,7 @@
           <div class="flex flex-col gap-8 w-full lg:w-1/2">
             <button type="button" class="relative w-full h-[200px] rounded-[24px] bg-[#04B3E3] shadow-[0_8px_0_#038DB4] flex flex-col justify-center px-6"
             onclick="window.location.href='./games/life-simulation-game-main/index.html'">
-              <img src="./assets/images/3dmoney.png" alt="Money"
+              <img src="./assets/images/3dmoney.png" alt="Hiasan Money"
                   class="absolute z-[1] w-[200px] top-[-20px] right-[-50px]
                           md:w-[293px] md:top-[-20px] md:right-[-70px] lg:top-[-30px] lg:right-[-70px]" />
               <div class="z-[0] w-full">
@@ -200,10 +283,10 @@
                   Simulasi Uang Saku
                 </p>
               </div>
-              <img src="./assets/images/play.png" alt="Play" class="absolute right-4 bottom-4 w-[60px] md:w-[86px]" />
+              <img src="./assets/images/play.png" alt="Play Symbol" class="absolute right-4 bottom-4 w-[60px] md:w-[86px]" />
             </button>
             <button type="button" class="relative w-full h-[200px] rounded-[24px] bg-[#FFD635] shadow-[0_8px_0_#D4B000] flex flex-col justify-center px-6 overflow-hidden">
-              <img src="./assets/images/raceflag.png" alt="Race Flag"
+              <img src="./assets/images/raceflag.png" alt="Bendera Hiasan"
                   class="hidden md:block absolute w-[400px] top-3 left-[-147px]" />
               <h3 class="font-baloo text-outline font-extrabold text-[28px] md:text-[40px] text-white leading-tight text-left md:pl-[100px]">
                 FINANCE QUIZ<br>RACE
@@ -211,7 +294,7 @@
               <p class="font-baloo font-bold text-white text-[20px] md:text-[32px] mt-1 text-left md:pl-[100px]">
                 Kuiz Keuangan
               </p>
-              <img src="./assets/images/play.png" alt="Play" class="absolute right-4 bottom-4 w-[60px] md:w-[86px]" />
+              <img src="./assets/images/play.png" alt="Play Symbol" class="absolute right-4 bottom-4 w-[60px] md:w-[86px]" />
             </button>
             <button type="button" class="relative w-full h-[200px] rounded-[24px] bg-[#FF6B6B] shadow-[0_8px_0_#D44F4F] flex flex-col justify-center px-6 overflow-hidden">
               <h3 class="font-baloo text-outline font-extrabold text-[28px] md:text-[40px] text-white leading-tight text-center">
@@ -220,7 +303,7 @@
               <p class="font-baloo font-bold text-white text-[20px] md:text-[32px] mt-1 text-center">
                 Simulasi Saham
               </p>
-              <img src="./assets/images/play.png" alt="Play" class="absolute right-4 bottom-4 w-[60px] md:w-[86px]" />
+              <img src="./assets/images/play.png" alt="Play Symbol" class="absolute right-4 bottom-4 w-[60px] md:w-[86px]" />
             </button>
           </div>
           <div class="w-full lg:w-1/2 mt-6 lg:mt-0">
@@ -236,7 +319,7 @@
                   AYOK BELAJAR BARENG!
                 </button>
               </div>
-              <img src="./assets/images/bucks.png" alt="Uang"
+              <img src="./assets/images/bucks.png" alt="Uang Hiasan"
                   class="absolute w-[280px] right-[-100px] bottom-[150px] md:w-[500px] md:right-[-170px] lg:bottom-[unset] lg:top-[200px] lg:-translate-y-1/2 object-contain" />
             </div>
           </div>
@@ -248,13 +331,13 @@
         <div class="w-full flex flex-col items-center px-4 md:px-8">
           <div class="relative w-full max-w-xl lg:w-[678px] h-auto bg-[#004B75] rounded-[50px] flex items-center justify-center py-4 overflow-visible">
             <span class="text-3xl lg:text-[48px] font-extrabold text-white text-center font-baloo">BERITA KEUANGAN</span>
-            <img src="./assets/images/toa.png" alt="Toa" class="absolute w-[100px] right-[-15px] top-[-10px] md:w-[230.1px] md:right-[-120px] md:top-[-7px]" />
+            <img src="./assets/images/toa.png" alt="Toa Hiasan" class="absolute w-[100px] right-[-15px] top-[-10px] md:w-[230.1px] md:right-[-120px] md:top-[-7px]" />
           </div>
           <div class="h-12"></div>
         
           <!-- === MODIFIED NEWS PREVIEW CONTAINER === -->
           <div id="berita-preview-container" class="relative w-full max-w-6xl h-auto lg:h-[350px] bg-[#FFC72C] rounded-[48px] flex flex-col lg:flex-row items-center justify-between p-6 lg:px-12 mx-auto cursor-pointer" data-id="">
-            <img id="berita-preview-image" src="assets/images/mockup.png" alt="News" class="w-full max-w-sm lg:w-[381px] h-auto rounded-[32px] object-cover flex-shrink-0" />
+            <img id="berita-preview-image" src="assets/images/mockup.png" alt="News Images" class="w-full max-w-sm lg:w-[381px] h-auto rounded-[32px] object-cover flex-shrink-0" />
             <div class="flex-1 pt-6 lg:pt-0 lg:pl-10 text-center lg:text-left">
               <p id="berita-preview-text" class="text-lg text-black font-medium leading-relaxed font-poppins">
                 <span id="berita-preview-title" class="font-extrabold">Memuat berita terbaru...</span><br class="hidden lg:block">
@@ -362,33 +445,32 @@
           </div>
         </div>
       
-        <div id="finny-section" class="mx-auto hidden lg:block w-full max-w-[1440px] py-[96px] px-1 lg:px-0 items-center">
+        <div id="finny-section" class="mx-auto block w-full max-w-[1440px] py-[96px] px-1 lg:px-0 items-center">
           <div class="flex flex-col items-center">
             <!-- Judul Section -->
-            <h1 class="font-baloo font-extrabold text-1xl sm:text-4xl lg:text-4xl text-center text-primary mb-8">
+            <h1 class="font-baloo font-extrabold text-3xl sm:text-4xl lg:text-4xl text-center text-primary mb-8">
               Kenalan Yuk Sama Aku!
             </h1>
 
             <!-- Kontainer Utama Finny (Relative untuk positioning anak) -->
-            <div class="w-full h-[380px] bg-[#04b3e3] rounded-[32px] md:rounded-[48px] relative lg:pt-8 lg:pb-8 md:pt-16 md:pb-12 px-6">
+            <div class="w-full h-auto lg:h-[380px] bg-[#04b3e3] rounded-[32px] md:rounded-[48px] relative lg:pt-8 lg:pb-8 md:pt-16 md:pb-12 p-6">
               
               <!-- Gambar Maskot Finny (Absolute, di atas kotak biru) -->
               <img src="assets/images/mascotfin.png"
                   alt="Finny Mascot"
-
-                  class="absolute -translate-x-[70px] -translate-y-[140px] w-48 sm:w-56 md:w-64 lg:w-[400px]" />
+                  class="absolute left-1/2 lg:left-0 transform -translate-x-1/2 lg:-translate-x-[70px] -top-24 lg:-translate-y-[140px] w-48 sm:w-56 md:w-64 lg:w-[400px]" />
 
               <!-- Konten di dalam kotak biru -->
-              <div class="w-full flex flex-col items-center justify-center gap-y-8">
+              <div class="w-full flex flex-col items-center lg:items-start justify-center gap-y-8 pt-24 lg:pt-0">
                 <!-- Teks "Chatbot FINNY" -->
-                <div class="text-center">
-                  <h2 class="font-baloo absolute left-[275px] top-[10px] text-4xl sm:text-5xl lg:text-[60px] font-extrabold leading-tight text-white">
+                <div class="text-center lg:text-left w-full">
+                  <h2 class="font-baloo relative lg:absolute lg:left-[275px] lg:top-[10px] text-4xl sm:text-5xl lg:text-[60px] font-extrabold leading-tight text-white">
                     Chatbot<br>FINNY
                   </h2>
                 </div>
 
                 <!-- Wrapper Kotak Putih & Tombol Lanjut (Centered) -->
-                <div class="w-full px-0 lg:px-[100px] pt-[100px] mx-auto">
+                <div class="w-full px-0 lg:px-[100px] pt-0 lg:pt-[100px] mx-auto">
                   <!-- Kotak Putih (Tombol) -->
                   <button id="next-button" class="custom-button w-full min-h-[120px] sm:min-h-[140px] bg-white rounded-[24px] sm:rounded-[32px] flex items-start justify-start shadow-[0_10px_0_rgba(255,255,255,0.75)] relative p-5 sm:p-6 text-left">
                     <p id="finny-text" class="text-base sm:text-lg md:text-xl font-bold text-black leading-snug font-poppins"></p>
@@ -413,7 +495,7 @@
                 <!-- Ukuran font dibuat responsif: lebih kecil di mobile, lebih besar di desktop -->
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary mb-3 font-baloo">Apa Saja Fitur LIFIN?</h2>
                 <!-- Lebar gambar garis disesuaikan agar tidak meluber di layar kecil -->
-                <img src="./assets/images/line.png" alt="Dekorasi garis biru" class="w-4/5 max-w-[480px] mx-auto" />
+                <img src="./assets/images/line.png" alt="Garis Hiasan" class="w-4/5 max-w-[480px] mx-auto" />
             </div>
 
             <!-- Kontainer Gambar dan Box -->
@@ -421,7 +503,7 @@
                 
                 <!-- Gambar utama: tetap tersembunyi di mobile (lg:block) -->
                 <div class="hidden lg:block w-4/5 lg:w-2/5 flex-shrink-0">
-                    <img src="./assets/images/big.png" alt="Logo LIFIN" class="w-full h-auto object-contain rounded-3xl" />
+                    <img src="./assets/images/big.png" alt="Typemark LIFIN" class="w-full h-auto object-contain rounded-3xl" />
                 </div>
 
                 <!-- Box Fitur -->
@@ -436,10 +518,9 @@
                         <div class="absolute lg:left-[40px]  md:left-[40px] left-[25px] lg:top-12 top-[90px] lg:h-[calc(100%-100px)] md:h-[calc(100%-100px)] h-[calc(100%-140px)] w-1 bg-white rounded-full z-0"></div>
 
                         <!-- Fitur 1 -->
-                        <!-- Gap dan ukuran ikon dibuat responsif -->
                         <div class="flex items-center gap-5 sm:gap-6 relative z-10">
                             <div class="w-[50px] sm:w-[80px] flex-shrink-0">
-                                <img src="assets/images/lamp.png" alt="Ikon Lampu" class="w-full h-auto" />
+                                <img src="assets/images/lamp.png" alt="Lampu Hiasan" class="w-full h-auto" />
                             </div>
                             <div>
                                 <!-- Ukuran font judul dan paragraf dibuat responsif -->
@@ -477,10 +558,11 @@
         <!-- Akhir Bagian Fitur -->
 
         <!-- FAQ Section -->
-        <div id="faq" class="bg-white py-20">
+        <!-- DIUBAH: Mengurangi padding-bottom (pb) agar tidak ada jarak kosong yang besar -->
+        <div id="faq" class="bg-white py-20 pb-20">
             <div class="w-full text-center px-4">
               <span class="font-baloo font-extrabold text-4xl lg:text-[48px] text-[#04B3E3]">Masih Bingung dan Ada Pertanyaan?</span>
-              <img src="./assets/images/Line2.png" alt="garis dekoratif" class="w-3/4 max-w-[480px] mt-2 mx-auto" /> 
+              <img src="./assets/images/Line2.png" alt="Garis Hiasan" class="w-3/4 max-w-[480px] mt-2 mx-auto" /> 
             </div>
             
             <div class="w-full max-w-7xl mx-auto flex flex-col items-center mt-[32px] gap-[32px] px-4" id="faq-container">
@@ -491,7 +573,7 @@
                   <span class="text-white text-xl md:text-[32px] font-extrabold font-baloo text-left pointer-events-none">
                     Apa itu LIFIN dan siapa yang boleh ikut?
                   </span>
-                  <img src="./assets/images/underarrow.png" alt="panah" class="faq-arrow w-14 h-14 md:w-[70px] md:h-[70px] transition-transform duration-300 pointer-events-none flex-shrink-0" />
+                  <img src="./assets/images/underarrow.png" alt="Panah Petunjuk" class="faq-arrow w-14 h-14 md:w-[70px] md:h-[70px] transition-transform duration-300 pointer-events-none flex-shrink-0" />
                 </div>
                 <div class="faq-content absolute left-4 right-4 md:left-8 md:right-8 bottom-0 bg-white h-[144px] rounded-t-[32px] flex items-center justify-center text-center opacity-0 pointer-events-none">
                   <p class="text-base md:text-[22px] font-semibold text-black leading-snug px-6 font-poppins">
@@ -506,7 +588,7 @@
                   <span class="text-white text-xl md:text-[32px] font-extrabold font-baloo text-left pointer-events-none">
                     LIFIN gratis atau bayar?
                   </span>
-                  <img src="./assets/images/underarrow.png" alt="panah" class="faq-arrow w-14 h-14 md:w-[70px] md:h-[70px] transition-transform duration-300 pointer-events-none flex-shrink-0" />
+                  <img src="./assets/images/underarrow.png" alt="Panah Petunjuk" class="faq-arrow w-14 h-14 md:w-[70px] md:h-[70px] transition-transform duration-300 pointer-events-none flex-shrink-0" />
                 </div>
                 <div class="faq-content absolute left-4 right-4 md:left-8 md:right-8 bottom-0 bg-white h-[144px] rounded-t-[32px] flex items-center justify-center text-center opacity-0 pointer-events-none">
                   <p class="text-base md:text-[22px] font-semibold text-black leading-snug px-6 font-poppins">
@@ -521,7 +603,7 @@
                   <span class="text-white text-xl md:text-[32px] font-extrabold font-baloo text-left pointer-events-none">
                     Saya akan belajar apa di LIFIN?
                   </span>
-                  <img src="./assets/images/underarrow.png" alt="panah" class="faq-arrow w-14 h-14 md:w-[70px] md:h-[70px] transition-transform duration-300 pointer-events-none flex-shrink-0" />
+                  <img src="./assets/images/underarrow.png" alt="Panah Petunjuk" class="faq-arrow w-14 h-14 md:w-[70px] md:h-[70px] transition-transform duration-300 pointer-events-none flex-shrink-0" />
                 </div>
                 <div class="faq-content absolute left-4 right-4 md:left-8 md:right-8 bottom-0 bg-white h-[144px] rounded-t-[32px] flex items-center justify-center text-center opacity-0 pointer-events-none">
                   <p class="text-base md:text-[22px] font-semibold text-black leading-snug px-6 font-poppins">
@@ -534,17 +616,176 @@
         </div>
     </main>
 
-  <!-- PERUBAHAN: Menambahkan margin atas (mt) agar ada jarak dari konten di atasnya -->
-  <footer id="footer-landingpage-container" class="w-full max-w-none px-0 mt-48"></footer>
+  <!-- =================================================================== -->
+  <!-- ======================= START: FOOTER SECTION ===================== -->
+  <!-- =================================================================== -->
+  <!-- DIUBAH: Menghapus margin-top (mt) yang besar -->
+  <footer class="relative w-full mt-[300px]">
+    <!-- Call to Action Section -->
+    <div class="absolute top-[-220px] md:top-[-250px] lg:top-[-300px] left-1/2 -translate-x-1/2 z-20 flex w-full max-w-lg lg:max-w-none flex-col items-center gap-6 px-4">
+      <h2 class="font-baloo text-[48px] leading-tight md:text-6xl lg:text-[72px] font-extrabold text-[#04B3E3] text-center drop-shadow-sm lg:leading-[80px]">
+        Belajar Keuangan <br />bareng LIFIN
+      </h2>
+  
+      <!-- DIUBAH: Menghapus shadow (garis pembatas) pada tombol -->
+     <!-- Tombol Mulai -->
+    <button class="mt-[30px] bg-[#04B3E3] text-[30px] text-white font-baloo font-extrabold rounded-[32px] shadow-[0_10px_0_#038DB4]  w-[300px]  md:w-[400px]  lg:w-[496px] h-[54px] shadow-[0_8px_0_#038DB4]">
+      Mulai
+    </button>
+  </div>
+  
+    <!-- Footer Content Wrapper -->
+    <div class="relative w-full lg:mt-[100px] md:mt-[100px]  mt-[400px] md:pt-56 lg:pt-64 text-white">
+    
+      <!-- DIUBAH: Tinggi gambar diubah menjadi 700px dan posisi potong dari bawah -->
+      <img
+        src="./assets/images/footer-landingpage.svg"
+        alt="Footer Background Desktop"
+        class="absolute bottom-0 left-0 w-full h-[1600px] md:h-[1050px] lg:h-[700px] object-cover object-bottom pointer-events-none select-none z-0"
+        draggable="false"
+      />
+  
+      
+      <!-- Footer Content -->
+      <div class="relative z-10 w-full max-w-[1440px] mx-auto flex flex-col items-center px-4 pb-5 md:pb-16">
+        
+        <!-- DIUBAH: Struktur link diubah untuk menambahkan alamat -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full translate-y-[-70px] md:translate-y-[-50px]">
+          <div class="flex flex-col lg:flex-row justify-between lg:items-start gap-10 pb-0">
+            <!-- DIUBAH: Grid diubah menjadi 4 kolom di layar besar -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center sm:text-left mx-auto sm:mx-0 w-full">
+             <div>
+                <h4 class="text-xl font-extrabold mb-4" style="font-family: 'Baloo 2', cursive">Utama</h4>
+                <ul class="space-y-2">
+                  <li><a href="#" class="text-lg footer-link-animated">LIFIN</a></li>
+                  <li><a href="#" class="text-lg footer-link-animated">Beranda</a></li>
+                  <li><a href="#" class="text-lg footer-link-animated">FAQ</a></li>
+                </ul>
+              </div>
 
+              <div>
+                <h4 class="text-xl font-extrabold mb-4" style="font-family: 'Baloo 2', cursive">Game</h4>
+                <ul class="space-y-2">
+                  <li><a href="#" class="text-lg footer-link-animated">Dompet Pintar</a></li>
+                  <li><a href="#" class="text-lg footer-link-animated">Investor Cilik</a></li>
+                  <li><a href="#" class="text-lg footer-link-animated">Finny Of Olympus</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="text-xl font-extrabold mb-4" style="font-family: 'Baloo 2', cursive">Fitur</h4>
+                <ul class="space-y-2">
+                  <li><a href="#" class="text-lg footer-link-animated">Kalkulator Keuangan</a></li>
+                  <li><a href="#" class="text-lg footer-link-animated">Mesin Waktu Finansial</a></li>
+                  <li><a href="#" class="text-lg footer-link-animated">Berita Keuangan</a></li>
+                </ul>
+              </div>
+
+            <!-- DITAMBAHKAN: Kolom baru untuk alamat "Temui Kami" -->
+            <div>
+              <h4 class="text-xl font-extrabold mb-4" style="font-family: 'Baloo 2', cursive">Temui Kami</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a href="https://maps.app.goo.gl/RtiF4kpzXezkJ6rR8"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     class="text-lg leading-relaxed footer-link-animated">
+                    Jalan Tirto Sentono No.16,<br>Dusun Klandungan, Landungsari,<br>Kec. Dau, Kabupaten Malang, Jawa Timur 65151
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            </div>
+          </div>
+        </div>
+  
+        <!-- Social Media Icons -->
+        <div class="relative lg:absolute lg:bottom-[50px] lg:left-[50px] z-20 flex justify-center gap-4 lg:gap-6 mt-10 lg:mt-0">
+          <a href="https://www.linkedin.com/in/lifin-literasi-finansial-pelajar-4280b7368/" target="_blank" class="w-12 h-12 lg:w-[60px] lg:h-[60px] rounded-full bg-white flex items-center justify-center shadow-md transition-all duration-200 hover:-translate-y-[10px] hover:shadow-xl hover:bg-[#E8F4FD]">
+            <img src="assets/images/linkedin.svg" alt="LinkedIn" class="w-6 h-6 lg:w-[32px] lg:h-[32px] object-contain" />
+          </a>
+          <a href="#" class="w-12 h-12 lg:w-[60px] lg:h-[60px] rounded-full bg-white flex items-center justify-center shadow-md transition-all duration-200 hover:-translate-y-[10px] hover:shadow-xl hover:bg-[#FDE8F4]">
+            <img src="assets/images/ig.svg" alt="Instagram" class="w-6 h-6 lg:w-[32px] lg:h-[32px] object-contain" />
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lifin.website@gmail.com&su=HALO%20LIFIN!&body=Aku%20tertarik%20sama%20kamu%20dan%20punya%20saran%20yang%20menarik%20buat%20kamu" target="_blank" class="w-12 h-12 lg:w-[60px] lg:h-[60px] rounded-full bg-white flex items-center justify-center shadow-md transition-all duration-200 hover:-translate-y-[10px] hover:shadow-xl hover:bg-[#F4F8FB]">
+            <img src="assets/images/gmail.svg" alt="Email" class="w-6 h-6 lg:w-[32px] lg:h-[32px] object-contain" />
+          </a>
+          <a href="#" class="w-12 h-12 lg:w-[60px] lg:h-[60px] rounded-full bg-white flex items-center justify-center shadow-md transition-all duration-200 hover:-translate-y-[10px] hover:shadow-xl hover:bg-[#F4F8FB]">
+            <img src="assets/images/x.svg" alt="X Twitter" class="w-6 h-6 lg:w-[32px] lg:h-[32px] object-contain" />
+          </a>
+        </div>
+        
+        <!-- DIUBAH: Copyright dan link legal dibuat menjadi di tengah -->
+        <div class="w-full border-t border-white/20 mt-10 pt-6 flex flex-col items-center text-center gap-4">
+          <div class="text-white/70 text-base md:text-lg font-medium">
+            &copy; 2025 LIFIN. All rights reserved.
+          </div>
+          <div class="flex flex-col sm:flex-row gap-x-6 gap-y-2">
+              <a href="/LIFIN/terms.html" class="text-lg footer-link-animated">Ketentuan Layanan</a>
+              <a href="/LIFIN/privacy.html" class="text-lg footer-link-animated">Kebijakan Privasi</a>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </footer>
+  <!-- =================================================================== -->
+  <!-- ======================== END: FOOTER SECTION ====================== -->
+  <!-- =================================================================== -->
 
   <div id="chatbot-container"></div>
 
-<!-- Add this right before your closing </body> tag in index.html -->
 <script type="module" src="js/index-berita.js"></script>
+<script src="/js/chatbot.js"></script>
+
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+
+    // --- SCRIPT UNTUK NAVBAR ---
+    const hamburgerBtn = document.getElementById("hamburger-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const hamburgerIcon = document.getElementById("hamburger-icon");
+    const closeIcon = document.getElementById("close-icon");
+
+    function toggleMenu() {
+        const isOpen = closeIcon.classList.contains("opacity-100");
+        mobileMenu.classList.toggle("hidden");
+
+        if (!isOpen) {
+            hamburgerIcon.classList.replace("opacity-100", "opacity-0");
+            hamburgerIcon.classList.replace("rotate-0", "rotate-90");
+            closeIcon.classList.replace("opacity-0", "opacity-100");
+            closeIcon.classList.replace("-rotate-90", "rotate-0");
+        } else {
+            hamburgerIcon.classList.replace("opacity-0", "opacity-100");
+            hamburgerIcon.classList.replace("rotate-90", "rotate-0");
+            closeIcon.classList.replace("opacity-100", "opacity-0");
+            closeIcon.classList.replace("rotate-0", "-rotate-90");
+        }
+    }
+
+    if(hamburgerBtn) {
+        hamburgerBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            toggleMenu();
+        });
+    }
+    
+    if(mobileMenu) {
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+            toggleMenu();
+            }
+        });
+    }
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    // Membuat fungsi scrollToTop bisa diakses global
+    window.scrollToTop = scrollToTop;
 
     // --- LOGIKA KALKULATOR KEUANGAN ---
     const uangSakuInput = document.getElementById('uang-saku');
@@ -704,19 +945,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Menutup dropdown jika klik di luar area
-    window.addEventListener('click', () => {
+    window.addEventListener('click', (e) => {
         if (dropdownMenu && !dropdownMenu.classList.contains('hidden')) {
             dropdownMenu.classList.add('hidden');
+        }
+        if (mobileMenu && !mobileMenu.classList.contains("hidden") && !hamburgerBtn.contains(e.target)) {
+            toggleMenu();
         }
     });
 
 });
 </script>
-<style>
-html {
-  scroll-behavior: smooth;
-}
-</style>
-<script src="./js/component.js"></script>
+
 </body>
 </html>

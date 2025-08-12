@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Berita - LIFIN</title>
+    <title>Berita LIFIN</title>
+    <meta name="description" content="Tetap update dengan berita keuangan terbaru di LIFIN News. Temukan artikel menarik, tips praktis mengelola uang, dan wawasan investasi untuk menambah pengetahuan finansialmu.">
     <link rel="icon" type="image/png" href="assets/images/fav.png">
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts: Baloo 2 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -26,19 +25,17 @@
 
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
-        <!-- Header -->
         <header class="grid grid-cols-1 md:grid-cols-3 items-center gap-6 mb-10 p-4 border-b-2 border-gray-200">
-            <!-- Logo -->
             <div class="flex items-center justify-center md:justify-start">
-                <img src="assets/images/icon.png" alt="Logo LIFIN" class="w-[72px]">
+                <a href="index.html">
+                    <img src="assets/images/icon.png" alt="Ikon LIFIN" class="w-[72px]">
+                </a>
             </div>
 
-            <!-- Judul Tengah -->
             <div class="text-[#04b3e3] text-4xl md:text-5xl font-bold whitespace-nowrap text-center order-first md:order-none">
                 News
             </div>
 
-            <!-- Pencarian -->
             <div class="relative w-full max-w-sm mx-auto md:max-w-xs md:justify-self-end">
                 <input type="text" id="search-input" placeholder="Search articles..." class="w-full pl-10 pr-4 py-2 border-2 border-[#04b3e3] rounded-full bg-white focus:outline-none focus:ring-2 focus:ring-[#04b3e3] transition-all">
                 <svg class="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-[#04b3e3]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.0" stroke="currentColor">
@@ -47,9 +44,7 @@
             </div>
         </header>
 
-        <!-- Konten Utama -->
         <main>
-            <!-- Artikel Unggulan (Featured Article) - Now Dynamic -->
             <section id="featured-article-section" class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center my-12 md:my-20">
                 <div class="order-2 lg:order-1">
                     <div class="text-sm text-gray-500 mb-2 font-medium">
@@ -63,24 +58,20 @@
                     </button>
                 </div>
                 <div class="order-1 lg:order-2">
-                    <img id="featured-image" src="https://placehold.co/600x400/EEE/31343C?text=Loading..." alt="Gambar Artikel Unggulan" class="w-full h-auto object-cover rounded-2xl shadow-lg">
+                    <img id="featured-image" src="https://placehold.co/600x400/EEE/31343C?text=Loading..." alt="Gambar Artikel" class="w-full h-auto object-cover rounded-2xl shadow-lg">
                 </div>
             </section>
 
-            <!-- Grid Artikel Dinamis -->
             <section id="berita-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-                <!-- Articles from Firebase will be loaded here -->
                 <p class="col-span-full text-center text-gray-500">Loading news...</p>
             </section>
         </main>
 
     </div>
 
-    <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js" type="module"></script>
     <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js" type="module"></script>
 
-    <!-- Firebase Configuration and Berita Logic -->
     <script src="js/firebase-config.js" type="module"></script>
     <script src="js/berita.js" type="module"></script>
 

@@ -61,9 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Memuat Komponen ---
   // Muat komponen navbar, footer, dan chatbot ke placeholder masing-masing.
-  loadComponent(`${basePath}navbar-game.html`, 'navbar-container');
-  loadComponent(`${basePath}footer-game.html`, 'footer-container');
-  loadComponent(`${basePath}chatbot.html`, 'chatbot-container');
-  loadComponent(`${basePath}navbar-landing-page.html`, 'navbar-landingpage-container');
-  loadComponent(`${basePath}footer-landing-page.html`, 'footer-landingpage-container'); // Memanggil komponen chatbot
+  loadComponent(`${basePath}navbar.html`, 'navbar-container');
+  loadComponent(`${basePath}footer.html`, 'footer-container'); // Memanggil komponen chatbot
 });

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finance Quiz Race - True/False LIFIN</title>
+    <link rel="icon" type="image/png" href="/LIFIN/assets/images/fav.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Menggunakan Font Awesome untuk ikon centang dan silang -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body {
+        font-family: 'Baloo 2', sans-serif;
+        background-color: #04B3E3;
+    }
+    .rounded-top-100 {
+      border-top-left-radius: 100px;
+      border-top-right-radius: 100px;
+    }
+    .rounded-bottom-30 {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    /* Style untuk tombol jawaban yang benar */
+    .correct-answer {
+        background-color: #4ade80 !important; /* Hijau Terang */
+        border-color: #22c55e !important;
+        color: white !important;
+    }
+    /* Style untuk tombol jawaban yang salah */
+    .wrong-answer {
+        background-color: #f87171 !important; /* Merah Terang */
+        border-color: #ef4444 !important;
+        color: white !important;
+    }
+    .hidden {
+        display: none;
+    }
+    .progress-bar-fill {
+        transition: width 0.5s ease-in-out;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+  <!-- PERUBAHAN: Lebar maksimal diperbesar dari max-w-md menjadi max-w-lg -->
+  <div class="w-full max-w-lg mx-auto">
+
+    <!-- Layar Awal -->
+    <div id="start-screen" class="bg-white rounded-3xl p-8 text-center">
+        <h1 class="text-4xl font-extrabold text-[#006F8D] mb-4">Kuis Benar/Salah</h1>
+        <p class="text-gray-600 mb-8">Uji pengetahuan finansialmu! Jawab 10 pertanyaan secepat mungkin.</p>
+        <button id="start-btn" class="bg-[#FFD635] text-[#004b75] font-bold text-2xl py-4 px-12 rounded-2xl shadow-lg hover:scale-105 transition-transform">
+            Mulai
+        </button>
+    </div>
+
+    <!-- Kontainer Game -->
+    <div id="game-container" class="hidden">
+        <!-- PERUBAHAN: Header Kuning dibuat lebih tinggi (min-h-[120px]) dan padding disesuaikan -->
+        <div class="bg-[#FFD635] w-full h-auto min-h-[120px] rounded-top-100 relative flex items-center justify-between px-8 sm:px-12 py-5 gap-4">
+            <div class="flex items-center gap-3 bg-white w-auto h-[50px] rounded-full p-2 pr-6 shadow-md">
+                <img src="https://raw.githubusercontent.com/Farrasc/LIFIN/main/assets/images/stopwatch.svg" alt="Stopwatch" class="w-16 h-16 -mt-1" />
+                <span id="timer" class="text-2xl font-bold text-gray-700">00:00</span>
+            </div>
+            <div class="bg-white rounded-full px-6 py-2 shadow-md">
+                <span id="question-counter" class="text-xl font-bold text-[#006F8D]">Soal 1/10</span>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="bg-white -mt-1 pt-4">
+            <div class="w-11/12 mx-auto bg-gray-200 rounded-full h-4">
+                <div id="progress-bar" class="bg-green-500 h-4 rounded-full progress-bar-fill" style="width: 10%"></div>
+            </div>
+        </div>
+
+        <!-- PERUBAHAN: Area Konten Putih dibuat lebih tinggi (min-h-[420px]) dan padding diperbesar -->
+        <div class="bg-white w-full min-h-[420px] rounded-bottom-30 p-10 flex flex-col justify-center">
+            <div id="quiz-container" class="text-center">
+                <h2 id="question" class="text-xl sm:text-2xl font-bold text-[#006F8D] mb-10 min-h-[100px]">Memuat pertanyaan...</h2>
+                <div id="options-container" class="flex flex-col sm:flex-row gap-5 justify-center">
+                    <button data-option="Benar" class="option-button w-full sm:w-56 h-32 bg-green-100 text-green-700 rounded-2xl flex flex-col items-center justify-center cursor-pointer hover:bg-green-200 transition-all duration-300 border-b-4 border-green-300 active:border-b-0">
+                        <i class="fas fa-check text-4xl mb-2"></i>
+                        <span class="text-2xl font-bold">Benar</span>
+                    </button>
+                    <button data-option="Salah" class="option-button w-full sm:w-56 h-32 bg-red-100 text-red-700 rounded-2xl flex flex-col items-center justify-center cursor-pointer hover:bg-red-200 transition-all duration-300 border-b-4 border-red-300 active:border-b-0">
+                        <i class="fas fa-times text-4xl mb-2"></i>
+                        <span class="text-2xl font-bold">Salah</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Layar Ringkasan Hasil -->
+    <div id="summary-screen" class="hidden bg-white rounded-3xl p-8 text-center">
+        <h1 class="text-4xl font-extrabold text-[#006F8D] mb-6">Permainan Selesai!</h1>
+        <div class="grid grid-cols-2 gap-4 text-left max-w-sm mx-auto">
+            <div class="bg-gray-100 p-4 rounded-lg"><p class="text-sm text-gray-600">Total Waktu</p><p id="summary-time" class="text-2xl font-bold text-gray-800"></p></div>
+            <div class="bg-gray-100 p-4 rounded-lg"><p class="text-sm text-gray-600">Ketepatan</p><p id="summary-accuracy" class="text-2xl font-bold text-gray-800"></p></div>
+            <div class="bg-gray-100 p-4 rounded-lg"><p class="text-sm text-gray-600">Benar</p><p id="summary-correct" class="text-2xl font-bold text-green-500"></p></div>
+            <div class="bg-gray-100 p-4 rounded-lg"><p class="text-sm text-gray-600">Salah</p><p id="summary-wrong" class="text-2xl font-bold text-red-500"></p></div>
+        </div>
+        <button id="play-again-btn" class="mt-8 bg-[#FFD635] text-[#004b75] font-bold text-xl py-3 px-10 rounded-xl shadow-lg hover:scale-105 transition-transform">Main Lagi</button>
+    </div>
+
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Referensi Elemen DOM ---
+        const startScreen = document.getElementById('start-screen');
+        const startBtn = document.getElementById('start-btn');
+        const gameContainer = document.getElementById('game-container');
+        const summaryScreen = document.getElementById('summary-screen');
+        const playAgainBtn = document.getElementById('play-again-btn');
+
+        const questionElement = document.getElementById('question');
+        const optionButtons = document.querySelectorAll('.option-button');
+        const questionCounterElement = document.getElementById('question-counter');
+        const progressBar = document.getElementById('progress-bar');
+        const timerElement = document.getElementById('timer');
+
+        // --- State Game ---
+        let allQuizData = [];
+        let questionsForCurrentGame = [];
+        let currentQuestionIndex = 0;
+        const TOTAL_QUESTIONS = 10;
+        let correctAnswers = 0;
+        let questionAnswered = false;
+        let raceTimerInterval;
+
+        // --- Fungsi Utama ---
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        async function prepareQuiz() {
+            try {
+                const response = await fetch('/LIFIN/finance-quiz-race/data/soal-truefalse-financequizrace.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                allQuizData = [...data];
+                
+                shuffleArray(allQuizData);
+                questionsForCurrentGame = allQuizData.slice(0, TOTAL_QUESTIONS);
+
+            } catch (error) {
+                console.error("Gagal memuat data kuis:", error);
+                questionElement.textContent = "Gagal memuat soal. Coba muat ulang halaman.";
+            }
+        }
+
+        async function startGame() {
+            currentQuestionIndex = 0;
+            correctAnswers = 0;
+            clearInterval(raceTimerInterval);
+
+            startScreen.classList.add('hidden');
+            summaryScreen.classList.add('hidden');
+            gameContainer.classList.remove('hidden');
+            
+            await prepareQuiz();
+            
+            if (questionsForCurrentGame.length > 0) {
+                displayQuestion();
+                startRaceTimer();
+            }
+        }
+
+        function displayQuestion() {
+            if (currentQuestionIndex >= TOTAL_QUESTIONS) {
+                endGame();
+                return;
+            }
+
+            questionAnswered = false;
+            optionButtons.forEach(btn => {
+                const isBenar = btn.dataset.option === 'Benar';
+                btn.className = `option-button w-full sm:w-56 h-32 rounded-2xl flex flex-col items-center justify-center cursor-pointer transition-all duration-300 border-b-4 active:border-b-0 ${
+                    isBenar 
+                    ? 'bg-green-100 text-green-700 hover:bg-green-200 border-green-300' 
+                    : 'bg-red-100 text-red-700 hover:bg-red-200 border-red-300'
+                }`;
+                btn.disabled = false;
+            });
+
+            const currentQuestionData = questionsForCurrentGame[currentQuestionIndex];
+            questionElement.textContent = currentQuestionData.Pertanyaan;
+            questionCounterElement.textContent = `Soal ${currentQuestionIndex + 1}/${TOTAL_QUESTIONS}`;
+            progressBar.style.width = `${((currentQuestionIndex + 1) / TOTAL_QUESTIONS) * 100}%`;
+        }
+        
+        function checkAnswer(selectedOption, selectedButton) {
+            if (questionAnswered) return;
+            questionAnswered = true;
+
+            const correctAnswer = questionsForCurrentGame[currentQuestionIndex]['Kunci Jawaban'];
+            optionButtons.forEach(btn => btn.disabled = true);
+
+            if (selectedOption === correctAnswer) {
+                selectedButton.classList.add('correct-answer');
+                correctAnswers++;
+            } else {
+                selectedButton.classList.add('wrong-answer');
+                const correctButton = document.querySelector(`[data-option="${correctAnswer}"]`);
+                correctButton.classList.add('correct-answer');
+            }
+            
+            setTimeout(() => {
+                currentQuestionIndex++;
+                displayQuestion();
+            }, 1500);
+        }
+        
+        function endGame() {
+            clearInterval(raceTimerInterval);
+            
+            gameContainer.classList.add('hidden');
+            summaryScreen.classList.remove('hidden');
+            
+            const wrongAnswers = TOTAL_QUESTIONS - correctAnswers;
+            const accuracy = (correctAnswers / TOTAL_QUESTIONS) * 100;
+
+            document.getElementById('summary-time').textContent = timerElement.textContent;
+            document.getElementById('summary-accuracy').textContent = `${accuracy.toFixed(0)}%`;
+            document.getElementById('summary-correct').textContent = correctAnswers;
+            document.getElementById('summary-wrong').textContent = wrongAnswers;
+        }
+
+        function startRaceTimer() {
+            let seconds = 0;
+            timerElement.textContent = '00:00';
+            raceTimerInterval = setInterval(() => {
+                seconds++;
+                const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
+                const secs = (seconds % 60).toString().padStart(2, '0');
+                timerElement.textContent = `${mins}:${secs}`;
+            }, 1000);
+        }
+
+        // --- Event Listeners ---
+        startBtn.addEventListener('click', startGame);
+        playAgainBtn.addEventListener('click', () => {
+            summaryScreen.classList.add('hidden');
+            startScreen.classList.remove('hidden');
+        });
+
+        optionButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                checkAnswer(button.dataset.option, button);
+            });
+        });
+    });
+  </script>
+
+</body>
+</html>
