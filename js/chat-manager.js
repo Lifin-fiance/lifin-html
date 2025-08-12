@@ -226,15 +226,19 @@ export function initializeChat(config) {
         // Use innerHTML on a temporary element to properly create the node
         messageDiv.innerHTML = messageHTML.trim();
         
-        chatMessages.appendChild(messageDiv.firstChild);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-        return messageDiv.firstChild;
+        const appendedNode = messageDiv.firstChild;
+        if (appendedNode) {
+            chatMessages.appendChild(appendedNode);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        return appendedNode;
     };
 
     const generateResponse = async (userMessage) => {
         const typingIndicator = appendMessage("Mengetik...", "finny");
         if (typingIndicator) {
-            // Add a visual cue for the "typing" message
+            // BUG FIX: Add a specific class to the indicator so we can reliably find and remove it later.
+            typingIndicator.classList.add('typing-indicator');
             typingIndicator.querySelector('p')?.parentElement.classList.add('italic', 'opacity-75');
         }
 
@@ -251,11 +255,18 @@ export function initializeChat(config) {
             const data = await response.json();
             const finnyResponse = data.choices[0]?.message?.content?.trim() || "Maaf, ada sedikit gangguan. Coba lagi ya!";
             
-            if (typingIndicator) typingIndicator.remove();
+            // BUG FIX: Find the indicator by its class within the chat messages and remove it.
+            const indicatorToRemove = chatMessages.querySelector('.typing-indicator');
+            if (indicatorToRemove) indicatorToRemove.remove();
+
             appendMessage(finnyResponse, "finny");
         } catch (error) {
             console.error("Error calling chat proxy:", error);
-            if (typingIndicator) typingIndicator.remove();
+
+            // BUG FIX: Also remove the indicator in the catch block.
+            const indicatorToRemove = chatMessages.querySelector('.typing-indicator');
+            if (indicatorToRemove) indicatorToRemove.remove();
+
             appendMessage("Oops! Ada yang salah. Coba lagi nanti ya.", "finny");
         }
     };
