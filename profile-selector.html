@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Selamat Datang di LIFIN</title>
-  <link rel="icon" type="image/png" href="assets/images/fav.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -31,40 +30,19 @@
     .button { transition: all 0.15s ease-in-out; }
     .button:hover { transform: translateY(6px); box-shadow: none !important; }
     .button:active { transform: translateY(4px); box-shadow: none !important; }
-    
-    #continueBtn:disabled { 
-      opacity: 0.6; 
-      cursor: not-allowed; 
-      transform: translateY(0); 
-      box-shadow: none;
-    }
-    #continueBtn:disabled:hover { 
-      transform: translateY(0);
-      box-shadow: none;
-    }
-
+    #continueBtn:disabled { opacity: 0.6; cursor: not-allowed; transform: translateY(0); box-shadow: 0 6px 0 #003552 !important; }
+    #continueBtn:disabled:hover { transform: translateY(0); }
     .pressed { transform: translateY(6px); box-shadow: none !important; }
     .button-3d { transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; }
     .button-3d:hover { transform: translateY(10px); box-shadow: none !important; }
     .button-3d:active { transform: translateY(4px); box-shadow: none !important; }
   </style>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-00CHWMXSV1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-00CHWMXSV1');
-</script>
-
 <body class="bg-[#04b3e3] min-h-screen w-full flex flex-col items-center justify-center px-5 py-10 font-baloo relative overflow-x-hidden">
 
   <!-- Mascot for desktop -->
-  <div class="absolute left-[-30px] top-[10px] z-50 hidden lg:block">
-    <img src="assets/images/mascotfin.png" alt="Finlook Mascot" class="w-[300px] object-contain rounded-full" />
+  <div class="absolute left-[30px] top-[10px] z-50 hidden lg:block">
+    <img src="assets/images/finlook.svg" alt="Finny Mascot" class="w-[250px] object-contain rounded-full" />
   </div>
 
   <!-- Step 1: Profile Selection -->
@@ -83,9 +61,7 @@
       <h2 class="text-lg lg:text-[24px] font-extrabold text-black mb-6 text-center">Siapa Namamu?</h2>
       <div class="w-full flex flex-col md:flex-row md:relative gap-4 md:gap-0">
         <input id="nameInput" type="text" placeholder="Masukkan Namamu" class="w-full h-14 pl-6 py-2 md:pr-[170px] rounded-full border border-gray-300 bg-white text-black placeholder:text-gray-400 placeholder:font-extrabold focus:outline-none focus:ring-2 focus:ring-[#04b3e3] transition-all duration-300"/>
-        <button id="continueBtn" 
-          class="no-anim w-full h-14 bg-[#004b75] text-white font-extrabold rounded-full text-sm 
-                 md:absolute md:top-0 md:right-0 md:h-full md:w-[150px] hover:bg-[#006199]">
+        <button id="continueBtn" class="button w-full h-14 bg-[#004b75] text-white font-extrabold rounded-full text-sm md:absolute md:top-0 md:right-0 md:h-full md:w-[150px] shadow-mdBtn">
           Lanjutkan
         </button>
       </div>
@@ -93,31 +69,28 @@
   </div>
 
   <!-- Step 2: Level Selection (Initially Hidden) -->
-  <div id="level-step" class="hidden fixed inset-0 bg-white z-20 flex flex-col items-center justify-start lg:justify-center p-4 pt-10 lg:pt-4 overflow-y-auto">
-      <!-- Header -->
-      <div class="relative w-full max-w-lg md:max-w-2xl lg:max-w-3xl mb-10 text-center">
-        <div class="w-full h-[65px] bg-[#04b3e3] rounded-full flex items-center justify-center px-6">
+  <!-- This div now acts as a full-screen overlay to replicate the original page's UI -->
+  <div id="level-step" class="hidden fixed inset-0 bg-gray-100 z-20 flex flex-col items-center justify-center p-4 overflow-y-auto">
+      <div class="relative w-full max-w-lg md:max-w-2xl lg:max-w-3xl mb-16 md:mb-24 text-center">
+        <div class="w-full h-[65px] bg-[#04b3e3] mt-[10px] rounded-full flex items-center justify-center px-6">
           <h1 class="text-xl sm:text-2xl text-white font-bold text-center">Aku Ingin Belajar Dari Level...</h1>
         </div>
+        <img src="assets/images/mascotfin.png" alt="Mascot" class="hidden sm:block absolute w-[150px] md:w-[200px] lg:w-[250px] h-auto" style="top: -90px; right: -50px;">
       </div>
-      <!-- Level Cards -->
-      <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 w-full">
-        <!-- Beginner Card -->
-        <div data-level="Beginner" class="level-btn cursor-pointer button-3d block w-full max-w-[320px] h-auto sm:h-96 bg-[#04b3e3] rounded-3xl flex flex-col justify-center items-center p-8 text-white text-center shadow-levelBlue">
+      <div class="flex flex-col lg:flex-row items-center justify-center gap-12">
+        <div data-level="Beginner" class="level-btn cursor-pointer button-3d block w-72 sm:w-80 h-96 bg-[#04b3e3] rounded-3xl flex flex-col justify-center items-center p-8 text-white text-center shadow-levelBlue">
           <img src="assets/images/Ikon Level 1.svg" alt="Ikon Beginner" class="w-28 h-28 mb-6 object-contain">
-          <h2 class="text-3xl font-extrabold uppercase tracking-wider mb-2">Beginner</h2>
+          <h2 class="text-3xl font-semibold uppercase tracking-wider mb-2">Beginner</h2>
           <p class="text-base font-bold">Level Dasar Buat Pemula Keuangan</p>
         </div>
-        <!-- Smart Spender Card -->
-        <div data-level="Smart Spender" class="level-btn cursor-pointer button-3d block w-full max-w-[320px] h-auto sm:h-96 bg-[#ffc72c] rounded-3xl flex flex-col justify-center items-center p-8 text-white text-center shadow-levelYellow">
+        <div data-level="Smart Spender" class="level-btn cursor-pointer button-3d block w-72 sm:w-80 h-96 bg-[#ffc72c] rounded-3xl flex flex-col justify-center items-center p-8 text-white text-center shadow-levelYellow">
           <img src="assets/images/Ikon Level 2.svg" alt="Ikon Smart Spender" class="w-28 h-28 mb-6 object-contain">
-          <h2 class="text-3xl font-extrabold uppercase tracking-wider mb-2">Smart Spender</h2>
+          <h2 class="text-3xl font-semibold uppercase tracking-wider mb-2">Smart Spender</h2>
           <p class="text-base font-bold max-w-xs">Untuk yang cerdas kelola uang</p>
         </div>
-        <!-- Future Investor Card -->
-        <div data-level="Future Investor" class="level-btn cursor-pointer button-3d block w-full max-w-[320px] h-auto sm:h-96 bg-[#004b75] rounded-3xl flex flex-col justify-center items-center p-8 text-white text-center shadow-levelDarkBlue">
+        <div data-level="Future Investor" class="level-btn cursor-pointer button-3d block w-72 sm:w-80 h-96 bg-[#004b75] rounded-3xl flex flex-col justify-center items-center p-8 text-white text-center shadow-levelDarkBlue">
           <img src="assets/images/Ikon Level 3.svg" alt="Ikon Future Investor" class="w-28 h-28 mb-6 object-contain">
-          <h2 class="text-3xl font-extrabold uppercase tracking-wider mb-2">Future Investor</h2>
+          <h2 class="text-3xl font-semibold uppercase tracking-wider mb-2">Future Investor</h2>
           <p class="text-base font-bold">Ahlinya Mengatur Uang</p>
         </div>
       </div>

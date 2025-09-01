@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Header Lifin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Import Baloo 2 dan Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body class="m-0 p-0 box-border">
+
+  <!-- Header -->
+  <header class="absolute top-0 left-0 w-full h-[90px] bg-white flex items-center justify-between px-6 lg:px-20 shadow-sm z-50" style="box-shadow: 0 3px 0px 0 rgba(4,179,227,0.2);">
+    <div class="flex items-center">
+      <img src="/LIFIN/assets/images/icon.png" class="w-[90px] object-cover cursor-pointer" alt="logolifin" onclick="scrollToTop()">
+    </div>
+
+    <!-- Tombol BACK sebagai pengganti hamburger -->
+    <button onclick="history.back()"
+      class="bg-[#FF6B6B] text-white text-lg font-extrabold px-5 py-2 rounded-full font-['Baloo_2'] hover:opacity-90 transition-all duration-200" style="box-shadow: 0 5px 0px 0 #d44f4f;">
+      Back
+    </button>
+  </header>
+
+</body>
+</html>

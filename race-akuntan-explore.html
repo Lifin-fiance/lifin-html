@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finance Quiz Race</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+        font-family: 'Baloo 2', sans-serif;
+    }
+    .correct-answer, .correct-answer-bg {
+        background-color: #4ade80 !important;
+        border-color: #22c55e !important;
+    }
+    .wrong-answer, .wrong-answer-bg {
+        background-color: #f87171 !important;
+        border-color: #ef4444 !important;
+    }
+    .hidden {
+        display: none;
+    }
+    .calculator-btn {
+        @apply bg-gray-200 hover:bg-gray-300 text-2xl font-bold rounded-lg transition-colors duration-200;
+    }
+    .calculator-btn.operator {
+        @apply bg-amber-500 hover:bg-amber-600 text-white;
+    }
+  </style>
+</head>
+<body class="bg-[#04B3E3] flex items-center justify-center min-h-screen p-4">
+
+  <div class="w-full max-w-4xl">
+
+    <div id="mode-selection-screen" class="hidden bg-white rounded-3xl p-8 text-center">
+        </div>
+
+    <div id="accountant-screen" class="bg-white rounded-3xl p-6 sm:p-8">
+        <h1 class="text-3xl font-extrabold text-[#006F8D] text-center mb-4">Akuntan Explorer</h1>
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="flex-1">
+                <p id="accountant-counter" class="text-gray-600 mb-2 text-center md:text-left">Memuat soal...</p>
+                <div class="bg-gray-100 rounded-2xl p-6 mb-4 min-h-[10rem] flex items-center justify-center">
+                    <p id="accountant-problem" class="text-xl font-semibold text-gray-800 text-center"></p>
+                </div>
+                <input type="number" id="accountant-answer" class="w-full p-3 text-xl border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500" placeholder="Masukkan jawabanmu...">
+                <button id="check-accountant-answer" class="w-full mt-4 bg-purple-600 text-white font-bold text-xl py-3 rounded-lg hover:bg-purple-700 transition-colors">Cek Jawaban</button>
+                <div id="accountant-feedback" class="mt-2 text-center font-bold"></div>
+            </div>
+            <div class="w-full md:w-64 bg-gray-800 p-4 rounded-2xl">
+                <div id="calculator-display" class="bg-gray-200 text-right text-3xl font-mono p-3 rounded-lg mb-4 h-16 overflow-x-auto">0</div>
+                <div class="grid grid-cols-4 gap-2">
+                    <button class="calculator-btn operator col-span-2" data-key="C">C</button>
+                    <button class="calculator-btn operator" data-key="/">/</button>
+                    <button class="calculator-btn operator" data-key="*">*</button>
+                    <button class="calculator-btn" data-key="7">7</button>
+                    <button class="calculator-btn" data-key="8">8</button>
+                    <button class="calculator-btn" data-key="9">9</button>
+                    <button class="calculator-btn operator" data-key="-">-</button>
+                    <button class="calculator-btn" data-key="4">4</button>
+                    <button class="calculator-btn" data-key="5">5</button>
+                    <button class="calculator-btn" data-key="6">6</button>
+                    <button class="calculator-btn operator" data-key="+">+</button>
+                    <button class="calculator-btn" data-key="1">1</button>
+                    <button class="calculator-btn" data-key="2">2</button>
+                    <button class="calculator-btn" data-key="3">3</button>
+                    <button class="calculator-btn operator row-span-2" data-key="=">=</button>
+                    <button class="calculator-btn col-span-2" data-key="0">0</button>
+                    <button class="calculator-btn" data-key=".">.</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="summary-screen" class="hidden"></div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Referensi Elemen DOM ---
+        const accountantScreen = document.getElementById('accountant-screen');
+        
+        // --- State Game Akuntan---
+        let accountantData = []; // Akan diisi dari JSON
+        const accountantProblem = document.getElementById('accountant-problem');
+        const accountantCounter = document.getElementById('accountant-counter');
+        const accountantAnswerInput = document.getElementById('accountant-answer');
+        const checkAccountantAnswerBtn = document.getElementById('check-accountant-answer');
+        const accountantFeedback = document.getElementById('accountant-feedback');
+        let currentAccountantIndex = 0, accountantScore = 0;
+
+        // --- Kalkulator State ---
+        const calculatorDisplay = document.getElementById('calculator-display');
+        let calculatorState = { displayValue: '0', firstOperand: null, waitingForSecondOperand: false, operator: null };
+        
+        // --- Fungsi Utama ---
+
+        /**
+         * Mengambil data soal dari file JSON, menyimpannya ke variabel accountantData.
+         */
+        async function loadData() {
+            try {
+                // Mengambil data dari file JSON
+                const response = await fetch('./data/soal-akuntancilik-financequizrace.json');
+                if (!response.ok) {
+                    throw new Error(`Gagal mengambil data: ${response.statusText}`);
+                }
+                const data = await response.json();
+                
+                // Memastikan data ada dan merupakan array
+                if (data && Array.isArray(data.akuntan_cilik)) {
+                    accountantData = data.akuntan_cilik;
+                } else {
+                    throw new Error("Format data JSON tidak sesuai.");
+                }
+
+            } catch (error) {
+                console.error("Gagal memuat data soal:", error);
+                // Menampilkan pesan error di layar jika gagal memuat
+                accountantProblem.textContent = "Maaf, gagal memuat soal. Silakan coba muat ulang halaman.";
+                checkAccountantAnswerBtn.disabled = true; // Menonaktifkan tombol jika soal gagal dimuat
+            }
+        }
+        
+        /**
+         * Mengacak urutan elemen di dalam sebuah array.
+         * @param {Array} array Array yang akan diacak.
+         */
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        /**
+         * Memulai permainan Akuntan Explorer.
+         */
+        function startGame() {
+            // Memastikan ada soal yang dimuat sebelum memulai
+            if (accountantData.length === 0) {
+                return; // Berhenti jika tidak ada data soal
+            }
+            
+            currentAccountantIndex = 0;
+            accountantScore = 0;
+            shuffleArray(accountantData); // Mengacak soal setiap kali game dimulai
+            accountantScreen.classList.remove('hidden');
+            displayAccountantProblem();
+        }
+
+        // --- Logika Akuntan Explorer ---
+
+        /**
+         * Menampilkan soal Akuntan Explorer saat ini.
+         */
+        function displayAccountantProblem() {
+            // Cek jika permainan sudah selesai
+            if (currentAccountantIndex >= accountantData.length) {
+                endGame();
+                return;
+            }
+
+            const currentProblem = accountantData[currentAccountantIndex];
+            
+            // Mengupdate tampilan
+            accountantCounter.textContent = `Soal ${currentAccountantIndex + 1} dari ${accountantData.length}`;
+            accountantProblem.textContent = currentProblem.problem;
+            accountantAnswerInput.value = '';
+            accountantFeedback.textContent = '';
+            checkAccountantAnswerBtn.disabled = false;
+            accountantAnswerInput.classList.remove('correct-answer', 'wrong-answer');
+            accountantAnswerInput.focus();
+        }
+
+        /**
+         * Memeriksa jawaban yang dimasukkan oleh pengguna.
+         */
+        function checkAccountantAnswer() {
+            if (checkAccountantAnswerBtn.disabled) return; // Mencegah double click
+
+            const userAnswer = parseFloat(accountantAnswerInput.value);
+            const correctAnswer = accountantData[currentAccountantIndex].answer;
+            
+            if (userAnswer === correctAnswer) {
+                accountantScore++;
+                accountantFeedback.textContent = "Benar! 🎉";
+                accountantFeedback.className = "mt-2 text-center font-bold text-green-500";
+                accountantAnswerInput.classList.add('correct-answer');
+            } else {
+                accountantFeedback.textContent = `Salah! Jawaban yang benar: ${correctAnswer}`;
+                accountantFeedback.className = "mt-2 text-center font-bold text-red-500";
+                accountantAnswerInput.classList.add('wrong-answer');
+            }
+            
+            checkAccountantAnswerBtn.disabled = true; // Menonaktifkan tombol setelah menjawab
+            
+            // Pindah ke soal berikutnya setelah 2 detik
+            setTimeout(() => {
+                currentAccountantIndex++;
+                displayAccountantProblem();
+            }, 2000);
+        }
+        
+        /**
+         * Menangani akhir permainan.
+         */
+        function endGame() {
+            alert(`Game Selesai! Skor Anda: ${accountantScore} dari ${accountantData.length} soal.`);
+            // Di sini Anda bisa menambahkan logika untuk kembali ke menu atau menampilkan layar rangkuman
+            // Contoh: window.location.reload(); // Untuk memulai ulang
+        }
+
+        // --- Logika Kalkulator (tidak diubah) ---
+        function setupCalculator() {
+            const calculator = document.querySelector('#accountant-screen .grid');
+            calculator.addEventListener('click', (e) => {
+                if (!e.target.matches('.calculator-btn')) return;
+                const key = e.target.dataset.key;
+                
+                if (key === '=') calculate();
+                else if (key === 'C') resetCalculator();
+                else if (['/', '*', '-', '+'].includes(key)) handleOperator(key);
+                else if (key === '.') inputDecimal(key);
+                else inputDigit(key);
+                
+                updateDisplay();
+            });
+        }
+        function inputDigit(digit) {
+            const { displayValue, waitingForSecondOperand } = calculatorState;
+            if (waitingForSecondOperand === true) {
+                calculatorState.displayValue = digit;
+                calculatorState.waitingForSecondOperand = false;
+            } else {
+                calculatorState.displayValue = displayValue === '0' ? digit : displayValue + digit;
+            }
+        }
+        function inputDecimal(dot) {
+            if (calculatorState.waitingForSecondOperand) return;
+            if (!calculatorState.displayValue.includes(dot)) {
+                calculatorState.displayValue += dot;
+            }
+        }
+        function handleOperator(nextOperator) {
+            const { firstOperand, displayValue, operator } = calculatorState;
+            const inputValue = parseFloat(displayValue);
+            if (operator && calculatorState.waitingForSecondOperand) {
+                calculatorState.operator = nextOperator;
+                return;
+            }
+            if (firstOperand == null && !isNaN(inputValue)) {
+                calculatorState.firstOperand = inputValue;
+            } else if (operator) {
+                const result = performCalculation[operator](firstOperand, inputValue);
+                calculatorState.displayValue = `${parseFloat(result.toFixed(7))}`;
+                calculatorState.firstOperand = result;
+            }
+            calculatorState.waitingForSecondOperand = true;
+            calculatorState.operator = nextOperator;
+        }
+        const performCalculation = {
+            '/': (firstOperand, secondOperand) => secondOperand !== 0 ? firstOperand / secondOperand : 'Error',
+            '*': (firstOperand, secondOperand) => firstOperand * secondOperand,
+            '+': (firstOperand, secondOperand) => firstOperand + secondOperand,
+            '-': (firstOperand, secondOperand) => firstOperand - secondOperand,
+        };
+        function calculate() {
+            const { firstOperand, displayValue, operator } = calculatorState;
+            const inputValue = parseFloat(displayValue);
+            if (operator && !calculatorState.waitingForSecondOperand) {
+                const result = performCalculation[operator](firstOperand, inputValue);
+                calculatorState.displayValue = (result === 'Error') ? 'Error' : `${parseFloat(result.toFixed(7))}`;
+                calculatorState.firstOperand = null;
+                calculatorState.operator = null;
+            }
+            calculatorState.waitingForSecondOperand = false;
+        }
+        function resetCalculator() {
+            calculatorState = { displayValue: '0', firstOperand: null, waitingForSecondOperand: false, operator: null };
+        }
+        function updateDisplay() {
+            calculatorDisplay.textContent = calculatorState.displayValue;
+        }
+
+        // --- Event Listeners ---
+        checkAccountantAnswerBtn.addEventListener('click', checkAccountantAnswer);
+        accountantAnswerInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                checkAccountantAnswer();
+            }
+        });
+
+        // --- Inisialisasi ---
+        async function initialize() {
+            setupCalculator();      // Siapkan kalkulator
+            await loadData();       // Muat data soal dari JSON
+            startGame();            // Mulai permainan
+        }
+        
+        initialize();
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Split Smart LIFIN</title>
+    <link rel="icon" type="image/png" href="/LIFIN/assets/images/fav.png">
+  <!-- Memuat Tailwind CSS untuk styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Memuat Font dari Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Gaya Kustom untuk Game */
+    body {
+        font-family: 'Baloo 2', sans-serif;
+    }
+    .hidden {
+        display: none;
+    }
+    /* Gaya untuk Drop Zone (Sortir Kebutuhan & Keinginan) */
+    .drop-zone {
+        transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+    }
+    .drop-zone.drag-over {
+        background-color: #e0f7fa; /* cyan-50 */
+        border-color: #06b6d4; /* cyan-600 */
+    }
+    .drop-zone.correct-drop {
+        border-color: #22c55e; /* green-600 */
+        background-color: #dcfce7; /* green-100 */
+        transform: scale(1.05);
+    }
+    .drop-zone.wrong-drop {
+        border-color: #ef4444; /* red-600 */
+        background-color: #fee2e2; /* red-100 */
+        transform: scale(1.05);
+    }
+    .draggable-item {
+        cursor: grab;
+    }
+    .draggable-item:active {
+        cursor: grabbing;
+    }
+    /* Gaya untuk interaksi klik di mobile */
+    .clickable-zone {
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+    .clickable-zone:hover {
+        transform: scale(1.03);
+    }
+  </style>
+</head>
+<body class="bg-[#04B3E3] flex items-center justify-center min-h-screen p-4">
+
+    <!-- Kontainer Utama Game -->
+    <div class="w-full max-w-4xl">
+
+        <!-- Kontainer Game Sortir Kebutuhan & Keinginan -->
+        <div id="sort-screen" class="bg-white rounded-3xl p-6 sm:p-8 text-center">
+            <h1 class="text-3xl font-extrabold text-[#006F8D] mb-4">Sortir Kebutuhan & Keinginan!</h1>
+            <p id="instruction-text" class="text-gray-600 mb-6">Seret barang di bawah ke kotak yang benar.</p>
+            
+            <!-- Area untuk menampilkan item yang bisa diseret (dengan gambar) -->
+            <div id="item-display-area" class="bg-gray-100 rounded-2xl min-h-[200px] flex items-center justify-center mb-6 p-4">
+                <div id="draggable-item" draggable="true" class="draggable-item bg-white p-4 rounded-lg shadow-md flex flex-col items-center gap-3 transition-transform transform">
+                    <img id="item-image" src="" alt="Gambar Barang" class="h-32 w-32 object-contain rounded-md bg-gray-200">
+                    <p id="item-text" class="text-xl font-bold text-gray-800 text-center">Memuat...</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <div id="needs-zone" data-type="Kebutuhan" class="drop-zone flex-1 bg-blue-100 border-4 border-dashed border-blue-300 rounded-2xl p-4 min-h-[150px] flex items-center justify-center">
+                    <h2 class="text-2xl font-bold text-blue-800">Kebutuhan</h2>
+                </div>
+                <div id="wants-zone" data-type="Keinginan" class="drop-zone flex-1 bg-purple-100 border-4 border-dashed border-purple-300 rounded-2xl p-4 min-h-[150px] flex items-center justify-center">
+                    <h2 class="text-2xl font-bold text-purple-800">Keinginan</h2>
+                </div>
+            </div>
+            <div class="mt-6 text-2xl font-bold text-[#006F8D]">Skor: <span id="sort-score">0</span></div>
+        </div>
+        
+        <!-- Layar Rangkuman (Hasil Akhir) -->
+        <div id="summary-screen" class="hidden bg-white rounded-3xl p-8 text-center">
+            <h1 class="text-4xl font-extrabold text-[#006F8D] mb-2">Permainan Selesai!</h1>
+            <div class="text-center max-w-md mx-auto mt-6">
+                 <div class="bg-gray-100 p-6 rounded-lg">
+                       <p class="text-lg text-gray-600">Skor Akhir</p>
+                       <p id="summary-final-score" class="text-4xl font-bold text-[#006F8D]"></p>
+                 </div>
+            </div>
+            <div class="mt-8 flex justify-center items-center gap-4">
+                <button id="play-again-btn" class="bg-[#FFD635] text-[#004b75] font-bold text-xl py-3 px-10 rounded-xl shadow-lg hover:scale-105 transition-transform">Main Lagi</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- State & Variabel ---
+        let allSortItems = [];
+        let gameItems = [];
+        let currentSortIndex = 0;
+        let sortScore = 0;
+        let currentDragItem = null;
+        const TOTAL_SORT_ITEMS = 10;
+        let isInteractionDisabled = false;
+
+        // --- Referensi Elemen DOM ---
+        const sortScreen = document.getElementById('sort-screen');
+        const summaryScreen = document.getElementById('summary-screen');
+        const draggableItemEl = document.getElementById('draggable-item');
+        const itemImageEl = document.getElementById('item-image');
+        const itemTextEl = document.getElementById('item-text');
+        const needsZoneEl = document.getElementById('needs-zone');
+        const wantsZoneEl = document.getElementById('wants-zone');
+        const sortScoreEl = document.getElementById('sort-score');
+        const instructionTextEl = document.getElementById('instruction-text');
+        const playAgainBtn = document.getElementById('play-again-btn');
+
+        // --- Fungsi Pemuatan Data ---
+        async function loadSortData() {
+            try {
+                // Pastikan path ke file JSON ini benar
+                const response = await fetch('/LIFIN/data/soal-sotirkebutuhankeinginan-financequizrace.json');
+                if (!response.ok) {
+                    throw new Error(`Gagal memuat data: ${response.statusText}`);
+                }
+                allSortItems = await response.json();
+            } catch (error) {
+                console.error("Gagal memuat data soal:", error);
+                itemTextEl.textContent = "Gagal memuat soal.";
+                draggableItemEl.style.display = 'none'; // Sembunyikan item jika gagal
+            }
+        }
+
+        // --- Fungsi Kontrol Game ---
+        function showScreen(screenElement) {
+            sortScreen.classList.add('hidden');
+            summaryScreen.classList.add('hidden');
+            screenElement.classList.remove('hidden');
+        }
+
+        function startGame() {
+            if (allSortItems.length === 0) {
+                itemTextEl.textContent = "Data soal tidak ditemukan.";
+                return;
+            };
+            
+            gameItems = [...allSortItems].sort(() => 0.5 - Math.random()).slice(0, TOTAL_SORT_ITEMS);
+            currentSortIndex = 0;
+            sortScore = 0;
+            isInteractionDisabled = false;
+            sortScoreEl.textContent = sortScore;
+            
+            displaySortItem();
+            showScreen(sortScreen);
+        }
+
+        function endGame() {
+            document.getElementById('summary-final-score').textContent = `${sortScore} / ${TOTAL_SORT_ITEMS}`;
+            showScreen(summaryScreen);
+        }
+
+        // --- Logika Game Sortir ---
+        function displaySortItem() {
+            if (currentSortIndex >= TOTAL_SORT_ITEMS) {
+                setTimeout(endGame, 500);
+                return;
+            }
+            currentDragItem = gameItems[currentSortIndex];
+            
+            itemTextEl.textContent = currentDragItem.Barang;
+            itemImageEl.src = currentDragItem['Link Gambar'];
+            itemImageEl.onerror = function() {
+                this.onerror=null;
+                this.src=`https://placehold.co/128x128/e2e8f0/475569?text=Gambar\\nError`;
+            };
+
+            draggableItemEl.dataset.id = currentDragItem.No;
+            instructionTextEl.textContent = `Barang ${currentSortIndex + 1} dari ${TOTAL_SORT_ITEMS}`;
+        }
+
+        function processAnswer(chosenType) {
+            if (!currentDragItem || isInteractionDisabled) return;
+
+            isInteractionDisabled = true;
+            const correct = currentDragItem.Jawaban === chosenType;
+            const zoneEl = chosenType === 'Kebutuhan' ? needsZoneEl : wantsZoneEl;
+
+            if (correct) {
+                sortScore++;
+                zoneEl.classList.add('correct-drop');
+            } else {
+                zoneEl.classList.add('wrong-drop');
+            }
+            sortScoreEl.textContent = sortScore;
+            
+            setTimeout(() => {
+                zoneEl.classList.remove('correct-drop', 'wrong-drop');
+                currentSortIndex++;
+                displaySortItem();
+                isInteractionDisabled = false;
+            }, 1200);
+        }
+
+        // --- Handler untuk Desktop (Drag and Drop) ---
+        function handleDragStart(e) {
+            if (currentDragItem) {
+                e.dataTransfer.setData('text/plain', currentDragItem.No);
+                setTimeout(() => e.target.classList.add('opacity-50'), 0);
+            } else {
+                e.preventDefault();
+            }
+        }
+        
+        function handleDragEnd(e) {
+            e.target.classList.remove('opacity-50');
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            const dropZone = e.currentTarget;
+            const dropType = dropZone.dataset.type;
+            dropZone.classList.remove('drag-over');
+            processAnswer(dropType);
+        }
+
+        // --- Handler untuk Mobile (Klik) ---
+        function handleChoiceClick(e) {
+            const choiceType = e.currentTarget.dataset.type;
+            processAnswer(choiceType);
+        }
+
+        // --- Inisialisasi Game ---
+        async function init() {
+            playAgainBtn.addEventListener('click', startGame);
+
+            // Muat data soal terlebih dahulu
+            await loadSortData();
+
+            // Cek lebar layar untuk menentukan mode interaksi
+            // Lebar 768px (md di Tailwind) digunakan sebagai batas
+            if (window.innerWidth < 768) {
+                // Mode Mobile: Klik
+                instructionTextEl.textContent = "Pilih kotak 'Kebutuhan' atau 'Keinginan' untuk menjawab.";
+                draggableItemEl.draggable = false;
+                draggableItemEl.style.cursor = 'default'; // Ubah cursor karena tidak bisa di-drag
+
+                // Tambahkan event listener untuk klik
+                needsZoneEl.addEventListener('click', handleChoiceClick);
+                wantsZoneEl.addEventListener('click', handleChoiceClick);
+                
+                // Tambahkan class untuk styling hover/klik
+                needsZoneEl.classList.add('clickable-zone');
+                wantsZoneEl.classList.add('clickable-zone');
+            } else {
+                // Mode Desktop: Drag and Drop
+                instructionTextEl.textContent = "Seret barang di bawah ke kotak yang benar.";
+                draggableItemEl.addEventListener('dragstart', handleDragStart);
+                draggableItemEl.addEventListener('dragend', handleDragEnd);
+
+                [needsZoneEl, wantsZoneEl].forEach(zone => {
+                    zone.addEventListener('dragover', (e) => {
+                        e.preventDefault();
+                        if (!isInteractionDisabled) zone.classList.add('drag-over');
+                    });
+                    zone.addEventListener('dragleave', (e) => {
+                        e.currentTarget.classList.remove('drag-over');
+                    });
+                    zone.addEventListener('drop', handleDrop);
+                });
+            }
+            
+            // Mulai game setelah semua setup selesai
+            startGame();
+        }
+        
+        init();
+    });
+    </script>
+</body>
+</html>

@@ -27,7 +27,7 @@ import {
 import { fetchFlashcardData } from './flashfin.js';
 
 // --- KEY CHANGE: Import the chatbot initializer ---
-import { initFinlookChat } from './finlook.js';
+import { initFinlookChat } from './chatbot.js';
 
 
 // --- STATE MANAGEMENT ---

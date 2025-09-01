@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LIFIN Loading</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&display=swap" rel="stylesheet">
+  <style>
+    @keyframes fillBar {
+      0% {
+        width: 0%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+
+    @keyframes moveFinny {
+      0% {
+        left: 0%;
+      }
+      100% {
+        left: 100%;
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes dots {
+      0% { content: ''; }
+      25% { content: '.'; }
+      50% { content: '..'; }
+      75% { content: '...'; }
+      100% { content: ''; }
+    }
+
+    .fill-animation {
+      animation: fillBar 4s ease-in-out forwards;
+    }
+
+    .finny-animation {
+      animation: moveFinny 4s ease-in-out forwards;
+    }
+
+    .typing-dots::after {
+      content: '';
+      animation: dots 1.5s steps(4, end) infinite;
+    }
+  </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-[#04B3E3] gap-10">
+
+  <!-- WRAPPER seluruh progress dan Finny -->
+  <div class="relative w-[80%] max-w-[800px]">
+
+    <!-- Finny di luar bar -->
+    <img src="../assets/images/finlook.svg" alt="Finny"
+         class="absolute top-[-60px] w-[150px] rounded-full z-20 finny-animation"
+         style="transform: translateX(-50%);" />
+
+    <!-- Progress Bar -->
+    <div class="w-full h-[40px] rounded-full bg-white overflow-hidden relative z-10">
+      <!-- Bar Isi -->
+      <div class="absolute top-0 left-0 h-full bg-[#FFD635] rounded-full fill-animation z-0"></div>
+    </div>
+  </div>
+
+  <!-- Text: Menyiapkan Teleportasi... -->
+  <div class="pt-[20px] text-white text-[32px] font-extrabold typing-dots" style="font-family: 'Baloo 2', cursive;">
+    Menyiapkan Teleportasi
+  </div>
+
+</body>
+</html>
