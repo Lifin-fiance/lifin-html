@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>LIFIN Dashboard</title>
+    <title>Dashboard Pengguna LIFIN</title>
+    <meta name="description" content="Selamat datang di Dashboard LIFIN! Pantau progres belajarmu, jelajahi materi baru, mainkan game finansial seru, dan kelola profil pribadimu di sini.">
+    <link rel="icon" type="image/png" href="assets/images/fav.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
@@ -161,6 +163,17 @@
         }
     </style>
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-00CHWMXSV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-00CHWMXSV1');
+</script>
+
 <body class="bg-white pb-24 lg:pb-0">
 
     <!-- Loader -->
@@ -173,7 +186,7 @@
 <header class="w-full max-w-screen-xl mx-auto hidden lg:flex items-center px-6 justify-between h-[120px] relative">
   <img 
     src="assets/images/icon.png" 
-    alt="Logo" 
+    alt="Ikon LIFIN"
     class="w-[90px] object-contain cursor-pointer"
     onclick="window.location.href='index.html'"
   >  
@@ -189,17 +202,17 @@
         </div>
 
         <button id="desktop-nav-finlook" class="nav-button menu-btn absolute z-20" style="left: 50%; transform: translateX(-50%); top: -30px;" data-action="set-page" data-page="finlook">
-            <img src="assets/images/finlook.svg" alt="Finlook" class="w-[200px]">
+            <img src="assets/images/finlook.svg" alt="Finlook Ikon" class="w-[200px]">
         </button>
 
-        <img id="profileBtn" src="assets/images/profile.svg" alt="Profile" class="w-[70px] h-[70px] rounded-full object-cover cursor-pointer" data-action="open-profile">
+        <img id="profileBtn" src="assets/images/profile.svg" alt="Profile Ikon" class="w-[70px] h-[70px] rounded-full object-cover cursor-pointer" data-action="open-profile">
     </header>
 
     <!-- Mobile Header -->
     <header class="lg:hidden w-full h-[70px] p-4 flex justify-between items-center bg-white sticky top-0 z-30" style="box-shadow: 0 5px 20px 0 rgba(4,179,227,0.2);">
-        <img src="assets/images/icon.png" alt="Logo" class="w-[60px] object-contain">
+        <img src="assets/images/icon.png" alt="Ikon LIFIN" class="w-[60px] object-contain">
         <span id="mobilePageTitle" class="text-xl font-extrabold text-[#004B75]">Home</span>
-        <img id="profileBtnMobile" src="assets/images/profile.svg" alt="Profile" class="w-[40px] h-[40px] rounded-full object-cover cursor-pointer" data-action="open-profile">
+        <img id="profileBtnMobile" src="assets/images/profile.svg" alt="Profile Ikon" class="w-[40px] h-[40px] rounded-full object-cover cursor-pointer" data-action="open-profile">
     </header>
 
     <!-- Main Content -->
@@ -207,7 +220,7 @@
 
     <!-- === PROFILE PANEL (OVERLAY) === -->
     <div id="profileOverlay" class="fixed inset-0 bg-white/40 backdrop-blur-[5px] z-40 hidden items-center justify-center p-4 font-baloo2">
-        <div id="profilePanel" class="relative w-full max-w-[900px] bg-white border-[5px] border-[#04B3E3] shadow-[0_4px_0_#04B3E3] rounded-[30px] p-4 flex flex-col items-center gap-6 transition-all duration-300 opacity-0 scale-95">
+        <div id="profilePanel" class="relative w-full max-w-[900px] lg:h-[450px] bg-white border-[5px] border-[#04B3E3] shadow-[0_4px_0_#04B3E3] rounded-[30px] p-4 flex flex-col items-center gap-6 transition-all duration-300 opacity-0 scale-95">
           <!-- Close Button -->
           <div class="absolute w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] bg-[#FF6B6B] rounded-full flex items-center justify-center cursor-pointer" style="right: -21px; top: -21px;" data-action="close-profile">
             <div class="relative w-[20px] h-[20px] lg:w-[24px] lg:h-[24px]">
@@ -220,39 +233,39 @@
             <!-- Dark Blue Box -->
             <div class="flex flex-col lg:flex-row bg-[#004B75] w-full lg:w-[800px] rounded-[20px] lg:rounded-[100px] items-center justify-between p-4 lg:p-0 lg:pl-10 lg:pr-10 gap-4 lg:gap-0 lg:translate-y-5">
               <div class="flex items-center gap-4 lg:gap-6">
-                <img src="assets/images/white-profile.svg" alt="Profile" class="w-[50px] h-[50px] lg:w-[70px] lg:h-[70px] rounded-full">
+                <img src="assets/images/white-profile.svg" alt="Profile Ikon" class="w-[50px] h-[50px] lg:w-[70px] lg:h-[70px] rounded-full">
                 <span id="namaUser" class="text-white text-[24px] lg:text-[30px] font-extrabold">Nama Pengguna</span>
               </div>
               <div class="flex items-center gap-8 lg:gap-10">
-                <img src="assets/images/share.svg" alt="Share" class="w-[30px] lg:w-[40px] cursor-pointer">
-                <img src="assets/images/edit-white.svg" alt="Edit" class="w-[30px] lg:w-[40px] cursor-pointer" data-action="open-modal" data-modal-id="modalEditName">
+                <img src="assets/images/share.svg" alt="Share Ikon" class="w-[30px] lg:w-[40px] cursor-pointer">
+                <img src="assets/images/edit-white.svg" alt="Edit Ikon" class="w-[30px] lg:w-[40px] cursor-pointer" data-action="open-modal" data-modal-id="modalEditName">
               </div>
             </div>
     
             <!-- Invite Friends Box -->
             <div class="w-full lg:w-[800px] h-[60px] lg:h-[75px] mt-4 lg:mt-[50px] bg-[#FFABDB] rounded-[50px] flex items-center justify-between px-6 lg:px-8 cursor-pointer" data-action="open-modal" data-modal-id="modalAjakTeman">
               <span class="text-white text-[18px] lg:text-[24px] font-bold">Ajak Teman</span>
-              <img src="assets/images/love.svg" alt="Arrow Right" class="w-[30px] lg:w-[40px]">
+              <img src="assets/images/love.svg" alt="Love Ikon" class="w-[30px] lg:w-[40px]">
             </div>
           </div>
     
           <!-- Action Buttons -->
-          <div class="flex flex-col lg:flex-row gap-4 lg:gap-6 w-full lg:w-auto lg:translate-y-[50px] mt-4 lg:mt-0 pb-4 lg:pb-0">
+          <div class="flex flex-col lg:flex-row gap-4 lg:gap-6 w-full lg:w-auto lg:translate-y-[50px] mt-0 lg:mt-0 pb-4 lg:pb-0">
             <!-- Delete Progress Button -->
             <div class="button-3d w-full lg:w-[250px] h-[60px] lg:h-[100px] bg-[#FFD635] rounded-full lg:rounded-[32px] shadow-[0_4px_0_#D4B000] flex flex-row lg:flex-col items-center justify-center px-6 lg:px-0 gap-4 cursor-pointer" data-action="open-modal" data-modal-id="modalConfirmDelete">
-                <img src="assets/images/trash.svg" alt="Trash" class="w-[26px] h-[26px]">
+                <img src="assets/images/trash.svg" alt="Trash Ikon" class="w-[26px] h-[26px]">
                 <span class="text-[#004b75] text-[18px] lg:text-[20px] font-extrabold">Hapus Progress</span>
             </div>
     
             <!-- Help Button -->
-            <div onclick="window.location.href='Features/help.html'" class="button-3d w-full lg:w-[250px] h-[60px] lg:h-[100px] bg-[#04B3E3] rounded-full lg:rounded-[32px] shadow-[0_4px_0_#0390B9] flex flex-row lg:flex-col items-center justify-center px-6 lg:px-0 gap-4 cursor-pointer">
-                <img src="assets/images/help-center.svg" alt="Help" class="w-[26px] h-[26px]">
+            <div onclick="window.location.href='help.html'" class="button-3d w-full lg:w-[250px] h-[60px] lg:h-[100px] bg-[#04B3E3] rounded-full lg:rounded-[32px] shadow-[0_4px_0_#0390B9] flex flex-row lg:flex-col items-center justify-center px-6 lg:px-0 gap-4 cursor-pointer">
+                <img src="assets/images/help-center.svg" alt="Help Ikon" class="w-[26px] h-[26px]">
                 <span class="text-white text-[18px] lg:text-[20px] font-extrabold">Bantuan</span>
             </div>
             
             <!-- Logout Button -->
             <div class="button-3d w-full lg:w-[250px] h-[60px] lg:h-[100px] bg-[#FF6B6B] rounded-full lg:rounded-[32px] shadow-[0_4px_0_#D44F4F] flex flex-row lg:flex-col items-center justify-center px-6 lg:px-0 gap-4 cursor-pointer" data-action="open-modal" data-modal-id="modalConfirmLogout">
-                <img src="assets/images/logout.png" alt="Logout" class="w-[26px] h-[26px]">
+                <img src="assets/images/logout.png" alt="Logout Ikon" class="w-[26px] h-[26px]">
                 <span class="text-white text-[18px] lg:text-[20px] font-extrabold">Keluar</span>
             </div>
           </div>
@@ -282,7 +295,7 @@
         <div class="bg-white w-full max-w-[400px] rounded-2xl p-6 relative">
           <h2 class="text-xl lg:text-2xl font-bold text-[#004B75] mb-4">Bagikan Link</h2>
           <div class="flex items-center gap-2">
-            <input type="text" id="linkAjak" value="https://lifin.id/ajak" class="w-full border-2 border-[#04B3E3] rounded-xl px-4 py-2 bg-gray-100 text-sm" readonly>
+            <input type="text" id="linkAjak" value="https://lifin.fun/ajak" class="w-full border-2 border-[#04B3E3] rounded-xl px-4 py-2 bg-gray-100 text-sm" readonly>
             <button class="bg-[#04B3E3] text-white px-3 py-2 rounded-lg hover:bg-[#0390B9] text-sm" data-action="copy-link">Salin</button>
           </div>
           <span id="copyFeedback" class="text-green-600 text-sm hidden mt-2">Link disalin!</span>
@@ -307,26 +320,26 @@
     <!-- Mobile Navigation -->
     <nav class="lg:hidden fixed bottom-0 left-0 w-full h-[65px] lg:h-20 bg-white shadow-[0_-2px_10px_rgba(0,0,0,0.1)] flex justify-around items-center z-40">
         <button id="nav-home" class="nav-button bottom-nav-btn group flex flex-col items-center gap-1 text-gray-500 w-1/5" data-action="set-page" data-page="home">
-            <img src="assets/images/home-icon.svg" alt="Home" class="w-8 h-8">
+            <img src="assets/images/home-icon.svg" alt="Home Ikon" class="w-8 h-8">
             <span class="text-xs font-bold">Home</span>
         </button>
         <button id="nav-game" class="nav-button bottom-nav-btn group flex flex-col items-center gap-1 text-gray-500 w-1/5" data-action="set-page" data-page="game">
-            <img src="assets/images/game-icon.svg" alt="Game" class="w-8 h-8">
+            <img src="assets/images/game-icon.svg" alt="Game Ikon" class="w-8 h-8">
             <span class="text-xs font-bold">Game</span>
         </button>
         
         <div class="relative w-2/5 h-full flex justify-center">
             <button id="nav-finlook" class="nav-button bottom-nav-btn absolute top-[-70px]" data-action="set-page" data-page="finlook">
-                <img src="assets/images/finlook.svg" alt="Finlook" class="w-[200px]">
+                <img src="assets/images/finlook.svg" alt="Finlook Ikon" class="w-[200px]">
             </button>
         </div>
 
         <button id="nav-materi" class="nav-button bottom-nav-btn group flex flex-col items-center gap-1 text-gray-500 w-1/5" data-action="set-page" data-page="materi">
-            <img src="assets/images/materi-icon.svg" alt="Materi" class="w-8 h-8">
+            <img src="assets/images/materi-icon.svg" alt="Materi Ikon" class="w-8 h-8">
             <span class="text-xs font-bold">Materi</span>
         </button>
         <button id="nav-panel" class="nav-button bottom-nav-btn group flex flex-col items-center gap-1 text-gray-500 w-1/5" data-action="set-page" data-page="panel">
-            <img src="assets/images/panel-icon.svg" alt="Panel" class="w-8 h-8">
+            <img src="assets/images/panel-icon.svg" alt="Panel Ikon" class="w-8 h-8">
             <span class="text-xs font-bold">Panel</span>
         </button>
     </nav>
