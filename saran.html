@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kotak Saran</title>
+  <title>Saran LIFIN</title>
+  <meta name="description" content="Punya ide, saran, atau pertanyaan untuk LIFIN? Gunakan halaman ini untuk menghubungi tim kami. Masukan Anda sangat berharga untuk membantu kami berkembang.">
+  <link rel="icon" type="image/png" href="assets/images/fav.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -15,19 +17,55 @@
  <style>
     body { font-family: 'Poppins', sans-serif; }
     .baloo { font-family: 'Baloo 2', cursive; }
+    button, .button {
+      transition: all 0.15s ease-in-out;
+    }
+    button:hover, .button:hover {
+      transform: translateY(4px);
+      box-shadow: none !important;
+    }
+    button:active, .button:active {
+      transform: translateY(10px);
+      box-shadow: none !important;
+    }
   </style>
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-00CHWMXSV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-00CHWMXSV1');
+</script>
+
 <body class="bg-white">
 
-<div class="relative flex items-center justify-center py-[36px] pt-[36px]">
+    <header id="navbar-container"></header>
+
+
+<script>
+  function goBackOrHome() {
+    if (window.history.length > 1) {
+      history.back();
+    } else {
+      window.location.href = 'index.html';
+    }
+  }
+</script>
+
+  </header>
+<div class="relative flex items-center justify-center py-[36px] pt-[130px]">
   <div class="flex flex-col items-center text-center px-4">
     <h2 class="baloo font-extrabold text-[28px] lg:text-[40px] leading-tight">
       <span class="text-[#04B3E3]">Kita Bisa Bantu </span>
       <span class="text-[#FFC72C]">Masalahmu</span>
     </h2>
-    <img src="assets/images/line-yellow.svg" class="mt-[2px] w-[150px] lg:w-[217.54px] lg:translate-x-[140px]" alt="garis bawah kuning"/>
+    <img src="assets/images/line-yellow.svg" class="mt-[2px] w-[150px] lg:w-[217.54px] lg:translate-x-[140px]" alt="Garis Hiasan"/>
   </div>
-  <img src="assets/images/finlook.svg" alt="finny" class="hidden lg:block absolute translate-x-[400px] w-[250px] z-[-1] translate-y-[60px]" />
+  <img src="assets/images/finlook.svg" alt="Finlook Mascot" class="hidden lg:block absolute translate-x-[400px] w-[250px] z-[-1] translate-y-[60px]" />
 </div>
 
 <main class="px-6 pb-24">
@@ -68,10 +106,12 @@
   </form>
 
   <div class="flex justify-center py-8">
-    <div class="g-recaptcha" data-sitekey="6Lf1aY4rAAAAAPe2l0Sh4zkXnFu2PWn3F0daG3nR" data-callback="recaptchaCallback"></div>
+    <div class="g-recaptcha" data-sitekey="6LfaDKgrAAAAACGlczK0ETGgzrJhHsSPLYBL8zVS" data-callback="recaptchaCallback"></div>
   </div>
 
 </main>
+
+<footer id="footer-container"></footer>
 
 <script>
   function scrollToTop() {
@@ -125,6 +165,9 @@
     btn.classList.add('bg-[#004B75]', 'hover:translate-y-[10px]', 'shadow-[0_10px_0_#003552]', 'cursor-pointer');
   }
 </script>
+
+<script src="js/component.js" type="module"></script>
+
 
 </body>
 </html>

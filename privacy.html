@@ -3,122 +3,159 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&display=swap" rel="stylesheet" />
+  <title>Kebijakan Privasi LIFIN</title>
+  <meta name="description" content="Kami menghargai privasi Anda. Baca Kebijakan Privasi LIFIN untuk memahami bagaimana kami mengumpulkan, menggunakan, dan menjaga keamanan data Anda secara transparan.">
+  <link rel="icon" type="image/png" href="assets/images/fav.png" onerror="this.onerror=null;this.src='https://placehold.co/32x32/141f25/FFFFFF?text=LIFIN';">
+  <!-- Memuat font Baloo 2 dengan ketebalan bold (700) dan extrabold (800) saja -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Tailwind CSS Configuration
+    // Konfigurasi Tailwind CSS
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
             baloo: ['"Baloo 2"', 'cursive']
           },
-          boxShadow: {
-            redButton: '0px 6px 0px #b94e4e',
-          }
         }
       }
     }
   </script>
-
   <style>
-    /* Custom button styles for hover and active states */
-    .button {
+      button, .button {
       transition: all 0.15s ease-in-out;
     }
-    .button:hover {
-      transform: translateY(6px);
+    button:hover, .button:hover {
+      transform: translateY(4px);
       box-shadow: none !important;
     }
-    .button:active {
-      transform: translateY(4px);
+    button:active, .button:active {
+      transform: translateY(10px);
       box-shadow: none !important;
     }
   </style>
 </head>
-<body class="bg-[#04B3E3] flex justify-center items-start min-h-screen font-baloo py-12 overflow-x-hidden">
 
-  <div class="bg-white rounded-lg shadow-lg p-8 w-11/12 max-w-5xl">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-00CHWMXSV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-00CHWMXSV1');
+</script>
+
+<body class="bg-slate-800 font-baloo mt-[100px] text-white flex justify-center min-h-screen py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+ <header id="navbar-container"></header>
+
+
+  <div class="w-full max-w-4xl space-y-8">
     
-    <h1 class="text-3xl font-bold mb-6 text-center text-gray-800">Kebijakan Privasi LIFIN</h1>
-    <p class="mb-6 text-gray-700">
-      Selamat datang di LIFIN. Kami berkomitmen untuk melindungi privasi Anda dan menangani data pribadi Anda secara terbuka dan transparan. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan membagikan informasi tentang Anda saat Anda menggunakan situs web dan layanan kami yang berkaitan dengan literasi finansial.
-    </p>
+    <!-- Judul Utama -->
+    <div class="text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-[#04B3E3]">Kebijakan Privasi LIFIN</h1>
+      <!-- Tanggal terakhir diperbarui dipindahkan ke sini -->
+      <p class="text-sm text-white/70 mt-2 mb-4">Terakhir diperbarui: 16 Agustus 2025</p>
+      <p class="text-lg text-white/90 max-w-3xl mx-auto">
+        Selamat datang di LIFIN. Kami berkomitmen melindungi privasi Anda. Kebijakan ini menjelaskan cara kami mengumpulkan, menggunakan, dan menjaga keamanan data Anda.
+      </p>
+    </div>
 
-    <div class="mb-6 text-gray-700">
-      <h2 class="text-2xl font-bold mb-2 text-gray-800">1. Informasi yang Kami Kumpulkan</h2>
-      <p class="mb-2">Kami mengumpulkan informasi dengan dua cara:</p>
-      <div class="ml-4">
-        <h3 class="font-semibold mb-1 text-gray-800">a. Informasi yang Anda Berikan kepada Kami</h3>
-        <ul class="list-disc list-inside mb-2 space-y-1">
-          <li><strong>Informasi Akun:</strong> Saat Anda mendaftar di LIFIN, kami mengumpulkan nama pengguna, alamat email, dan kata sandi Anda untuk membuat dan mengelola akun.</li>
-          <li><strong>Informasi Kontak:</strong> Jika Anda menghubungi kami melalui formulir kontak, kami menyimpan nama, alamat email, dan isi pesan Anda agar dapat merespons pertanyaan atau permintaan Anda.</li>
-        </ul>
-        <h3 class="font-semibold mb-1 text-gray-800">b. Informasi yang Kami Kumpulkan Secara Otomatis</h3>
-        <ul class="list-disc list-inside space-y-1">
-          <li><strong>Data Penggunaan:</strong> Kami menggunakan Google Analytics untuk memahami bagaimana pengguna berinteraksi dengan situs kami. Ini dapat mencakup alamat IP, jenis browser, sistem operasi, halaman yang dikunjungi, serta tanggal dan waktu akses.</li>
-          <li><strong>Interaksi Chatbot:</strong> Percakapan dengan Asisten Chatbot AI kami dapat direkam untuk meningkatkan kualitas dan akurasi layanan.</li>
+    <!-- Konten Kebijakan -->
+    <div class="space-y-6 text-white/90">
+      
+      <!-- Bagian 1: Informasi yang Dikumpulkan -->
+      <div>
+        <h2 class="text-2xl font-bold mb-3 text-[#04B3E3]">1. Informasi yang Kami Kumpulkan</h2>
+        <p class="mb-3 font-bold">Kami mengumpulkan informasi melalui dua cara utama:</p>
+        <div class="ml-4 space-y-3">
+          <div>
+            <h3 class="font-bold text-white mb-2">a. Informasi yang Anda Berikan</h3>
+            <ul class="list-disc list-inside space-y-1 text-white/80">
+              <li><strong class="font-bold text-white">Informasi Akun:</strong> Nama pengguna, email, dan kata sandi saat Anda mendaftar.</li>
+              <li><strong class="font-bold text-white">Informasi Kontak:</strong> Nama, email, dan isi pesan jika Anda menghubungi kami.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold text-white mb-2">b. Informasi yang Terkumpul Otomatis</h3>
+            <ul class="list-disc list-inside space-y-1 text-white/80">
+              <li><strong class="font-bold text-white">Data Penggunaan:</strong> Interaksi dengan situs melalui Google Analytics (misal: halaman yang dikunjungi).</li>
+              <li><strong class="font-bold text-white">Interaksi Chatbot:</strong> Percakapan dengan Asisten AI untuk peningkatan layanan.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bagian 2: Cara Penggunaan Informasi -->
+      <div>
+        <h2 class="text-2xl font-bold mb-3 text-[#04B3E3]">2. Cara Kami Menggunakan Informasi Anda</h2>
+        <p class="font-bold">Data Anda kami gunakan untuk:</p>
+        <ul class="list-disc list-inside ml-4 space-y-1 text-white/80">
+          <li>Menyediakan dan memelihara layanan edukasi finansial kami.</li>
+          <li>Mengelola akun dan mempersonalisasi pengalaman belajar Anda.</li>
+          <li>Menanggapi pertanyaan, masukan, atau permintaan Anda.</li>
+          <li>Menganalisis penggunaan situs untuk perbaikan konten dan fitur.</li>
+          <li>Mengoperasikan chatbot AI melalui layanan pihak ketiga seperti Groq API.</li>
         </ul>
       </div>
-    </div>
 
-    <div class="mb-6 text-gray-700">
-      <h2 class="text-2xl font-bold mb-2 text-gray-800">2. Cara Kami Menggunakan Informasi Anda</h2>
-      <p>Kami menggunakan data yang kami kumpulkan untuk:</p>
-      <ul class="list-disc list-inside ml-4 space-y-1">
-        <li>Menyediakan dan memelihara layanan edukasi finansial kami.</li>
-        <li>Mengelola akun pengguna dan mendukung pengalaman belajar yang dipersonalisasi.</li>
-        <li>Menanggapi pertanyaan, masukan, atau permintaan dari Anda.</li>
-        <li>Menganalisis penggunaan situs untuk peningkatan konten dan fitur.</li>
-        <li>Mengoperasikan chatbot berbasis AI melalui layanan pihak ketiga seperti Groq API.</li>
-      </ul>
-    </div>
-
-    <div class="mb-6 text-gray-700">
-      <h2 class="text-2xl font-bold mb-2 text-gray-800">3. Pembagian Data dengan Pihak Ketiga</h2>
-      <p class="mb-2">Kami tidak menjual data pribadi Anda. Namun, kami dapat membagikan informasi Anda kepada penyedia layanan pihak ketiga untuk membantu kami dalam mengoperasikan layanan, termasuk:</p>
-      <ul class="list-disc list-inside ml-4 space-y-1">
-        <li><strong>Firebase (Google):</strong> Untuk autentikasi dan penyimpanan data pengguna.</li>
-        <li><strong>Google Analytics:</strong> Untuk analisis lalu lintas dan perilaku pengguna di situs.</li>
-        <li><strong>Groq API (jika chatbot digunakan):</strong> Untuk memproses percakapan pengguna.</li>
-        <li><strong>Google Sheets:</strong> Untuk menyimpan data dari formulir kontak.</li>
-      </ul>
-      <p class="mt-2">Pihak ketiga ini hanya akan mengakses data pribadi Anda sejauh yang diperlukan untuk menyediakan layanan atas nama kami dan dilarang menyalahgunakan data tersebut.</p>
-    </div>
-    
-    <div class="mb-6 text-gray-700">
-        <h2 class="text-2xl font-bold mb-2 text-gray-800">4. Keamanan Data</h2>
-        <p>Kami menggunakan langkah-langkah keamanan teknis dan administratif untuk melindungi informasi Anda. Meski kami berupaya menjaga keamanan data, perlu diketahui bahwa tidak ada sistem yang 100% aman dari ancaman.</p>
-    </div>
-
-    <div class="mb-6 text-gray-700">
-        <h2 class="text-2xl font-bold mb-2 text-gray-800">5. Hak Anda</h2>
-        <p>Anda memiliki hak untuk:</p>
-        <ul class="list-disc list-inside ml-4 space-y-1">
-            <li>Mengakses informasi pribadi Anda.</li>
-            <li>Memperbarui atau memperbaiki data yang tidak akurat.</li>
-            <li>Meminta penghapusan akun dan data Anda.</li>
+      <!-- Bagian 3: Pembagian Data -->
+      <div>
+        <h2 class="text-2xl font-bold mb-3 text-[#04B3E3]">3. Pembagian Data dengan Pihak Ketiga</h2>
+        <p class="mb-2 font-bold">Kami tidak menjual data pribadi Anda. Data dapat dibagikan kepada penyedia layanan untuk membantu operasional kami, seperti:</p>
+        <ul class="list-disc list-inside ml-4 space-y-1 text-white/80">
+          <li><strong class="font-bold text-white">Firebase (Google):</strong> Untuk autentikasi dan penyimpanan data.</li>
+          <li><strong class="font-bold text-white">Google Analytics:</strong> Untuk analisis lalu lintas situs.</li>
+          <li><strong class="font-bold text-white">Groq API:</strong> Untuk memproses percakapan chatbot.</li>
+          <li><strong class="font-bold text-white">Google Sheets:</strong> Untuk menyimpan data dari formulir kontak.</li>
         </ul>
-        <p class="mt-2">Anda dapat mengelola akun Anda secara langsung atau menghubungi kami untuk permintaan penghapusan.</p>
-    </div>
+        <p class="mt-2">Akses pihak ketiga terbatas hanya untuk menjalankan tugasnya dan mereka dilarang menyalahgunakan data tersebut.</p>
+      </div>
+      
+      <!-- Bagian 4: Keamanan Data -->
+      <div>
+        <h2 class="text-2xl font-bold mb-3 text-[#04B3E3]">4. Keamanan Data</h2>
+        <p>Kami menerapkan langkah-langkah keamanan teknis untuk melindungi data Anda. Namun, perlu diingat bahwa tidak ada sistem yang 100% aman.</p>
+      </div>
 
-    <div class="mb-6 text-gray-700">
-        <h2 class="text-2xl font-bold mb-2 text-gray-800">6. Perubahan pada Kebijakan Privasi</h2>
-        <p>Kami dapat memperbarui kebijakan ini dari waktu ke waktu. Setiap perubahan akan diumumkan di halaman ini bersamaan dengan tanggal pembaruan terbaru. Kami menyarankan Anda untuk memeriksa kebijakan ini secara berkala.</p>
-    </div>
-    
-    <div class="text-gray-700">
-        <h2 class="text-2xl font-bold mb-2 text-gray-800">7. Hubungi Kami</h2>
-        <p>Jika Anda memiliki pertanyaan atau permintaan terkait kebijakan privasi ini, silakan hubungi kami:</p>
-        <ul class="list-none ml-4 space-y-1">
-            <li><strong>Email:</strong> lifin.website@gmail.com</li>
-            <li><strong>Alamat:</strong> Jalan Tirto Sentono No.16, Dusun Klandungan, Landungsari, Kec. Dau, Kabupaten Malang, Jawa Timur 65151</li>
+      <!-- Bagian 5: Hak Anda -->
+      <div>
+        <h2 class="text-2xl font-bold mb-3 text-[#04B3E3]">5. Hak Anda</h2>
+        <p>Anda berhak untuk mengakses, memperbaiki, atau meminta penghapusan data dan akun Anda. Silakan kelola akun Anda atau hubungi kami untuk bantuan.</p>
+      </div>
+
+      <!-- Bagian 6: Perubahan Kebijakan -->
+      <div>
+        <h2 class="text-2xl font-bold mb-3 text-[#04B3E3]">6. Perubahan pada Kebijakan Privasi</h2>
+        <p>Kebijakan ini dapat kami perbarui dari waktu ke waktu. Perubahan akan diumumkan di halaman ini. Kami sarankan Anda memeriksanya secara berkala.</p>
+      </div>
+      
+      <!-- Bagian 7: Hubungi Kami -->
+      <div>
+        <h2 class="text-2xl font-bold mb-3 text-[#04B3E3]">7. Hubungi Kami</h2>
+        <p class="font-bold">Jika ada pertanyaan, silakan hubungi kami melalui:</p>
+        <ul class="list-none mt-2 space-y-2 text-white/80">
+          <!-- Email yang dapat diklik -->
+          <li>
+            <strong class="font-bold text-white">Email:</strong> 
+            <a href="mailto:lifin.website@gmail.com" class="hover:text-[#04B3E3] transition-colors duration-300">lifin.website@gmail.com</a>
+          </li>
+          <!-- Alamat yang dapat diklik dan mengarah ke Google Maps -->
+          <li>
+            <strong class="font-bold text-white">Alamat:</strong> 
+            <a href="https://www.google.com/maps/search/?api=1&query=Jalan+Tirto+Sentono+No.16,+Landungsari,+Dau,+Malang,+Jawa+Timur+65151" target="_blank" rel="noopener noreferrer" class="hover:text-[#04B3E3] transition-colors duration-300">
+              Jalan Tirto Sentono No.16, Landungsari, Dau, Malang, Jawa Timur 65151
+            </a>
+          </li>
         </ul>
+      </div>
+
     </div>
 
   </div>
+    <script src="js/component.js" type="module"></script>
+
 
 </body>
 </html>

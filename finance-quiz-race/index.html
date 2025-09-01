@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Quiz Race LIFIN</title>
+    
+    <!-- Memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Memuat Font Baloo 2 dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        // Konfigurasi custom untuk Tailwind CSS
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'baloo': ['"Baloo 2"', 'cursive'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Mengaplikasikan font Baloo 2 sebagai font default */
+        body {
+            font-family: 'Baloo 2', cursive;
+        }
+
+        /* --- CSS untuk Efek Tombol 3D (Diperbarui) --- */
+        .button-3d {
+            /* Transisi untuk semua properti dengan durasi 0.15s */
+            transition: all 0.15s ease-in-out;
+        }
+
+        /* Efek hover: tombol turun 10px dan shadow hilang */
+        .button-3d:hover {
+            transform: translateY(10px);
+            box-shadow: none !important;
+        }
+
+        /* Efek saat tombol ditekan: tombol turun 10px dan shadow hilang */
+        .button-3d:active {
+            transform: translateY(10px);
+            box-shadow: none !important;
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pilihan Finace Quiz Race Lifin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body class="m-0 p-0 box-border pt-[90px]">
+
+<header class="absolute top-0 left-0 w-full h-[90px] bg-white flex items-center justify-between px-6 lg:px-20 shadow-sm z-50" 
+        style="box-shadow: 0 3px 0px 0 rgba(4,179,227,0.2);">
+    <div class="flex items-center">
+      <!-- Klik ikon langsung ke Lifin -->
+      <img src="assets/images/icon.png" 
+           class="w-[90px] object-cover cursor-pointer" 
+           alt="logolifin" 
+           onclick="window.location.href='https://www.lifin.fun/'">
+    </div>
+    
+    <!-- Tombol Back tetap mengarah ke dashboard -->
+    <button onclick="window.location.href='/LIFIN/dashboard.html'"
+      class="bg-[#FF6B6B] text-white text-lg font-extrabold px-5 py-2 rounded-full font-['Baloo_2'] hover:opacity-90 transition-all duration-200" 
+      style="box-shadow: 0 5px 0px 0 #d44f4f;">
+      Back
+    </button>
+</header>
+
+
+</body>
+</html>
+<body class="bg-white">
+
+    <!-- Header: Judul sekarang diposisikan di tengah secara vertikal dan horizontal menggunakan Flexbox -->
+    <header class="bg-[#04b3e3] py-[20px] lg:py-[50px] flex items-center justify-center">
+        <h1 class="font-baloo text-white text-3xl lg:text-4xl font-extrabold text-center tracking-wider">
+            FINANCE QUIZ RACE
+        </h1>
+    </header>
+
+    <main class="bg-white py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+
+                <!-- Tombol 1: Akuntan Cilik -->
+                <a href="./akuntan-cilik.html" 
+                   class="button-3d block w-full max-w-[500px] h-[245px] bg-[#04b3e3] rounded-2xl p-6 text-white flex items-center"
+                   style="--shadow-color: #038db4; box-shadow: 0 10px 0 var(--shadow-color);">
+                    <div class="flex justify-between items-center w-full">
+                        <div>
+                            <h2 class="font-baloo font-bold text-2xl sm:text-3xl">Akuntan Cilik</h2>
+                        </div>
+                        <!-- DIUBAH: Mengganti img play.png yang hilang dengan inline SVG -->
+                        <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                    </div>
+                </a>
+
+                <!-- Tombol 2: Cuanesia -->
+                <a href="./cuanesia.html" 
+                   class="button-3d block w-full max-w-[500px] h-[245px] bg-[#004b75] rounded-2xl p-6 text-white flex items-center"
+                   style="--shadow-color: #003552; box-shadow: 0 10px 0 var(--shadow-color);">
+                    <div class="flex justify-between items-center w-full">
+                        <div>
+                            <h2 class="font-baloo font-bold text-2xl sm:text-3xl">Cuanesia</h2>
+                        </div>
+                        <!-- DIUBAH: Mengganti img play.png yang hilang dengan inline SVG -->
+                        <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                    </div>
+                </a>
+
+                <!-- Tombol 3: Detektif Cuan -->
+                <a href="./true-false.html" 
+                   class="button-3d block w-full max-w-[500px] h-[245px] bg-[#eeace6] rounded-2xl p-6 text-white flex items-center"
+                   style="--shadow-color: #BE8AB8; box-shadow: 0 10px 0 var(--shadow-color);">
+                    <div class="flex justify-between items-center w-full">
+                        <div>
+                            <h2 class="font-baloo font-bold text-2xl sm:text-3xl">Detektif Cuan</h2>
+                        </div>
+                        <!-- DIUBAH: Mengganti img play.png yang hilang dengan inline SVG -->
+                        <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                    </div>
+                </a>
+
+                <!-- Tombol 4: Split Smart -->
+                <a href="./split-smart.html" 
+                   class="button-3d block w-full max-w-[500px] h-[245px] bg-[#Ff6b6b] rounded-2xl p-6 text-white flex items-center"
+                   style="--shadow-color: #D44F4F; box-shadow: 0 10px 0 var(--shadow-color);">
+                    <div class="flex justify-between items-center w-full">
+                        <div>
+                            <h2 class="font-baloo font-bold text-2xl sm:text-3xl">Split Smart</h2>
+                        </div>
+                        <!-- DIUBAH: Mengganti img play.png yang hilang dengan inline SVG -->
+                        <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                    </div>
+                </a>
+
+                <!-- Tombol 5: Penjelajah Uang (di tengah) -->
+                <div class="md:col-span-2 flex justify-center w-full">
+                    <a href="./penjelajah-uang.html" 
+                       class="button-3d block w-full max-w-[500px] h-[245px] bg-[#ffc72c] rounded-2xl p-6 text-white flex items-center"
+                       style="--shadow-color: #D4B000; box-shadow: 0 10px 0 var(--shadow-color);">
+                        <div class="flex justify-between items-center w-full">
+                            <div>
+                                <h2 class="font-baloo font-bold text-2xl sm:text-3xl">Penjelajah Uang</h2>
+                            </div>
+                            <!-- DIUBAH: Mengganti img play.png yang hilang dengan inline SVG -->
+                            <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

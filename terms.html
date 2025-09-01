@@ -3,130 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ketentuan Layanan</title>
-  <link rel="icon" type="image/png" href="assets/images/fav.png">
-
+  <title>Ketentuan Layanan LIFIN</title>
+  <meta name="description" content="Pelajari Syarat dan Ketentuan penggunaan platform LIFIN. Dokumen ini menjelaskan hak dan kewajiban Anda, serta aturan yang berlaku saat mengakses materi dan layanan kami.">
+  <link rel="icon" type="image/png" href="assets/images/fav.png" onerror="this.onerror=null;this.src='https://placehold.co/32x32/1E293B/FFFFFF?text=L';">
+  <!-- Memuat bobot font 400, 700 (bold), dan 800 (extrabold) -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-
   <script>
-    // Tailwind CSS Configuration
+    // Konfigurasi Tailwind CSS
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
             baloo: ['"Baloo 2"', 'cursive']
           },
-          boxShadow: {
-            redButton: '0px 6px 0px #b94e4e',
-          }
         }
       }
     }
   </script>
 
   <style>
-    /* Custom button styles for hover and active states */
-    .button {
+    button, .button {
       transition: all 0.15s ease-in-out;
     }
-    .button:hover {
-      transform: translateY(6px);
-      box-shadow: none !important;
-    }
-    .button:active {
+    button:hover, .button:hover {
       transform: translateY(4px);
       box-shadow: none !important;
     }
-    a {
-      color: #04B3E3;
-      text-decoration: underline;
+    button:active, .button:active {
+      transform: translateY(10px);
+      box-shadow: none !important;
     }
-    a:hover {
-      color: #038ab5;
-    }
-  </style>
+    </style>
+
 </head>
-<body class="bg-[#04B3E3] flex justify-center items-start min-h-screen font-baloo py-12 overflow-x-hidden">
 
-  <div class="bg-white rounded-lg shadow-lg p-8 w-11/12 max-w-5xl text-gray-700">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-00CHWMXSV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-00CHWMXSV1');
+</script>
+
+
+<body class="bg-slate-800 font-baloo text-white flex justify-center min-h-screen mt-[100px] py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+ <header id="navbar-container"></header>
+
+  <div class="w-full max-w-4xl space-y-10">
     
-    <h1 class="text-3xl font-bold mb-2 text-center text-gray-800">Ketentuan Layanan LIFIN</h1>
-    <p class="text-center text-gray-500 mb-6">Terakhir Diperbarui: 4 Agustus 2025</p>
-
-    <p class="mb-6">
-      Harap baca Syarat Layanan ("Syarat") ini dengan seksama sebelum menggunakan situs web LIFIN (selanjutnya disebut "Layanan") yang dioperasikan oleh LIFIN ("kami", "kita", atau "milik kami").
-      Akses Anda ke dan penggunaan Layanan ini bergantung pada penerimaan dan kepatuhan Anda terhadap Syarat ini. Syarat ini berlaku untuk semua pengunjung, pengguna, dan pihak lain yang ingin mengakses atau menggunakan Layanan.
-    </p>
-
-    <div class="mb-6">
-      <h2 class="text-2xl font-bold mb-2 text-gray-800">1. Akun</h2>
-      <p>Saat Anda membuat akun di LIFIN, Anda menyatakan bahwa informasi yang Anda berikan adalah akurat, lengkap, dan terkini. Anda bertanggung jawab untuk menjaga kerahasiaan akun dan kata sandi Anda, serta bertanggung jawab atas semua aktivitas yang terjadi dalam akun Anda.</p>
-      <p class="mt-2">Kami berhak untuk menolak layanan, menangguhkan, atau menghapus akun atas kebijakan kami sendiri.</p>
+    <!-- Judul Utama -->
+    <div class="text-center">
+      <!-- Perubahan: Menggunakan font-extrabold untuk judul utama -->
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-2 text-[#04B3E3]">Ketentuan Layanan LIFIN</h1>
+      <!-- Perubahan: Tanggal diperbarui ke hari ini -->
+      <p class="text-slate-400 mb-6">Terakhir Diperbarui: 16 Agustus 2025</p>
     </div>
 
-    <div class="mb-6">
-      <h2 class="text-2xl font-bold mb-2 text-gray-800">2. Kekayaan Intelektual</h2>
-      <p>Layanan dan seluruh konten orisinalnya (tidak termasuk konten yang disediakan oleh pengguna), fitur, dan fungsionalitas tetap menjadi milik eksklusif LIFIN dan pemberi lisensinya. Konten yang mencakup materi edukasi, teks, grafik, logo, dan elemen visual lainnya dilindungi oleh undang-undang hak cipta dan kekayaan intelektual yang berlaku di Indonesia maupun negara lain.</p>
-      <p class="mt-2">Logo dan merek dagang LIFIN tidak boleh digunakan tanpa izin tertulis dari kami.</p>
-    </div>
-
-    <div class="mb-6">
-      <h2 class="text-2xl font-bold mb-2 text-gray-800">3. Perilaku Pengguna</h2>
-      <p class="mb-2">Anda setuju untuk tidak menggunakan Layanan untuk tujuan yang melanggar hukum atau bertentangan dengan Syarat ini. Anda dilarang untuk:</p>
-      <ul class="list-disc list-inside ml-4 space-y-1">
-        <li>Menggunakan Layanan dengan cara yang dapat merusak, menonaktifkan, membebani, atau mengganggu fungsi layanan.</li>
-        <li>Mencoba mengakses bagian Layanan, akun lain, atau sistem tanpa izin.</li>
-        <li>Menggunakan sistem otomatis seperti “robot,” “spider,” atau “offline reader” untuk mengakses situs kami.</li>
-        <li>Menyebarkan virus, worm, atau kode berbahaya lainnya.</li>
-      </ul>
-    </div>
-
-    <div class="mb-6">
-      <h2 class="text-2xl font-bold mb-2 text-gray-800">4. Penghentian Akun</h2>
-      <p>Kami dapat menangguhkan atau menghentikan akun Anda secara permanen dan langsung, tanpa pemberitahuan sebelumnya, atas kebijakan kami, termasuk jika Anda melanggar Syarat ini.</p>
-    </div>
-
-    <div class="mb-6">
-      <h2 class="text-2xl font-bold mb-2 text-gray-800">5. Penafian</h2>
-      <p>Layanan kami disediakan "SEBAGAIMANA ADANYA" dan "SESUAI KETERSEDIAAN". Meskipun kami berusaha menyediakan konten edukasi finansial yang akurat dan berkualitas, kami tidak memberikan jaminan, baik tersurat maupun tersirat, tentang keakuratan atau kelengkapan konten. Anda setuju untuk menggunakan Layanan atas risiko Anda sendiri.</p>
-    </div>
-
-    <div class="mb-6">
-      <h2 class="text-2xl font-bold mb-2 text-gray-800">6. Batasan Tanggung Jawab</h2>
-      <p>Dalam kondisi apa pun, LIFIN, termasuk direksi, karyawan, atau mitranya, tidak bertanggung jawab atas kerugian tidak langsung, insidental, khusus, atau konsekuensial, termasuk namun tidak terbatas pada kehilangan keuntungan, data, atau reputasi, yang timbul dari penggunaan atau ketidakmampuan menggunakan Layanan.</p>
-    </div>
-
-    <div class="mb-6">
-      <h2 class="text-2xl font-bold mb-2 text-gray-800">7. Hukum yang Berlaku</h2>
-      <p>Syarat ini diatur dan ditafsirkan sesuai dengan hukum Republik Indonesia, tanpa memperhatikan pertentangan ketentuan hukumnya.</p>
-    </div>
-
-    <div class="mb-6">
-      <h2 class="text-2xl font-bold mb-2 text-gray-800">8. Perubahan Syarat</h2>
-      <p>Kami berhak untuk mengubah atau mengganti Syarat ini kapan saja. Setiap perubahan akan diumumkan melalui pembaruan pada halaman ini dan mencantumkan tanggal “Terakhir Diperbarui.” Kami menganjurkan Anda untuk meninjau Syarat ini secara berkala.</p>
-    </div>
-
-    <div>
-      <h2 class="text-2xl font-bold mb-2 text-gray-800">9. Contact Us</h2>
-      <p class="mb-4">LIFIN is the data controller of your data for the purposes of the General Data Protection Regulation (“GDPR”) and any relevant local legislation. LIFIN’s headquarters are located in Indonesia at:</p>
-      <address class="not-italic mb-4 ml-4 bg-gray-50 p-4 border-l-4 border-gray-200 rounded-r-lg">
-        <strong>LIFIN</strong><br>
-        Jalan Tirto Sentono No.16<br>
-        Dusun Klandungan, Landungsari<br>
-        Kecamatan Dau, Kabupaten Malang<br>
-        Jawa Timur 65151<br>
-        Indonesia
-      </address>
-      <p class="mb-4">For all data privacy inquiries and any questions or concerns you have about these Terms, please contact our Data Protection Officer at:<br>
-        <a href="mailto:privacy@lifin.website">privacy@lifin.website</a> (or <a href="mailto:lifin.website@gmail.com">lifin.website@gmail.com</a>)
+    <!-- Konten Kebijakan -->
+    <div class="space-y-8 text-lg leading-relaxed text-slate-300">
+      
+      <p>
+        Harap baca Syarat Layanan ("Syarat") ini dengan seksama sebelum menggunakan situs web LIFIN (selanjutnya disebut "Layanan") yang dioperasikan oleh LIFIN ("kami", "kita", atau "milik kami"). Akses Anda ke dan penggunaan Layanan ini bergantung pada penerimaan dan kepatuhan Anda terhadap Syarat ini. Syarat ini berlaku untuk semua pengunjung, pengguna, dan pihak lain yang ingin mengakses atau menggunakan Layanan.
       </p>
-      <p>For all support inquiries, please visit our Help Center at:<br>
-        <a href="https://lifin.fun/help" target="_blank" rel="noopener noreferrer">https://lifin.fun/help</a>
-      </p>
+
+      <div>
+        <!-- Perubahan: Menggunakan font-extrabold untuk subjudul agar lebih menonjol -->
+        <h2 class="text-2xl font-extrabold mb-4 text-[#04B3E3]">1. Akun</h2>
+        <p>Saat Anda membuat akun di LIFIN, Anda menyatakan bahwa informasi yang Anda berikan adalah akurat, lengkap, dan terkini. Anda bertanggung jawab untuk menjaga kerahasiaan akun dan kata sandi Anda, serta bertanggung jawab atas semua aktivitas yang terjadi dalam akun Anda.</p>
+        <p class="mt-2">Kami berhak untuk menolak layanan, menangguhkan, atau menghapus akun atas kebijakan kami sendiri.</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-extrabold mb-4 text-[#04B3E3]">2. Kekayaan Intelektual</h2>
+        <p>Layanan dan seluruh konten orisinalnya (tidak termasuk konten yang disediakan oleh pengguna), fitur, dan fungsionalitas tetap menjadi milik eksklusif LIFIN dan pemberi lisensinya. Konten yang mencakup materi edukasi, teks, grafik, logo, dan elemen visual lainnya dilindungi oleh undang-undang hak cipta dan kekayaan intelektual yang berlaku di Indonesia maupun negara lain.</p>
+        <p class="mt-2">Logo dan merek dagang LIFIN tidak boleh digunakan tanpa izin tertulis dari kami.</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-extrabold mb-4 text-[#04B3E3]">3. Perilaku Pengguna</h2>
+        <p class="mb-3">Anda setuju untuk tidak menggunakan Layanan untuk tujuan yang melanggar hukum atau bertentangan dengan Syarat ini. Anda dilarang untuk:</p>
+        <ul class="list-disc list-inside ml-4 space-y-2">
+          <li>Menggunakan Layanan dengan cara yang dapat merusak, menonaktifkan, membebani, atau mengganggu fungsi layanan.</li>
+          <li>Mencoba mengakses bagian Layanan, akun lain, atau sistem tanpa izin.</li>
+          <li>Menggunakan sistem otomatis seperti “robot,” “spider,” atau “offline reader” untuk mengakses situs kami.</li>
+          <li>Menyebarkan virus, worm, atau kode berbahaya lainnya.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-extrabold mb-4 text-[#04B3E3]">4. Penghentian Akun</h2>
+        <p>Kami dapat menangguhkan atau menghentikan akun Anda secara permanen dan langsung, tanpa pemberitahuan sebelumnya, atas kebijakan kami, termasuk jika Anda melanggar Syarat ini.</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-extrabold mb-4 text-[#04B3E3]">5. Penafian</h2>
+        <p>Layanan kami disediakan "SEBAGAIMANA ADANYA" dan "SESUAI KETERSEDIAAN". Meskipun kami berusaha menyediakan konten edukasi finansial yang akurat dan berkualitas, kami tidak memberikan jaminan, baik tersurat maupun tersirat, tentang keakuratan atau kelengkapan konten. Anda setuju untuk menggunakan Layanan atas risiko Anda sendiri.</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-extrabold mb-4 text-[#04B3E3]">6. Batasan Tanggung Jawab</h2>
+        <p>Dalam kondisi apa pun, LIFIN, termasuk direksi, karyawan, atau mitranya, tidak bertanggung jawab atas kerugian tidak langsung, insidental, khusus, atau konsekuensial, termasuk namun tidak terbatas pada kehilangan keuntungan, data, atau reputasi, yang timbul dari penggunaan atau ketidakmampuan menggunakan Layanan.</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-extrabold mb-4 text-[#04B3E3]">7. Hukum yang Berlaku</h2>
+        <p>Syarat ini diatur dan ditafsirkan sesuai dengan hukum Republik Indonesia, tanpa memperhatikan pertentangan ketentuan hukumnya.</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-extrabold mb-4 text-[#04B3E3]">8. Perubahan Syarat</h2>
+        <p>Kami berhak untuk mengubah atau mengganti Syarat ini kapan saja. Setiap perubahan akan diumumkan melalui pembaruan pada halaman ini dan mencantumkan tanggal “Terakhir Diperbarui.” Kami menganjurkan Anda untuk meninjau Syarat ini secara berkala.</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-extrabold mb-4 text-[#04B3E3]">9. Hubungi Kami</h2>
+        <p class="mb-4 text-slate-100">LIFIN adalah pengendali data Anda untuk tujuan Peraturan Perlindungan Data Umum ("GDPR") dan undang-undang lokal lain yang relevan. Kantor pusat LIFIN berlokasi di Indonesia di:</p>
+        
+        <!-- Perubahan: Alamat sekarang menjadi tautan ke Google Maps -->
+        <a href="https://www.google.com/maps/search/?api=1&query=Jalan+Tirto+Sentono+No.16,+Landungsari,+Dau,+Malang,+Jawa+Timur" target="_blank" rel="noopener noreferrer" class="block">
+          <address class="not-italic mb-4 ml-4 bg-slate-700 p-4 border-l-[10px] border-slate-600 rounded-[25px] hover:bg-slate-600 transition-colors duration-200 cursor-pointer">
+            <strong>LIFIN</strong><br>
+            Jalan Tirto Sentono No.16<br>
+            Dusun Klandungan, Landungsari<br>
+            Kecamatan Dau, Kabupaten Malang<br>
+            Jawa Timur 65151<br>
+            Indonesia
+          </address>
+        </a>
+
+        <p class="mb-4">Untuk semua pertanyaan privasi data dan pertanyaan atau kekhawatiran apa pun yang Anda miliki tentang Ketentuan ini, silakan hubungi Petugas Perlindungan Data kami di:<br>
+          <!-- Perubahan: Menghapus email privacy@ dan hanya menyisakan satu email yang bisa diklik -->
+          <a href="mailto:lifin.website@gmail.com" class="text-[#04B3E3] hover:text-blue-400 underline">lifin.website@gmail.com</a>
+        </p>
+        <p>Untuk semua pertanyaan dukungan, silakan kunjungi Pusat Bantuan kami di:<br>
+          <a href="https://lifin.fun/help" target="_blank" rel="noopener noreferrer" class="text-[#04B3E3] hover:text-blue-400 underline">https://lifin.fun/help</a>
+        </p>
+      </div>
+      
     </div>
-    
+
   </div>
+
+  <script src="js/component.js" type="module"></script>
 
 </body>
 </html>
