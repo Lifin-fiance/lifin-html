@@ -267,20 +267,20 @@
             const userProgress = profile.progress[userLevel] || 0;
 
             materials.forEach(mat => {
-                const isLocked = mat.Nomor > userProgress + 1;
-                const button = document.createElement('button');
-                button.className = `p-6 rounded-2xl text-left transition duration-300 shadow-lg ${isLocked ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#04b3e3] text-white hover:bg-[#008db1]'}`;
-                button.disabled = isLocked;
-                button.innerHTML = `
-                    <span class="block text-lg font-bold">Materi ${mat.Nomor} ${isLocked ? '(Terkunci)' : ''}</span>
-                    <span class="block text-2xl font-extrabold">${mat['Judul Materi']}</span>
-                `;
-                if (!isLocked) {
-                    button.onclick = () => {
-                        window.location.href = `./materi.html?id=${mat.Nomor}`;
-                    };
-                }
-                materialSelectionContainer.appendChild(button);
+            const isLocked = mat.Nomor > userProgress + 1;
+            const button = document.createElement('button');
+            button.className = `p-6 rounded-2xl text-left transition duration-300 shadow-lg ${isLocked ? 'bg-gray-400 cursor-not-allowed ' : 'bg-[#04b3e3] text-white hover:bg-[#008db1]'}`;
+            button.disabled = isLocked;
+            button.innerHTML = `
+                <span class="block text-lg font-bold">Materi ${mat.Nomor} ${isLocked ? '(Terkunci)' : ''}</span>
+                <span class="block text-2xl font-extrabold">${mat['Judul Materi']}</span>
+            `;
+            if (!isLocked) {
+                button.onclick = () => {
+                window.location.href = `./materi.html?id=${mat.Nomor}`;
+                };
+            }
+            materialSelectionContainer.appendChild(button);
             });
         }
 

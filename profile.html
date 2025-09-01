@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pengguna LIFIN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Library untuk membuat QR Code -->
+    <script src="https://cdn.jsdelivr.net/npm/easyqrcodejs@4.4.13/dist/easy.qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: 'Baloo 2', cursive;
+            background-color: #E0E7FF; /* Warna latar belakang yang lembut */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+      Struktur Kartu Profil Utama
+      - Dibuat dengan `relative` agar bisa menampung ikon dan QR code di pojok.
+      - `overflow-hidden` memastikan semua konten tetap di dalam sudut rounded.
+    -->
+    <div id="profileCard" class="bg-white w-full max-w-sm rounded-2xl shadow-2xl transition-all duration-500 opacity-0 transform scale-95">
+        <!-- Loader, ditampilkan saat data sedang diambil -->
+        <div id="loader" class="flex flex-col items-center justify-center p-10">
+             <div class="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-500"></div>
+             <p class="mt-4 text-gray-600 font-semibold">Memuat Profil...</p>
+        </div>
+
+        <!-- Konten Profil, ditampilkan setelah data didapat -->
+        <div id="profileContent" class="hidden relative">
+            <!-- Bagian atas kartu untuk avatar/gambar -->
+            <div class="h-40 bg-gray-200">
+                <!-- Anda bisa mengganti div ini dengan <img> jika punya URL avatar -->
+                <!-- <img id="profile-avatar" src="..." alt="Avatar" class="w-full h-full object-cover"> -->
+            </div>
+
+            <!-- Bagian bawah kartu untuk informasi -->
+            <div class="p-6">
+                <h1 id="profile-nama" class="text-4xl font-extrabold text-[#004B75] -mt-2"></h1>
+                <p class="text-base font-bold text-gray-800 bg-[#FFD635] inline-block px-4 py-1 rounded-full mt-2">
+                    <span id="profile-level"></span>
+                </p>
+            </div>
+
+            <!-- Ikon di pojok kiri bawah -->
+            <div class="absolute bottom-4 left-6">
+                <!-- Ganti `src` dengan path ke ikon Anda -->
+                <img src="assets/images/icon.png" alt="LIFIN Icon" class="w-12">
+            </div>
+
+            <!-- Container untuk QR Code di pojok kanan bawah -->
+            <div id="qrcode" class="absolute bottom-4 right-4 p-1 bg-white rounded-md"></div>
+        </div>
+
+        <!-- Pesan Error, jika pengguna tidak ditemukan -->
+        <div id="error-message" class="hidden p-10 text-center">
+             <img src="assets/images/sad-mascot.png" alt="Mascot Sedih" class="w-24 h-24 mx-auto mb-4">
+             <h2 class="text-2xl font-bold text-red-500">Oops! Profil Tidak Ditemukan</h2>
+             <p class="text-gray-600 mt-2">Kami tidak dapat menemukan data untuk pengguna ini.</p>
+              <a href="index.html" class="mt-6 inline-block bg-gray-300 text-gray-800 font-bold py-2 px-6 rounded-full hover:bg-gray-400 transition-colors">
+                    Kembali
+              </a>
+        </div>
+    </div>
+
+    <!-- Script untuk mengambil dan menampilkan data -->
+    <script type="module" src="js/profile.js"></script>
+</body>
+</html>

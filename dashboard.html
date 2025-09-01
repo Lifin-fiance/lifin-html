@@ -9,9 +9,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/easyqrcodejs@4.4.13/dist/easy.qrcode.min.js"></script>
 
     <style>
-        /* Note: All styles have been preserved from the original file */
+        /* Semua style lainnya tetap sama */
         body {
             font-family: 'Baloo 2', cursive;
             background-color: white;
@@ -161,6 +163,28 @@
             transition: bottom 0.5s ease-in-out;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
+
+        @media (max-width: 1100px) {
+            #navbarWrapper {
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+        }
+        
+        /* === STYLE BARU UNTUK ANIMASI MODAL === */
+        .modal-container {
+            transition: opacity 0.3s ease-in-out;
+        }
+        .modal-card {
+            transition: transform 0.3s ease-in-out;
+        }
+        /* State saat modal terbuka (diasumsikan ui-manager.js mengubah dari hidden ke flex) */
+        .modal-container.flex {
+            opacity: 1 !important;
+        }
+        .modal-container.flex .modal-card {
+            transform: scale(1) translateY(0) !important;
+        }
     </style>
 </head>
 
@@ -183,13 +207,13 @@
     </div>
 
     <!-- Desktop Header -->
-<header class="w-full max-w-screen-xl mx-auto hidden lg:flex items-center px-6 justify-between h-[120px] relative">
-  <img 
-    src="assets/images/icon.png" 
-    alt="Ikon LIFIN"
-    class="w-[90px] object-contain cursor-pointer"
-    onclick="window.location.href='index.html'"
-  >  
+    <header class="w-full max-w-screen-xl mx-auto hidden lg:flex items-center px-6 justify-between h-[120px] relative">
+      <img 
+        src="assets/images/icon.png" 
+        alt="Ikon LIFIN"
+        class="w-[90px] object-contain cursor-pointer"
+        onclick="window.location.href='index.html'"
+      >  
         <div id="navbarWrapper" class="relative w-[888px] h-[54px] bg-[rgba(255,107,107,0.5)] rounded-[32px] flex items-center transition-all duration-300 px-4">
             <div id="highlight" class="absolute top-0 h-[54px] bg-[#FF6B6B] rounded-[32px] transition-all duration-300" style="opacity: 1;"></div>
             <div class="relative z-10 flex w-full justify-around items-center text-white text-[32px] font-extrabold">
@@ -201,19 +225,22 @@
             </div>
         </div>
 
-        <button id="desktop-nav-finlook" class="nav-button menu-btn absolute z-20" style="left: 50%; transform: translateX(-50%); top: -30px;" data-action="set-page" data-page="finlook">
-            <img src="assets/images/finlook.svg" alt="Finlook Ikon" class="w-[200px]">
+        <button id="desktop-nav-finlook" class="nav-button menu-btn absolute z-20" style="left: 50%; transform: translateX(-50%); top: -10px;" data-action="set-page" data-page="finlook">
+            <img src="assets/images/mascotfin.png" alt="Finny Mascot" class="w-[300px]">
         </button>
 
         <img id="profileBtn" src="assets/images/profile.svg" alt="Profile Ikon" class="w-[70px] h-[70px] rounded-full object-cover cursor-pointer" data-action="open-profile">
     </header>
 
     <!-- Mobile Header -->
-    <header class="lg:hidden w-full h-[70px] p-4 flex justify-between items-center bg-white sticky top-0 z-30" style="box-shadow: 0 5px 20px 0 rgba(4,179,227,0.2);">
-        <img src="assets/images/icon.png" alt="Ikon LIFIN" class="w-[60px] object-contain">
-        <span id="mobilePageTitle" class="text-xl font-extrabold text-[#004B75]">Home</span>
-        <img id="profileBtnMobile" src="assets/images/profile.svg" alt="Profile Ikon" class="w-[40px] h-[40px] rounded-full object-cover cursor-pointer" data-action="open-profile">
-    </header>
+   <header class="lg:hidden w-full h-[70px] p-4 flex justify-between items-center bg-white sticky top-0 z-30" style="box-shadow: 0 5px 20px 0 rgba(4,179,27,0.2);">
+    <a href="index.html">
+        <img src="assets/images/icon.png" alt="Ikon LIFIN" class="w-[60px] object-contain cursor-pointer">
+    </a>
+    <span id="mobilePageTitle" class="text-xl font-extrabold text-[#004B75]">Home</span>
+    <img id="profileBtnMobile" src="assets/images/profile.svg" alt="Profile Ikon" class="w-[40px] h-[40px] rounded-full object-cover cursor-pointer" data-action="open-profile">
+</header>
+
 
     <!-- Main Content -->
     <main id="mainContent" class="w-full"></main>
@@ -237,7 +264,7 @@
                 <span id="namaUser" class="text-white text-[24px] lg:text-[30px] font-extrabold">Nama Pengguna</span>
               </div>
               <div class="flex items-center gap-8 lg:gap-10">
-                <img src="assets/images/share.svg" alt="Share Ikon" class="w-[30px] lg:w-[40px] cursor-pointer">
+                <img src="assets/images/share.svg" alt="Share Ikon" class="w-[30px] lg:w-[40px] cursor-pointer" data-action="open-share-modal">
                 <img src="assets/images/edit-white.svg" alt="Edit Ikon" class="w-[30px] lg:w-[40px] cursor-pointer" data-action="open-modal" data-modal-id="modalEditName">
               </div>
             </div>
@@ -312,6 +339,42 @@
           </div>
         </div>
     </div>
+    
+    <!-- =========================================================== -->
+    <!-- === KODE MODAL SHARE PROFILE YANG DIPERBARUI === -->
+    <!-- =========================================================== -->
+    <div id="modalShareProfile" class="modal-container fixed inset-0 z-50 hidden items-center justify-center bg-black/60 p-4 font-baloo2 opacity-0" data-action="close-modal">
+        <div id="shareProfileCard" class="modal-card w-full max-w-sm mx-auto transform scale-95 translate-y-5">
+            <!-- Kartu Profil -->
+            <div class="bg-white w-full rounded-3xl p-4 sm:p-6 relative aspect-[9/12] shadow-2xl flex flex-col">
+                <!-- Placeholder untuk gambar profil utama -->
+                <div class="w-full flex-grow bg-gray-200 rounded-2xl mb-4">
+                    <!-- Anda bisa menambahkan <img> di sini jika punya URL gambar profil -->
+                </div>
+
+                <!-- Bagian Bawah Kartu -->
+                <div class="flex-shrink-0">
+                    <!-- Informasi Nama dan Level -->
+                    <div class="mb-2">
+                        <h3 id="shareNamaUser" class="text-2xl sm:text-3xl font-bold text-[#04B3E3] truncate">Nama Pengguna</h3>
+                        <span id="shareLevelUser" class="bg-[#FFD635] text-[#004B75] text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1 rounded-full mt-1 inline-block">Level Pengguna</span>
+                    </div>
+
+                    <!-- Ikon dan QR Code -->
+                    <div class="flex justify-between items-end">
+                        <img src="assets/images/icon.png" alt="LIFIN Icon" class="w-12 sm:w-16 h-auto">
+                        <div id="qrcode" class="p-1 bg-white rounded-lg shadow-md">
+                            <!-- QR Code akan digenerate oleh JavaScript di sini -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =========================================================== -->
+    <!-- === AKHIR DARI KODE MODAL YANG DIPERBARUI === -->
+    <!-- =========================================================== -->
+
     <!-- === END OF PROFILE PANEL === -->
     
     <!-- Custom Toast Notification -->
@@ -344,13 +407,6 @@
         </button>
     </nav>
 
-    <!--
-    =================================================================
-    REFACTORING COMPLETE
-    All inline JavaScript has been removed. The dashboard is now
-    powered by the modular scripts loaded below.
-    =================================================================
-    -->
     <script type="module" src="js/dashboard.js"></script>
 
 </body>

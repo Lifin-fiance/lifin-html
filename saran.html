@@ -9,17 +9,16 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<!-- Poppins: 600, 700, 800 -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
-<!-- Baloo 2: 600, 700, 800 -->
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
- <style>
+  <!-- Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Baloo 2 -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
     body { font-family: 'Poppins', sans-serif; }
     .baloo { font-family: 'Baloo 2', cursive; }
-    button, .button {
-      transition: all 0.15s ease-in-out;
-    }
+    button, .button { transition: all 0.15s ease-in-out; }
     button:hover, .button:hover {
       transform: translateY(4px);
       box-shadow: none !important;
@@ -31,143 +30,140 @@
   </style>
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-00CHWMXSV1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-00CHWMXSV1');
-</script>
-
 <body class="bg-white">
-
     <header id="navbar-container"></header>
 
+    <div class="relative flex items-center justify-center py-[36px] pt-[130px]">
+      <div class="flex flex-col items-center text-center px-4">
+        <h2 class="baloo font-extrabold text-[28px] lg:text-[40px] leading-tight">
+          <span class="text-[#04B3E3]">Kita Bisa Bantu </span>
+          <span class="text-[#FFC72C]">Masalahmu</span>
+        </h2>
+        <img src="assets/images/line-yellow.svg" class="mt-[2px] w-[150px] lg:w-[217.54px] lg:translate-x-[140px]" alt="Garis Hiasan"/>
+      </div>
+      <img src="assets/images/finlook.svg" alt="Finlook Mascot" class="hidden lg:block absolute translate-x-[400px] w-[250px] z-[-1] translate-y-[60px]" />
+    </div>
 
-<script>
-  function goBackOrHome() {
-    if (window.history.length > 1) {
-      history.back();
-    } else {
-      window.location.href = 'index.html';
-    }
-  }
-</script>
+    <main class="px-6 pb-24">
+      <form id="saranForm" class="w-full lg:w-[1084px] h-auto lg:h-[477px] bg-[#04B3E3] rounded-2xl lg:rounded-[32px] mx-auto p-6 lg:p-[32px] flex flex-col lg:flex-row gap-8 lg:gap-[40px] text-white" enctype="multipart/form-data">
+        
+        <div class="flex flex-col gap-[8px] w-full lg:w-1/2">
+          <label class="baloo font-extrabold text-[20px] lg:text-[24px]">Alamat Emailmu</label>
+          <input type="email" name="email" required
+            class="w-full h-[50px] rounded-lg lg:rounded-[10px] text-black px-4 py-0 leading-none bg-white focus:outline-none focus:ring-[3px] focus:ring-[#FFC72C]" />
 
-  </header>
-<div class="relative flex items-center justify-center py-[36px] pt-[130px]">
-  <div class="flex flex-col items-center text-center px-4">
-    <h2 class="baloo font-extrabold text-[28px] lg:text-[40px] leading-tight">
-      <span class="text-[#04B3E3]">Kita Bisa Bantu </span>
-      <span class="text-[#FFC72C]">Masalahmu</span>
-    </h2>
-    <img src="assets/images/line-yellow.svg" class="mt-[2px] w-[150px] lg:w-[217.54px] lg:translate-x-[140px]" alt="Garis Hiasan"/>
-  </div>
-  <img src="assets/images/finlook.svg" alt="Finlook Mascot" class="hidden lg:block absolute translate-x-[400px] w-[250px] z-[-1] translate-y-[60px]" />
-</div>
+          <label class="baloo text-[20px] lg:text-[24px] font-extrabold mt-2">Subjek</label>
+          <input type="text" name="title" required
+            class="w-full h-[50px] rounded-lg lg:rounded-[10px] text-black px-4 py-0 leading-none bg-white focus:outline-none focus:ring-[3px] focus:ring-[#FFC72C]" />
 
-<main class="px-6 pb-24">
-  <form id="saranForm" class="w-full lg:w-[1084px] h-auto lg:h-[477px] bg-[#04B3E3] rounded-2xl lg:rounded-[32px] mx-auto p-6 lg:p-[32px] flex flex-col lg:flex-row gap-8 lg:gap-[40px] text-white" enctype="multipart/form-data">
-    
-    <div class="flex flex-col gap-[8px] w-full lg:w-1/2">
-      <label class="baloo text-[20px] lg:text-[24px]">Alamat Emailmu</label>
-      <input type="email" name="email" required
-        class="w-full h-[50px] rounded-lg lg:rounded-[10px] text-black px-4 py-0 leading-none bg-white focus:outline-none focus:ring-[3px] focus:ring-[#FFC72C]" />
-
-      <label class="baloo text-[20px] lg:text-[24px] mt-2">Subjek</label>
-      <input type="text" name="title" required
-        class="w-full h-[50px] rounded-lg lg:rounded-[10px] text-black px-4 py-0 leading-none bg-white focus:outline-none focus:ring-[3px] focus:ring-[#FFC72C]" />
-
-      <label class="baloo text-[20px] lg:text-[24px] mt-2">Lampiran</label>
-      <div class="w-full h-[150px] bg-white rounded-lg lg:rounded-[10px] flex items-center justify-center p-4 mx-0 mb-[6px]">
-        <div onclick="document.getElementById('attachment').click()" 
-             class="w-full h-full border-2 border-dashed border-[#D6D6D6] rounded-lg lg:rounded-[10px] flex items-center justify-center text-center cursor-pointer">
-          <p class="text-black text-center px-2 text-base">
-            <span class="text-[#04B3E3] font-semibold">Sedang Dalam</span> Masa Pembuatan.
-          </p>
-          <input type="file" name="attachment" id="attachment" class="hidden" />
+          <label class="baloo text-[20px] font-extrabold lg:text-[24px] mt-2">Lampiran</label>
+          <div class="w-full h-[150px] bg-white rounded-lg lg:rounded-[10px] flex items-center justify-center p-4 mx-0 mb-[6px]">
+            <div onclick="document.getElementById('attachment').click()" 
+                 class="w-full h-full border-2 border-dashed border-[#D6D6D6] rounded-lg lg:rounded-[10px] flex items-center justify-center text-center cursor-pointer">
+              <p class="text-black text-center px-2 text-base">
+                <span class="text-[#04B3E3] font-semibold">Sedang Dalam</span> Masa Pembuatan.
+              </p>
+              <input type="file" name="attachment" id="attachment" class="hidden" />
+            </div>
+          </div>
         </div>
+
+        <div class="flex flex-col w-full lg:w-1/2 justify-between">
+          <div>
+            <label class="baloo text-[20px] font-extrabold lg:text-[24px]">Deskripsi</label>
+            <textarea name="message" required
+              class="mt-[8px] w-full h-[160px] rounded-lg lg:rounded-[10px] text-black p-4 resize-none bg-white focus:outline-none focus:ring-[3px] focus:ring-[#FFC72C]"></textarea>
+          </div>
+
+          <input type="submit" id="button" disabled
+            value="Langsung Kirim"
+            class="font-extrabold w-full h-[32px] lg:h-[140px] mb-[10px] bg-gray-400 text-white baloo text-semibold text-[12px] lg:text-[32px] rounded-xl lg:rounded-[25px] shadow-[0_5px_0_#aaa] lg:shadow-[0_10px_0_#aaa] cursor-not-allowed transition-all duration-150" />
+        </div>
+      </form>
+
+      <div class="flex justify-center py-8">
+        <div class="g-recaptcha" 
+             data-sitekey="6LdID7orAAAAAEiYMjn5a-xZ_JQfpgDVRgqprbRu" 
+             data-callback="recaptchaCallback"></div>
       </div>
-    </div>
+    </main>
 
-    <div class="flex flex-col w-full lg:w-1/2 justify-between">
-      <div>
-        <label class="baloo text-[20px] lg:text-[24px]">Deskripsi</label>
-        <textarea name="message" required
-          class="mt-[8px] w-full h-[160px] rounded-lg lg:rounded-[10px] text-black p-4 resize-none bg-white focus:outline-none focus:ring-[3px] focus:ring-[#FFC72C]"></textarea>
-      </div>
+    <footer id="footer-container"></footer>
 
-      <input type="submit" id="button" disabled
-        value="Langsung Kirim"
-        class="w-full h-[32px] lg:h-[140px] sm:h- mb-[10px] lg:h-[140px] mt-4 lg:mt-0 bg-gray-400 text-white baloo text-semibold text-[12px] lg:text-[32px] rounded-xl lg:rounded-[25px] shadow-[0_5px_0_#aaa] lg:shadow-[0_10px_0_#aaa] cursor-not-allowed transition-all duration-150" />
-    </div>
-  </form>
+    <script>
+      emailjs.init("qTkRU5PHixuf0D08O");
 
-  <div class="flex justify-center py-8">
-    <div class="g-recaptcha" data-sitekey="6LfaDKgrAAAAACGlczK0ETGgzrJhHsSPLYBL8zVS" data-callback="recaptchaCallback"></div>
-  </div>
+      const btn = document.getElementById('button');
+      const form = document.getElementById('saranForm');
 
-</main>
+      form.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        btn.value = 'Mengirim...';
+        const email = this.email.value.trim();
 
-<footer id="footer-container"></footer>
+        // Ambil token dari reCAPTCHA
+        const token = grecaptcha.getResponse();
+        if (!token) {
+          alert("Tolong centang reCAPTCHA dulu.");
+          btn.value = 'Langsung Kirim';
+          return;
+        }
 
-<script>
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+        // Verifikasi token langsung ke Google
+        const secretKey = "6LdID7orAAAAAL0-TXA5NN2wk_4R20wlOa-XMd78";
+        const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`;
 
-  emailjs.init("qTkRU5PHixuf0D08O");
+        try {
+          const response = await fetch(verifyUrl, { method: 'POST' });
+          const data = await response.json();
 
-  const btn = document.getElementById('button');
-  const form = document.getElementById('saranForm');
+          if (!data.success) {
+            alert("Verifikasi reCAPTCHA gagal. Silakan coba lagi.");
+            btn.value = 'Langsung Kirim';
+            grecaptcha.reset();
+            return;
+          }
 
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    btn.value = 'Mengirim...';
-    const email = this.email.value.trim();
+          // Validasi email harus pakai Gmail
+          if (!email.endsWith('@gmail.com')) {
+            alert("Email harus menggunakan @gmail.com");
+            btn.value = 'Langsung Kirim';
+            return;
+          }
 
-    if (grecaptcha.getResponse() === "") {
-      alert("Tolong centang reCAPTCHA dulu.");
-      btn.value = 'Langsung Kirim';
-      return;
-    }
+          // Kirim data via EmailJS
+          emailjs.sendForm("service_nrl3de3", "template_xhjwxte", this)
+            .then(() => {
+              btn.value = 'Terkirim ✔️';
+              alert("Saran berhasil dikirim ke Lifin!");
+              form.reset();
+              grecaptcha.reset();
+              btn.disabled = true;
 
-    if (!email.endsWith('@gmail.com')) {
-      alert("Email harus menggunakan @gmail.com");
-      btn.value = 'Langsung Kirim';
-      return;
-    }
+              btn.classList.remove('bg-[#004B75]', 'hover:translate-y-[10px]', 'shadow-[0_10px_0_#003552]', 'cursor-pointer');
+              btn.classList.add('bg-gray-400', 'cursor-not-allowed', 'shadow-[0_10px_0_#aaa]');
 
-    emailjs.sendForm("service_nrl3de3", "template_xhjwxte", this)
-      .then(() => {
-        btn.value = 'Terkirim ✔️';
-        alert("Saran berhasil dikirim ke Lifin!");
-        form.reset();
-        grecaptcha.reset();
-        btn.disabled = true;
-        
-        btn.classList.remove('bg-[#004B75]', 'hover:translate-y-[10px]', 'shadow-[0_10px_0_#003552]', 'cursor-pointer');
-        btn.classList.add('bg-gray-400', 'cursor-not-allowed', 'shadow-[0_10px_0_#aaa]');
-        
-        setTimeout(() => { btn.value = 'Langsung Kirim'; }, 2000);
-      }, (err) => {
-        btn.value = 'Langsung Kirim';
-        alert("Gagal mengirim: " + JSON.stringify(err));
+              setTimeout(() => { btn.value = 'Langsung Kirim'; }, 2000);
+            }, (err) => {
+              btn.value = 'Langsung Kirim';
+              alert("Gagal mengirim: " + JSON.stringify(err));
+            });
+
+        } catch (error) {
+          alert("Terjadi kesalahan saat verifikasi reCAPTCHA.");
+          btn.value = 'Langsung Kirim';
+          grecaptcha.reset();
+        }
       });
-  });
 
-  function recaptchaCallback() {
-    const btn = document.getElementById('button');
-    btn.disabled = false;
-    btn.classList.remove('bg-gray-400', 'cursor-not-allowed');
-    btn.classList.add('bg-[#004B75]', 'hover:translate-y-[10px]', 'shadow-[0_10px_0_#003552]', 'cursor-pointer');
-  }
-</script>
+      function recaptchaCallback() {
+        const btn = document.getElementById('button');
+        btn.disabled = false;
+        btn.classList.remove('bg-gray-400', 'cursor-not-allowed');
+        btn.classList.add('bg-[#004B75]', 'hover:translate-y-[10px]', 'shadow-[0_10px_0_#003552]', 'cursor-pointer');
+      }
+    </script>
 
-<script src="js/component.js" type="module"></script>
-
-
+    <script src="js/component.js" type="module"></script>
 </body>
 </html>

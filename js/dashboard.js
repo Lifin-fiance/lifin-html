@@ -34,6 +34,8 @@ import { initFinlookChat } from './finlook.js';
 let userProfile = null;
 let allMateriData = null;
 const pageCache = {};
+// Tidak perlu variabel instance QR lagi, karena library baru lebih simpel
+// let qrCodeInstance = null; 
 
 // --- CORE FUNCTIONS ---
 
@@ -57,7 +59,6 @@ async function setPage(page) {
     
     mainContent.innerHTML = content;
 
-    // --- KEY CHANGE: Initialize chatbot if the 'finlook' page is active ---
     if (page === 'finlook') {
         initFinlookChat();
     }
@@ -77,7 +78,8 @@ async function preloadAllPages() {
         if (!pageCache[pageName]) {
             try {
                 pageCache[pageName] = generatePageContent(pageName, userProfile, allMateriData);
-            } catch (error) {
+            } catch (error)
+{
                 console.error(`Failed to preload page ${pageName}:`, error);
             }
         }
@@ -107,16 +109,61 @@ async function handlePageClick(e) {
             const modalIdToOpen = e.target.closest('[data-modal-id]').dataset.modalId;
             openModal(modalIdToOpen);
             break;
+        
+        // ===========================================================
+        // === KODE UNTUK MODAL SHARE PROFILE YANG DIPERBARUI ===
+        // ===========================================================
+        case 'open-share-modal':
+            if (userProfile) {
+                document.getElementById('shareNamaUser').textContent = userProfile.nama || 'Tamu';
+                document.getElementById('shareLevelUser').textContent = userProfile.level || 'Beginner';
+
+                const qrCodeContainer = document.getElementById('qrcode');
+                qrCodeContainer.innerHTML = ''; 
+                
+                const profileUrl = `https://lifin.fun/profile?user=${userProfile.uid || 'guest'}`;
+
+                // Opsi baru untuk EasyQRCodeJS yang disesuaikan dengan desain
+                const options = {
+                    text: profileUrl,
+                    width: 120, // Ukuran diperbesar
+                    height: 120,
+                    colorDark: "#000000",
+                    colorLight: "#ffffff",
+                    correctLevel: QRCode.CorrectLevel.H, // Tingkat koreksi kesalahan yang tinggi
+                    quietZone: 0, // Menghilangkan margin putih di sekitar QR code
+                    
+                    // --- OPSI LOGO DIKEMBALIKAN ---
+                    logo: "assets/images/mascotfin.png", // Path ke gambar maskot
+                    logoWidth: 45, // Disesuaikan dengan ukuran QR
+                    logoHeight: 45, // Disesuaikan dengan ukuran QR
+                    logoBackgroundColor: '#ffffff', // Warna background di belakang logo
+                    logoBackgroundTransparent: false // Set false jika ingin ada background
+                };
+
+                // Membuat QR Code baru
+                new QRCode(qrCodeContainer, options);
+
+                openModal('modalShareProfile');
+            }
+            break;
+        // ===========================================================
+        // === AKHIR DARI KODE YANG DIPERBARUI ===
+        // ===========================================================
+
         case 'close-modal':
-            const modalIdToClose = e.target.closest('.fixed').id;
-            closeModal(modalIdToClose);
+            const modalToClose = e.target.closest('.fixed');
+            if (modalToClose && modalToClose.id === 'modalShareProfile') {
+                 document.getElementById('qrcode').innerHTML = '';
+            }
+            closeModal(modalToClose.id);
             break;
         case 'save-name':
             const newName = document.getElementById("inputNama").value.trim();
             if (!newName) return;
             const nameSuccess = await updateUserName(newName);
             if (nameSuccess) {
-                userProfile.nama = newName; // Update local state
+                userProfile.nama = newName;
                 document.getElementById("namaUser").textContent = newName;
                 closeModal("modalEditName");
                 showToast("Nama berhasil diperbarui!");
@@ -125,10 +172,10 @@ async function handlePageClick(e) {
         case 'confirm-delete':
             const resetSuccess = await resetUserProgress();
             if (resetSuccess) {
-                userProfile = await getUserProfileData(); // Re-fetch profile
+                userProfile = await getUserProfileData();
                 closeModal('modalConfirmDelete');
                 showToast("Progress telah direset!");
-                await setPage('home'); // Refresh the page content
+                await setPage('home');
             }
             break;
         case 'confirm-logout':
@@ -166,7 +213,7 @@ async function handlePageClick(e) {
             const levels = ['Beginner', 'Smart Spender', 'Future Investor'];
             const currentIndex = levels.indexOf(userProfile.level || 'Beginner');
             const nextLevel = levels[(currentIndex + 1) % levels.length];
-            await saveUserLevel(nextLevel); // Save to Firestore, which will trigger a reload via auth-manager
+            await saveUserLevel(nextLevel);
             showToast(`Berpindah ke level: ${nextLevel}`);
             await setPage('materi');
             break;
@@ -181,7 +228,6 @@ async function handlePageClick(e) {
 async function initializeDashboard() {
     const loader = document.getElementById('loader');
     
-    // Fetch critical data first
     [userProfile, allMateriData] = await Promise.all([
         getUserProfileData(),
         fetch('./data/materi.json').then(res => res.json())
@@ -193,22 +239,18 @@ async function initializeDashboard() {
         return;
     }
 
-    // Set up event listeners
     document.body.addEventListener('click', handlePageClick);
     document.querySelectorAll('.nav-button').forEach(btn => {
         btn.addEventListener('click', () => setPage(btn.dataset.page));
     });
 
-    // Load initial page
     const initialPage = localStorage.getItem('lastPage') || 'home';
     await setPage(initialPage);
 
-    // Hide loader
     loader.style.transition = 'opacity 0.5s ease';
     loader.style.opacity = '0';
     setTimeout(() => loader.style.display = 'none', 500);
 
-    // Preload other pages for faster navigation
     setTimeout(preloadAllPages, 500);
 }
 

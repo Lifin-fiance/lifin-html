@@ -147,17 +147,67 @@ export function updateActiveNav(page) {
         } else {
             highlight.style.opacity = '1';
             highlight.style.backgroundColor = colors.bg;
+            
+            // === PERUBAHAN YANG DIMINTA ===
+            // Get text width dynamically and add padding
+            const getTextWidth = (text, font) => {
+                const canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
+                const context = canvas.getContext("2d");
+                context.font = font || window.getComputedStyle(activeDesktopBtn).font;
+                return context.measureText(text).width;
+            };
 
-            if (page === 'home') {
-                highlight.style.width = '190px';
-                highlight.style.left = '0px';
-            } else if (page === 'panel') {
-                highlight.style.width = '190px';
-                highlight.style.left = '700px';
+            if (window.innerWidth < 1100) {
+                // Get the active button and its text content
+                const activeButton = document.getElementById(`desktop-nav-${page}`);
+                if (activeButton) {
+                    const buttonText = activeButton.textContent.trim();
+                    const textWidth = getTextWidth(buttonText);
+                    let sliderWidth = textWidth + 50; // Add 20px padding (10px each side)
+
+                    switch(page) {
+                        case 'home':
+                            highlight.style.width = '170px';
+                            highlight.style.left = '0px';
+                            break;
+                        case 'panel':
+                            highlight.style.width = '170px';
+                            highlight.style.left = `calc(100% - 170px)`;
+                            break;
+                        case 'game':
+                        case 'materi':
+                            highlight.style.width = `${sliderWidth}px`;
+                            highlight.style.left = `${activeButton.offsetLeft}px`;
+                            break;
+                        default:
+                            highlight.style.width = `${sliderWidth}px`;
+                            highlight.style.left = `${activeButton.offsetLeft}px`;
+                    }
+                }
             } else {
-                highlight.style.width = '170px';
-                const btnCenter = activeDesktopBtn.offsetLeft + (activeDesktopBtn.offsetWidth / 2);
-                highlight.style.left = `${btnCenter - 85}px`;
+                // Ukuran asli untuk layar besar
+                switch(page) {
+                    case 'home':
+                        highlight.style.width = '190px';
+                        highlight.style.left = '0px';
+                        break;
+                    case 'game':
+                        highlight.style.width = '170px';
+                        highlight.style.left = '180px';
+                        break;
+                    case 'materi':
+                        highlight.style.width = '170px';
+                        highlight.style.left = '535px';
+                        break;
+                    case 'panel':
+                        highlight.style.width = '190px';
+                        highlight.style.left = '700px';
+                        break;
+                    default:
+                        highlight.style.width = '170px';
+                        const btnCenter = activeDesktopBtn.offsetLeft + (activeDesktopBtn.offsetWidth / 2);
+                        highlight.style.left = `${btnCenter - 85}px`;
+                }
             }
         }
     }
@@ -297,7 +347,7 @@ export function generatePageContent(page, userProfile, allMateri) {
                             <span class="text-white text-base lg:text-xl font-bold" style="font-family: 'Poppins', sans-serif;">${materi["Judul Materi"]}</span>
                         </div>
                     </div>
-                    <div class="w-full flex justify-center lg:justify-end mt-4 lg:mt-0 lg:w-auto">
+                    <div class="w-full flex justify-center lg:justify-end mt-4 lg:mt-0 lg:w-auto lg:mr-[12px]">
                         <button data-action="buka-materi" data-nomor="${materi.Nomor}" 
                                 class="button-3d button2 w-full max-w-xs lg:w-auto h-12 lg:h-14 ${buttonColor} text-black text-xl lg:text-2xl font-extrabold rounded-full lg:px-8 ${buttonShadow} focus:outline-none flex-shrink-0 ${isLocked ? 'cursor-not-allowed' : ''}"
                                 ${isLocked ? 'disabled' : ''}>
@@ -412,7 +462,7 @@ export function generatePageContent(page, userProfile, allMateri) {
                 </div>
                 <div class="h-16"></div>
                 <div class="w-full mx-auto mb-16 flex flex-col md:flex-row gap-6">
-\<a href="https://finny-of-olympus.lifin.fun/" class="button-3d w-full h-[180px] md:h-[240px] bg-[#FF6B6B] rounded-[32px] shadow-[0_10px_0_0_#D44F4F] flex flex-col items-center justify-center focus:outline-none p-4 mb-5 no-underline">
+<a href="https://finny-of-olympus.lifin.fun/" class="button-3d w-full h-[180px] md:h-[240px] bg-[#FF6B6B] rounded-[32px] shadow-[0_10px_0_0_#D44F4F] flex flex-col items-center justify-center focus:outline-none p-4 mb-5 no-underline">
     <img src="assets/images/berita.svg" alt="Judi Konyol" class="w-[90px] h-[90px] md:w-[134px] md:h-[139px] mb-2 md:mb-[12px]">
     <p class="text-white text-3xl md:text-[36px] font-extrabold">Judi Konyol</p>
 </a>
