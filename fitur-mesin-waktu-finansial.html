@@ -80,9 +80,9 @@
 
 <body class="m-0 p-0 box-border pt-[90px]">
 
-  <header class="absolute top-0 left-0 w-full h-[90px] bg-white flex items-center justify-between px-6 lg:px-20 shadow-sm z-50" style="box-shadow: 0 3px 0px 0 rgba(4,179,227,0.2);">
-    <div class="flex items-center">
-      <img src="assets/images/icon.png" class="w-[90px] object-cover cursor-pointer" alt="logolifin" onclick="window.location.href='index.html'">
+<header class="absolute top-0 left-0 w-full h-[90px] bg-white flex items-center justify-between px-6 lg:px-20 shadow-sm z-50" style="box-shadow: 0 3px 0px 0 rgba(4,179,227,0.2);">
+  <div class="flex items-center">
+      <img src="assets/images/icon.png" class="w-[90px] object-cover cursor-pointer" alt="logolifin" onclick="window.location.href='https://www.lifin.fun'">
     </div>
 <button 
   onclick="goBackOrHome()" 
@@ -93,10 +93,14 @@
 
 <script>
   function goBackOrHome() {
-    if (window.history.length > 1) {
+    const homepage = "https://www.lifin.fun";
+
+    // Jika ada riwayat sebelumnya DAN URL sebelumnya bukan halaman ini
+    if (document.referrer && document.referrer !== window.location.href) {
       history.back();
     } else {
-      window.location.href = 'index.html';
+      // Kalau tidak ada riwayat, atau halaman sebelumnya sama -> langsung ke homepage
+      window.location.href = homepage;
     }
   }
 </script>
@@ -153,9 +157,9 @@
         <div>
           <h4 class="text-xl font-extrabold mb-4 font-baloo">Utama</h4>
           <ul class="space-y-3">
-            <li><a href="#" class="text-lg footer-link-animated">LIFIN</a></li>
-            <li><a href="#" class="text-lg footer-link-animated">Beranda</a></li>
-            <li><a href="#" class="text-lg footer-link-animated">FAQ</a></li>
+            <li><a href="https://lifin.fun" class="text-lg footer-link-animated">Beranda</a></li>
+            <li><a href="https://lifin.fun/berita.html" class="text-lg footer-link-animated">News</a></li>
+            <li><a href="https://lifin.fun/help.html" class="text-lg footer-link-animated">FAQ</a></li>
           </ul>
         </div>
 
@@ -163,9 +167,9 @@
         <div>
           <h4 class="text-xl font-extrabold mb-4 font-baloo">Game</h4>
           <ul class="space-y-3">
-            <li><a href="#" class="text-lg footer-link-animated">Dompet Pintar</a></li>
-            <li><a href="#" class="text-lg footer-link-animated">Investor Cilik</a></li>
-            <li><a href="#" class="text-lg footer-link-animated">Finny Of Olympus</a></li>
+            <li><a href="https://dompet-pintar/lifin.fun" class="text-lg footer-link-animated">Dompet Pintar</a></li>
+            <li><a href="https://finance-quiz-race/lifin.fun" class="text-lg footer-link-animated">Finance Quiz Race</a></li>
+            <li><a href="https://investor-cilik/lifin.fun" class="text-lg footer-link-animated">Investor Cilik</a></li>
           </ul>
         </div>
 
@@ -173,8 +177,8 @@
         <div>
           <h4 class="text-xl font-extrabold mb-4 font-baloo">Fitur</h4>
           <ul class="space-y-3">
-            <li><a href="#" class="text-lg footer-link-animated">Kalkulator Keuangan</a></li>
-            <li><a href="#" class="text-lg footer-link-animated">Mesin Waktu Finansial</a></li>
+            <li><a href="https://lifin.fun/fitur-kalkulator-keuangan.html" class="text-lg footer-link-animated">Kalkulator Keuangan</a></li>
+            <li><a href="https://lifin.fun/fitur-mesin-waktu-finansial.html" class="text-lg footer-link-animated">Mesin Waktu Finansial</a></li>
           </ul>
         </div>
 
@@ -216,8 +220,8 @@
         
         <!-- Legal Links (Kanan) -->
         <div class="flex flex-col sm:flex-row gap-x-6 gap-y-2 order-3 md:order-3">
-          <a href="#" class="text-lg footer-link-animated">Ketentuan Layanan</a>
-          <a href="#" class="text-lg footer-link-animated">Kebijakan Privasi</a>
+          <a href="https://lifin.fun/terms.html" class="text-lg footer-link-animated">Ketentuan Layanan</a>
+          <a href="https://lifin.fun/privacy.html" class="text-lg footer-link-animated">Kebijakan Privasi</a>
         </div>
       </div>
 

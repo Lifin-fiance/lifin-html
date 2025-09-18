@@ -1,6 +1,6 @@
 <header class="absolute top-0 left-0 w-full h-[90px] bg-white flex items-center justify-between px-6 lg:px-20 shadow-sm z-50" style="box-shadow: 0 3px 0px 0 rgba(4,179,227,0.2);">
-    <div class="flex items-center">
-      <img src="assets/images/icon.png" class="w-[90px] object-cover cursor-pointer" alt="logolifin" onclick="window.location.href='index.html'">
+  <div class="flex items-center">
+      <img src="assets/images/icon.png" class="w-[90px] object-cover cursor-pointer" alt="logolifin" onclick="window.location.href='https://www.lifin.fun'">
     </div>
 <button 
   onclick="goBackOrHome()" 
@@ -11,10 +11,14 @@
 
 <script>
   function goBackOrHome() {
-    if (window.history.length > 1) {
+    const homepage = "https://www.lifin.fun";
+
+    // Jika ada riwayat sebelumnya DAN URL sebelumnya bukan halaman ini
+    if (document.referrer && document.referrer !== window.location.href) {
       history.back();
     } else {
-      window.location.href = 'index.html';
+      // Kalau tidak ada riwayat, atau halaman sebelumnya sama -> langsung ke homepage
+      window.location.href = homepage;
     }
   }
 </script>
