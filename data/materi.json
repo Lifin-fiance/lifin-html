@@ -3,12 +3,15 @@
     "Nomor": 1,
     "Judul Materi": "Apa Itu Uang dan Mengapa Penting?",
     "Tujuan Materi": "Memahami pengertian uang dan fungsinya dalam kehidupan sehari-hari.",
-    "Materi": "Apa sih uang itu? Uang adalah alat tukar yang kita gunakan untuk membeli barang dan jasa. Zaman dulu, sebelum ada uang, orang-orang melakukan barter, yaitu menukar barang dengan barang lain. Namun, cara ini cukup sulit karena nilai tukarnya tidak selalu adil. Uang membuat proses jual beli menjadi lebih mudah, baik untuk membeli makanan, alat tulis, atau mainan. Saat ini, uang ada dalam berbagai bentuk, seperti koin, kertas, dan uang digital yang bisa disimpan di ponsel. Dengan memahami fungsi uang, kita bisa belajar menggunakannya dengan lebih bijak.",
+    "Pembukaan (Atas Gambar)": "Bayangin deh, uang di dunia nyata itu kayak \"Gold\" atau \"Diamond\" di dalam game favoritmu. Kenapa semua orang di game itu mau \"Gold\" atau \"Diamond\"? Soalnya, item itu bisa ditukar sama apa aja! Mau beli pedang legendaris? Pakai Gold. Mau beli skin keren? Pakai Diamond. Kamu nggak perlu repot-repot menukar 10 pedang biasamu untuk sebuah pedang legendaris. Nah, uang di dunia kita juga begitu. Uang adalah \"item universal\" yang diterima semua orang untuk mendapatkan apa pun yang mereka mau!",
+    "Gambar": "https://mmc.tirto.id/image/otf/640x0/2020/08/28/istock-660644174_ratio-16x9.jpg",
+    "Materi": "Uang adalah alat tukar yang diterima secara umum untuk membeli barang atau jasa. Sebelum ada uang, orang menggunakan sistem barter, yaitu menukar barang dengan barang. Namun, barter sangat merepotkan karena sulit menemukan kecocokan. Uang menyelesaikan masalah ini dengan menjadi perantara yang diterima semua orang, sehingga transaksi menjadi lebih mudah dan cepat, baik untuk membeli makanan, alat tulis, atau mainan.",
+    "Penutupan/Summary": "Uang itu seperti pelumas yang membuat mesin ekonomi raksasa di dunia ini bisa berputar dengan lancar tanpa macet. Tanpa fungsi ini, kita mungkin masih repot menukar hasil panen hanya untuk mendapatkan sepasang sepatu baru. Keren, kan?",
     "Poin-Poin Penting": [
-      "Uang adalah alat tukar untuk mendapatkan barang dan jasa.",
-      "Sebelum ada uang, sistem barter digunakan, tetapi seringkali tidak praktis.",
-      "Uang ada dalam bentuk fisik (koin dan kertas) dan digital (dompet elektronik).",
-      "Memahami fungsi uang membantu kita mengelola uang saku dengan lebih baik."
+      "Uang adalah alat tukar yang digunakan untuk mendapatkan barang dan jasa.",
+      "Sebelum ada uang, orang melakukan barter, tapi itu menyulitkan.",
+      "Uang sekarang tidak hanya dalam bentuk fisik (koin dan kertas), tetapi juga digital.",
+      "Memahami fungsi uang sejak dini membantu kita lebih bijak dalam mengatur uang."
     ],
     "Simpel Quiz": [
       {
@@ -22,7 +25,7 @@
         "jawaban": "Membeli barang dan jasa"
       },
       {
-        "pertanyaan": "Mengapa sistem barter digantikan oleh uang?",
+        "pertanyaan": "Mengapa barter diganti dengan uang?",
         "pilihan": [
           "Karena uang lebih berat",
           "Karena barter selalu berhasil",
@@ -41,19 +44,22 @@
   {
     "Nomor": 2,
     "Judul Materi": "Kenapa Kita Perlu Menabung?",
-    "Tujuan Materi": "Memahami pentingnya menabung untuk mencapai tujuan di masa depan.",
-    "Materi": "Menabung adalah kegiatan menyisihkan sebagian uang yang kita miliki untuk digunakan nanti. Mengapa menabung itu penting? Dengan menabung, kita bisa mempersiapkan diri untuk membeli sesuatu yang kita inginkan atau butuhkan di masa depan, seperti sepatu baru atau hadiah ulang tahun untuk teman. Menabung mengajarkan kita untuk bersabar dan tidak selalu menghabiskan uang untuk semua hal yang kita inginkan saat itu juga.",
+    "Tujuan Materi": "Menentukan strategi menabung yang paling efektif.",
+    "Pembukaan (Atas Gambar)": "Bayangin deh, kamu lagi main game petualangan dan mau mengalahkan bos terakhir yang super kuat. Kamu nggak bisa kan langsung maju begitu saja? Kamu pasti perlu ngumpulin item sedikit demi sedikit, menaikkan level karaktermu pelan-pelan, sampai akhirnya kamu cukup kuat untuk menang. Nah, menabung itu persis seperti itu! Kamu mengumpulkan \"kekuatan\" (uang) sedikit demi sedikit untuk \"mengalahkan bos\" (membeli barang yang kamu inginkan).",
+    "Gambar": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiq153THgit3gXN0G0_LFmHU-EH3FdQiD35JnlVt2PIat7McHfYCB1GKlFSeYIAlt9klwE3kKNP_cpPcldjZXGEl8oGnx1l2_1SLQz3OVyAwBwQryKxXqjdJ6fvVt2n7YwYjUKU14R0QX8/s1600/manfaat-menabung.jpg",
+    "Materi": "Menabung adalah menyisihkan sebagian uang untuk disimpan. Kunci utamanya adalah prinsip \"bayar diri sendiri terlebih dahulu\". Artinya, saat menerima uang saku, langsung sisihkan sebagian untuk ditabung sebelum dipakai untuk jajan. Dengan menentukan tujuan yang jelas, seperti ingin membeli sesuatu, proses menabung akan terasa lebih termotivasi dan terarah.",
+    "Penutupan/Summary": "Jadi, kuncinya bukan seberapa besar uang yang kamu punya, tapi seberapa disiplin kamu dengan rencana menabungmu. Dengan rencana yang jelas dan disiplin menyisihkan di awal, barang apa pun yang kamu inginkan pasti bisa terbeli.",
     "Poin-Poin Penting": [
-      "Menabung membantu mempersiapkan pengeluaran di masa depan, termasuk kebutuhan mendesak.",
-      "Kita bisa belajar mengatur uang saku agar tidak habis dalam satu hari dan menyisihkannya untuk ditabung.",
-      "Menabung melatih kita untuk lebih bijak dalam berbelanja dan tidak impulsif.",
-      "Kita bisa mulai menabung menggunakan celengan, dompet, atau aplikasi digital."
+      "Menabung membantu kita mempersiapkan pengeluaran di masa depan.",
+      "Anak-anak bisa belajar mengatur uang saku agar tidak habis dalam satu hari.",
+      "Menabung membuat kita lebih bijak dalam membeli sesuatu.",
+      "Kita bisa gunakan celengan, dompet, atau aplikasi digital untuk mulai menabung."
     ],
     "Simpel Quiz": [
       {
         "pertanyaan": "Apa arti menabung?",
         "pilihan": [
-          "Menghabiskan uang dengan cepat",
+          "Menghabiskan uang cepat",
           "Menyimpan sebagian uang untuk digunakan nanti",
           "Meminjam uang dari teman",
           "Menyimpan makanan"
@@ -64,11 +70,11 @@
         "pertanyaan": "Mengapa kita sebaiknya menabung?",
         "pilihan": [
           "Supaya uang cepat habis",
-          "Agar punya simpanan untuk keperluan masa depan",
+          "Agar bisa punya uang untuk keperluan masa depan",
           "Supaya bisa meminta lebih banyak uang",
-          "Supaya bisa membeli semua barang sekarang juga"
+          "Supaya bisa beli semua barang sekarang juga"
         ],
-        "jawaban": "Agar punya simpanan untuk keperluan masa depan"
+        "jawaban": "Agar bisa punya uang untuk keperluan masa depan"
       }
     ],
     "Sumber": [
@@ -79,19 +85,22 @@
   {
     "Nomor": 3,
     "Judul Materi": "Mengenal Kebutuhan dan Keinginan",
-    "Tujuan Materi": "Dapat membedakan antara kebutuhan (yang penting) dan keinginan (yang bisa ditunda).",
-    "Materi": "Penting untuk bisa membedakan antara kebutuhan dan keinginan. Kebutuhan adalah hal-hal yang harus kita penuhi untuk hidup sehat dan nyaman, seperti makanan, pakaian, dan tempat tinggal. Sementara itu, keinginan adalah hal-hal yang ingin kita miliki untuk kepuasan, tetapi tidak harus segera dipenuhi, contohnya mainan atau gadget baru. Memahami perbedaan ini membantu kita membuat keputusan yang lebih bijak saat menggunakan uang.",
+    "Tujuan Materi": "Memahami dan membedakan antara kebutuhan (yang penting) dan keinginan (yang bisa ditunda).",
+    "Pembukaan (Atas Gambar)": "Coba bayangin HP kamu. Ada dua hal penting di sana: baterai dan casing HP yang lucu. Kalau baterai HP-mu tinggal 1%, tapi di saat yang sama kamu lihat ada casing lucu lagi diskon, mana yang akan kamu dahulukan? Pasti cari colokan buat nge-charge, kan? Kenapa? Karena tanpa baterai (kebutuhan), HP-mu nggak akan bisa nyala, dan casing selucu apa pun (keinginan) jadi nggak ada gunanya.",
+    "Gambar": "https://asset.kompas.com/crops/OsIGe6r5jaQ45D3WsV1YdQuaqF4=/71x50:1700x1136/750x500/data/photo/2021/12/30/61cd9df0289a3.png",
+    "Materi": "Kebutuhan adalah sesuatu yang harus dipenuhi agar kita bisa hidup, seperti makanan dan pakaian. Sedangkan keinginan adalah sesuatu yang kita inginkan untuk kesenangan tapi tidak wajib, seperti mainan baru. Prinsip yang bijak adalah selalu mendahulukan kebutuhan. Setelah kebutuhan terpenuhi, barulah sisa uang bisa digunakan untuk keinginan.",
+    "Penutupan/Summary": "Meskipun diskon terlihat menggiurkan, ingatlah bahwa kesehatan dan kelangsungan hidup kita jauh lebih berharga daripada penawaran terbatas mana pun. Memahami prioritas ini adalah inti dari kecerdasan finansial. Dahulukan \"baterai\" tubuhmu, baru pikirkan \"aksesoris\"-nya kemudian.",
     "Poin-Poin Penting": [
-      "Kebutuhan bersifat esensial untuk kelangsungan hidup, seperti makan dan pendidikan.",
-      "Keinginan bersifat tambahan dan bisa ditunda, seperti mainan, aksesoris, atau makanan cepat saji.",
+      "Kebutuhan bersifat penting dan harus dipenuhi.",
+      "Keinginan bersifat tambahan dan bisa ditunda.",
       "Mengutamakan kebutuhan akan membuat pengeluaran lebih terkontrol.",
-      "Belajar membedakan keduanya membantu kita membuat keputusan finansial yang baik di masa depan."
+      "Belajar membedakan keduanya membantu membuat keputusan finansial yang baik."
     ],
     "Simpel Quiz": [
       {
-        "pertanyaan": "Manakah yang termasuk kebutuhan?",
+        "pertanyaan": "Apa yang termasuk kebutuhan?",
         "pilihan": [
-          "Sepatu bola baru",
+          "Sepatu main bola baru",
           "Nasi dan sayur untuk makan",
           "Mainan robot",
           "Boneka lucu"
@@ -99,7 +108,7 @@
         "jawaban": "Nasi dan sayur untuk makan"
       },
       {
-        "pertanyaan": "Apa perbedaan utama antara kebutuhan dan keinginan?",
+        "pertanyaan": "Apa perbedaan kebutuhan dan keinginan?",
         "pilihan": [
           "Kebutuhan tidak penting, keinginan harus dipenuhi",
           "Kebutuhan penting untuk hidup, keinginan bisa ditunda",
@@ -117,13 +126,16 @@
   {
     "Nomor": 4,
     "Judul Materi": "Dari Mana Uang Didapatkan?",
-    "Tujuan Materi": "Memahami bahwa uang tidak datang begitu saja, tetapi perlu diusahakan melalui kerja keras.",
-    "Materi": "Pernahkah kamu berpikir dari mana orang tua mendapatkan uang? Uang diperoleh melalui usaha dan kerja keras. Ketika orang bekerja, mereka mendapatkan imbalan berupa gaji atau upah. Uang saku yang kamu terima adalah bagian dari hasil kerja keras orang tuamu. Menghargai uang berarti menghargai usaha yang telah dilakukan untuk mendapatkannya.",
+    "Tujuan Materi": "Memahami bagaimana cara memperoleh uang.",
+    "Pembukaan (Atas Gambar)": "Kamu pernah main game yang ada sistem crafting atau membangun sesuatu? Misalnya, untuk membuat sebuah pedang legendaris, kamu nggak bisa langsung dapat begitu saja, kan? Kamu harus berusaha dulu: mencari bahan-bahannya, menebang pohon, menambang bijih besi. Semakin banyak usaha yang kamu keluarkan, semakin bagus dan berharga pedang yang kamu dapatkan.",
+    "Gambar": "https://lh4.googleusercontent.com/q5MiWFpSLO5rxD8LgXGypA2uWv8KE4y1nrcH-G5CTM6QKgH66WlRtSPwUP-ZqxqSNMY5fELIIx53J0HUoDVjrGCLo7OAbgs14mRdAqJproVMYkYs89-TD0waLWjqL17n0iAacqndYkI5UEUb8mz0WTeSuBW2msi1NxboVuMQIY4IWSdEwYdYW5UDE7f6dvO1KOLBAbwx6Q",
+    "Materi": "Uang tidak muncul begitu saja, melainkan didapat dari hasil kerja keras. Uang adalah imbalan yang kita terima karena telah memberikan nilai kepada orang lain. Nilai itu bisa berupa barang (membuat kue), jasa (memperbaiki motor), atau ide (menulis cerita). Orang dewasa bekerja untuk mendapatkan gaji yang digunakan untuk kebutuhan keluarga, termasuk uang saku.",
+    "Penutupan/Summary": "Memahami ini penting banget, lho. Ini mengajarkan kita bahwa untuk mendapatkan sesuatu, kita harus memberi sesuatu terlebih dahulu, yaitu usaha dan kerja keras kita. Itulah pondasi dari ekonomi dan kunci untuk menjadi pribadi yang mandiri.",
     "Poin-Poin Penting": [
-      "Uang diperoleh dari bekerja, seperti menjadi guru, dokter, atau pengusaha.",
-      "Uang saku yang diberikan orang tua berasal dari hasil kerja mereka, jadi kita harus menghargainya.",
-      "Kita bisa belajar berusaha sejak kecil, misalnya dengan membantu orang tua atau menabung uang hadiah.",
-      "Memahami bahwa uang berasal dari kerja keras membantu kita menjadi lebih bertanggung jawab."
+      "Uang diperoleh dari bekerja.",
+      "Orang tua memberikan uang saku dari hasil kerja mereka.",
+      "Kita bisa mulai belajar berusaha kecil-kecilan.",
+      "Mengerti bahwa uang berasal dari kerja keras membantu kita menjadi lebih bertanggung jawab."
     ],
     "Simpel Quiz": [
       {
@@ -155,13 +167,16 @@
   {
     "Nomor": 5,
     "Judul Materi": "Cara Mengatur Uang Saku",
-    "Tujuan Materi": "Bisa mengatur uang saku harian atau mingguan agar cukup untuk kebutuhan dan tetap bisa menabung.",
-    "Materi": "Uang saku adalah uang yang diberikan orang tua untuk keperluan sehari-hari, seperti membeli makanan di sekolah. Jika diatur dengan baik, uang saku bisa cukup sampai akhir minggu, bahkan masih ada sisa untuk ditabung. Kamu bisa belajar membuat catatan harian atau rencana pengeluaran kecil agar tidak boros.",
+    "Tujuan Materi": "Mengelola uang saku harian atau mingguan agar cukup untuk kebutuhan dan tetap bisa menabung.",
+    "Pembukaan (Atas Gambar)": "Bayangin kamu diberi satu loyang kue utuh setiap pagi. Kue itu adalah uang sakumu. Sebelum kamu bisa menikmati kue itu sesukamu, ada dua potong yang \"wajib\" kamu amankan terlebih dahulu. Satu potong untuk ongkos, dan satu potong lagi untuk \"dirimu di masa depan\" alias tabungan. Sisa kuenya, barulah boleh kamu nikmati untuk jajan. Inilah yang disebut membuat anggaran.",
+    "Gambar": "https://cdn0-production-images-kly.akamaized.net/4rvzK0A8K6sPG4ZYp5WN_kClKd0=/500x281/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3728230/original/056150100_1639736411-pexels-photo-4475524__1_.jpeg",
+    "Materi": "Mengatur uang saku berarti merencanakan pengeluaran sejak awal. Caranya adalah dengan memprioritaskan hal-hal wajib terlebih dahulu. Misalnya, dari uang saku harian, sisihkan dulu untuk ongkos dan tabungan. Sisa uangnya barulah menjadi anggaran maksimal yang bisa digunakan untuk jajan. Dengan begitu, pengeluaran jadi lebih terkendali.",
+    "Penutupan/Summary": "Ini adalah inti dari mengelola uang saku: bukan tentang menghabiskan apa yang tersisa, tapi tentang merencanakan pengeluaranmu sejak awal. Dengan memisahkan kewajiban dan tujuan terlebih dahulu, kamu jadi punya kendali penuh atas uangmu.",
     "Poin-Poin Penting": [
-      "Uang saku sebaiknya dibagi untuk keperluan penting dulu, seperti makan siang atau alat tulis.",
-      "Sisakan sebagian uang saku untuk ditabung, walaupun hanya sedikit.",
-      "Jangan langsung habiskan uang saku di hari pertama; pikirkan kebutuhan untuk beberapa hari ke depan.",
-      "Buat catatan kecil tentang pengeluaran agar kamu tahu ke mana uang saku digunakan."
+      "Uang saku sebaiknya dibagi untuk keperluan penting dulu.",
+      "Sisakan sebagian uang saku untuk ditabung.",
+      "Jangan langsung habiskan uang saku di hari pertama.",
+      "Buat catatan kecil tentang pengeluaran agar bisa belajar mengelola lebih baik."
     ],
     "Simpel Quiz": [
       {
@@ -193,13 +208,16 @@
   {
     "Nomor": 6,
     "Judul Materi": "Belajar Hidup Hemat Sejak Dini",
-    "Tujuan Materi": "Memahami arti hidup hemat dan bisa membedakan antara kebutuhan dan pemborosan.",
-    "Materi": "Hidup hemat artinya menggunakan uang secara bijak dan tidak boros. Kamu bisa mulai belajar hemat dari hal sederhana, seperti membawa bekal ke sekolah, tidak membeli jajan setiap hari, dan memanfaatkan barang yang masih bisa dipakai. Hidup hemat bukan berarti pelit, tapi tahu kapan dan untuk apa uang digunakan.",
+    "Tujuan Materi": "Menganalisis perbedaan antara perilaku hemat dan pemborosan dalam pengambilan keputusan.",
+    "Pembukaan (Atas Gambar)": "Pernah main game MOBA atau RPG? Coba bayangin, karaktermu punya skill ultimate yang cooldown-nya lama banget. Apakah kamu akan memakai skill itu untuk mengalahkan monster kecil yang gampang? Tentu tidak, kan? Kamu pasti akan menyimpannya baik-baik dan baru mengeluarkannya saat melawan bos besar yang tangguh. Kamu melakukannya karena kamu tahu skill itu sangat berharga.",
+    "Gambar": "https://www.bcalife.co.id/storage/infographics/langkah-mudah-berhemat-1595409238.jpg",
+    "Materi": "Hemat bukan berarti pelit atau tidak boleh jajan sama sekali. Hemat adalah menggunakan uang secara cerdas untuk mendapatkan manfaat terbaik. Ini seperti strategi dalam game, di mana kita menggunakan sumber daya (uang) pada saat yang tepat dan untuk hal yang paling penting, bukan menghamburkannya untuk hal-hal sepele.",
+    "Penutupan/Summary": "Intinya, hemat adalah tentang menjadi seorang \"strategis\" yang cerdas dengan uangmu. Kamu tidak boros, tapi juga tidak menyiksa diri. Kamu hanya memastikan bahwa setiap rupiah yang kamu keluarkan akan memberikan \"serangan\" atau manfaat yang paling efektif untuk hidupmu.",
     "Poin-Poin Penting": [
-      "Hidup hemat membantu kita menyimpan uang untuk hal penting dan menghindari pemborosan.",
-      "Anak bisa mulai hemat dengan membawa bekal, membawa air minum sendiri, atau meminjam buku di perpustakaan.",
-      "Dengan hidup hemat, kita bisa menabung lebih banyak dan mencapai tujuan keuangan dengan cepat.",
-      "Menghemat bukan berarti tidak boleh beli apa-apa, tapi menghindari membeli yang tidak benar-benar diperlukan."
+      "Hidup hemat membantu kita menyimpan uang untuk hal penting.",
+      "Anak bisa mulai hemat dengan membawa bekal, air minum, atau meminjam buku.",
+      "Dengan hidup hemat, kita bisa menabung lebih banyak.",
+      "Menghemat bukan berarti tidak boleh beli apa-apa, tapi menghindari yang tidak perlu."
     ],
     "Simpel Quiz": [
       {
@@ -231,13 +249,16 @@
   {
     "Nomor": 7,
     "Judul Materi": "Mengenal Uang Digital",
-    "Tujuan Materi": "Mengenal bentuk uang digital dan tahu cara penggunaannya dengan aman.",
-    "Materi": "Uang digital adalah uang yang tidak berbentuk kertas atau koin, tetapi tersimpan dalam aplikasi di HP. Orang tua kadang membayar lewat aplikasi atau kartu, bukan tunai. Uang digital praktis, tapi juga perlu digunakan dengan hati-hati karena bisa membuat kita tergoda belanja berlebihan jika tidak sadar. Contoh platform uang digital adalah Gopay, Dana, dan OVO.",
+    "Tujuan Materi": "Memahami perbedaan antara uang digital (E wallet) dengan saldo rekening bank.",
+    "Pembukaan (Atas Gambar)": "Bayangin deh, uangmu itu seperti koleksi lagu favoritmu. Rekening bank itu ibarat hard disk besar di komputermu, tempat kamu menyimpan ribuan lagu. Sementara itu, dompet digital (e-wallet) itu seperti playlist di HP-mu. Kamu hanya memasukkan beberapa lagu yang paling sering kamu dengarkan agar bisa diputar dengan cepat dan praktis di mana saja.",
+    "Gambar": "https://statik.tempo.co/data/2019/06/19/id_849563/849563_720.jpg",
+    "Materi": "Rekening bank dan e-wallet sama-sama menyimpan uang, tapi fungsinya berbeda. Rekening bank fokus untuk menyimpan uang dalam jumlah besar dan jangka panjang, seperti brankas. Sedangkan e-wallet fokus pada kemudahan dan kecepatan untuk transaksi sehari-hari dalam jumlah kecil, seperti dompet praktis yang kita bawa ke mana-mana.",
+    "Penutupan/Summary": "Meskipun sama-sama berisi uang, fungsi fundamentalnya berbeda. Rekening bank adalah brankas penyimpanan, sementara e-wallet adalah dompet untuk transaksi cepat.",
     "Poin-Poin Penting": [
       "Uang digital bisa berbentuk saldo di e-wallet, transfer bank, atau kartu debit.",
-      "Anak-anak bisa mengenalnya saat orang tua membeli makanan online atau membayar lewat barcode.",
-      "Uang digital tidak boleh digunakan sembarangan karena tetap uang sungguhan, hanya berbeda bentuknya.",
-      "Belajar menggunakan uang digital sejak dini penting agar tidak boros dan tetap bisa mengatur keuangan."
+      "Anak-anak bisa mengenalnya saat orang tua membeli makanan online.",
+      "Uang digital tidak boleh digunakan sembarangan karena tetap uang sungguhan.",
+      "Belajar menggunakan uang digital penting agar tidak boros."
     ],
     "Simpel Quiz": [
       {
@@ -270,12 +291,15 @@
     "Nomor": 8,
     "Judul Materi": "Jangan Tergoda Iklan!",
     "Tujuan Materi": "Memahami bahwa iklan bertujuan agar kita membeli barang, dan belajar menolak jika tidak dibutuhkan.",
-    "Materi": "Iklan seringkali muncul di TV, internet, dan media sosial. Iklan membuat kita melihat barang itu sangat menarik, padahal belum tentu kita butuh. Kamu perlu belajar berpikir sebelum membeli, jangan hanya karena tertarik iklan. Kita harus tanya dulu: 'Apakah aku benar-benar butuh barang ini?'",
+    "Pembukaan (Atas Gambar)": "Pernah lihat filter di Instagram atau TikTok yang bisa membuat wajah kita jadi super mulus dan keren? Kita semua tahu kalau itu hanya efek visual, bukan wajah kita yang sebenarnya. Filter itu hanya \"menjual\" sebuah tampilan yang menarik. Nah, iklan seringkali bekerja persis seperti filter itu.",
+    "Gambar": "https://i.ytimg.com/vi/zTOTmUeuiD8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAy2piQvmQ7YtZwrQFa-7Cy7kfUzg",
+    "Materi": "Iklan dibuat untuk membujuk kita agar membeli sesuatu. Seringkali, iklan mengaitkan sebuah produk dengan hasil emosional yang tidak nyata, misalnya sepatu yang bisa membuat populer. Iklan menjual mimpi atau harapan. Padahal, popularitas datang dari kepribadian, bukan dari merek yang kita pakai.",
+    "Penutupan/Summary": "Tugas kita sebagai penonton yang cerdas adalah melihat menembus filter iklan itu dan menilai produknya berdasarkan fungsi aslinya, bukan sebagai tiket menuju popularitas.",
     "Poin-Poin Penting": [
-      "Iklan dibuat agar kita tertarik membeli, meski kadang tidak terlalu butuh.",
-      "Tidak semua yang terlihat bagus di iklan benar-benar penting untuk dibeli.",
+      "Iklan dibuat agar kita tertarik membeli.",
+      "Tidak semua yang terlihat bagus di iklan benar-benar penting.",
       "Sebelum membeli, pikirkan dulu apakah barang itu benar-benar dibutuhkan.",
-      "Dengan belajar menahan diri dari godaan iklan, kita jadi lebih hemat dan bijak."
+      "Belajar menahan diri dari godaan iklan membuat kita lebih hemat."
     ],
     "Simpel Quiz": [
       {
@@ -307,13 +331,16 @@
   {
     "Nomor": 9,
     "Judul Materi": "Belanja dengan Bijak",
-    "Tujuan Materi": "Belajar membandingkan harga, memilih yang dibutuhkan, dan tidak belanja berlebihan.",
-    "Materi": "Belanja dengan bijak itu artinya membeli barang yang benar-benar dibutuhkan, membandingkan harga, dan memperhatikan kualitas. Anak-anak bisa belajar ini saat membeli alat tulis, makanan, atau mainan. Jangan langsung beli barang yang pertama dilihat, coba cari tahu dulu apakah ada yang lebih murah atau lebih bagus.",
+    "Tujuan Materi": "Membandingkan harga, memilih yang dibutuhkan, dan tidak belanja berlebihan.",
+    "Pembukaan (Atas Gambar)": "Kalau kamu mau membangun sesuatu dari LEGO, apa yang pertama kali kamu lakukan? Kamu nggak mungkin kan asal comot balok warna-warni secara acak? Pasti kamu lihat dulu buku panduannya atau setidaknya punya gambaran jelas di kepala. Gambaran jelas inilah yang menjadi panduanmu.",
+    "Gambar": "https://www.farah.id/assets/images/news/2022/07/20220714101419_normal.jpg",
+    "Materi": "Belanja bijak dimulai dengan membuat daftar kebutuhan sebelum membeli sesuatu. Misalnya, saat ingin membeli tas baru, tentukan dulu fitur apa yang kamu butuhkan: ukuran, jumlah kantong, atau bahan. Dengan daftar ini, kamu bisa fokus mencari barang yang sesuai, bukan hanya tergoda oleh merek atau diskon.",
+    "Penutupan/Summary": "Langkah ini memastikan kamu berbelanja dengan tujuan, bukan hanya karena lapar mata. Baru setelah daftar ini ada, kamu bisa mulai membandingkan harga dan kualitas dari tas-tas yang memenuhi kriteriamu.",
     "Poin-Poin Penting": [
       "Belanja bijak berarti tidak asal beli, tapi melihat kebutuhan dan membandingkan harga.",
       "Penting juga memilih kualitas, bukan hanya murahnya saja.",
-      "Anak-anak bisa belajar dari pengalaman belanja sederhana, seperti membeli pensil atau makanan.",
-      "Belanja bijak membantu kita hemat dan tidak menyesal setelah membeli barang."
+      "Anak-anak bisa belajar dari pengalaman belanja sederhana.",
+      "Belanja bijak membantu kita hemat dan tidak menyesal."
     ],
     "Simpel Quiz": [
       {
@@ -345,13 +372,16 @@
   {
     "Nomor": 10,
     "Judul Materi": "Pentingnya Memiliki Tujuan Keuangan",
-    "Tujuan Materi": "Belajar merencanakan tujuan keuangan jangka pendek dan sederhana.",
-    "Materi": "Tujuan keuangan adalah hal yang ingin kamu capai dengan uang kita. Misalnya, ingin membeli tas baru dalam 3 bulan, maka kamu harus menabung sedikit demi sedikit. Dengan punya tujuan, kamu bisa lebih semangat menabung dan tidak tergoda belanja sembarangan. Kamu juga bisa belajar membuat rencana kecil agar uang saku tidak habis begitu saja.",
+    "Tujuan Materi": "Memahami pentingnya menetapkan tujuan keuangan jangka pendek maupun jangka panjang.",
+    "Pembukaan (Atas Gambar)": "Coba bayangkan kamu dan temanmu sedang melakukan perjalanan. Kamu bilang, \"Ayo kita pergi ke Kawah Putih di Bandung, kita harus sampai sana sebelum jam 3 sore!\" Sementara temanmu hanya bilang, \"Ayo kita jalan-jalan aja ke arah selatan sejauh mungkin.\" Perjalanan siapa yang lebih mungkin berhasil? Tentu saja perjalananmu, kan?",
+    "Gambar": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1lDegM-VR8yxf2Y2_Cf30FUPCcJ4-WnEMluZUdcmNJFoM9qzJ0dC63va_3czpyH-B2wEWk7WL4V7JS7l6jvQr2YkCtvGC8QGpGMjvz5x2MW8BL-KS5L1OlMLgUOA9H39h-71333s3K4-CYoRMjscjSejlMbAvaxH46WOOZ4shnNysVLc9z2h6qKFy/s500/financial-check-up.jpg",
+    "Materi": "Menetapkan tujuan keuangan yang spesifik (misalnya, \"menabung Rp 200.000 untuk membeli sepatu baru dalam 2 bulan\") jauh lebih efektif daripada sekadar \"menabung sebanyak-banyaknya\". Tujuan yang jelas memberikan motivasi, arah, dan batas waktu, sehingga membuat proses menabung lebih terukur dan bersemangat.",
+    "Penutupan/Summary": "Sebaliknya, menabung \"sebanyak-banyaknya\" itu seperti melakukan perjalanan tanpa peta dan tujuan. Tidak ada arah, tidak ada semangat, dan kamu tidak akan pernah tahu kapan kamu \"sampai\".",
     "Poin-Poin Penting": [
-      "Tujuan keuangan membantu kita fokus dalam menggunakan uang dan tidak membelanjakan sembarangan.",
-      "Contoh tujuan keuangan yang cocok untuk anak: beli buku cerita, tas sekolah baru, atau hadiah untuk keluarga.",
-      "Menabung dengan tujuan membuat proses menabung lebih menyenangkan dan tidak terasa berat.",
-      "Membuat catatan atau gambar tujuan bisa membantu kita lebih disiplin dan ingat kenapa harus menabung."
+      "Tujuan keuangan membantu kita fokus dalam menggunakan uang.",
+      "Contoh tujuan: beli buku cerita, tas sekolah baru, atau hadiah.",
+      "Menabung dengan tujuan membuat proses lebih menyenangkan.",
+      "Membuat catatan atau gambar tujuan bisa membantu lebih disiplin."
     ],
     "Simpel Quiz": [
       {
@@ -382,14 +412,17 @@
   },
   {
     "Nomor": 11,
-    "Judul Materi": "Menentukan Skala Prioritas Keuangan",
-    "Tujuan Materi": "Belajar membedakan antara kebutuhan utama dan keinginan, serta menyusun prioritas penggunaan uang saku.",
-    "Materi": "Dalam mengelola uang, penting untuk bisa membedakan antara kebutuhan dan keinginan. Misalnya, membeli makanan sehat untuk bekal adalah kebutuhan, sementara beli mainan setiap minggu adalah keinginan. Dengan menyusun skala prioritas, kamu bisa tahu mana yang harus didahulukan. Kamu juga bisa belajar membagi uang, seperti 50% untuk kebutuhan, 30% untuk ditabung, dan 20% untuk keinginan, agar uang saku cukup dan tidak cepat habis.",
+    "Judul Materi": "Menentukan Hitungan Prioritas Keuangan",
+    "Tujuan Materi": "Menyusun pengeluaran berdasarkan skala prioritas penggunaan uang saku.",
+    "Pembukaan (Atas Gambar)": "Mengelola uang saku itu ibarat mempersiapkan diri untuk mendaki gunung dengan ransel berkapasitas terbatas. Tentu, seorang pendaki yang cerdas akan memprioritaskan hal yang paling penting terlebih dahulu: mengamankan \"tiket masuk\" sebagai syarat wajib untuk memulai (kewajiban), kemudian memastikan \"air dan bekal\" cukup sebagai energi vital di perjalanan (kebutuhan), dan barulah terakhir memikirkan untuk membawa \"kamera profesional\" yang hanya untuk bersenang-senang di puncak (keinginan). Urutan inilah yang paling logis agar bisa sampai ke tujuan dengan selamat, bukan?",
+    "Gambar": "https://danirachmat.com/wp-content/uploads/2021/07/menentukan-prioritas.jpg",
+    "Materi": "Urutan prioritas yang paling logis dalam menggunakan uang adalah berdasarkan tingkat kepentingannya, yaitu Kewajiban, Kebutuhan, dan Keinginan. Kewajiban adalah pengeluaran yang harus dibayar (seperti iuran kas kelas). Kebutuhan adalah hal penting untuk aktivitas (seperti kuota internet untuk belajar). Keinginan adalah hal untuk kesenangan yang bisa ditunda (seperti tiket nonton).",
+    "Penutupan/Summary": "Dengan mendahulukan kewajiban dan kebutuhan, siswa tersebut belajar bertanggung jawab dan memastikan hal-hal paling penting dalam hidupnya berjalan lancar.",
     "Poin-Poin Penting": [
-      "Kebutuhan adalah hal yang harus dipenuhi agar kita bisa hidup sehat dan nyaman, seperti makan dan belajar.",
-      "Keinginan adalah hal yang menyenangkan tapi tidak wajib, seperti beli mainan atau es krim.",
-      "Menentukan prioritas membantu kita mengelola uang saku agar cukup untuk kebutuhan penting.",
-      "Anak bisa membuat daftar belanja sederhana dan mengurutkan mana yang harus dibeli dulu dan mana yang bisa ditunda."
+      "Kebutuhan adalah hal yang harus dipenuhi (makan, belajar).",
+      "Keinginan menyenangkan tapi tidak wajib (mainan, es krim).",
+      "Menentukan prioritas membantu mengelola uang saku.",
+      "Anak bisa membuat daftar belanja dan mengurutkannya."
     ],
     "Simpel Quiz": [
       {
@@ -421,13 +454,16 @@
   {
     "Nomor": 12,
     "Judul Materi": "Mengenal Risiko dalam Keuangan",
-    "Tujuan Materi": "Memahami bahwa setiap keputusan keuangan punya risiko dan penting untuk berpikir sebelum bertindak.",
-    "Materi": "Dalam dunia keuangan, tidak semua keputusan itu aman. Misalnya, kalau semua uang sakumu dipakai beli barang online tanpa tahu tokonya aman atau tidak, bisa saja tertipu. Risiko dalam keuangan bisa berarti kehilangan uang karena keputusan yang tidak hati-hati. Kamu perlu belajar mengenali dan menghindari risiko sejak kecil.",
+    "Tujuan Materi": "Mengevaluasi risiko setiap keputusan keuangan yang diambil.",
+    "Pembukaan (Atas Gambar)": "Jika ada orang asing di jalan menawarimu sebuah \"ramuan ajaib\" yang katanya bisa membuatmu terbang, apakah kamu akan langsung meminumnya? Tentu tidak, kan? Kamu tidak tahu apa isinya, dan risikonya terlalu besar—bisa jadi itu racun! Tawaran investasi dari temanmu itu persis seperti \"ramuan ajaib\" tadi.",
+    "Gambar": "https://storage.googleapis.com/flip-prod-mktg-strapi/media-library/risiko_keuangan_b014a8c268/risiko_keuangan_b014a8c268.jpg",
+    "Materi": "Tawaran investasi dengan keuntungan yang sangat besar dalam waktu singkat (misalnya 100% dalam sehari) hampir pasti adalah penipuan. Dalam keuangan, semakin tinggi potensi keuntungan yang ditawarkan, semakin tinggi pula risikonya. Tawaran yang terlalu bagus untuk jadi kenyataan biasanya tidak nyata dan berpotensi membuat kita kehilangan seluruh uang kita.",
+    "Penutupan/Summary": "Dalam keuangan, aturan utamanya adalah: semakin tinggi potensi keuntungan yang ditawarkan dalam waktu singkat, semakin tinggi pula risikonya. Pilihan paling bijak adalah melindungi uangmu dan menolak tawaran yang tidak masuk akal.",
     "Poin-Poin Penting": [
-      "Risiko keuangan bisa terjadi saat kita mengambil keputusan tanpa pertimbangan, seperti belanja impulsif atau ikut tren.",
+      "Risiko keuangan bisa terjadi saat kita mengambil keputusan tanpa pertimbangan.",
       "Penipuan online bisa terjadi jika membeli dari tempat yang tidak terpercaya.",
-      "Menghindari risiko bisa dilakukan dengan bertanya ke orang tua atau memeriksa dulu sebelum belanja.",
-      "Anak juga bisa belajar dari pengalaman orang lain agar tidak mengulangi kesalahan yang sama."
+      "Menghindari risiko bisa dilakukan dengan bertanya ke orang tua.",
+      "Belajar dari pengalaman orang lain agar tidak mengulangi kesalahan."
     ],
     "Simpel Quiz": [
       {
@@ -461,12 +497,15 @@
     "Nomor": 13,
     "Judul Materi": "Pentingnya Menabung Secara Teratur",
     "Tujuan Materi": "Memahami pentingnya kebiasaan menabung secara rutin dan manfaat jangka panjangnya.",
-    "Materi": "Menabung bukan hanya dilakukan saat ada sisa uang, tetapi harus jadi kebiasaan. Dengan menabung secara rutin, uang bisa terkumpul lebih banyak, meskipun jumlahnya sedikit-sedikit. Anak bisa mulai dengan menabung Rp1.000 per hari. Jika dilakukan setiap hari, dalam sebulan bisa terkumpul banyak.",
+    "Pembukaan (Atas Gambar)": "Pernah lihat proses terbentuknya stalaktit di gua? Itu bukan hasil dari satu guyuran air besar, melainkan dari jutaan tetesan air kecil yang jatuh secara konsisten selama bertahun-tahun. Setiap tetesan sepertinya tidak berarti, tetapi seiring waktu, mereka membangun sesuatu yang besar dan mengagumkan.",
+    "Gambar": "https://reliance-life.co.id/storage/news-image/nxopB5Bf5unOYF1cEiDorqaAfjIxg5FUSMeNelqa.jpg",
+    "Materi": "Manfaat utama dari menabung secara teratur sejak dini bukanlah tentang jumlah uangnya, melainkan tentang membentuk kebiasaan dan disiplin. Seperti tetesan air yang membangun stalaktit, menabung sedikit demi sedikit secara konsisten akan menghasilkan sesuatu yang besar di masa depan. Kebiasaan ini juga melatih kesabaran dan mempersiapkan kita untuk kebutuhan tak terduga.",
+    "Penutupan/Summary": "Jadi, yang paling berharga dari menabung sejak dini bukanlah jumlah uangnya, melainkan kebiasaan disiplin yang terbentuk.",
     "Poin-Poin Penting": [
-      "Menabung secara teratur membantu kita mencapai tujuan keuangan tanpa terasa berat.",
-      "Tidak harus menabung dalam jumlah besar, yang penting rutin dan konsisten.",
-      "Anak bisa membuat jadwal atau catatan menabung agar lebih semangat.",
-      "Kebiasaan menabung sejak dini membantu anak lebih siap menghadapi kebutuhan mendadak di masa depan."
+      "Menabung secara teratur membantu kita mencapai tujuan.",
+      "Tidak harus menabung dalam jumlah besar, yang penting rutin.",
+      "Anak bisa membuat jadwal menabung agar lebih semangat.",
+      "Kebiasaan ini membantu anak lebih siap menghadapi kebutuhan mendadak."
     ],
     "Simpel Quiz": [
       {
@@ -498,12 +537,15 @@
   {
     "Nomor": 14,
     "Judul Materi": "Mengenal Catatan Keuangan Pribadi",
-    "Tujuan Materi": "Memahami pentingnya mencatat pemasukan dan pengeluaran untuk tahu ke mana uang mereka digunakan.",
-    "Materi": "Catatan keuangan adalah buku atau lembaran yang berisi informasi tentang uang yang kita dapat dan yang kita keluarkan. Dengan mencatat, kita tahu apakah uang saku cukup, dan bisa belajar dari kebiasaan belanja. Kamu bisa mulai dari buku kecil atau kertas sederhana untuk mencatat kapan dan untuk apa uang digunakan.",
+    "Tujuan Materi": "Menggunakan data dari catatan keuangan untuk mengevaluasi kebiasaan belanja dan merumuskan tindakan perbaikan yang efektif.",
+    "Pembukaan (Atas Gambar)": "Anggap dirimu adalah kapten dari kapal luar angkasa 'Misi Masa Depan', dan uang sakumu adalah sumber dayamu. Catatan keuangan adalah panel kontrol utama yang menunjukkan status kapal. Saat memeriksa panel, kamu menemukan alarm berbunyi: ada kebocoran energi sebesar 60% yang terus-menerus mengalir ke sistem hiburan 'Arcade Minuman Instan' yang tidak penting. Padahal, kamu butuh semua energi itu untuk mencapai planet tujuanmu (membeli sesuatu yang kamu inginkan). Sebagai kapten yang andal, apa perintahmu? Pasti kamu akan segera mematikan daya ke sistem yang boros itu dan mengalihkan semua energi ke mesin utama agar misimu berhasil.",
+    "Gambar": "https://i.ytimg.com/vi/t7MGnwnhiVE/maxresdefault.jpg",
+    "Materi": "Catatan keuangan berfungsi untuk melacak ke mana saja uang kita pergi. Dengan melihat catatan tersebut, kita bisa mengetahui kebiasaan belanja kita. Jika data menunjukkan pengeluaran terbesar ada pada pos yang tidak penting (misalnya, terlalu banyak jajan minuman), maka langkah logisnya adalah membuat rencana untuk mengurangi pengeluaran tersebut, seperti mulai membawa botol minum sendiri.",
+    "Penutupan/Summary": "Inti dari catatan keuangan adalah memberikan kesadaran yang mendorong tindakan. Tanpa tindakan, catatan itu hanyalah angka-angka tak berguna.",
     "Poin-Poin Penting": [
-      "Mencatat keuangan membantu kita melihat kebiasaan baik atau boros dalam penggunaan uang.",
-      "Anak-anak bisa mencatat pemasukan (uang saku, hadiah) dan pengeluaran (jajan, alat tulis).",
-      "Catatan bisa dibuat harian, mingguan, atau bulanan agar lebih mudah dianalisis.",
+      "Mencatat keuangan membantu kita melihat kebiasaan penggunaan uang.",
+      "Anak-anak bisa mencatat pemasukan dan pengeluaran.",
+      "Catatan bisa dibuat harian, mingguan, atau bulanan.",
       "Dengan kebiasaan ini, anak bisa lebih bijak dan tahu kapan harus hemat."
     ],
     "Simpel Quiz": [
@@ -535,35 +577,38 @@
   },
   {
     "Nomor": 15,
-    "Judul Materi": "Menghindari Sifat Boros",
-    "Tujuan Materi": "Anak belajar mengenali tanda-tanda boros dan bagaimana menghindarinya dalam kehidupan sehari-hari.",
-    "Materi": "Boros adalah kebiasaan menghabiskan uang untuk hal-hal yang tidak penting. Misalnya, jajan setiap istirahat padahal bisa bawa bekal dari rumah. Kamu perlu mengenali kebiasaan ini dan berusaha menguranginya. Uang yang dihemat bisa digunakan untuk hal yang lebih bermanfaat atau ditabung.",
+    "Judul Materi": "Menghindari Phishing",
+    "Tujuan Materi": " Menganalisis ciri-ciri penipuan digital (phishing) untuk melindungi keamanan akun game dan data pribadi.",
+    "Pembukaan (Atas Gambar)": "Bayangkan ada seorang kurir datang ke rumahmu membawa kotak besar bertuliskan \"SELAMAT, ANDA MENANG MOBIL!\". Kurir itu lalu bilang, \"Tapi untuk mengambil mobilnya, saya harus pinjam kunci rumah Bapak/Ibu dulu untuk verifikasi.\" Apakah kamu akan memberikannya? Tentu tidak! Itu sangat mencurigakan. Kunci rumahmu adalah privasi.",
+    "Gambar": "https://assets.jago.com/web-assets/public/blog-202310-sifat-boros-dalam-islam-cara-mengatasi.jpg",
+    "Materi": "Phishing adalah upaya penipuan untuk 'memancing' data pribadi rahasia seperti username dan password. Ciri-cirinya adalah tawaran yang terlalu indah untuk jadi kenyataan, permintaan data rahasia, dan menciptakan rasa urgensi. Jika muncul pop-up hadiah yang meminta data login, tindakan paling tepat adalah segera menutupnya dan jangan pernah memberikan informasi pribadi.",
+    "Penutupan/Summary": "Lindungi \"kunci rumah digitalmu\" dengan baik. Jika ragu, selalu lebih baik untuk mengabaikannya. Hal yang harus diingat: Tawaran Terlalu Indah, Meminta Data Rahasia, dan Menciptakan Urgensi adalah ciri-ciri phishing.",
     "Poin-Poin Penting": [
-      "Sifat boros bisa muncul dari kebiasaan belanja karena ikut-ikutan atau tidak berpikir panjang.",
-      "Menghindari boros bisa dimulai dari membawa bekal, membuat daftar belanja, dan menolak ajakan belanja jika tidak perlu.",
-      "Boros tidak hanya merugikan kita sekarang, tapi juga bisa membuat tujuan keuangan sulit tercapai.",
-      "Orang yang hemat bukan berarti pelit, tapi tahu kapan waktu yang tepat untuk menggunakan uang."
+      "Phishing adalah penipuan untuk mencuri data pribadi seperti password.",
+      "Jangan mudah percaya dengan iming-iming hadiah di internet.",
+      "Jangan pernah memberikan password atau kode OTP kepada siapapun.",
+      "Jika ada yang mencurigakan, segera tutup dan abaikan."
     ],
     "Simpel Quiz": [
       {
-        "pertanyaan": "Apa itu boros?",
+        "pertanyaan": "Apa itu phishing?",
         "pilihan": [
-          "Menghemat uang",
-          "Menghabiskan uang untuk hal tidak penting",
-          "Menyimpan uang di celengan",
-          "Menabung di bank"
+          "Memancing ikan di laut",
+          "Penipuan untuk mencuri data pribadi online",
+          "Memberi hadiah kepada teman",
+          "Menjual barang di internet"
         ],
-        "jawaban": "Menghabiskan uang untuk hal tidak penting"
+        "jawaban": "Penipuan untuk mencuri data pribadi online"
       },
       {
-        "pertanyaan": "Bagaimana cara menghindari sifat boros?",
+        "pertanyaan": "Apa yang harus dilakukan jika mendapat pesan mencurigakan yang meminta password?",
         "pilihan": [
-          "Belanja setiap hari",
-          "Beli barang karena teman beli",
-          "Membuat daftar kebutuhan dan membawa bekal",
-          "Ikuti iklan yang menarik"
+          "Langsung memberikannya",
+          "Mengabaikan dan menghapus pesan itu",
+          "Membagikan pesan itu ke teman-teman",
+          "Mengklik link yang diberikan"
         ],
-        "jawaban": "Membuat daftar kebutuhan dan membawa bekal"
+        "jawaban": "Mengabaikan dan menghapus pesan itu"
       }
     ],
     "Sumber": [
@@ -574,13 +619,16 @@
   {
     "Nomor": 16,
     "Judul Materi": "Mengenal Produk Keuangan Dasar",
-    "Tujuan Materi": "Anak mengenal produk keuangan sederhana seperti tabungan dan celengan sebagai alat bantu mengelola uang.",
-    "Materi": "Produk keuangan adalah layanan atau benda yang membantu kita menyimpan, mengelola, atau menggunakan uang. Anak-anak bisa mulai mengenal celengan dan tabungan di bank sebagai produk keuangan yang aman dan berguna. Dengan tahu produk ini, kamu bisa memilih cara menabung yang paling cocok, baik di rumah maupun di lembaga resmi seperti bank.",
+    "Tujuan Materi": "Memahami produk keuangan seperti tabungan dan celengan sebagai alat bantu mengelola uang.",
+    "Pembukaan (Atas Gambar)": "Menyimpan uang di celengan itu seperti menyimpan es krim di dalam kotak bekal biasa di mejamu. Mungkin aman untuk beberapa saat, tapi bisa meleleh atau diambil orang. Sedangkan menabung di bank itu seperti menyimpan es krim di dalam kulkas super canggih yang terkunci rapat, suhunya terjaga, dan bahkan es krimnya bisa bertambah sendiri sedikit demi sedikit.",
+    "Gambar": "https://blog.eku.id/wp-content/uploads/2024/10/Untitled-design-1.jpg",
+    "Materi": "Celengan dan tabungan di bank adalah produk keuangan dasar. Celengan cocok untuk memulai kebiasaan menabung di rumah. Namun, menabung di bank memiliki keunggulan utama, yaitu tingkat keamanan yang lebih tinggi karena diawasi dan dijamin oleh pemerintah, serta adanya potensi uang untuk bertambah sedikit melalui bunga.",
+    "Penutupan/Summary": "Celengan bagus untuk memulai kebiasaan, tapi bank adalah langkah selanjutnya untuk menyimpan uang dengan lebih aman dan cerdas.",
     "Poin-Poin Penting": [
-      "Celengan adalah tempat menabung di rumah, cocok untuk menyimpan uang saku secara sederhana dan mudah.",
-      "Tabungan di bank lebih aman dan uangnya bisa bertambah karena mendapat bunga atau bonus.",
-      "Memiliki tabungan mengajarkan anak untuk disiplin dan menghargai uang yang disimpan.",
-      "Anak bisa dibimbing orang tua untuk mengenal cara buka rekening tabungan di bank khusus anak."
+      "Celengan adalah tempat menabung di rumah, cocok untuk pemula.",
+      "Tabungan di bank lebih aman dan uangnya bisa bertambah.",
+      "Memiliki tabungan mengajarkan anak untuk disiplin.",
+      "Anak bisa dibimbing orang tua untuk membuka rekening tabungan."
     ],
     "Simpel Quiz": [
       {
@@ -612,13 +660,16 @@
   {
     "Nomor": 17,
     "Judul Materi": "Bijak Menggunakan Uang Digital",
-    "Tujuan Materi": "Anak memahami pentingnya kehati-hatian dan tanggung jawab dalam menggunakan uang digital.",
-    "Materi": "Sekarang banyak anak yang sudah mengenal uang digital, seperti saldo di e-wallet atau belanja lewat aplikasi. Uang digital memudahkan transaksi, tapi jika tidak digunakan dengan bijak bisa cepat habis. Kamu harus belajar membatasi diri, dan hanya menggunakan uang digital untuk hal yang benar-benar dibutuhkan, bukan karena iklan atau keinginan sesaat.",
+    "Tujuan Materi": "Memahami pentingnya kehati-hatian dan tanggung jawab dalam menggunakan uang digital.",
+    "Pembukaan (Atas Gambar)": "Saat kamu jajan pakai uang tunai, kamu bisa melihat dompetmu jadi makin tipis. Kamu bisa \"merasakan\" uangmu berkurang. Tapi saat pakai uang digital, kamu hanya menekan tombol \"Bayar\" dan angkanya berubah. Rasanya tidak nyata, seperti bermain game. Karena tidak terasa, kita jadi gampang kebablasan.",
+    "Gambar": "https://cdn.prod.website-files.com/60865b2e948bd69b89087ef2/60b831ffa6b7be612f101006_Cara_Bijak_Gunakan_Dompet_Digital_Biar_Nggak_Boros_1.jpg",
+    "Materi": "Karena transaksi uang digital tidak terasa secara fisik, kita jadi mudah boros. Cara paling bijak untuk mengontrolnya adalah dengan rutin memeriksa \"Riwayat Transaksi\" di aplikasi e-wallet. Riwayat transaksi ini seperti rapor keuangan yang menunjukkan semua pengeluaran kita secara jujur, sehingga kita bisa sadar dan membuat rencana yang lebih baik.",
+    "Penutupan/Summary": "Melihat data konkret dari riwayat transaksi adalah cara paling jujur untuk \"menyentil\" diri sendiri dan membuat rencana yang lebih baik ke depannya.",
     "Poin-Poin Penting": [
-      "Uang digital adalah uang dalam bentuk elektronik yang tersimpan di aplikasi seperti e-wallet.",
-      "Gunakan uang digital hanya untuk keperluan penting, bukan untuk membeli hal yang tidak dibutuhkan.",
-      "Selalu minta izin atau diskusi dengan orang tua sebelum menggunakan uang digital.",
-      "Hindari klik sembarangan atau membagikan kode/kata sandi agar saldo tidak hilang."
+      "Uang digital adalah uang elektronik di aplikasi seperti e-wallet.",
+      "Gunakan uang digital hanya untuk keperluan penting.",
+      "Selalu minta izin orang tua sebelum menggunakan uang digital.",
+      "Hindari klik sembarangan atau membagikan kode/kata sandi."
     ],
     "Simpel Quiz": [
       {
@@ -650,13 +701,16 @@
   {
     "Nomor": 18,
     "Judul Materi": "Mengatur Uang Saku Harian dan Mingguan",
-    "Tujuan Materi": "Anak belajar mengatur uang saku dengan membaginya untuk keperluan harian dan mingguan.",
-    "Materi": "Uang saku yang kamu terima setiap hari atau setiap minggu harus diatur agar tidak habis sekaligus. Kamu bisa membuat rencana sederhana: sebagian untuk jajan, sebagian untuk ditabung. Dengan cara ini, kamu belajar menahan diri dan menjadi lebih disiplin dalam menggunakan uang.",
+    "Tujuan Materi": "Mengatur uang saku dengan membaginya untuk keperluan harian dan mingguan.",
+    "Pembukaan (Atas Gambar)": "Bayangkan kamu adalah seorang pelatih tim sepak bola, dan uang saku Rp200.000 itu adalah 11 pemainmu untuk seminggu penuh. Pelatih yang cerdas tidak akan menyuruh semua pemainnya jadi penyerang di hari pertama dan membiarkan gawang kosong di hari-hari berikutnya. Dia akan membagi pemainnya ke berbagai posisi.",
+    "Gambar": "https://i0.wp.com/rocketpocket.id/wp-content/uploads/2022/07/Screenshot-389.png?resize=580%2C373&ssl=1",
+    "Materi": "Cara terbaik untuk mengelola uang saku mingguan adalah dengan metode persentase, seperti aturan 50/30/20. Caranya, bagi uang sakumu menjadi tiga pos: 50% untuk Kebutuhan (transportasi, makan), 30% untuk Keinginan (jajan, main), dan 20% untuk Tabungan. Metode ini memberikan struktur yang jelas dan memastikan semua pos penting terisi.",
+    "Penutupan/Summary": "Metode ini memberikan struktur yang jelas, memastikan semua pos penting terisi, dan melatihmu untuk hidup seimbang.",
     "Poin-Poin Penting": [
-      "Atur uang saku harian agar cukup untuk kebutuhan penting, seperti makanan dan alat tulis.",
+      "Atur uang saku harian agar cukup untuk kebutuhan penting.",
       "Sisihkan sebagian uang untuk ditabung, walau jumlahnya kecil.",
-      "Jangan habiskan semua uang di hari pertama, karena masih ada hari berikutnya yang butuh uang juga.",
-      "Anak bisa membuat pembagian sederhana, misalnya 70% untuk jajan, 30% untuk ditabung."
+      "Jangan habiskan semua uang di hari pertama.",
+      "Anak bisa membuat pembagian sederhana, misal 70% jajan, 30% ditabung."
     ],
     "Simpel Quiz": [
       {
@@ -674,7 +728,6 @@
         "pilihan": [
           "Semua untuk beli mainan",
           "Sebagian untuk jajan, sebagian ditabung",
-          
           "Dibelikan satu barang besar",
           "Langsung disimpan semua"
         ],
@@ -689,13 +742,16 @@
   {
     "Nomor": 19,
     "Judul Materi": "Mengenal Konsep Hemat dan Tidak Boros",
-    "Tujuan Materi": "Anak memahami perbedaan antara hemat dan pelit, serta bisa membedakan mana perilaku boros dan bijak.",
-    "Materi": "Banyak dari kamu berpikir bahwa hemat itu sama dengan pelit, padahal berbeda. Hemat artinya menggunakan uang dengan bijak dan sesuai kebutuhan. Sementara pelit berarti tidak mau membantu orang lain sama sekali. Kamu perlu belajar hidup hemat agar bisa menabung dan tidak boros, tetapi tetap berbagi jika diperlukan.",
+    "Tujuan Materi": "Membedakan perilaku hemat, pelit, boros, dan bijak dalam menggunakan uang.",
+    "Pembukaan (Atas Gambar)": "Bayangkan ada dua orang koki yang diberi satu ekor ayam utuh. Koki pertama adalah orang yang \"pelit\". Dia menolak memasak ayam itu karena takut bahannya habis, akhirnya ayamnya busuk. Koki kedua adalah orang yang \"hemat\". Dia menggunakan semua bagian ayam dengan cerdas, tidak ada yang terbuang dan semua orang bisa makan.",
+    "Gambar": "https://media.kompas.tv/library/image/content_article/article_img/20230908121018.jpg",
+    "Materi": "Perbedaan mendasar antara hemat dan pelit adalah pada tujuannya. Orang hemat fokus memaksimalkan nilai dari setiap uang yang dikeluarkan (mendapatkan manfaat terbaik). Sementara itu, orang pelit fokus menolak mengeluarkan uang sama sekali, bahkan untuk hal penting. Hemat itu cerdas, sedangkan pelit itu cenderung merugikan diri sendiri.",
+    "Penutupan/Summary": "Jadi, hemat adalah tentang efisiensi, sedangkan pelit adalah tentang penolakan.",
     "Poin-Poin Penting": [
-      "Hemat berarti tahu cara menggunakan uang sebaik mungkin, bukan tidak mau mengeluarkan uang.",
-      "Orang yang hemat tetap bisa membeli sesuatu, tapi setelah dipikirkan baik-baik.",
-      "Boros adalah kebiasaan membeli sesuatu yang tidak penting atau tidak direncanakan.",
-      "Hidup hemat membantu kita mencapai tujuan keuangan tanpa harus merasa kekurangan."
+      "Hemat berarti tahu cara menggunakan uang sebaik mungkin.",
+      "Orang yang hemat tetap bisa membeli sesuatu setelah dipikirkan.",
+      "Boros adalah kebiasaan membeli sesuatu yang tidak penting.",
+      "Hidup hemat membantu kita mencapai tujuan keuangan."
     ],
     "Simpel Quiz": [
       {
@@ -727,13 +783,16 @@
   {
     "Nomor": 20,
     "Judul Materi": "Belajar Literasi Keuangan Sejak Dini Itu Penting",
-    "Tujuan Materi": "Anak memahami bahwa belajar mengelola uang sejak dini akan membuat mereka lebih mandiri dan tidak selalu bergantung pada orang tua.",
-    "Materi": "Banyak dari kamu berpikir bahwa urusan uang hanya tanggung jawab orang tua. Tapi sebenarnya, belajar cara mengatur uang sejak dini sangat penting untuk masa depan. Dengan belajar literasi keuangan, Kamu jadi tahu bagaimana cara menabung, membedakan kebutuhan dan keinginan, serta menghindari kebiasaan boros. Kalau kita terbiasa mengelola uang sejak dini, nanti saat dewasa kita gak akan bingung atau bergantung terus pada orang lain. Ini adalah langkah awal menjadi pribadi yang mandiri dan bertanggung jawab.",
+    "Tujuan Materi": "Memahami bahwa belajar mengelola uang sejak dini akan membuat mereka lebih mandiri dan tidak selalu bergantung pada orang tua.",
+    "Pembukaan (Atas Gambar)": "Bayangkan hidup ini adalah sebuah lautan luas. Belajar Matematika, IPA, atau Bahasa itu seperti belajar cara membuat perahu yang kokoh. Tapi, belajar mengelola keuangan itu seperti belajar cara membaca kompas dan peta. Tanpa kemampuan navigasi ini, perahu sebagus apa pun hanya akan terombang-ambing di lautan tanpa arah.",
+    "Gambar": "https://www.bhuanajaya.desa.id/wp-content/uploads/2024/05/Poster-Literasi-Keuangan-Pada-Anak-Usia-Sekolah-Salma-Azzahra-Kurnia-20012-1.png",
+    "Materi": "Literasi keuangan adalah kemampuan dasar untuk bertahan hidup (life skill) di dunia modern. Hampir semua keputusan penting dalam hidup, mulai dari memilih pendidikan hingga membeli rumah, sangat bergantung pada kemampuan ini. Belajar mengelola uang adalah dasar dari kemandirian, pondasi ketenangan hidup, dan alat untuk mencapai cita-cita.",
+    "Penutupan/Summary": "Tanpa skill ini, kecerdasan di bidang lain tidak akan bisa digunakan secara maksimal. Itulah mengapa ia disebut sebagai salah satu kemampuan bertahan hidup yang paling fundamental di dunia modern.",
     "Poin-Poin Penting": [
-      "Literasi keuangan mengajarkan anak untuk berpikir bijak dalam menggunakan uang, bukan hanya menghabiskannya.",
-      "Anak yang belajar mengatur keuangannya sendiri akan lebih siap menghadapi tantangan hidup di masa depan.",
-      "Mengandalkan orang tua terus-menerus bisa membuat kita sulit belajar mandiri dalam hal keuangan.",
-      "Dengan pengetahuan keuangan sejak SMP, kita bisa membuat keputusan lebih cerdas tentang uang, baik saat ini maupun saat dewasa nanti."
+      "Literasi keuangan mengajarkan anak untuk berpikir bijak.",
+      "Anak yang belajar mengatur keuangan akan lebih siap di masa depan.",
+      "Mengandalkan orang tua terus-menerus bisa membuat sulit belajar mandiri.",
+      "Dengan pengetahuan keuangan, kita bisa membuat keputusan lebih cerdas."
     ],
     "Simpel Quiz": [
       {
@@ -765,13 +824,16 @@
   {
     "Nomor": 21,
     "Judul Materi": "Apa Itu Investasi?",
-    "Tujuan Materi": "Anak mengenal arti investasi sebagai cara mengembangkan uang untuk masa depan.",
-    "Materi": "Investasi adalah cara menanamkan uang agar bisa bertambah nilainya di masa depan. Misalnya, jika kamu menaruh uang di suatu tempat yang menghasilkan keuntungan, seperti membeli reksa dana atau menabung emas, itu disebut investasi. Tujuan investasi adalah untuk masa depan, bukan untuk dipakai sekarang. Jadi anak-anak harus belajar bahwa investasi butuh waktu dan kesabaran.",
+    "Tujuan Materi": "Memahami arti investasi sebagai cara mengembangkan uang untuk masa depan.",
+    "Pembukaan (Atas Gambar)": "Bayangkan kamu punya dua buah mangga. Menabung itu seperti menyimpan satu buah mangga di dalam kulkas. Jumlahnya tetap satu. Sedangkan investasi itu seperti mengambil biji dari mangga yang satunya lagi, lalu menanamnya di kebun. Jika kamu sabar merawatnya, biji itu akan tumbuh menjadi pohon yang kelak memberimu puluhan mangga.",
+    "Gambar": "https://blog.rumahweb.com/wp-content/uploads/2022/08/Banner-Apa-Itu-Investasi-adalah-Pengertian-Jenis-hingga-Risikonya.png",
+    "Materi": "Investasi berbeda dengan menabung. Menabung bertujuan menjaga nilai uang agar aman untuk jangka pendek. Sementara itu, investasi bertujuan menumbuhkan atau mengembangkan nilai uang untuk jangka panjang, meskipun ada sedikit risiko. Investasi ibarat menanam benih agar bisa panen di masa depan.",
+    "Penutupan/Summary": "Investasi fokus pada pertumbuhan, dengan menerima sedikit risiko demi mendapatkan hasil yang lebih besar di masa depan.",
     "Poin-Poin Penting": [
-      "Investasi berarti mengelola uang agar bisa berkembang dan bertambah nilainya.",
-      "Tujuan investasi bisa untuk pendidikan, liburan, atau keperluan jangka panjang lainnya.",
-      "Investasi berbeda dari menabung; menabung itu menyimpan, sedangkan investasi itu menumbuhkan uang.",
-      "Anak bisa mulai memahami investasi sederhana seperti emas atau reksa dana, dengan bimbingan orang tua."
+      "Investasi berarti mengelola uang agar bisa berkembang.",
+      "Tujuan investasi bisa untuk pendidikan, liburan, atau jangka panjang.",
+      "Investasi berbeda dari menabung; menabung menyimpan, investasi menumbuhkan.",
+      "Anak bisa memahami investasi sederhana dengan bimbingan orang tua."
     ],
     "Simpel Quiz": [
       {
@@ -804,13 +866,16 @@
   {
     "Nomor": 22,
     "Judul Materi": "Jenis-Jenis Investasi yang Cocok untuk Anak dan Remaja",
-    "Tujuan Materi": "Anak mengenal contoh investasi yang aman dan sederhana bagi usia mereka.",
-    "Materi": "Tidak semua jenis investasi cocok untuk anak. Tapi ada beberapa pilihan yang bisa dikenalkan sejak dini, misalnya menabung emas, reksa dana, atau membuka tabungan berjangka. Semua itu bisa dilakukan dengan bantuan orang tua. Penting untuk memahami bahwa setiap investasi memiliki risiko dan keuntungan yang berbeda.",
+    "Tujuan Materi": "Memahami jenis investasi yang aman dan sederhana bagi usia remaja.",
+    "Pembukaan (Atas Gambar)": "Saat kamu main game, ada pedang kristal yang serangannya kuat tapi rapuh, dan ada juga perisai baja yang mungkin tidak keren, tapi sangat kuat. Dalam dunia investasi, ada aset yang seperti pedang kristal, dan ada yang seperti perisai baja.",
+    "Gambar": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjK0-XVA3FlF05p5WdP5zUqVzq46gb9uxYAiyiZsJyPHAlmEXgns0WjgnVCzp3Ml9S-t5f3wyFMbKqmeXOuu09GpBhPgaC-8JBaiMhS4IK9pvFT6WRapZka8v0At3vTk7G48TI9sk5UYJN8/s1600/jenis+investasi.jpg",
+    "Materi": "Untuk pemula, investasi yang risikonya paling rendah adalah Emas. Nilai emas cenderung stabil dan diakui sejak dulu. Emas tidak terikat pada kinerja perusahaan tertentu dan wujudnya nyata, sehingga lebih mudah dipahami dibandingkan saham yang harganya bisa naik turun dengan cepat. Emas sering dianggap sebagai aset 'aman'.",
+    "Penutupan/Summary": "Karena sifatnya yang stabil dan teruji oleh waktu, emas sering dijadikan pondasi atau aset aman dalam portofolio investasi.",
     "Poin-Poin Penting": [
-      "Reksa dana cocok untuk pemula karena dikelola oleh manajer investasi profesional.",
-      "Emas adalah pilihan investasi yang stabil dan mudah dimengerti anak.",
-      "Tabungan berjangka bisa membantu anak disiplin menyimpan uang untuk jangka waktu tertentu.",
-      "Sebelum memilih investasi, anak harus berdiskusi dengan orang tua atau guru."
+      "Reksa dana cocok untuk pemula karena dikelola oleh profesional.",
+      "Emas adalah pilihan investasi yang stabil dan mudah dimengerti.",
+      "Tabungan berjangka bisa membantu anak disiplin.",
+      "Sebelum memilih investasi, harus berdiskusi dengan orang tua."
     ],
     "Simpel Quiz": [
       {
@@ -841,14 +906,17 @@
   },
   {
     "Nomor": 23,
-    "Judul Materi": "Mengenal P2P Lending",
-    "Tujuan Materi": "Anak mengenal konsep dasar P2P lending dan bagaimana kerjanya dalam sistem keuangan.",
-    "Materi": "P2P lending adalah singkatan dari peer-to-peer lending, yaitu meminjamkan uang dari satu orang ke orang lain lewat aplikasi atau platform online. Jadi bukan dari bank, tapi dari sesama pengguna. Dalam sistem ini, seseorang bisa memberikan pinjaman dan mendapat imbal hasil berupa bunga. Tapi ini juga punya risiko jika peminjam tidak mengembalikan uangnya. Kamu perlu tahu konsep ini agar tidak mudah tergiur tawaran online.",
+    "Judul Materi": "Mengenal Pinjaman Online dan P2P Lending",
+    "Tujuan Materi": "Mengevaluasi keputusan keuangan terkait pinjaman online (pinjol).",
+    "Pembukaan (Atas Gambar)": "Melihat iklan pinjol untuk tiket konser itu seperti melihat jembatan gantung yang sudah lapuk untuk menyeberang ke sebuah taman bermain. Taman bermainnya (konser) memang terlihat menyenangkan, tapi menyeberangi jembatan itu (mengambil pinjol) adalah keputusan yang sangat berbahaya.",
+    "Gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9XWkd4DoKdQ78GbSqSXrINHZYTTzPl5Smcg&s",
+    "Materi": "P2P (Peer-to-Peer) Lending adalah platform online yang mempertemukan orang yang butuh pinjaman dengan orang yang mau memberikan pinjaman. Pinjaman online (pinjol) harus digunakan dengan sangat bijak. Langkah terbaik adalah berhenti sejenak, sadari bahwa konser adalah keinginan bukan kebutuhan, dan cari cara lain selain berutang untuk memenuhinya.",
+    "Penutupan/Summary": "Keputusan untuk menunda kesenangan demi menghindari jeratan utang adalah salah satu tanda kecerdasan finansial yang paling tinggi.",
     "Poin-Poin Penting": [
-      "P2P lending mempertemukan pemberi pinjaman dan peminjam melalui platform online resmi.",
-      "Platform P2P diawasi oleh OJK agar aman dan terpercaya.",
-      "P2P lending bisa memberi keuntungan, tapi juga memiliki risiko jika peminjam tidak membayar.",
-      "Anak tidak boleh ikut investasi tanpa izin dan pendampingan orang dewasa."
+      "P2P lending mempertemukan pemberi pinjaman dan peminjam.",
+      "Platform P2P diawasi oleh OJK.",
+      "P2P lending punya keuntungan tapi juga risiko.",
+      "Pinjol terbaik adalah yang memiliki izin resmi."
     ],
     "Simpel Quiz": [
       {
@@ -880,13 +948,16 @@
   {
     "Nomor": 24,
     "Judul Materi": "Apa Itu Multi Financing (Pendanaan Banyak Sumber)?",
-    "Tujuan Materi": "Anak memahami bahwa beberapa proyek keuangan bisa dibiayai dari banyak sumber dana.",
-    "Materi": "Multi Financing atau pendanaan dari banyak sumber adalah cara untuk mengumpulkan dana dari berbagai pihak untuk mendukung satu tujuan. Misalnya, dalam membangun taman sekolah, uang bisa berasal dari donasi orang tua, pemerintah, dan sponsor. Konsep ini juga dipakai dalam bisnis atau investasi yang melibatkan banyak investor.",
+    "Tujuan Materi": "Memahami bahwa beberapa proyek keuangan bisa dibiayai dari banyak sumber dana.",
+    "Pembukaan (Atas Gambar)": "Bayangkan kamu ingin sekali membeli sepeda motor baru yang harganya mahal. Perusahaan multifinancing atau leasing itu seperti teman baik yang sangat kaya. Dia bilang, \"Tenang, aku belikan dan bayar lunas dulu motornya buat kamu. Nanti, kamu ganti uangku dengan cara mencicil setiap bulan plus sedikit uang terima kasih (bunga).\"",
+    "Gambar": "https://images.cakeresume.com/images/f3488f0b-53c0-4cec-ab0b-8ae51e868c7b.png",
+    "Materi": "Multifinancing adalah perusahaan pembiayaan yang menyediakan dana untuk pembelian barang, terutama kendaraan. Mereka pada dasarnya 'menalangi' atau membayar lunas barang yang kita inginkan, sehingga kita bisa langsung membawanya pulang. Sebagai gantinya, kita punya kewajiban untuk membayar cicilan kepada mereka setiap bulan.",
+    "Penutupan/Summary": "Sebagai gantinya, kamu punya kewajiban untuk membayar angsuran atau cicilan kepada mereka setiap bulan selama jangka waktu yang disepakati.",
     "Poin-Poin Penting": [
-      "Multifinancing menggabungkan dana dari banyak sumber untuk satu proyek atau tujuan.",
-      "Ini sering dipakai dalam pembangunan sekolah, usaha kecil, atau program sosial.",
-      "Semua pihak yang menyumbang biasanya memiliki peran atau keuntungan tertentu.",
-      "Anak bisa belajar kerja sama dan tanggung jawab lewat proyek sederhana di sekolah yang pakai sistem ini."
+      "Multifinancing menggabungkan dana dari banyak sumber.",
+      "Sering dipakai dalam pembangunan sekolah atau usaha kecil.",
+      "Semua pihak yang menyumbang biasanya memiliki peran tertentu.",
+      "Anak bisa belajar kerja sama lewat proyek sederhana di sekolah."
     ],
     "Simpel Quiz": [
       {
@@ -918,17 +989,20 @@
   {
     "Nomor": 25,
     "Judul Materi": "Cara Memulai Investasi Secara Aman",
-    "Tujuan Materi": "Anak memahami langkah awal jika ingin belajar investasi secara aman dan bertanggung jawab.",
-    "Materi": "Untuk memulai investasi, kamu harus tahu bahwa mereka tidak bisa melakukannya sendirian. Butuh bimbingan dari orang tua dan pemahaman dasar. Langkah pertama adalah memilih investasi yang aman, seperti reksa dana pasar uang atau emas. Lalu tentukan tujuan investasi, misalnya untuk beli laptop atau pendidikan. Jangan terburu-buru, dan pelajari dulu risikonya.",
+    "Tujuan Materi": "Memahami langkah awal jika ingin belajar investasi secara aman dan bertanggung jawab.",
+    "Pembukaan (Atas Gambar)": "Ingin mulai investasi setelah melihat orang pamer untung besar di media sosial itu seperti ingin belajar parkour setelah melihat video keren di TikTok. Kamu tidak mungkin kan langsung mencoba lompat dari atap gedung? Langkah pertama adalah mencari gym khusus, dilatih oleh profesional, dan mulai dari lompatan-lompatan kecil di atas matras.",
+    "Gambar": "https://s3-bucket.most.co.id/most-assets/storage/7305/conversions/8631e2b6f17d764829e48d76b570d31e-medium.png",
+    "Materi": "Langkah memulai investasi yang paling bijaksana adalah berdiskusi dengan orang tua, belajar dari sumber resmi (seperti OJK), dan memulai dengan nominal kecil pada produk berisiko rendah. Jangan pernah ikut-ikutan tren tanpa pemahaman. Investasi adalah maraton, bukan lari cepat. Kesabaran dan pengetahuan adalah kuncinya.",
+    "Penutupan/Summary": "Ingat, investasi itu maraton, bukan lari sprint. Kesabaran dan pengetahuan adalah kunci kemenangan, bukan ikut-ikutan tren.",
     "Poin-Poin Penting": [
-      "Mulailah dengan investasi kecil yang risikonya rendah, seperti emas atau reksa dana pasar uang.",
-      "Tentukan tujuan yang jelas: untuk apa kamu ingin uangmu berkembang.",
-      "Diskusikan semua rencana dengan orang tua atau guru sebelum memulai.",
-      "Gunakan platform investasi yang resmi dan diawasi OJK agar aman."
+      "Mulailah dengan investasi kecil yang risikonya rendah.",
+      "Tentukan tujuan yang jelas.",
+      "Diskusikan semua rencana dengan orang tua atau guru.",
+      "Gunakan platform investasi yang resmi dan diawasi OJK."
     ],
     "Simpel Quiz": [
       {
-        "pertanyaan": "Langkah awal investasi yang aman untuk anak adalah…",
+        "pertanyaan": "Langkah awal investasi yang aman untuk anak adalah?",
         "pilihan": [
           "Investasi tanpa izin orang tua",
           "Memilih investasi yang sesuai dan didampingi orang tua",
@@ -956,13 +1030,16 @@
   {
     "Nomor": 26,
     "Judul Materi": "Mengenal Bunga dalam Keuangan",
-    "Tujuan Materi": "Anak mengenal konsep bunga secara sederhana dan memahami dampaknya dalam tabungan dan pinjaman.",
-    "Materi": "Bunga adalah tambahan uang yang kita dapatkan atau harus kita bayar. Kalau kita menabung di bank, bank akan memberi bunga sebagai hadiah karena kita menyimpan uang di sana. Tapi kalau kita meminjam uang dari bank, kita harus membayar bunga sebagai biaya meminjam. Jadi, bunga bisa menguntungkan jika menabung, tapi bisa menambah beban kalau berutang. Kamu perlu paham agar tidak kaget saat melihat uang bertambah atau berkurang karena bunga.",
+    "Tujuan Materi": "Mengaplikasikan konsep bunga secara sederhana dan memahami dampaknya dalam tabungan dan pinjaman.",
+    "Pembukaan (Atas Gambar)": "Bayangkan uang tabunganmu adalah sebuah \"pohon uang\" ajaib yang kamu tanam di kebun milik bank. Sebagai ucapan terima kasih karena kamu menanam pohon di sana, setiap akhir tahun bank akan menaburkan \"pupuk ajaib\" (bunga) yang membuat pohonmu menumbuhkan beberapa lembar daun uang baru.",
+    "Gambar": "https://assets.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p3/78/2024/06/04/artikel-jenis-suku-bungaArtboard-1-26410149.png",
+    "Materi": "Bunga adalah imbal hasil saat kita menabung di bank, atau biaya tambahan saat kita meminjam uang. Misalnya, jika menabung Rp 1.000.000 dengan bunga 5% per tahun, maka setelah setahun uang kita akan bertambah Rp 50.000 (5% dari Rp 1.000.000) menjadi Rp 1.050.000. Bunga membuat uang tabungan bisa bertumbuh.",
+    "Penutupan/Summary": "Total Uang = Rp1.000.000 + Rp50.000 = Rp1.050.000. Jadi, setelah satu tahun, uang Anda akan menjadi Rp1.050.000.",
     "Poin-Poin Penting": [
-      "Bunga bisa menjadi keuntungan saat kita menabung karena bank menambahkan sejumlah uang ke tabungan kita.",
-      "Bunga juga bisa menjadi beban saat meminjam uang karena kita harus mengembalikan lebih banyak dari yang dipinjam.",
-      "Pahami bunga sejak dini agar tidak salah dalam menilai keuntungan dan kerugian dalam keuangan.",
-      "Selalu tanya atau baca baik-baik berapa bunga yang dikenakan sebelum menabung atau meminjam."
+      "Bunga bisa menjadi keuntungan saat menabung.",
+      "Bunga juga bisa menjadi beban saat meminjam uang.",
+      "Pahami bunga sejak dini agar tidak salah menilai.",
+      "Selalu tanya berapa bunga yang dikenakan sebelum menabung atau meminjam."
     ],
     "Simpel Quiz": [
       {
@@ -993,14 +1070,17 @@
   },
   {
     "Nomor": 27,
-    "Judul Materi": "Memahami Konsep Pinjaman",
-    "Tujuan Materi": "Memahami konsep pinjaman dan kapan sebaiknya digunakan.",
-    "Materi": "Pinjaman adalah uang yang kita terima dari orang lain atau lembaga (seperti bank) dan harus dikembalikan. Biasanya, pinjaman digunakan untuk hal yang sangat penting dan mendesak, misalnya biaya sekolah, modal usaha, atau keadaan darurat. Pinjaman bukanlah uang gratis. Kita harus mengembalikannya dalam jangka waktu tertentu, seringkali dengan tambahan bunga. Penting untuk memahami bahwa meminjam harus dilakukan dengan rencana yang matang agar tidak menyulitkan di kemudian hari.",
+    "Judul Materi": "Apa Itu Pinjaman?",
+    "Tujuan Materi": "Menganalisis perbedaan antara pinjaman produktif dan konsumtif untuk menentukan skenario penggunaan yang paling tepat.",
+    "Pembukaan (Atas Gambar)": "Bayangkan kamu punya dua pilihan: meminjam uang untuk membeli pancing super canggih atau meminjam uang untuk membeli topi pesta. Topi pesta itu akan habis gunanya setelah satu malam. Tapi pancing canggih itu, jika kamu gunakan untuk memancing, bisa memberimu ikan untuk dimakan dan dijual, yang hasilnya bisa dipakai untuk mengembalikan pinjaman.",
+    "Gambar": "https://storage.googleapis.com/wpc-storage/jadipcpm.id/2024/09/c32cd18b-apa-itu-pinjaman-bank-pengertian-jenis-dan-manfaat-yang-bisa-anda-dapatkan.png",
+    "Materi": "Pinjaman dibedakan menjadi dua: produktif dan konsumtif. Pinjaman produktif adalah utang yang digunakan untuk membeli aset yang bisa menghasilkan uang kembali (misalnya, membeli mesin jahit untuk usaha). Sedangkan pinjaman konsumtif adalah utang untuk membeli barang yang nilainya akan habis (misalnya, tiket konser atau makanan).",
+    "Penutupan/Summary": "Ini berbeda dengan pinjaman konsumtif (membeli topi pesta), yang hanya untuk kesenangan dan tidak menghasilkan apa-apa.",
     "Poin-Poin Penting": [
-      "Pinjaman harus dikembalikan sesuai kesepakatan, jadi jangan meminjam jika tidak yakin bisa mengembalikan.",
-      "Gunakan pinjaman hanya untuk keperluan penting dan bukan untuk belanja konsumtif.",
-      "Pahami dulu aturan pinjaman, seperti bunga dan waktu pengembalian, sebelum setuju meminjam.",
-      "Jangan menganggap pinjaman sebagai penghasilan tambahan, karena itu adalah utang yang harus dilunasi."
+      "Pinjaman harus dikembalikan sesuai kesepakatan.",
+      "Gunakan pinjaman hanya untuk keperluan penting.",
+      "Pahami dulu aturan pinjaman sebelum setuju meminjam.",
+      "Jangan menganggap pinjaman sebagai penghasilan tambahan."
     ],
     "Simpel Quiz": [
       {
@@ -1016,12 +1096,12 @@
       {
         "pertanyaan": "Kapan sebaiknya kita meminjam uang?",
         "pilihan": [
-          "Saat ingin beli mainan baru",
-          "Untuk kebutuhan darurat dan sangat penting",
-          "Untuk membeli jajan setiap hari",
+          "Saat ingin beli mainan",
+          "Untuk kebutuhan darurat dan penting",
+          "Untuk beli jajan",
           "Karena ikut-ikutan teman"
         ],
-        "jawaban": "Untuk kebutuhan darurat dan sangat penting"
+        "jawaban": "Untuk kebutuhan darurat dan penting"
       }
     ],
     "Sumber": [
@@ -1032,13 +1112,16 @@
   {
     "Nomor": 28,
     "Judul Materi": "Siapa Itu Investor?",
-    "Tujuan Materi": "Anak memahami siapa itu investor dan peran pentingnya dalam dunia usaha.",
-    "Materi": "Investor adalah orang yang menanamkan uangnya ke suatu usaha atau bisnis agar bisnis itu bisa berkembang. Nantinya, investor akan mendapatkan bagian keuntungan dari bisnis tersebut. Jadi, investor tidak hanya menyimpan uang, tapi juga membantu orang lain mengembangkan usaha. Kamu perlu tahu bahwa menjadi investor bukan hanya untuk orang kaya. Siapa pun bisa mulai berinvestasi dengan cara yang aman dan bijak.",
+    "Tujuan Materi": "Memahami siapa itu investor dan peran pentingnya dalam dunia usaha.",
+    "Pembukaan (Atas Gambar)": "Seorang investor itu seperti seorang petani modern. Petani tidak menyimpan semua gabah hasil panennya di lumbung. Petani yang cerdas akan mengambil sebagian gabah terbaiknya (uang) dan menanamnya kembali di sawah. Dia \"mengorbankan\" gabah itu sekarang, dengan harapan di musim panen berikutnya, dia mendapatkan satu karung penuh gabah baru (keuntungan).",
+    "Gambar": "https://www.bee.id/wp-content/uploads/2024/09/64-APRIL-cover-investor-adalah.jpg",
+    "Materi": "Investor adalah orang yang menempatkan uangnya di suatu usaha atau aset dengan harapan akan mendapatkan lebih banyak uang di masa depan (keuntungan). Mereka menunda menggunakan uangnya hari ini agar uang tersebut bisa 'bekerja' dan menghasilkan lebih banyak di kemudian hari. Mereka berperan penting dalam membantu usaha untuk tumbuh.",
+    "Penutupan/Summary": "Harapannya, uang itu akan \"bekerja keras\" dan kembali lagi di masa depan sambil membawa \"teman-temannya\" yang lebih banyak.",
     "Poin-Poin Penting": [
-      "Investor adalah orang yang menaruh uangnya di bisnis atau usaha dengan harapan mendapatkan keuntungan.",
-      "Investasi bisa membantu banyak usaha kecil tumbuh dan menciptakan lapangan kerja.",
-      "Kita bisa menjadi investor jika punya dana dan pengetahuan yang cukup tentang usaha yang akan didukung.",
-      "Belajar jadi investor sejak dini membantu kita berpikir jangka panjang tentang uang dan risiko."
+      "Investor adalah orang yang menaruh uangnya di bisnis dengan harapan untung.",
+      "Investasi bisa membantu usaha kecil tumbuh.",
+      "Kita bisa menjadi investor jika punya dana dan pengetahuan.",
+      "Belajar jadi investor membantu kita berpikir jangka panjang."
     ],
     "Simpel Quiz": [
       {
@@ -1070,13 +1153,16 @@
   {
     "Nomor": 29,
     "Judul Materi": "Cara Memulai Usaha Sendiri",
-    "Tujuan Materi": "Anak memahami dasar-dasar memulai bisnis kecil dari hal sederhana.",
-    "Materi": "Memulai usaha tidak harus menunggu dewasa. Anak SMP pun bisa belajar membuat usaha kecil, seperti menjual kerajinan, makanan ringan, atau barang bekas yang masih bagus. Hal yang penting adalah punya ide, niat, dan mau belajar. Usaha kecil mengajarkan tanggung jawab, mengatur uang, dan melatih keberanian. Usaha bukan cuma tentang untung, tapi juga belajar dari prosesnya.",
+    "Tujuan Materi": "Membandingkan berbagai model bisnis sederhana untuk memutuskan mana yang paling menguntungkan.",
+    "Pembukaan (Atas Gambar)": "Kamu adalah seorang koki yang punya banyak sekali ide resep kue baru. Apa langkah pertamamu? Kamu tidak mungkin kan langsung membuat 100 loyang kue? Langkah yang paling strategis adalah membuat satu loyang kecil sebagai sampel, lalu meminta teman atau keluarga untuk mencicipinya dan memberi masukan.",
+    "Gambar": "https://cdn1.katadata.co.id/media/images/thumb/2022/12/02/Ilustrasi_pelaku_usaha_rumahan-2022_12_02-11_45_33_0ae08e3f68f4ba5dca2949172d0f223c_960x640_thumb.png",
+    "Materi": "Langkah pertama yang strategis dalam memulai usaha adalah melakukan 'tes pasar' atau validasi ide dalam skala kecil. Misalnya, jika ingin menjual stiker, buatlah beberapa contoh desain terbaik lalu tunjukkan kepada teman-teman untuk mendapatkan masukan. Tujuannya adalah untuk mengurangi risiko, mendapatkan data, dan memastikan idemu disukai sebelum mengeluarkan banyak modal.",
+    "Penutupan/Summary": "Selalu uji idemu dalam skala kecil sebelum mengerahkan semua sumber dayamu.",
     "Poin-Poin Penting": [
-      "Memulai usaha bisa dari ide sederhana seperti jualan makanan, barang bekas, atau jasa bantu belajar.",
-      "Usaha mengajarkan anak mengelola uang, memahami keuntungan dan kerugian, serta tanggung jawab.",
-      "Penting untuk mencatat pengeluaran dan pemasukan agar tahu kondisi usaha.",
-      "Jangan takut gagal, karena dari kegagalan kita bisa belajar dan memperbaiki."
+      "Memulai usaha bisa dari ide sederhana.",
+      "Usaha mengajarkan anak mengelola uang dan tanggung jawab.",
+      "Penting untuk mencatat pengeluaran dan pemasukan.",
+      "Jangan takut gagal, karena dari kegagalan kita bisa belajar."
     ],
     "Simpel Quiz": [
       {
@@ -1107,14 +1193,17 @@
   },
   {
     "Nomor": 30,
-    "Judul Materi": "Mengapa Belajar Literasi Finansial Itu Penting?",
-    "Tujuan Materi": "Anak-anak menyadari bahwa belajar mengatur uang adalah tanggung jawab pribadi, bukan bergantung pada orang tua.",
-    "Materi": "Banyak anak berpikir, “Aku tidak perlu belajar keuangan karena orang tuaku kaya.” Tapi kenyataannya, uang bisa habis jika tidak dikelola dengan baik. Belajar literasi finansial bukan hanya untuk orang yang kekurangan uang, tetapi untuk semua orang. Karena pada akhirnya, setiap orang harus bisa mengatur uangnya sendiri. Uang bukan cuma untuk dibelanjakan, tapi harus dijaga, digunakan dengan bijak, dan dimanfaatkan untuk masa depan. Kamu tidak akan selamanya bergantung pada orang tuamu. Suatu hari kamu akan berdiri sendiri. Maka dari itu, belajar sejak sekarang adalah bekal yang penting untuk masa depan.",
+    "Judul Materi": "Mengapa Belajar Literasi Finansial?",
+    "Tujuan Materi": "Mempertahankan argumen tentang pentingnya literasi keuangan dibandingkan hanya fokus pada mencari uang.",
+    "Pembukaan (Atas Gambar)": "Bayangkan mencari uang itu seperti mengisi sebuah ember besar dengan air. Semakin keras kamu bekerja, semakin cepat ember itu terisi. Tapi, jika kamu tidak punya literasi finansial, ember yang kamu gunakan itu penuh dengan lubang. Kamu bisa saja mengisi air secepat kilat, tapi airnya akan terus merembes keluar tanpa henti.",
+    "Gambar": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi50Ql0lvNx1rYiWusPok9m2XofDNBJHjMGU1D2wzC6P9cDtIG5RjMnxyHUYprDI9YRwwKMBphQUvN-rxKoeTDjcxOYOPbN2THuld4MNBBChoCNnMnUG_cOTeyuZjJDcgFgAtiaRVXe0yuNYsDNHiCUvYhA2XIN6nlpBc46fMphP_ItKAxdZ2NeXU7t0b34/s1123/5-alasan-pentingnya-mempelajari-literasi-keuangan-mitaoktaviacom.jpg",
+    "Materi": "Mencari uang itu penting, tapi belajar mengelola uang (literasi finansial) jauh lebih penting. Tanpa literasi finansial, penghasilan sebesar apa pun bisa habis sia-sia, seperti mengisi ember bocor. Literasi finansial adalah kemampuan untuk 'menambal ember' agar setiap usaha kita tidak terbuang. Ini bukan tentang berapa yang didapat, tapi berapa yang tersisa dan bisa dikembangkan.",
+    "Penutupan/Summary": "Mencari uang membuatmu bertahan hidup. Mengelola uang membuatmu bisa merancang kehidupan.",
     "Poin-Poin Penting": [
-      "Meskipun orang tua mampu, kita tetap harus belajar agar bisa mengatur uang sendiri dan tidak boros.",
-      "Uang bisa habis kalau digunakan sembarangan, jadi penting memahami cara mengelolanya.",
-      "Belajar literasi keuangan mengajarkan tanggung jawab, kedewasaan, dan sikap mandiri.",
-      "Tidak ada jaminan bahwa kekayaan orang tua akan bertahan selamanya. Kita harus siap mandiri suatu hari nanti."
+      "Meskipun orang tua mampu, kita tetap harus belajar mandiri.",
+      "Uang bisa habis kalau digunakan sembarangan.",
+      "Belajar literasi keuangan mengajarkan tanggung jawab.",
+      "Kita harus siap mandiri suatu hari nanti."
     ],
     "Simpel Quiz": [
       {
