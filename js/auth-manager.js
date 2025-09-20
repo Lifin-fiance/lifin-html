@@ -193,12 +193,19 @@ export const getUserProfileData = async () => {
     try {
         const userDocRef = doc(db, "users", user.uid);
         const docSnap = await getDoc(userDocRef);
-        return docSnap.exists() ? docSnap.data() : null;
+        if (docSnap.exists()) {
+            // === PERUBAHAN DI SINI ===
+            // Kita gabungkan ID pengguna (uid) dengan data dari database
+            return { uid: user.uid, ...docSnap.data() };
+        } else {
+            return null;
+        }
     } catch (error) {
         console.error("Error fetching profile data:", error);
         return null;
     }
 };
+
 
 export const updateUserName = async (newName) => {
     await authReady;
@@ -243,34 +250,26 @@ export const updateMateriProgress = async (levelName, materiId) => {
     try {
         const userDocRef = doc(db, "users", user.uid);
         
-        // The data to be updated. Start with the progress for the current level.
         const updateData = {
             [`progress.${levelName}`]: materiId
         };
 
-        // Define the level progression map
         const nextLevelMap = {
             'Beginner': 'Smart Spender',
             'Smart Spender': 'Future Investor'
         };
 
-        // Check if the user has completed the level (10 lessons per level)
         const isLevelComplete = materiId % 10 === 0;
 
         if (isLevelComplete && nextLevelMap[levelName]) {
             const nextLevel = nextLevelMap[levelName];
             
-            // Promote user to the next level
             updateData.level = nextLevel;
-            
-            // *** THE FIX: Set the progress for the NEW level to the current materiId ***
-            // This acts as the "key" to unlock the next set of lessons (e.g., lesson 11).
             updateData[`progress.${nextLevel}`] = materiId;
 
             console.log(`User completed ${levelName}. Progressing to ${nextLevel} and setting initial progress.`);
         }
 
-        // Perform a single update operation with all the changes
         await updateDoc(userDocRef, updateData);
         
         return true;

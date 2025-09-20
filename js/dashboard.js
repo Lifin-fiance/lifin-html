@@ -115,13 +115,21 @@ async function handlePageClick(e) {
         // ===========================================================
         case 'open-share-modal':
             if (userProfile) {
+                // Mengambil elemen-elemen dari HTML
                 document.getElementById('shareNamaUser').textContent = userProfile.nama || 'Tamu';
                 document.getElementById('shareLevelUser').textContent = userProfile.level || 'Beginner';
+
+                // ===== PERUBAHAN: Menghitung total progres/nomor level =====
+                // Ini menjumlahkan semua nilai dari objek progress
+                const totalProgress = Object.values(userProfile.progress || {}).reduce((sum, current) => sum + current, 0);
+                document.getElementById('shareLevelNomor').textContent = `Lv. ${totalProgress}`;
+                // =========================================================
 
                 const qrCodeContainer = document.getElementById('qrcode');
                 qrCodeContainer.innerHTML = ''; 
                 
-                const profileUrl = `https://lifin.fun/profile?user=${userProfile.uid || 'guest'}`;
+                // ===== PERBAIKAN DI SINI: Menambahkan .html pada URL =====
+                const profileUrl = `https://lifin.fun/profile.html?user=${userProfile.uid || 'guest'}`;
 
                 // Opsi baru untuk EasyQRCodeJS yang disesuaikan dengan desain
                 const options = {
@@ -133,7 +141,6 @@ async function handlePageClick(e) {
                     correctLevel: QRCode.CorrectLevel.H, // Tingkat koreksi kesalahan yang tinggi
                     quietZone: 0, // Menghilangkan margin putih di sekitar QR code
                     
-                    // --- OPSI LOGO DIKEMBALIKAN ---
                     logo: "assets/images/mascotfin.png", // Path ke gambar maskot
                     logoWidth: 45, // Disesuaikan dengan ukuran QR
                     logoHeight: 45, // Disesuaikan dengan ukuran QR
@@ -153,10 +160,13 @@ async function handlePageClick(e) {
 
         case 'close-modal':
             const modalToClose = e.target.closest('.fixed');
-            if (modalToClose && modalToClose.id === 'modalShareProfile') {
-                 document.getElementById('qrcode').innerHTML = '';
+            // ===== PERBAIKAN DI SINI: Menambahkan pengecekan null =====
+            if (modalToClose) {
+                 if (modalToClose.id === 'modalShareProfile') {
+                     document.getElementById('qrcode').innerHTML = '';
+                 }
+                 closeModal(modalToClose.id);
             }
-            closeModal(modalToClose.id);
             break;
         case 'save-name':
             const newName = document.getElementById("inputNama").value.trim();
@@ -214,6 +224,7 @@ async function handlePageClick(e) {
             const currentIndex = levels.indexOf(userProfile.level || 'Beginner');
             const nextLevel = levels[(currentIndex + 1) % levels.length];
             await saveUserLevel(nextLevel);
+            userProfile.level = nextLevel; // Perbarui state lokal
             showToast(`Berpindah ke level: ${nextLevel}`);
             await setPage('materi');
             break;
@@ -240,10 +251,7 @@ async function initializeDashboard() {
     }
 
     document.body.addEventListener('click', handlePageClick);
-    document.querySelectorAll('.nav-button').forEach(btn => {
-        btn.addEventListener('click', () => setPage(btn.dataset.page));
-    });
-
+    
     const initialPage = localStorage.getItem('lastPage') || 'home';
     await setPage(initialPage);
 
