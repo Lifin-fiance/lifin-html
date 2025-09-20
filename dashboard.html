@@ -270,7 +270,7 @@
             </div>
     
             <!-- Invite Friends Box -->
-            <div class="w-full lg:w-[800px] h-[60px] lg:h-[75px] mt-4 lg:mt-[50px] bg-[#FFABDB] rounded-[50px] flex items-center justify-between px-6 lg:px-8 cursor-pointer" data-action="open-modal" data-modal-id="modalAjakTeman">
+            <div id="ajakTemanBtn" class="w-full lg:w-[800px] h-[60px] lg:h-[75px] mt-4 lg:mt-[50px] bg-[#FFABDB] rounded-[50px] flex items-center justify-between px-6 lg:px-8 cursor-pointer">
               <span class="text-white text-[18px] lg:text-[24px] font-bold">Ajak Teman</span>
               <img src="assets/images/love.svg" alt="Love Ikon" class="w-[30px] lg:w-[40px]">
             </div>
@@ -316,17 +316,6 @@
             <button class="w-full bg-gray-200 text-gray-800 rounded-xl py-3 text-lg font-semibold hover:bg-gray-300" data-action="close-modal">Batal</button>
             <button class="w-full bg-[#FF6B6B] text-white rounded-xl py-3 text-lg font-semibold hover:bg-[#D44F4F]" data-action="confirm-delete">Ya, Hapus</button>
           </div>
-        </div>
-    </div>
-    <div id="modalAjakTeman" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/30 p-4 font-baloo2">
-        <div class="bg-white w-full max-w-[400px] rounded-2xl p-6 relative">
-          <h2 class="text-xl lg:text-2xl font-bold text-[#004B75] mb-4">Bagikan Link</h2>
-          <div class="flex items-center gap-2">
-            <input type="text" id="linkAjak" value="https://lifin.fun/ajak" class="w-full border-2 border-[#04B3E3] rounded-xl px-4 py-2 bg-gray-100 text-sm" readonly>
-            <button class="bg-[#04B3E3] text-white px-3 py-2 rounded-lg hover:bg-[#0390B9] text-sm" data-action="copy-link">Salin</button>
-          </div>
-          <span id="copyFeedback" class="text-green-600 text-sm hidden mt-2">Link disalin!</span>
-          <button class="absolute top-2 right-4 text-xl text-gray-500 hover:text-gray-700" data-action="close-modal">✕</button>
         </div>
     </div>
      <div id="modalConfirmLogout" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/30 p-4 font-baloo2">
@@ -406,8 +395,39 @@
             <span class="text-xs font-bold">Panel</span>
         </button>
     </nav>
+    
+    <!-- SCRIPT UNTUK SHARE FUNCTIONALITY -->
+    <script>
+      const shareData = {
+        title: 'LIFIN',
+        text: 'Aku lagi belajar keuangan di lifin.fun lohh  Yuk ikutan!',
+        url: 'https://lifin.fun'
+      }
+
+      const ajakTemanBtn = document.getElementById('ajakTemanBtn');
+      // Pastikan tombolnya ada sebelum menambahkan event listener
+      if (ajakTemanBtn) {
+          ajakTemanBtn.addEventListener('click', async () => {
+            // Cek apakah Web Share API didukung oleh browser
+            if (navigator.share) {
+              try {
+                // Memanggil navigator.share dan memberikan data yang akan dibagikan
+                await navigator.share(shareData);
+                console.log('Berhasil dibagikan!');
+              } catch (err) {
+                // Menangani error jika pengguna membatalkan atau terjadi kesalahan
+                console.error('Gagal membagikan:', err);
+              }
+            } else {
+              // Fallback untuk browser yang tidak mendukung Web Share API
+              alert('Fitur share belum didukung di browser ini.');
+            }
+          });
+      }
+    </script>
 
     <script type="module" src="js/dashboard.js"></script>
 
 </body>
 </html>
+

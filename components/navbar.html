@@ -2,25 +2,11 @@
   <div class="flex items-center">
       <img src="assets/images/icon.png" class="w-[90px] object-cover cursor-pointer" alt="logolifin" onclick="window.location.href='https://www.lifin.fun'">
     </div>
-<button 
-  onclick="goBackOrHome()" 
+
+<a 
+  href="https://www.lifin.fun/dashboard.html" 
   class="bg-[#FF6B6B] text-white text-lg font-extrabold px-5 py-2 rounded-full font-['Baloo_2'] hover:opacity-90 transition-all duration-200" 
   style="box-shadow: 0 5px 0px 0 #d44f4f;">
   Back
-</button>
-
-<script>
-  function goBackOrHome() {
-    const homepage = "https://www.lifin.fun";
-
-    // Jika ada riwayat sebelumnya DAN URL sebelumnya bukan halaman ini
-    if (document.referrer && document.referrer !== window.location.href) {
-      history.back();
-    } else {
-      // Kalau tidak ada riwayat, atau halaman sebelumnya sama -> langsung ke homepage
-      window.location.href = homepage;
-    }
-  }
-</script>
-
-  </header>
+</a>
+</header>
