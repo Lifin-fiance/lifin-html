@@ -178,7 +178,30 @@ export const saveUserLevel = async (level) => {
     if (!user) return showModal("Error", "Anda harus login untuk memilih level.");
     try {
         const userDocRef = doc(db, "users", user.uid);
-        await updateDoc(userDocRef, { level });
+
+        // Define progress based on the chosen starting level
+        const newProgress = {
+            'Beginner': 0,
+            'Smart Spender': 0,
+            'Future Investor': 0
+        };
+
+        // If starting at a higher level, unlock previous levels
+        if (level === 'Smart Spender') {
+            newProgress['Beginner'] = 10; // Complete Beginner level
+            newProgress['Smart Spender'] = 10; // Set progress to unlock the first lesson
+        } else if (level === 'Future Investor') {
+            newProgress['Beginner'] = 10; // Complete Beginner
+            newProgress['Smart Spender'] = 20; // Complete Smart Spender
+            newProgress['Future Investor'] = 20; // Set progress to unlock the first lesson
+        }
+        
+        const updateData = {
+            level: level,
+            progress: newProgress
+        };
+        
+        await updateDoc(userDocRef, updateData);
         window.location.href = PATHS.DASHBOARD;
     } catch (error) {
         console.error("Level Save Error:", error);
@@ -279,3 +302,4 @@ export const updateMateriProgress = async (levelName, materiId) => {
         return false;
     }
 };
+

@@ -285,21 +285,22 @@ export function generatePageContent(page, userProfile, allMateri) {
         case "game":
             return `
             <div class="flex mt-7 flex-col gap-8 lg:gap-10 p-4 lg:px-24 lg:py-8 max-w-screen-xl mx-auto">
-                <a href="https://dompet-pintar.lifin.fun/" class="group button-3d relative w-full h-48 lg:h-[168px] rounded-3xl bg-[#04B3E3] shadow-[0_10px_0_#038DB4] flex flex-col justify-center text-left p-6 lg:pl-[124px] focus:outline-none overflow-hidden">
-                    <img src="assets/images/3dmoney.png" alt="Money" class="absolute -top-3 -right-10 w-48 lg:w-[373.5px] lg:right-[-90px] lg:top-[-40px] transition-transform duration-300 group-hover:scale-110" />
-                    <h3 class="font-extrabold text-3xl lg:text-[45px] text-white text-outline leading-tight">DOMPET<br>PINTAR</h3>
-                    <div class="mt-4 lg:absolute lg:right-[120px] lg:top-1/2 lg:transform lg:-translate-y-1/2 w-48 lg:w-[254px] h-14 lg:h-[72px] bg-white rounded-full flex items-center justify-center"><span class="text-black text-2xl lg:text-[40px] font-extrabold">MAINKAN</span></div>
-                </a>
-                <a href="https://finance-quiz-race.lifin.fun/" class="group button-3d relative w-full h-48 lg:h-[168px] rounded-3xl bg-[#FFD635] shadow-[0_10px_0_#D4B000] flex flex-col justify-center text-left p-6 lg:pl-[200px] focus:outline-none overflow-hidden">
-                    <img src="assets/images/raceflag.png" alt="Race Flag" class="absolute bottom-5 -right-[70px] w-48 transform rotate-180 transition-transform duration-300 lg:w-[350px] lg:left-[-128px] lg:top-[10px] lg:rotate-0 group-hover:scale-110" />
-                    <h3 class="font-extrabold text-3xl lg:text-[45px] text-white text-outline leading-tight z-10">FINANCE QUIZ<br>RACE</h3>
-                    <div class="mt-4 lg:absolute lg:right-[120px] lg:top-1/2 lg:transform lg:-translate-y-1/2 w-48 lg:w-[254px] h-14 lg:h-[72px] bg-white rounded-full flex items-center justify-center z-10"><span class="text-black text-2xl lg:text-[40px] font-extrabold">MAINKAN</span></div>
-                </a>
-                <a href="https://investor-cilik.lifin.fun/" class="group button-3d mb-12 relative w-full h-48 lg:h-[168px] rounded-3xl bg-[#FF6B6B] shadow-[0_10px_0_#D44F4F] flex flex-col justify-center text-left p-6 lg:pl-[124px] focus:outline-none overflow-hidden">
-                    <img src="assets/images/rocket.svg" alt="Rocket" class="absolute left-[160px] bottom-0 w-32 md:w-40 lg:w-[200px] lg:-left-8 lg:bottom-[-20px] md:left-[500px] md:top-[20px] transition-transform duration-300 group-hover:scale-110" />
-                    <h3 class="font-extrabold text-3xl lg:text-[45px] text-white text-outline leading-tight z-10">INVESTOR CILIK</h3>
-                    <div class="mt-4 lg:mt-0 lg:absolute lg:right-[120px] lg:top-1/2 lg:transform lg:-translate-y-1/2 w-48 lg:w-[254px] h-14 lg:h-[72px] bg-white rounded-full flex items-center justify-center z-10"><span class="text-black text-2xl lg:text-[40px] font-extrabold">MAINKAN</span></div>
-                </a>
+            <a href="https://dompet-pintar.lifin.fun/" class="group button-3d relative w-full h-48 lg:h-[168px] rounded-3xl bg-[#04B3E3] shadow-[0_10px_0_#038DB4] flex flex-col justify-center text-left p-6 lg:pl-[124px] focus:outline-none overflow-hidden">
+            <img src="assets/images/3dmoney.png" alt="Money" class="absolute -top-3 -right-10 w-48 lg:w-[373.5px] lg:right-[-90px] lg:top-[-40px] transition-transform duration-300 group-hover:scale-110" />
+            <h3 class="font-extrabold text-3xl lg:text-[45px] text-white text-outline leading-tight">DOMPET<br>PINTAR</h3>
+            <div class="mt-4 lg:absolute lg:right-[120px] lg:top-1/2 lg:transform lg:-translate-y-1/2 w-48 lg:w-[254px] h-14 lg:h-[72px] bg-white rounded-full flex items-center justify-center"><span class="text-black text-2xl lg:text-[40px] font-extrabold">MAINKAN</span></div>
+            </a>
+            <a href="https://finance-quiz-race.lifin.fun/" class="group button-3d relative w-full h-48 lg:h-[168px] rounded-3xl bg-[#FFD635] shadow-[0_10px_0_#D4B000] flex flex-col justify-center text-left p-6 lg:pl-[200px] focus:outline-none overflow-hidden">
+            <img src="assets/images/raceflag.png" alt="Race Flag" class="absolute bottom-5 -right-[70px] w-48 transform rotate-180 transition-transform duration-300 lg:w-[350px] lg:left-[-128px] lg:top-[10px] lg:rotate-0 group-hover:scale-110 hidden lg:block" />
+            <img src="assets/images/reverse-flag.svg" alt="Reverse Flag" class="absolute right-0 top-1/2 -translate-y-1/2 w-24 h-24 lg:hidden" />
+            <h3 class="font-extrabold text-3xl lg:text-[45px] text-white text-outline leading-tight z-10">FINANCE QUIZ<br>RACE</h3>
+            <div class="mt-4 lg:absolute lg:right-[120px] lg:top-1/2 lg:transform lg:-translate-y-1/2 w-48 lg:w-[254px] h-14 lg:h-[72px] bg-white rounded-full flex items-center justify-center z-10"><span class="text-black text-2xl lg:text-[40px] font-extrabold">MAINKAN</span></div>
+            </a>
+            <a href="https://investor-cilik.lifin.fun/" class="group button-3d mb-12 relative w-full h-48 lg:h-[168px] rounded-3xl bg-[#FF6B6B] shadow-[0_10px_0_#D44F4F] flex flex-col justify-center text-left p-6 lg:pl-[124px] focus:outline-none overflow-hidden">
+            <img src="assets/images/rocket.svg" alt="Rocket" class="absolute left-[160px] bottom-0 w-32 md:w-40 lg:w-[200px] lg:-left-8 lg:bottom-[-20px] md:left-[500px] md:top-[20px] transition-transform duration-300 group-hover:scale-110" />
+            <h3 class="font-extrabold text-3xl lg:text-[45px] text-white text-outline leading-tight z-10">INVESTOR CILIK</h3>
+            <div class="mt-4 lg:mt-0 lg:absolute lg:right-[120px] lg:top-1/2 lg:transform lg:-translate-y-1/2 w-48 lg:w-[254px] h-14 lg:h-[72px] bg-white rounded-full flex items-center justify-center z-10"><span class="text-black text-2xl lg:text-[40px] font-extrabold">MAINKAN</span></div>
+            </a>
             </div>`;
         case "materi":
             if (!userProfile || !allMateri) return `<div class="text-center text-red-500 p-10">Gagal memuat data pengguna atau materi.</div>`;

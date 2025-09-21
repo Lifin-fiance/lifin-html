@@ -1,68 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Pengguna LIFIN</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
-    <!-- Library untuk membuat QR Code (tidak diperlukan di halaman profil) -->
     <style>
         body {
             font-family: 'Baloo 2', cursive;
-            background-color: #E0E7FF; /* Warna latar belakang yang lembut */
+            background: #04b3e3;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
             padding: 1rem;
         }
+        .card-shadow {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+        .button-3d {
+            transition: all 0.15s ease-in-out;
+            box-shadow: 0 6px 0 #003552;
+        }
+        .button-3d:hover {
+            transform: translateY(2px);
+            box-shadow: 0 4px 0 #003552;
+        }
+        .button-3d:active {
+            transform: translateY(6px);
+            box-shadow: none;
+        }
     </style>
 </head>
 <body>
 
-    <div id="profileCard" class="bg-white w-full max-w-sm rounded-2xl shadow-2xl transition-all duration-500 opacity-0 transform scale-95">
+    <div id="profileCard" class="bg-white w-full max-w-sm rounded-3xl transition-all duration-500 opacity-0 transform scale-95 card-shadow">
         <!-- Loader, ditampilkan saat data sedang diambil -->
-        <div id="loader" class="flex flex-col items-center justify-center p-10">
-             <div class="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-500"></div>
+        <div id="loader" class="flex flex-col items-center justify-center p-10 h-96">
+             <div class="animate-spin rounded-full h-16 w-16 border-b-4 border-[#04b3e3]"></div>
              <p class="mt-4 text-gray-600 font-semibold">Memuat Profil...</p>
         </div>
 
         <!-- Konten Profil, ditampilkan setelah data didapat -->
-        <div id="profileContent" class="hidden relative overflow-hidden rounded-2xl">
-            <!-- Bagian atas kartu untuk avatar/gambar -->
-            <div class="h-40 bg-gray-200">
-                <!-- Anda bisa mengganti div ini dengan <img> jika punya URL avatar -->
+        <div id="profileContent" class="hidden relative rounded-3xl text-center">
+            <!-- Header dengan Latar Belakang Gradasi -->
+            <div class="bg-gradient-to-br from-[#04b3e3] to-[#008db4] h-32 rounded-t-3xl relative">
+                 <!-- Placeholder untuk Avatar -->
+                <div class="absolute -bottom-12 left-1/2 -translate-x-1/2 w-24 h-24 bg-white rounded-full border-4 border-white flex items-center justify-center overflow-hidden">
+                    <img id="profile-avatar" src="assets/images/mascotfin.png" alt="Avatar" class="w-full h-full object-cover">
+                </div>
             </div>
 
-            <!-- Bagian bawah kartu untuk informasi -->
-            <div class="p-6 relative">
-                <h1 id="profile-nama" class="text-3xl font-extrabold text-[#004B75] -mt-2"></h1>
-                <div class="flex items-center mt-2">
-                    <p class="text-base font-bold text-gray-800 bg-[#FFD635] inline-block px-4 py-1 rounded-full">
+            <!-- Informasi Pengguna -->
+            <div class="p-6 pt-16">
+                <h1 id="profile-nama" class="text-3xl font-extrabold text-[#004B75]"></h1>
+                <div class="flex items-center justify-center mt-3 gap-3">
+                    <p class="text-base font-bold text-[#004B75] bg-[#FFD635] inline-block px-4 py-1 rounded-full">
                         <span id="profile-level"></span>
                     </p>
-                    <!-- ===== ELEMEN BARU UNTUK NOMOR LEVEL DITAMBAHKAN DI SINI ===== -->
-                    <span id="profile-level-nomor" class="ml-3 text-gray-600 text-lg font-bold">Lv. 0</span>
+                    <span id="profile-level-nomor" class="text-gray-600 text-lg font-bold">Lv. 0</span>
                 </div>
             </div>
 
             <!-- Ikon di pojok kiri bawah -->
-            <div class="absolute bottom-4 left-6">
-                <img src="assets/images/icon.png" alt="LIFIN Icon" class="w-12">
+            <div class="absolute bottom-4 right-4">
+                <img src="assets/images/icon.png" alt="LIFIN Icon" class="w-16">
             </div>
         </div>
 
         <!-- Pesan Error, jika pengguna tidak ditemukan -->
         <div id="error-message" class="hidden p-10 text-center">
-             <img src="assets/images/mascotfin.png" alt="Mascot Sedih" class="w-24 h-24 mx-auto mb-4">
+             <img src="assets/images/mascotfin.png" alt="Mascot Sedih" class="w-24 h-24 mx-auto mb-4 opacity-70">
              <h2 class="text-2xl font-bold text-red-500">Oops! Profil Tidak Ditemukan</h2>
-             <p class="text-gray-600 mt-2">Kami tidak dapat menemukan data untuk pengguna ini.</p>
-              <a href="index.html" class="mt-6 inline-block bg-gray-300 text-gray-800 font-bold py-2 px-6 rounded-full hover:bg-gray-400 transition-colors">
-                    Kembali
-              </a>
+             <p class="text-gray-600 mt-2">Sepertinya link ini salah atau pengguna tidak ada.</p>
         </div>
     </div>
+
+    <!-- Tombol Gabung Sekarang -->
+    <a href="www.lifin.fun" class="mt-8 w-full max-w-sm text-center bg-[#004B75] text-white font-extrabold text-xl py-4 px-8 rounded-full button-3d">
+        Gabung Sekarang!
+    </a>
 
     <!-- Script untuk mengambil dan menampilkan data -->
     <script type="module" src="js/profile.js"></script>

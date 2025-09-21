@@ -1,12 +1,64 @@
-<header class="absolute top-0 left-0 w-full h-[90px] bg-white flex items-center justify-between px-6 lg:px-20 shadow-sm z-50" style="box-shadow: 0 3px 0px 0 rgba(4,179,227,0.2);">
-  <div class="flex items-center">
-      <img src="assets/images/icon.png" class="w-[90px] object-cover cursor-pointer" alt="logolifin" onclick="window.location.href='https://www.lifin.fun'">
-    </div>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Lifin</title>
+    <!-- Memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Memuat Font Baloo 2 dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
 
-<a 
-  href="https://www.lifin.fun/dashboard.html" 
-  class="bg-[#FF6B6B] text-white text-lg font-extrabold px-5 py-2 rounded-full font-['Baloo_2'] hover:opacity-90 transition-all duration-200" 
-  style="box-shadow: 0 5px 0px 0 #d44f4f;">
-  Back
-</a>
-</header>
+    <!-- 
+      KODE HEADER ANDA DIMULAI DI SINI 
+    -->
+    <header class="absolute top-0 left-0 w-full h-[90px] bg-white flex items-center justify-between px-6 lg:px-20 shadow-sm z-50" style="box-shadow: 0 3px 0px 0 rgba(4,179,227,0.2);">
+        <div class="flex items-center">
+          <img 
+            src="assets/images/icon.png" 
+            class="w-[90px] object-cover cursor-pointer" 
+            alt="logolifin" 
+            onclick="window.location.href='https://www.lifin.fun'"
+          >
+        </div>
+
+        <a id="backButton" class="bg-[#FF6B6B] text-white text-lg font-extrabold px-5 py-2 rounded-full font-['Baloo_2'] hover:opacity-90 transition-all duration-200 cursor-pointer" style="box-shadow: 0 5px 0px 0 #d44f4f;">
+            Kembali
+        </a>
+    </header>
+    <!-- KODE HEADER ANDA SELESAI DI SINI -->
+
+
+   
+
+    <!-- 
+      SCRIPT UNTUK LOGIKA TOMBOL KEMBALI (DIPERBARUI)
+    -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backButton = document.getElementById('backButton');
+
+            backButton.addEventListener('click', function(event) {
+                event.preventDefault(); 
+                
+                // Cek apakah ada riwayat halaman di tab browser ini
+                // window.history.length > 1 berarti ada halaman sebelumnya.
+                if (window.history.length > 1) {
+                    // Jika YA, fungsikan seperti tombol "back" pada browser
+                    window.history.back();
+                } else {
+                    // Jika TIDAK (halaman ini adalah halaman pertama di tab),
+                    // arahkan ke halaman utama.
+                    window.location.href = 'https://www.lifin.fun';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+
