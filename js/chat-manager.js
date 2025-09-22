@@ -190,13 +190,8 @@ const systemPrompt = `
         Always aim to educate and empower users to make better financial decisions.
 `;
 
-const quickQuestions = [
-    "Apa itu inflasi?",
-    "Bagaimana cara membuat anggaran?",
-    "Saham vs. Obligasi?",
-    "Kenapa harus nabung?",
-    "Apa itu P2P lending?",
-];
+// Variabel untuk menampung semua pertanyaan kilat dari file JSON
+let quickQuestionsData = null;
 
 // The main exported function
 export function initializeChat(config) {
@@ -237,7 +232,6 @@ export function initializeChat(config) {
     const generateResponse = async (userMessage) => {
         const typingIndicator = appendMessage("Mengetik...", "finny");
         if (typingIndicator) {
-            // BUG FIX: Add a specific class to the indicator so we can reliably find and remove it later.
             typingIndicator.classList.add('typing-indicator');
             typingIndicator.querySelector('p')?.parentElement.classList.add('italic', 'opacity-75');
         }
@@ -255,18 +249,14 @@ export function initializeChat(config) {
             const data = await response.json();
             const finnyResponse = data.choices[0]?.message?.content?.trim() || "Maaf, ada sedikit gangguan. Coba lagi ya!";
             
-            // BUG FIX: Find the indicator by its class within the chat messages and remove it.
             const indicatorToRemove = chatMessages.querySelector('.typing-indicator');
             if (indicatorToRemove) indicatorToRemove.remove();
 
             appendMessage(finnyResponse, "finny");
         } catch (error) {
             console.error("Error calling chat proxy:", error);
-
-            // BUG FIX: Also remove the indicator in the catch block.
             const indicatorToRemove = chatMessages.querySelector('.typing-indicator');
             if (indicatorToRemove) indicatorToRemove.remove();
-
             appendMessage("Oops! Ada yang salah. Coba lagi nanti ya.", "finny");
         }
     };
@@ -279,19 +269,54 @@ export function initializeChat(config) {
         setTimeout(() => generateResponse(userMessage), 600);
     };
 
-    const renderQuickQuestions = () => {
-        quickQuestionsContainer.innerHTML = '';
-        const button = document.createElement('button');
-        button.className = 'w-full py-3 bg-[#ffc72c] rounded-full flex items-center justify-center relative text-white text-lg font-baloo font-extrabold hover:bg-yellow-500 transition-colors shadow-md';
-        button.innerHTML = `
-            <img src="assets/images/bolt.svg" alt="Bolt Icon" class="w-6 h-6 absolute left-5" />
-            <span>Pertanyaan Kilat</span>
-        `;
-        button.addEventListener('click', () => {
-            const randomIndex = Math.floor(Math.random() * quickQuestions.length);
-            handleChat(quickQuestions[randomIndex]);
-        });
-        quickQuestionsContainer.appendChild(button);
+    // Fungsi untuk mengambil data dan merender tombol pertanyaan kilat
+    const renderQuickQuestions = async () => {
+        try {
+            // Ambil data dari file JSON jika belum ada
+            if (!quickQuestionsData) {
+                const response = await fetch('./data/pertanyaan-kilat.json'); // Pastikan path ini benar
+                 if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                quickQuestionsData = await response.json();
+            }
+            
+            let questionsToShow = [];
+            
+            // PERUBAHAN LOGIKA INTI: Cek apakah ada judul materi spesifik
+            if (config.materiJudul && quickQuestionsData[config.materiJudul]) {
+                // Jika ada, gunakan pertanyaan dari materi itu
+                questionsToShow = quickQuestionsData[config.materiJudul];
+            } else {
+                // Jika tidak, gabungkan semua pertanyaan (fallback)
+                questionsToShow = Object.values(quickQuestionsData).flat();
+            }
+
+            if (questionsToShow.length === 0) {
+                 console.warn("No quick questions found for this context.");
+                 quickQuestionsContainer.innerHTML = ''; 
+                 return;
+            }
+
+            // Render tombol
+            quickQuestionsContainer.innerHTML = ''; 
+            const button = document.createElement('button');
+            button.className = 'w-full py-3 bg-[#ffc72c] rounded-full flex items-center justify-center relative text-white text-lg font-baloo font-extrabold hover:bg-yellow-500 transition-colors shadow-md';
+            button.innerHTML = `
+                <img src="assets/images/bolt.svg" alt="Bolt Icon" class="w-6 h-6 absolute left-5" />
+                <span>Pertanyaan Kilat</span>
+            `;
+
+            button.addEventListener('click', () => {
+                const randomIndex = Math.floor(Math.random() * questionsToShow.length);
+                handleChat(questionsToShow[randomIndex]);
+            });
+            quickQuestionsContainer.appendChild(button);
+
+        } catch (error) {
+            console.error("Could not fetch or render quick questions:", error);
+            quickQuestionsContainer.innerHTML = '<p class="text-center text-red-500 text-sm">Gagal memuat pertanyaan kilat.</p>';
+        }
     };
 
     // --- 3. Setup Event Listeners ---
@@ -307,7 +332,7 @@ export function initializeChat(config) {
 
     // --- 4. Handle Standalone-Specific Logic (like toggling visibility) ---
     if (config.isStandalone) {
-        const chatbotPanel = document.getElementById("chatbot-panel"); // Assumes this ID is stable for the standalone version
+        const chatbotPanel = document.getElementById("chatbot-panel");
         const chatbotToggler = document.getElementById("chatbot-toggler");
         const closeBtn = document.getElementById("close-btn");
 

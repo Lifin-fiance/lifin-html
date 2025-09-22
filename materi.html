@@ -68,6 +68,7 @@
 
     <main id="main-content" class="w-full max-w-7xl flex-1 flex p-4 sm:p-6">
 
+        <!-- Page 0: Pemilihan Materi -->
         <div id="page-0" class="page-section">
             <div class="w-full max-w-3xl mx-auto text-center">
                 <div class="w-fit px-8 py-2 bg-white rounded-[10px] shadow-[0_7px_0_#04b3e3] mx-auto mb-10">
@@ -79,6 +80,7 @@
             </div>
         </div>
 
+        <!-- Page 1: Tujuan Materi -->
         <div id="page-1" class="page-section">
              <div class="w-full max-w-5xl mx-auto">
                 <div class="w-fit px-8 py-2 bg-white rounded-[10px] shadow-[0_7px_0_#04b3e3] mx-auto mb-8">
@@ -87,6 +89,7 @@
                 <div class="w-full bg-[#FAFAFA] rounded-[16px] mx-auto custom-shadow p-8 mb-10">
                     <div id="konten-tujuan" class="text-gray-700 text-xl text-center font-semibold">Memuat...</div>
                 </div>
+                <!-- Tombol Navigasi Konsisten -->
                 <div class="w-full flex flex-col-reverse sm:flex-row sm:justify-between items-center gap-4">
                      <button data-action="dashboard" class="w-full sm:w-auto sm:flex-1 max-w-xs h-12 lg:h-[52px] bg-white text-[#004b75] border-[3px] border-[#004b75] rounded-2xl font-bold">Kembali</button>
                     <button data-action="next" class="w-full sm:w-auto sm:flex-1 max-w-xs h-12 lg:h-[52px] bg-[#004b75] text-white rounded-2xl font-bold">Lanjut</button>
@@ -94,14 +97,14 @@
             </div>
         </div>
 
-<div id="page-2" class="page-section">
+        <!-- Page 2: Isi Materi -->
+        <div id="page-2" class="page-section">
             <div class="w-full max-w-5xl space-y-6">
                 <div class="w-full bg-[#04b3e3] text-white rounded-[32px] px-6 py-8 sm:px-12 sm:py-10">
                     <p id="level-materi" class="text-xl sm:text-2xl font-bold py-2 ml-6">Memuat...</p>
                     <h2 id="judul-materi" class="inline-block bg-white text-[#04b3e3] text-lg sm:text-2xl font-extrabold py-2 px-6 rounded-full mb-6"></h2>
 
                     <div id="isi-materi-container" class="space-y-8 mt-6">
-                        
                         <div class="text-center">
                             <img id="gambar-materi" src="" alt="Gambar Ilustrasi Materi" class="w-full max-w-xl mx-auto rounded-xl shadow-lg object-cover aspect-video">
                             <div class="mt-2 text-center text-sm text-white">
@@ -109,31 +112,29 @@
                                 <a id="gambar-sumber" href="#" target="_blank" rel="noopener noreferrer" class="font-normal underline hover:opacity-80 transition-opacity"></a>
                             </div>
                         </div>
-
                         <div class="text-left">
                             <h3 class="text-xl font-bold border-b-2 border-white/50 pb-2 mb-3">Pembukaan</h3>
                             <p id="pembukaan-materi" class="text-base sm:text-lg font-semibold leading-relaxed text-justify"></p>
                         </div>
-
                         <div class="text-left">
                             <h3 class="text-xl font-bold border-b-2 border-white/50 pb-2 mb-3">Materi</h3>
                             <p id="materi-inti" class="text-base sm:text-lg font-semibold leading-relaxed text-justify"></p>
                         </div>
-
                         <div class="text-left">
                             <h3 class="text-xl font-bold border-b-2 border-white/50 pb-2 mb-3">Penutup</h3>
                             <p id="penutupan-materi" class="text-base sm:text-lg font-semibold leading-relaxed text-justify"></p>
                         </div>
-
                     </div>
-                    </div>
-
-                <div class="w-full flex justify-between items-center">
-                    <button data-action="prev" class="bg-white text-[#004b75] border-2 border-[#004b75] rounded-2xl px-6 py-3 font-bold">Kembali</button>
-                    <button data-action="next" class="bg-[#004b75] text-white border-2 border-[#004b75] rounded-2xl px-6 py-3 font-bold">Lanjut</button>
+                </div>
+                <!-- Tombol Navigasi Konsisten -->
+                <div class="w-full flex flex-col-reverse sm:flex-row sm:justify-between items-center gap-4">
+                    <button data-action="prev" class="w-full sm:w-auto sm:flex-1 max-w-xs h-12 lg:h-[52px] bg-white text-[#004b75] border-[3px] border-[#004b75] rounded-2xl font-bold">Kembali</button>
+                    <button data-action="next" class="w-full sm:w-auto sm:flex-1 max-w-xs h-12 lg:h-[52px] bg-[#004b75] text-white rounded-2xl font-bold">Lanjut</button>
                 </div>
             </div>
         </div>
+
+        <!-- Page 3: Quiz -->
         <div id="page-3" class="page-section">
              <div class="w-full max-w-7xl space-y-6 md:space-y-10">
                 <div class="w-fit px-8 py-2 lg:h-[72px] bg-white rounded-[10px] shadow-[0_7px_0_#04b3e3] mx-auto mb-6">
@@ -148,31 +149,36 @@
                          <div class="pilihan-jawaban w-full lg:w-[864px] min-h-[48px] bg-[#36c2e9]/65 rounded-2xl lg:rounded-full flex items-center p-2 gap-3 cursor-pointer"><div class="w-9 h-9 lg:w-12 lg:h-12 bg-[#004b75]/65 rounded-full flex-shrink-0 flex items-center justify-center"><span class="text-white font-bold">D</span></div><div id="pilihan-D" class="text-[#004b75] font-bold w-full text-left pr-2"></div></div>
                     </div>
                 </div>
-                <div class="w-full flex flex-col-reverse sm:flex-row sm:justify-between items-center gap-4 px-4 lg:px-[125px]">
-                    <button data-action="prev" class="w-full lg:w-[215px] h-12 bg-white text-[#004b75] border-[3px] border-[#004b75] rounded-2xl font-bold">Kembali</button>
-                    <button data-action="next" id="tombol-lanjut-quiz" class="w-full lg:w-[215px] h-12 bg-[#004b75] text-white rounded-2xl font-bold opacity-50 cursor-not-allowed" disabled>Lanjut</button>
+                 <!-- Tombol Navigasi Konsisten -->
+                <div class="w-full flex flex-col-reverse sm:flex-row sm:justify-between items-center gap-4 max-w-5xl mx-auto">
+                    <button data-action="prev" class="w-full sm:w-auto sm:flex-1 max-w-xs h-12 lg:h-[52px] bg-white text-[#004b75] border-[3px] border-[#004b75] rounded-2xl font-bold">Kembali</button>
+                    <button data-action="next" id="tombol-lanjut-quiz" class="w-full sm:w-auto sm:flex-1 max-w-xs h-12 lg:h-[52px] bg-[#004b75] text-white rounded-2xl font-bold opacity-50 cursor-not-allowed" disabled>Lanjut</button>
                 </div>
             </div>
         </div>
         
+        <!-- Page 4: Poin Penting -->
         <div id="page-4" class="page-section">
             <div class="w-full max-w-[992px]">
                 <div class="w-fit px-8 py-2 bg-white rounded-[10px] shadow-[0_7px_0_#04b3e3] mx-auto mb-8"><span class="text-[#038aaf] text-3xl lg:text-[40px] font-extrabold">Poin Penting</span></div>
                 <div id="poin-container" class="w-full bg-[#04b3e3] border-[5px] border-[#9ae9ff] rounded-[32px] p-8 mb-6"></div>
-                <div class="w-full flex justify-between gap-4 pt-4">
-                    <button data-action="prev" class="w-full sm:flex-1 max-w-xs h-12 bg-white text-[#004b75] border-[3px] border-[#004b75] rounded-2xl font-bold">Kembali</button>
-                    <button data-action="next" class="w-full sm:flex-1 max-w-xs h-12 bg-[#004b75] text-white rounded-2xl font-bold">Lanjut</button>
+                <!-- Tombol Navigasi Konsisten -->
+                <div class="w-full flex flex-col-reverse sm:flex-row sm:justify-between items-center gap-4">
+                    <button data-action="prev" class="w-full sm:w-auto sm:flex-1 max-w-xs h-12 lg:h-[52px] bg-white text-[#004b75] border-[3px] border-[#004b75] rounded-2xl font-bold">Kembali</button>
+                    <button data-action="next" class="w-full sm:w-auto sm:flex-1 max-w-xs h-12 lg:h-[52px] bg-[#004b75] text-white rounded-2xl font-bold">Lanjut</button>
                 </div>
             </div>
         </div>
 
+        <!-- Page 5: Sumber Informasi -->
         <div id="page-5" class="page-section">
             <div class="w-full max-w-5xl flex flex-col items-center">
                  <div class="w-fit px-8 py-2 bg-white rounded-[10px] shadow-[0_7px_0_#04b3e3] mx-auto"><span class="text-[#038aaf] text-3xl lg:text-[40px] font-extrabold">Sumber Informasi</span></div>
                 <div id="sumber-container" class="w-full flex flex-col items-center space-y-5 my-8"></div>
-                <div class="w-full flex justify-between gap-4 pt-4">
-                    <button data-action="prev" class="w-full sm:flex-1 max-w-xs h-12 bg-white text-[#004b75] border-[3px] border-[#004b75] rounded-2xl font-bold">Kembali</button>
-                    <button data-action="finish" class="w-full sm:flex-1 max-w-xs h-12 bg-[#004b75] text-white rounded-2xl font-bold">Selesai</button>
+                <!-- Tombol Navigasi Konsisten -->
+                <div class="w-full flex flex-col-reverse sm:flex-row sm:justify-between items-center gap-4">
+                    <button data-action="prev" class="w-full sm:w-auto sm:flex-1 max-w-xs h-12 lg:h-[52px] bg-white text-[#004b75] border-[3px] border-[#004b75] rounded-2xl font-bold">Kembali</button>
+                    <button data-action="finish" class="w-full sm:w-auto sm:flex-1 max-w-xs h-12 lg:h-[52px] bg-[#004b75] text-white rounded-2xl font-bold">Selesai</button>
                 </div>
             </div>
         </div>

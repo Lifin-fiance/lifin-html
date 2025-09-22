@@ -292,7 +292,8 @@
                   <img src="./assets/images/panah.png" alt="Panah Petunjuk" class="w-[18px] sm:w-[24px] md:w-[32px]" />
                   <span class="font-baloo font-semibold md:font-extrabold lg:font-extrabold text-white text-[12px] sm:text-[16px] md:text-[22px]">Fitur LIFIN</span>
                 </button>
-                <button onclick="document.getElementById('finny-section').scrollIntoView({ behavior: 'smooth' })"
+                <!-- PERUBAHAN: Menambahkan id dan menghapus onclick inline -->
+                <button id="halo-finny-btn"
                   class="w-[140px] h-[44px] sm:w-[180px] sm:h-[50px] md:w-[220px] md:h-[60px] bg-[#FF6B6B] rounded-[32px] flex items-center justify-center shadow-md gap-2"
                   style="box-shadow: 0px 8px 0px #D44F4F;">
                   <span class="font-baloo font-semibold md:font-extrabold lg:font-extrabold text-white text-[12px] sm:text-[16px] md:text-[22px]">Halo FINNY</span>
@@ -1135,6 +1136,30 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleMenu();
         }
     });
+
+    // --- SCRIPT BARU UNTUK TOMBOL "HALO FINNY" ---
+    const haloFinnyBtn = document.getElementById('halo-finny-btn');
+    if (haloFinnyBtn) {
+        haloFinnyBtn.addEventListener('click', () => {
+            // Menggunakan breakpoint lg (1024px) untuk membedakan mobile dan desktop
+            if (window.innerWidth < 1024) {
+                // Perilaku di mobile: buka chatbot
+                const chatbotPanel = document.getElementById("chatbot-panel");
+                const chatbotToggler = document.getElementById("chatbot-toggler");
+                if (chatbotPanel && chatbotToggler) {
+                    chatbotPanel.classList.remove("chatbot-closed");
+                    chatbotPanel.classList.add("chatbot-open");
+                    chatbotToggler.classList.add("opacity-0", "pointer-events-none");
+                }
+            } else {
+                // Perilaku di desktop: scroll ke section finny
+                const finnySection = document.getElementById('finny-section');
+                if (finnySection) {
+                    finnySection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    }
 
 });
 </script>
