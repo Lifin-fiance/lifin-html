@@ -11,7 +11,7 @@
     <style type="text/tailwindcss">
         @layer base {
             html, body {
-                font-family: 'Baloo 2', sans-serif;
+                font-family: 'Baloo 2', cursive;
             }
             .page-section {
                 width: 100%;
@@ -42,7 +42,6 @@
     </style>
 </head>
 
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-00CHWMXSV1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -58,8 +57,7 @@
         <div class="max-w-screen-xl w-full mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4 gap-4">
             <img src="./assets/images/icon.png" alt="Ikon Logo" class="w-[55px] lg:w-[70px] object-contain flex-shrink-0 " onclick="window.location.href='https://www.lifin.fun/dashboard.html'">
             <div id="navbarWrapper" class="flex-1 h-[12px] rounded-full flex items-center transition-all duration-300 max-w-4xl">
-                <!-- Progress bar will be injected here -->
-            </div>
+                </div>
             <button id="closeButton" class="w-8 h-8 flex items-center justify-center hover:opacity-70 flex-shrink-0" aria-label="Close">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#4a4a4a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
                     <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
@@ -70,7 +68,6 @@
 
     <main id="main-content" class="w-full max-w-7xl flex-1 flex p-4 sm:p-6">
 
-        <!-- Page 0: Material Selection (Fallback) -->
         <div id="page-0" class="page-section">
             <div class="w-full max-w-3xl mx-auto text-center">
                 <div class="w-fit px-8 py-2 bg-white rounded-[10px] shadow-[0_7px_0_#04b3e3] mx-auto mb-10">
@@ -82,7 +79,6 @@
             </div>
         </div>
 
-        <!-- Page 1: Tujuan Materi -->
         <div id="page-1" class="page-section">
              <div class="w-full max-w-5xl mx-auto">
                 <div class="w-fit px-8 py-2 bg-white rounded-[10px] shadow-[0_7px_0_#04b3e3] mx-auto mb-8">
@@ -106,21 +102,27 @@
 
                     <div id="isi-materi-container" class="space-y-8 mt-6">
                         
-                        <img id="gambar-materi" src="" alt="Gambar Ilustrasi Materi" class="w-full max-w-xl mx-auto rounded-xl shadow-lg object-cover aspect-video">
+                        <div class="text-center">
+                            <img id="gambar-materi" src="" alt="Gambar Ilustrasi Materi" class="w-full max-w-xl mx-auto rounded-xl shadow-lg object-cover aspect-video">
+                            <div class="mt-2 text-center text-sm text-white">
+                                <p id="gambar-caption" class="font-semibold italic"></p>
+                                <a id="gambar-sumber" href="#" target="_blank" rel="noopener noreferrer" class="font-normal underline hover:opacity-80 transition-opacity"></a>
+                            </div>
+                        </div>
 
                         <div class="text-left">
                             <h3 class="text-xl font-bold border-b-2 border-white/50 pb-2 mb-3">Pembukaan</h3>
-                            <p id="pembukaan-materi" class="text-base sm:text-lg font-semibold leading-relaxed"></p>
+                            <p id="pembukaan-materi" class="text-base sm:text-lg font-semibold leading-relaxed text-justify"></p>
                         </div>
 
                         <div class="text-left">
                             <h3 class="text-xl font-bold border-b-2 border-white/50 pb-2 mb-3">Materi</h3>
-                            <p id="materi-inti" class="text-base sm:text-lg font-semibold leading-relaxed"></p>
+                            <p id="materi-inti" class="text-base sm:text-lg font-semibold leading-relaxed text-justify"></p>
                         </div>
 
                         <div class="text-left">
                             <h3 class="text-xl font-bold border-b-2 border-white/50 pb-2 mb-3">Penutup</h3>
-                            <p id="penutupan-materi" class="text-base sm:text-lg font-semibold leading-relaxed"></p>
+                            <p id="penutupan-materi" class="text-base sm:text-lg font-semibold leading-relaxed text-justify"></p>
                         </div>
 
                     </div>
@@ -132,7 +134,6 @@
                 </div>
             </div>
         </div>
-        <!-- Page 3: Quiz -->
         <div id="page-3" class="page-section">
              <div class="w-full max-w-7xl space-y-6 md:space-y-10">
                 <div class="w-fit px-8 py-2 lg:h-[72px] bg-white rounded-[10px] shadow-[0_7px_0_#04b3e3] mx-auto mb-6">
@@ -154,7 +155,6 @@
             </div>
         </div>
         
-        <!-- Page 4: Poin Penting -->
         <div id="page-4" class="page-section">
             <div class="w-full max-w-[992px]">
                 <div class="w-fit px-8 py-2 bg-white rounded-[10px] shadow-[0_7px_0_#04b3e3] mx-auto mb-8"><span class="text-[#038aaf] text-3xl lg:text-[40px] font-extrabold">Poin Penting</span></div>
@@ -166,7 +166,6 @@
             </div>
         </div>
 
-        <!-- Page 5: Sumber Informasi -->
         <div id="page-5" class="page-section">
             <div class="w-full max-w-5xl flex flex-col items-center">
                  <div class="w-fit px-8 py-2 bg-white rounded-[10px] shadow-[0_7px_0_#04b3e3] mx-auto"><span class="text-[#038aaf] text-3xl lg:text-[40px] font-extrabold">Sumber Informasi</span></div>
@@ -186,6 +185,9 @@
             <div id="feedback-actions" class="mt-6"></div>
         </div>
     </div>
+    <div id="chatbot-container"></div>
+    <script type="module" src="js/chatbot.js"></script>
+    
     <script type="module">
         import { getUserProfileData, updateMateriProgress } from './js/auth-manager.js';
 
@@ -243,9 +245,22 @@
             document.getElementById('level-materi').textContent = `Materi Level ${data.Nomor}`;
             document.getElementById('judul-materi').textContent = data["Judul Materi"];
 
-            // --- MENGISI KONTEN MATERI (BAGIAN YANG DIPERBARUI & DISIMPLIFY) ---
+            // --- MENGISI KONTEN MATERI ---
             document.getElementById('gambar-materi').src = data.Gambar;
             document.getElementById('gambar-materi').alt = `Ilustrasi untuk ${data['Judul Materi']}`;
+
+            document.getElementById('gambar-caption').textContent = `Gambar: Ilustrasi materi "${data['Judul Materi']}"`;
+            const sumberLink = document.getElementById('gambar-sumber');
+            try {
+                const url = new URL(data.Gambar);
+                let sourceName = url.hostname.replace('www.', '');
+                sumberLink.textContent = `Sumber: ${sourceName}`;
+                sumberLink.href = data.Gambar; 
+                sumberLink.style.display = 'inline'; 
+            } catch (e) {
+                sumberLink.style.display = 'none';
+            }
+
             document.getElementById('pembukaan-materi').textContent = data['Pembukaan (Atas Gambar)'];
             document.getElementById('materi-inti').textContent = data.Materi;
             document.getElementById('penutupan-materi').textContent = data['Penutupan/Summary'];
@@ -443,5 +458,9 @@
 
         initializeApp();
     </script>
+
+    <script type="module" src="js/chatbot.js"></script>
+    <div id="chatbot-container"></div>
+
 </body>
 </html>

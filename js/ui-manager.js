@@ -297,7 +297,7 @@ export function generatePageContent(page, userProfile, allMateri) {
             <div class="mt-4 lg:absolute lg:right-[120px] lg:top-1/2 lg:transform lg:-translate-y-1/2 w-48 lg:w-[254px] h-14 lg:h-[72px] bg-white rounded-full flex items-center justify-center z-10"><span class="text-black text-2xl lg:text-[40px] font-extrabold">MAINKAN</span></div>
             </a>
             <a href="https://investor-cilik.lifin.fun/" class="group button-3d mb-12 relative w-full h-48 lg:h-[168px] rounded-3xl bg-[#FF6B6B] shadow-[0_10px_0_#D44F4F] flex flex-col justify-center text-left p-6 lg:pl-[124px] focus:outline-none overflow-hidden">
-            <img src="assets/images/rocket.svg" alt="Rocket" class="absolute left-[160px] bottom-0 w-32 md:w-40 lg:w-[200px] lg:-left-8 lg:bottom-[-20px] md:left-[500px] md:top-[20px] transition-transform duration-300 group-hover:scale-110" />
+            <img src="assets/images/rocket.svg" alt="Rocket" class="absolute right-[0px] top-[150px] -translate-y-1/2 w-[90px] transition-transform duration-300 group-hover:scale-110 lg:w-[200px] lg:-left-8 lg:bottom-[-20px] lg:top-auto lg:translate-y-0" />
             <h3 class="font-extrabold text-3xl lg:text-[45px] text-white text-outline leading-tight z-10">INVESTOR CILIK</h3>
             <div class="mt-4 lg:mt-0 lg:absolute lg:right-[120px] lg:top-1/2 lg:transform lg:-translate-y-1/2 w-48 lg:w-[254px] h-14 lg:h-[72px] bg-white rounded-full flex items-center justify-center z-10"><span class="text-black text-2xl lg:text-[40px] font-extrabold">MAINKAN</span></div>
             </a>
