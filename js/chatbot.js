@@ -54,9 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const injectStyles = () => {
         const styles = `
-            @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Poppins:wght@400;600&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
-            body { font-family: 'Poppins', sans-serif; }
             .font-baloo { font-family: 'Baloo 2', cursive; }
             .chat-messages::-webkit-scrollbar { width: 0px; }
             #chatbot-panel { transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out; }
