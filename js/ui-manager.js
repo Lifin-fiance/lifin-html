@@ -376,7 +376,7 @@ export function generatePageContent(page, userProfile, allMateri) {
                     </div>
                     <div class="py-4 text-center mx-auto text-base lg:text-xl font-extrabold">
                         <button data-action="switch-level" class="text-[#04B3E3] cursor-pointer hover:underline">
-                           levelnya terlalu susah? beralih level →
+                            Beralih level →
                         </button>
                     </div>
                 </div>`;
