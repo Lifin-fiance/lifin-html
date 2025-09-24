@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Lifin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Mencegah scroll horizontal dan mengatur font dasar */
+        html, body {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+        .font-baloo {
+            font-family: 'Baloo 2', cursive;
+        }
+        /* Style untuk modal/lightbox agar muncul dengan animasi */
+        .modal-enter {
+            opacity: 0;
+        }
+        .modal-enter-active {
+            opacity: 1;
+            transition: opacity 200ms ease-out;
+        }
+        .modal-leave {
+            opacity: 1;
+        }
+        .modal-leave-active {
+            opacity: 0;
+            transition: opacity 200ms ease-in;
+        }
+        .modal-image-enter {
+            transform: scale(0.95);
+        }
+        .modal-image-enter-active {
+            transform: scale(1);
+            transition: transform 200ms ease-out;
+        }
+        .modal-image-leave-active {
+            transform: scale(0.95);
+            transition: transform 200ms ease-in;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- KODE HEADER ANDA DIMULAI DI SINI -->
+    <header class="absolute top-0 left-0 w-full h-[90px] bg-white flex items-center justify-between px-6 lg:px-20 shadow-sm z-50" style="box-shadow: 0 3px 0px 0 rgba(4,179,227,0.2);">
+        <div class="flex items-center">
+            <img 
+                src="assets/images/icon.png" 
+                class="w-[90px] object-cover cursor-pointer" 
+                alt="logolifin" 
+                onclick="window.location.href='https://www.lifin.fun'"
+                 
+            >
+        </div>
+        <a id="backButton" class="bg-[#FF6B6B] text-white text-lg font-extrabold px-5 py-2 rounded-full font-['Baloo_2'] hover:opacity-90 transition-all duration-200 cursor-pointer" style="box-shadow: 0 5px 0px 0 #d44f4f;">
+            Kembali
+        </a>
+    </header>
+    <!-- KODE HEADER ANDA SELESAI DI SINI -->
+
+    <main class="pt-[120px] pb-20 px-4 md:px-8 lg:px-16">
+        <div class="text-center mb-12">
+            <h1 class="font-baloo text-4xl md:text-5xl font-extrabold text-[#04B3E3]">Galeri FINNY</h1>
+            <p class="text-gray-600 mt-2 text-lg"></p>
+        </div>
+
+        <!-- Kontainer Galeri Foto -->
+        <div id="gallery-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            <!-- Gambar akan dimasukkan oleh JavaScript -->
+        </div>
+    </main>
+
+    <!-- Modal Lightbox untuk menampilkan gambar lebih besar -->
+    <div id="lightbox" class="modal-enter fixed inset-0 bg-black bg-opacity-80 z-[100] hidden items-center justify-center p-4">
+        <div class="relative modal-image-enter">
+            <img id="lightbox-image" src="" alt="Tampilan Gambar Penuh" class="max-w-[90vw] max-h-[85vh] object-contain rounded-lg shadow-2xl">
+            <button id="close-lightbox" class="absolute -top-4 -right-4 text-white bg-[#FF6B6B] rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold hover:bg-red-700 transition-colors" style="box-shadow: 0 4px 0px 0 #d44f4f;">
+                &times;
+            </button>
+        </div>
+    </div>
+
+
+    <!-- SCRIPT UNTUK LOGIKA TOMBOL KEMBALI (DIPERBARUI) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backButton = document.getElementById('backButton');
+
+            backButton.addEventListener('click', function(event) {
+                event.preventDefault(); 
+                
+                // Cek apakah ada riwayat halaman di tab browser ini
+                // window.history.length > 1 berarti ada halaman sebelumnya.
+                if (window.history.length > 1) {
+                    // Jika YA, fungsikan seperti tombol "back" pada browser
+                    window.history.back();
+                } else {
+                    // Jika TIDAK (halaman ini adalah halaman pertama di tab),
+                    // arahkan ke halaman utama.
+                    window.location.href = 'https://www.lifin.fun';
+                }
+            });
+        });
+    </script>
+    
+    <!-- SCRIPT UNTUK GALERI DAN LIGHTBOX -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryContainer = document.getElementById('gallery-container');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const closeLightbox = document.getElementById('close-lightbox');
+
+            // Jumlah foto yang ingin ditampilkan
+            const photoCount = 32;
+            const colors = ['04B3E3', 'FFD635', 'FF6B6B', '004B75'];
+
+            // Membuat placeholder untuk 32 foto
+            for (let i = 1; i <= photoCount; i++) {
+                const color = colors[i % colors.length];
+                const imageUrl = `https://placehold.co/600x400/${color}/ffffff?text=Foto+Lifin+${i}`;
+                
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'w-full h-auto bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer';
+                galleryItem.innerHTML = `<img src="${imageUrl}" alt="Foto Galeri Lifin ${i}" class="w-full h-full object-cover">`;
+
+                galleryItem.addEventListener('click', () => {
+                    openLightbox(imageUrl);
+                });
+
+                galleryContainer.appendChild(galleryItem);
+            }
+
+            // Fungsi untuk membuka lightbox
+            function openLightbox(src) {
+                lightboxImage.src = src;
+                lightbox.classList.remove('hidden');
+                lightbox.classList.add('flex', 'modal-enter-active');
+                lightbox.querySelector('div').classList.add('modal-image-enter-active');
+            }
+
+            // Fungsi untuk menutup lightbox
+            function closeLight() {
+                lightbox.classList.remove('modal-enter-active');
+                lightbox.querySelector('div').classList.remove('modal-image-enter-active');
+                lightbox.classList.add('modal-leave-active');
+                
+                setTimeout(() => {
+                    lightbox.classList.add('hidden');
+                    lightbox.classList.remove('modal-leave-active');
+                }, 200);
+            }
+
+            // Event listener untuk tombol close
+            closeLightbox.addEventListener('click', closeLight);
+
+            // Event listener untuk menutup dengan klik di luar gambar
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    closeLight();
+                }
+            });
+            
+            // Event listener untuk menutup dengan tombol Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+                    closeLight();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -16,7 +16,7 @@
   <script>
     tailwind.config = {
       theme: {
-        extend: {
+        extend: { 
           colors: {
             primary: '#04B3E3',
             accent: '#FFD635',
@@ -1137,29 +1137,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- SCRIPT BARU UNTUK TOMBOL "HALO FINNY" ---
-    const haloFinnyBtn = document.getElementById('halo-finny-btn');
-    if (haloFinnyBtn) {
-        haloFinnyBtn.addEventListener('click', () => {
-            // Menggunakan breakpoint lg (1024px) untuk membedakan mobile dan desktop
-            if (window.innerWidth < 1024) {
-                // Perilaku di mobile: buka chatbot
-                const chatbotPanel = document.getElementById("chatbot-panel");
-                const chatbotToggler = document.getElementById("chatbot-toggler");
-                if (chatbotPanel && chatbotToggler) {
-                    chatbotPanel.classList.remove("chatbot-closed");
-                    chatbotPanel.classList.add("chatbot-open");
-                    chatbotToggler.classList.add("opacity-0", "pointer-events-none");
-                }
-            } else {
-                // Perilaku di desktop: scroll ke section finny
-                const finnySection = document.getElementById('finny-section');
-                if (finnySection) {
-                    finnySection.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        });
-    }
+    // --- PERUBAHAN: Dengarkan sinyal 'chatbotReady' sebelum menjalankan skrip tombol ---
+    document.addEventListener('chatbotReady', () => {
+      const haloFinnyBtn = document.getElementById('halo-finny-btn');
+      if (haloFinnyBtn) {
+          haloFinnyBtn.addEventListener('click', () => {
+              if (window.innerWidth < 1024) {
+                  // Perilaku di mobile: buka chatbot
+                  const chatbotPanel = document.getElementById("chatbot-panel");
+                  const chatbotToggler = document.getElementById("chatbot-toggler");
+                  if (chatbotPanel && chatbotToggler) {
+                      chatbotPanel.classList.remove("chatbot-closed");
+                      chatbotPanel.classList.add("chatbot-open");
+                      chatbotToggler.classList.add("opacity-0", "pointer-events-none");
+                  }
+              } else {
+                  // Perilaku di desktop: scroll ke section finny
+                  const finnySection = document.getElementById('finny-section');
+                  if (finnySection) {
+                      finnySection.scrollIntoView({ behavior: 'smooth' });
+                  }
+              }
+          });
+      }
+    });
 
 });
 </script>

@@ -36,6 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
                     quickQuestionsContainerSelector: '#quick-questions-container',
                     materiJudul: specificMateriTitle, // Pass the specific title
                     messageTemplate: (message, sender) => {
+                        // SUGGESTION 3 (IMPLEMENTED): Handle the new 'error' sender type.
+                        if (sender === 'error') {
+                            return `
+                                <div class="flex items-center gap-2 justify-start ml-[-20px]">
+                                    <img src="assets/images/mascotfin.png" class="w-16 h-16 object-contain rounded-full flex-shrink-0 z-10" />
+                                    <div class="bg-red-100 text-red-700 p-3 rounded-lg max-w-[85%] text-sm sm:text-base">
+                                        <p class="font-semibold">${message}</p>
+                                    </div>
+                                </div>`;
+                        }
+                        
                         const isOutgoing = sender === 'user';
                         const wrapperClass = `flex items-end gap-2 ${isOutgoing ? 'justify-end' : 'justify-start ml-[-20px]'}`;
                         const bubbleColor = isOutgoing ? 'bg-[#004b75]' : 'bg-[#04b3e3]';
@@ -60,7 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 let attempts = 0;
                 const interval = setInterval(() => {
                     const judulMateriElement = document.getElementById('judul-materi');
-                    // Check if the element has meaningful content or if we should time out
                     if ((judulMateriElement && judulMateriElement.textContent && judulMateriElement.textContent !== 'Memuat...') || attempts >= 20) {
                         clearInterval(interval);
                         const title = judulMateriElement ? judulMateriElement.textContent : null;
@@ -68,9 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         startChat(title);
                     }
                     attempts++;
-                }, 100); // Check every 100ms, timeout after 2 seconds
+                }, 100); 
             } else {
-                // On any other page, initialize immediately without a specific title.
                 console.log("Not on materi page. Initializing chat for general use.");
                 startChat();
             }
@@ -97,4 +106,3 @@ document.addEventListener("DOMContentLoaded", () => {
         document.head.appendChild(styleSheet);
     };
 });
-

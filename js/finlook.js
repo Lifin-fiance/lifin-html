@@ -18,6 +18,17 @@ export function initFinlookChat() {
         quickQuestionsContainerSelector: '.quick-questions-container',
         // Template for how messages should look in the Finlook page
         messageTemplate: (text, sender) => {
+            // SUGGESTION 3 (IMPLEMENTED): Handle the new 'error' sender type.
+             if (sender === 'error') {
+                return `
+                    <div class="flex items-center gap-3 w-full justify-start">
+                        <img src="assets/images/mascotfin.png" alt="Finny" class="w-10 h-10 object-contain rounded-full flex-shrink-0 self-start" />
+                        <div class="bg-red-100 text-red-700 p-3 rounded-lg max-w-[85%]">
+                            <p class="text-sm sm:text-base font-semibold">${text}</p>
+                        </div>
+                    </div>`;
+            }
+
             const isUser = sender === 'user';
             const wrapperClass = `flex items-end gap-3 w-full ${isUser ? 'justify-end' : 'justify-start'}`;
             const finnyBubbleClasses = "bg-[#04b3e3] text-white p-3 rounded-tr-[20px] rounded-tl-[20px] rounded-br-[20px] max-w-[85%]";
