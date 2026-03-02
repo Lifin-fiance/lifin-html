@@ -30,7 +30,7 @@ export default async function handler(request, response) {
     // place to update it in the future.
     const modifiedBody = {
       ...clientRequestBody, // Copy `messages`, `temperature`, etc. from the client
-      model: "zai-org/GLM-4.5-Air" // Securely set the model here
+      model: "openai/gpt-oss-120b-TEE" // Securely set the model here
     };
 
     // Forward the modified request body to the official Chutes.ai API endpoint.
