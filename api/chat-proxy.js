@@ -1,65 +1,138 @@
 /**
  * File: /api/chat-proxy.js
- * Description: A secure, server-side proxy to handle requests to the Chutes.ai API.
+ * Description: A secure, server-side proxy to handle requests to the Groq API.
  * This function runs on a server environment (like Vercel, Netlify, or a Node.js server),
  * NOT in the user's browser.
  */
 
+const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
+const GROQ_MODEL = "openai/gpt-oss-120b";
+
+function normalizeRequestBody(rawBody) {
+  if (!rawBody || typeof rawBody !== "object" || Array.isArray(rawBody)) {
+    return { error: "Invalid request body. Expected a JSON object." };
+  }
+
+  const {
+    model: _ignoredModel,
+    max_tokens,
+    messages,
+    temperature,
+    logprobs: _ignoredLogprobs,
+    logit_bias: _ignoredLogitBias,
+    top_logprobs: _ignoredTopLogprobs,
+    ...rest
+  } = rawBody;
+
+  if (!Array.isArray(messages) || messages.length === 0) {
+    return { error: "The request must include a non-empty messages array." };
+  }
+
+  if (rest.n !== undefined && rest.n !== 1) {
+    return { error: "Groq only supports n=1 for chat completions." };
+  }
+
+  if (rest.stream === true) {
+    return { error: "Streaming is not supported by this proxy yet." };
+  }
+
+  const sanitizedMessages = messages.map((message) => {
+    if (!message || typeof message !== "object" || Array.isArray(message)) {
+      return null;
+    }
+
+    const { name: _ignoredName, ...sanitizedMessage } = message;
+    return sanitizedMessage;
+  });
+
+  if (sanitizedMessages.some((message) => message === null)) {
+    return { error: "Each message must be a JSON object." };
+  }
+
+  const normalizedBody = {
+    ...rest,
+    messages: sanitizedMessages,
+    model: GROQ_MODEL,
+  };
+
+  if (max_tokens !== undefined && rest.max_completion_tokens === undefined) {
+    normalizedBody.max_completion_tokens = max_tokens;
+  }
+
+  if (temperature === 0) {
+    normalizedBody.temperature = 1e-8;
+  } else if (temperature !== undefined) {
+    normalizedBody.temperature = temperature;
+  }
+
+  return { body: normalizedBody };
+}
+
+async function parseUpstreamPayload(upstreamResponse) {
+  const contentType = upstreamResponse.headers.get("content-type") || "";
+
+  if (contentType.includes("application/json")) {
+    return upstreamResponse.json().catch(() => null);
+  }
+
+  const text = await upstreamResponse.text().catch(() => "");
+  return text ? { error: text } : null;
+}
+
 export default async function handler(request, response) {
-  // Only allow POST requests
-  if (request.method !== 'POST') {
-    response.setHeader('Allow', ['POST']);
+  if (request.method !== "POST") {
+    response.setHeader("Allow", ["POST"]);
     return response.status(405).json({ error: `Method ${request.method} Not Allowed` });
   }
 
-  // IMPORTANT: Get the API key from a secure server environment variable.
-  const apiKey = process.env.CHUTES_API_TOKEN;
+  const apiKey = process.env.GROQ_API_KEY;
 
   if (!apiKey) {
-    // If the server isn't configured with a key, return a server error.
-    console.error('CHUTES_API_TOKEN environment variable not set.');
-    return response.status(500).json({ error: 'API key not configured on the server.' });
+    console.error("GROQ_API_KEY environment variable not set.");
+    return response.status(500).json({ error: "API key not configured on the server." });
   }
 
   try {
-    // Get the original request body from our chatbot client
-    const clientRequestBody = request.body;
+    const rawBody =
+      typeof request.body === "string" ? JSON.parse(request.body) : request.body;
+    const { body: normalizedBody, error: validationError } = normalizeRequestBody(rawBody);
 
-    // SUGGESTION 1 (IMPLEMENTED): Securely add the model name on the server.
-    // This prevents the client from choosing the model and provides a single
-    // place to update it in the future.
-    const modifiedBody = {
-      ...clientRequestBody, // Copy `messages`, `temperature`, etc. from the client
-      model: "openai/gpt-oss-120b-TEE" // Securely set the model here
-    };
+    if (validationError) {
+      return response.status(400).json({ error: validationError });
+    }
 
-    // Forward the modified request body to the official Chutes.ai API endpoint.
-    const chutesResponse = await fetch("https://llm.chutes.ai/v1/chat/completions", {
+    const groqResponse = await fetch(GROQ_API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        // The secure API key is added here on the server-side.
-        "Authorization": `Bearer ${apiKey}`,
+        Authorization: `Bearer ${apiKey}`,
       },
-      // Use the new, modified body for the request.
-      body: JSON.stringify(modifiedBody),
+      body: JSON.stringify(normalizedBody),
     });
 
-    // Get the JSON data from the Chutes.ai response.
-    const data = await chutesResponse.json();
+    const data = await parseUpstreamPayload(groqResponse);
 
-    // If the Chutes.ai API returns an error, forward it to our client.
-    if (!chutesResponse.ok) {
-      console.error('Error from Chutes.ai API:', data);
-      return response.status(chutesResponse.status).json(data);
+    if (!groqResponse.ok) {
+      console.error("Error from Groq API:", data);
+      return response.status(groqResponse.status).json(
+        data && typeof data === "object"
+          ? data
+          : { error: "Groq API request failed." }
+      );
     }
-    
-    // If the request is successful, send the response from Chutes.ai back to our chatbot client.
-    response.status(200).json(data);
 
+    if (!data || typeof data !== "object") {
+      console.error("Unexpected non-JSON success response from Groq API:", data);
+      return response.status(502).json({ error: "Unexpected response format from Groq API." });
+    }
+
+    return response.status(200).json(data);
   } catch (error) {
-    // Catch any network errors or other issues during the fetch process.
-    console.error("Error in proxy function:", error);
-    response.status(500).json({ error: 'An internal server error occurred.' });
+    if (error instanceof SyntaxError) {
+      return response.status(400).json({ error: "Invalid JSON request body." });
+    }
+
+    console.error("Error in Groq proxy function:", error);
+    return response.status(500).json({ error: "An internal server error occurred." });
   }
 }
